@@ -1,0 +1,38 @@
+                  
+
+
+        <h2>¿Cómo eres?</h2>
+
+                  <div class="field">
+                    <%= f.label :being, '¿Cómo eres?' %><br />
+                    <p> Sé honesto contigo, hay cosas de ti que a lo mejor no te habías cuestionado. Recuerda que no hay respuestas correctas ni equivocadas, sólo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p><br/>
+                    <%= f.text_field :being%>
+                </div>
+                
+            <!--método selector-->
+                <form action="" method="post" id="form1">
+                    <p class="uso">Seleccione un número<input type="range" min="1" max="10">
+                </form>
+            <!--Fin método selector-->
+
+
+                <div class="field">
+                    <%= f.label :do, '¿Cómo te gusta hacer las cosas?' %><br />
+                    <p> Sé honesto contigo, hay cosas de ti que a lo mejor no te habías cuestionado. Recuerda que no hay respuestas correctas ni equivocadas, sólo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p><br/>
+                    <span>Arrastra el botón dependiendo de lo inclinado que te sientas por cada concepto.
+                    Si crees que estás en un punto medio, puedes dejar el botón en el medio
+                    o arrastrarlo solo un poco hacia donde prefieras.</span><br/>
+                    <%= f.text_field :do%>
+                </div>
+
+                <div class="field">
+                    <%= f.label :motivation, 'El podio de lo que más te motiva'%><br />
+                    <span>Califica sólo los tres factores que más te importan de la siguiente lista, dándole el número 1 al que más te motiva.</span><br/>
+                    <%= f.text_field :motivation%>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit "Enviar registro" %>
+                </div>
+              
+              <%= render "devise/shared/links" %>

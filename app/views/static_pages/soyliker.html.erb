@@ -1,0 +1,295 @@
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                     <a class="navbar-brand" href="/">
+                        <img alt="LikeU" src="">
+                    </a>
+                    <a class="navbar-brand page-scroll" href="/">LikeU</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li role="LikeU" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">
+                            LikeU
+                            <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li>
+                                    <a class="page-scroll" href="/">Inicio</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="/#what">Lo que hacemos</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="/#why">Por que lo hacemos?</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="/#how">Como lo hacemos?</a>
+                                </li>
+                            </ul>
+                        </li>                  
+                        <li role="SoyLiker" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">
+                            Soy Liker
+                            <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li>
+                                     <a class="page-scroll" href="/quieroserliker">Inicio</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="/quieroserliker#being-a-liker">Ser liker es...</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="/quieroserliker#our-likers">Nuestros Likers</a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="/quieroserliker#apply">Convertirme en Liker</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact">Contacto</a>
+                        </li>
+
+                        <% if user_signed_in? %>
+                                <li><p>Bienvenid@ <%= current_user.username%></p>
+                                    <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %></li>
+                                    <% else %>
+                                <li><%= link_to('Iniciar sesión', new_user_session_path)%></li>
+                        <% end %>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+     </nav>
+
+
+	   
+
+	<header class="header-soyliker">
+		<section id="home">
+			<div class="header-content">
+				<h1>Somos Gente como tú</h1>
+				<hr class="largo">
+				<h1>Gente con talento, que quiere llegar lejos pero a su manera.</h1>		
+               	<a href="#being-a-liker" class="btn btn-primary btn-xl page-scroll">Quiero saber mas</a>
+            </div>
+		</section>
+
+	</header>
+	<section class="bg-primary seccion-suave" id="being-a-liker">
+		 <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+		
+					<h2 class="section-heading">Por que ser un Liker</h2>
+
+					<br>
+					
+					<p>Si crees que trabajar ya no es tomar el transporte público por horas y llegar a un espacio lleno de gente para hacer algo que no te gusta, dejame decirte que estás en lo correcto. La vida hoy se trata de equilibrio ya no somos como nuestros padres que necesitaban una corbata y un espacio frio y triste donde trabajar, ahora somos la generación del talento, en la era de la tecnología donde todo esta a la mano.</p>
+
+				 	<p>Este trabajo es para gente como tú,  gente con con talento, gente que sabe lo que quiere, gente que quiere llegar lejos, gente que entiende el valor del tiempo y su espacio, gente que vive la vida y que quiere trabaja, gente como tu. </p>
+			 	</div>
+		 	</div>
+		</div>
+
+	</section>
+
+
+     <section class="no-padding" id="our-likers">
+     	<div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                	<br>
+     				<h2 class="section-heading">Nuestros Likers</h2>
+     				<br>
+     				<p>Nuestros Likers son personas como tú, con familia, con metas y sueños, personas que objetivos que cumplir. Tambien son gerentes, formadores, Vendedores, especialistas y amigos. Tan diversos y unicos a la vez. Bienvenidos a nuestro mundo Likers</p>
+     			</div>
+     		</div>
+     	</div>
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="<%=image_path('portfolio/1.jpg')%>" class="img-responsive" alt="">
+                          <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="<%=image_path('portfolio/2.jpg')%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="<%=image_path('portfolio/3.jpg')%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="<%=image_path('portfolio/4.jpg')%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="<%=image_path('portfolio/5.jpg')%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="<%=image_path('portfolio/6.jpg')%>" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <aside class="bg-dark no-padding">
+        <div class="container text-center">
+            <div class="call-to-action">
+            <br>
+                <h2>Datos Curiosos</h2>
+                
+	                <div class="row">
+	                	<div class="col-lg-3 col-md-6">
+	                		<h2>106</h2>
+	                		<p>Clientes felices</p>
+	                	</div>
+	                	<div class="col-lg-3 col-md-6">
+	                		<h2><%= User.count %></h2>
+	                		<p>Nuevos likers</p>
+	                	</div>
+	                	<div class="col-lg-3 col-md-6">
+	                		<h2>106</h2>
+	                		<p>Likes en nuestra comunidad</p>
+	                	</div>
+	                	<div class="col-lg-3 col-md-6">
+	                		<h2>106</h2>
+	                		<p>Solucitudes de aspirantes</p>
+	                	</div>
+	                </div>	
+                
+            </div>
+        </div>
+    </aside>
+
+	<section id="apply">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Como ser un Liker.</h2>
+                    <hr class="largo">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box text-center">
+                        <i class="fa fa-4x fa-file-text-o wow bounceIn text-primary"></i>
+                        <h3>Queremos Saber de tí</h3>
+                        <p class="text-muted">Con tu información no solo podremos saber mas de tí,  además te podremos contactar para que inicies con nosostros.</p>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-bar-chart wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Sabemos tú Talento</h3>
+                        <p class="text-muted">Estos serán los 10 minutos mejor invertidos en tu vida. Aquí encontraremos talentos que ni tú sabias que tenias. Asi sabremos cual es el mejor trabajo para ti.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-microphone wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Queremos Escucharte</h3>
+                        <p class="text-muted">Será la primera vez que te escuchemos, así que ve por tu diadema y pon tu mejor voz.</p>
+
+
+                    </div>
+                </div>
+            </div>
+            <br> 
+            <br>
+            <div class="col-lg-8 col-lg-offset-2 text-center">  
+                               
+            <%= button_to "Quiero ser liker!", new_user_registration_path,form: {target: '_blank'}, :id => "open-contacts-dialog-btn",:class => "btn btn-primary btn-xl", :method => :get %>
+            </div>
+        </div>
+	</section>
+	
+
+
+
+

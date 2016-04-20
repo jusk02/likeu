@@ -1,0 +1,552 @@
+<section class= "registro">
+
+
+<div class="container">
+  <div class="row">
+
+
+        <h1>Cuéntanos sobre ti</h1>
+
+        <p>Contesta las siguientes preguntas con la mayor sinceridad. No hay respuestas correctas ni equivocadas, sólo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p>
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+
+                <h2 class="tituloinicial">Datos personales</h2>
+
+              <div class="parte1">
+                <div class="fieldformulario">
+                  <%= f.label :username, '¿Queremos saber cuál es tu nombre?' %><br>
+                  <%= f.text_field :username%><br>
+
+                  <%= f.label :birthdate, 'Tu fecha de nacimiento' %><br>
+                  <%= date_select :birthday, "birthday",start_year: 1920, end_year: 2016,class: "form-control" %><br>
+
+                <%= label_tag :sex_sel, '¿Cuál es tu género?' %><br>
+                <form action="demo_form.asp" method="get">
+                <img src="<%=image_path('masculino.png')%>" class="icono-form" class="wow bounceIn">
+                    <input type="radio" name="sexo" value="Masculino">
+                <img src="<%=image_path('femenino.png')%>" class="icono-form" class="wow bounceIn">
+                    <input type="radio" name="sexo"value="Femenino" checked><br>
+                </form>
+
+
+                </div>
+              </div>
+               
+
+                
+             <div class="parte2">
+
+             <h2 class="tituloinicial">¿Actualmente a qué te dedicas?</h2><br/>
+
+                
+                <div class="fieldformulario">
+                  
+                  <div class="variableformulario">
+                    <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    <input type="radio" name="ocupation" value="1" /> Estudiante universitario<br/>
+                  </div>
+
+                  <div class="variableformulario">
+                    <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    <input type="radio" name="ocupation" value="2" /> Trabajo como <br/>empleado
+                  </div>
+
+                  <div class="variableformulario">
+                    <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    <input type="radio" name="ocupation" value="3"/>Estudio y trabajo<br/> como empleado<br/>
+                  </div>
+                  <div class="variableformulario">
+                    <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    <input type="radio" name="ocupation" value="4" /> Soy <br/>independiente<br/>
+                  </div>
+
+                  <div class="variableformulario">
+                    <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    <input type="radio" name="ocupation" value="5" /> Soy ama (o) <br/>de casa<br/>
+                  </div>
+
+                  <div class="variableformulario">
+                    <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    <input type="radio" name="ocupation" value="6" /> No trabajo <br/>ni estudio<br/>
+                  </div>
+
+                
+                </div>
+            </div>
+
+
+
+            <div class="parte3">
+
+            <h2 class="tituloinicial">¿Qué buscas?</h2>
+
+              <div class="fieldformulario">
+
+              <div class=perfilesparte3>
+                  <%= f.label :looking_for_employee, 'Perfil trabajador' %><br/>
+              </div>
+                  
+                <div class="variableformulario">
+                  <img src="<%=image_path('ingresosextras.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  <input type="radio" name="looking_for_employee" value="1" /> Quiero<br/> ingresos extras<br/>
+                </div>
+
+                <div class="variableformulario">
+                  <img src="<%=image_path('busconuevosretos.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  <input type="radio" name="looking_for_employee" value="2" /> Busco <br/>nuevos retos<br/>
+                </div>
+
+                <div class="variableformulario">
+                  <img src="<%=image_path('calidaddevidaingresos.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  <input type="radio" name="looking_for_employee" value="3" /> Balance calidad <br/> de vida - ingresos<br/>
+                </div>
+
+              </div>
+
+                <div class="fieldformulario">
+
+                  <div class=perfilesparte3>
+                    <%= f.label :looking_for_independent, 'Perfil no trabajador' %><br />
+                  </div>
+                  
+              <div class="variableformulario">
+                  <img src="<%=image_path('manejodetiempo.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  <input type="radio" name="looking_for_independent" value="4" /> Un trabajo que me <br/> permita manejar mi tiempo<br/>
+              </div>
+
+              <div class="variableformulario">
+                  <img src="<%=image_path('cualquierlugar.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  <input type="radio" name="looking_for_independent" value="5" /> Poder trabajar desde <br/> cualquier lugar<br/>
+              </div>
+
+              <div class="variableformulario">
+                  <img src="<%=image_path('probarnuevo.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  <input type="radio" name="looking_for_independent" value="6" /> Quiero probar <br/> algo nuevo<br/>
+              </div>
+
+                </div>
+            </div>
+            
+
+              <div class="parte4">
+
+                <h2 class="tituloinicial">Cuéntanos sobre tu experiencia</h2><br/>
+
+                  <div class="fieldformulario">
+                    
+                    <div class="variableformulario">
+                        <%= f.label :experience, 'Quiero aprender' %><br/>
+                        <img src="<%=image_path('quieroaprender.png')%>" class="icono-form" class="wow bounceIn"><br/>
+
+                        <input type="radio" name="experience" value="1" /> Tengo poca experiencia<br/>
+                        <input type="radio" name="experience" value="2" /> No tengo experiencia<br/>
+                    </div>
+
+                  <div class="variableformulario">
+                      <%= f.label :experience, 'He tenido varios trabajos' %><br/>
+                       <%= f.label :experience, '(menos de 2 años)' %><br/>
+                      
+                      <img src="<%=image_path('variostrabajos.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                      
+
+                      <input type="radio" name="experience" value="1" /> Menos de 1 año de experiencia<br/>
+                      <input type="radio" name="experience" value="2" /> Entre 1 y 2 años de experiencia<br/>
+                  </div>
+
+                  <div class="variableformulario">
+                      <%= f.label :experience, 'Tengo años de experiencia' %><br/>
+                      <%= f.label :experience, '(más de 2 años)' %><br/>
+
+                      <img src="<%=image_path('añosdeexperiencia.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  
+                      <input type="radio" name="experience" value="1" /> He tenido personas a cargo<br/>
+                      <input type="radio" name="experience" value="2" /> No he tenido personas a cargo<br/>
+                  </div>
+               
+
+                  </div>
+
+
+              </div>
+
+
+            <div class="parte5">
+
+              <h2 class="tituloinicial">¿Cómo te gustaría trabajar?</h2><br/>
+
+                <div class="fieldformulario">
+                  
+                  <div class="variableformulario">
+                      <%= f.label :would_work, 'Prefiero trabajar muchas'%><br/>
+                      <%= f.label :would_work, 'horas seguidas, pero'%><br/>
+                       <%= f.label :would_work,'menos días a la semana.'%><br/>
+
+                       <img src="<%=image_path('muchashoras.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    
+
+                      <input type="radio" name="would_work" value="1" /> Menos de 4 horas<br/>
+                      <input type="radio" name="would_work" value="2" /> 6 horas<br/>
+                      <input type="radio" name="would_work" value="3" /> 8 horas<br/>
+                  </div>
+                    
+                  <div class="variableformulario">
+                    <%= f.label :would_work, 'Prefiero trabajar pocas'%><br/>
+                    <%= f.label :would_work, 'horas al día, más días'%><br/>
+                    <%= f.label :would_work, 'en la semana'%><br/>
+
+                    <img src="<%=image_path('pocashoras.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                    
+
+                    <input type="radio" name="would_work" value="1" /> 20 horas por semana<br/>
+                    <input type="radio" name="would_work" value="2" /> 30 horas por semana<br/>
+                    <input type="radio" name="would_work" value="3" /> 40 horas por semana<br/>
+                  </div>
+
+                  <div class="variableformulario">
+                    <%= f.label :would_work, 'Quiero administrar mi' %><br/>
+                    <%= f.label :would_work, 'tiempo completamente.' %><br/>
+
+                    <img src="<%=image_path('administrartiempo.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                   
+                    <input type="radio" name="would_work" value="1" /> 20 horas por semana<br/>
+                    <input type="radio" name="would_work" value="2" /> 30 horas por semana<br/>
+                    <input type="radio" name="would_work" value="3" /> 40 horas por semana<br/>
+                  </div>
+
+                </div>
+
+
+            </div>
+
+      <div class="parte6">
+
+              <h2 class="tituloinicial">¿Qué tipos de trabajos has realizado?</h2><br/>
+                 
+          <div class="fieldformulario">
+                  
+              <div class="variableformulario">
+                    <%= f.label :jobs_made, '¿Eres profesional' %><br/>
+                    <%= f.label :jobs_made, 'universitario?' %><br/>
+                        <img src="<%=image_path('profesionaluniversitario.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                      <%= f.label :jobs_made, 'Área' %><br/>          
+                        <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Área <br/>
+
+                          <option>Artes</option>
+                          <option>Ciencias agrarias</option>
+                          <option>Ciencias de la salud</option>
+                          <option>Ciencias económicas y administrativas</option>
+                          <option>Ciencias exactas y naturales</option>
+                          <option>Ciencias sociales y humanas</option>
+                          <option>Comunicaciones</option>
+                          <option>Derecho y ciencias políticas</option>
+                          <option>Educación</option>
+                          <option>Educación física, recreación y deportes</option>
+                          <option>Idiomas</option>
+                          <option>Ingeniería</option>
+                    
+                        </select><br/>
+                        
+                      <%= f.label :jobs_made, 'Nivel' %><br/>
+                        <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Nivel <br/>
+                          <option>Técnico</option>
+                          <option>Tecnológico</option>
+                          <option>Pregrado</option>
+                          <option>Especialización</option>
+                          <option>Maestría</option>
+                          <option>Doctorado</option>
+                          <option>Posdoctorado</option>
+                        </select><br/>
+              </div>
+              <div class="variableformulario">
+                    <%= f.label :jobs_made, '¿Qué actividad' %><br/>
+                    <%= f.label :jobs_made, 'realizabas?' %><br/>
+                      <img src="<%=image_path('actividadquerealizabas.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  
+                      <%= f.label :jobs_made, 'Último trabajo' %><br/>
+
+                        <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Último trabajo <br/>
+                            <option>Independiente</option>
+                            <option>Administrador(a)</option>
+                            <option>Auxiliar</option>
+                            <option>Gerencial</option>
+                            <option>Jefe</option>
+                            <option>Comunicador(a)</option>
+                            <option>Coordinador(a) o Líder</option>
+                            <option>Profesional</option>
+                            <option>Profesor(a)</option>
+                            <option>Investigador(a)</option>
+                            <option>Artista</option>
+                        </select><br/>
+                        
+                      <%= f.label :jobs_made, 'Penúltimo trabajo' %><br/>
+                        <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Penúltimo trabajo <br/>
+                            <option>Independiente</option>
+                            <option>Administrador(a)</option>
+                            <option>Auxiliar</option>
+                            <option>Gerencial</option>
+                            <option>Jefe</option>
+                            <option>Comunicador(a)</option>
+                            <option>Coordinador(a) o Líder</option>
+                            <option>Profesional</option>
+                            <option>Profesor(a)</option>
+                            <option>Investigador(a)</option>
+                            <option>Artista</option>
+                        </select><br/>
+              </div>
+
+              <div class="variableformulario">
+                  <%= f.label :jobs_made, 'Sector económico' %><br/>
+                  <img src="<%=image_path('sectoreconomico.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                        
+                        <%= f.label :jobs_made, 'Área' %><br/>
+                          <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Área<br/>
+                              <option>Agricultura, Ganadería y Avícultura</option>
+                              <option>Comercio</option>
+                              <option>Comunicaciones</option><br/>
+                              <option>Construcción</option>
+                              <option>Educación</option><br/>
+                              <option>Financiera</option><br/>
+                              <option>Industria manufacturera</option><br/>
+                              <option>Informática</option><br/>
+                              <option>Inmobiliaria</option><br/>
+                              <option>Hotelería, Turismo y Recreación</option><br/>
+                              <option>Logística, Transporte y Almacenamiento</option><br/>
+                              <option>Minería e Hidrocarburos</option><br/>
+                              <option>Salud</option><br/>
+                              <option>Servicios</option><br/>
+                          </select><br/>
+                        
+                        <%= f.label :jobs_made, 'Nivel' %><br/>
+                          <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Nivel<br/>
+                              <option>Administrativo, Financiero y Contable</option>
+                              <option>Diseño y Publicidad</option>
+                              <option>Gerencial</option>
+                              <option>Operativo</option>
+                              <option>Educación</option>
+                              <option>Mercadeo y ventas</option>
+                              <option>Sistemas</option>
+                              <option>Producción</option>
+                          </select><br/>
+              </div>
+        </div>
+  </div>
+
+          <div class="parte7">
+
+              <h2 class="tituloinicial"> Queremos contactarnos contigo </h2><br/>
+
+          <div class="fieldformulario">
+
+            <div class="variableformulario">
+
+                <img src="<%=image_path('celular.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                <%= f.label :phone_contact, 'Celular' %><%= f.text_field :phone_contact %>
+             
+
+                  <!-- sheepIt Form -->
+                  <div id="sheepItForm">
+                  
+                    <!-- Form template-->
+                    <div id="sheepItForm_template">
+
+                      <label for="sheepItForm_#index#_phone">Teléfono<span id="sheepItForm_label"></span></label>
+                      <%= f.text_field :phone_contact %>
+                        <!--<input id="sheepItForm_#index#_phone" name="person[phones][#index#][phone]" type="text" size="15" maxlength="10" />-->
+                     
+                      <a id="sheepItForm_remove_current">
+                        <img class="delete" src="<%=image_path('cross.png')%>" width="16" height="16" border="0">
+                      </a>
+                    </div>
+                    <!-- /Form template-->
+                     
+                    <!-- No forms template -->
+                    <div id="sheepItForm_noforms_template">No tengo más números de teléfonos</div>
+                    <!-- /No forms template-->
+                     
+                    <!-- Controls -->
+                    <div id="sheepItForm_controls">
+                        <div id="sheepItForm_add"><a><span>Adicionar número de teléfono</span></a></div>
+                        <div id="sheepItForm_remove_last"><a><span>Eliminar</span></a></div>
+                        <div id="sheepItForm_remove_all"><a><span>Eliminar todos los registros</span></a></div>
+                        <div id="sheepItForm_add_n"></div>
+                    <!-- /Controls -->
+                     
+                    </div>
+                  <!-- /sheepIt Form -->
+          </div> <br/>
+            </div>
+
+            <div class="variableformulario">
+
+                <img src="<%=image_path('correoelectronico.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                
+                  <%= f.label :email, 'Correo electrónico' %><br/>
+                 
+                  <input value="" name="user[email]" id="user_email" type="email" placeholder="e-mail">
+                     
+            </div>
+
+
+      </div>
+      
+  
+
+        <div class="parte8">
+
+            <h2 class="tituloinicial"> Un liker trabaja desde donde quiere, queremos saber cómo es ese lugar </h2><br/>
+
+          <div class="fieldformulario">
+
+              <div class="variableformulario">
+                  <%= f.label :type_computer, '¿Qué tipo de' %><br/>
+                   <%= f.label :type_computer, 'computador tienes?'%><br/> 
+                 <img src="<%=image_path('tipocomputador.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  
+
+                    <input type="radio" name="type_computer" value="1" /> De escritorio<br/>
+                    <input type="radio" name="type_computer" value="2" /> Portátil<br/>
+              </div>
+
+      
+
+            
+
+              <div class="variableformulario">
+                  <%= f.label :use_computer, '¿Quién usa el equipo' %><br/>
+                  <%= f.label :use_computer, 'normalmente?' %><br/>
+                  <img src="<%=image_path('usoequipo.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  
+                  
+                    <input type="radio" name="use_computer" value="1" /> Sólo lo uso yo<br/>
+                    <input type="radio" name="use_computer" value="2" /> Es de uso familiar<br/>
+              </div>
+
+     
+
+
+              <div class="variableformulario">
+                  <%= f.label :connection_internet, 'Tu conexión a' %><br/>
+                  <%= f.label :connection_internet, 'internet es de...' %><br/>
+                  <img src="<%=image_path('conexioninternet.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  
+                  
+                  <input type="radio" name="connection_internet" value="1" /> Menor de 2 MB<br/>
+                  <input type="radio" name="connection_internet" value="2" /> Entre 2 y 5 MB<br/>
+                  <input type="radio" name="connection_internet" value="3" /> Mayor a 5 MB<br/>
+                  <input type="radio" name="connection_internet" value="4" /> No sé la velocidad<br/>
+              </div>
+
+  
+
+                <div class="variableformulario">
+                  <%= f.label :computer_accessories, '¿Puedes hablar desde ' %><br/>
+                  <%= f.label :computer_accessories, 'tu computador?' %><br/>
+                  <img src="<%=image_path('accesorios.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                  
+                  
+                  <input type="radio" name="computer_accessories" value="1" /> Tengo diadema<br/>
+                  <input type="radio" name="computer_accessories" value="2" /> Manos libres<br/>
+                  <input type="radio" name="computer_accessories" value="3" /> Ninguna<br/>
+
+              </div>
+          
+
+        </div>
+
+
+
+        <div class="parte9">
+
+            <div class="fieldformulario">
+                
+            
+                        <h2 class="tituloinicial">Ahora imagina por un momento que estás trabajando desde el lugar que elegiste</h2><br/>
+              
+                  <%= f.label :comfort, '¿Qué tan cómodo crees que sería para trabajar, entendiendo que debes hablar con personas a través de tu computador? (Ten en cuenta el entorno, las distracciones, el riudo, la temperatura, las interrupciones, etc).' %><br/>
+                  <br/>
+
+                      <div class="variableformulario">
+                        
+                        <input type="radio" name="comfort" value="1" />Creo que funciona perfecto<br/>
+                      </div><br/>
+
+                      <div class="variableformulario">
+                        
+                        <input type="radio" name="comfort" value="2" /> Creo que debo hacer algunas mejoras<br/>
+                      </div><br/>
+
+                      <div class="variableformulario">
+                       
+                        <input type="radio" name="comfort" value="3" /> No estoy seguro que funcione<br/><br/>
+                      </div> <br/>
+                      
+
+            </div>
+
+        </div>
+
+          <div class="parte10">
+
+                <div class="fieldformulario">
+
+                  <%= f.label :avatar, 'Adjuntar foto de perfil'%><br/>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-6 col-lg-offset-4">
+                          <input name="user[avatar]" id="user_avatar" type="file"><br/>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                
+          </div>
+
+
+          <div class="parte11">
+
+                <div class="fieldformulario">
+                    <%= f.label :password,"Elija una contraseña"%>
+                    <% if @minimum_password_length %>
+                    <em>(<% @minimum_password_length %> Mínimo 8 carácteres)</em>
+                    <% end %><br/>
+                    <%= f.password_field :password, autocomplete: "off" %>
+                </div>
+
+                <div class="fieldformulario">
+                  <%= f.label :password_confirmation,"Por favor confirme contraseña"%><br/>
+                  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                </div>
+                  <br/>
+                  <br/>
+
+
+              <div class="fieldformulario">
+                     
+                  <form action="actualizar.php" method="get">
+                         
+                    <input type="submit" value="Borrar Datos" />
+                      
+                  </form>
+
+                  <input type="checkbox" name="recibir_info" checked>
+                    Deseo recibir notificaciones de las novedades
+                  <br> 
+
+                  <div class="actions">
+                    <%= f.submit "Enviar registro" %>
+                  </div>
+                  <% end %>
+
+              </div>
+
+             </div>
+
+          
+
+</div>
+</div>
+</section>

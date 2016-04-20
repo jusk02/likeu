@@ -1,0 +1,217 @@
+	
+	<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+	        <div class="container-fluid">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                 <a class="navbar-brand" href="#home">
+        				<img alt="LikeU" src="<%=image_path('likeU_compresslogo.png')%>">
+      				</a>
+	                <a class="navbar-brand page-scroll" href="#home">LikeU</a>
+	            </div>
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li role="LikeU" class="dropdown">
+   							<a class="dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">
+   							LikeU
+   							<span class="caret"></span>
+    						</a>
+				    		<ul class="dropdown-menu dropdown-menu-left">
+				    			<li>
+	                       			<a class="page-scroll" href="#home">Inicio</a>
+	                   			</li>
+				    			<li>
+	                       			<a class="page-scroll" href="#what">Lo que hacemos</a>
+	                   			</li>
+	                   			<li>
+			                        <a class="page-scroll" href="#how">Como lo hacemos?</a>
+			                    </li>
+				      			<li>
+			                        <a class="page-scroll" href="#why">Por que lo hacemos?</a>
+			                    </li>
+			           		</ul>
+				 		</li>                  
+	                    <li role="SoyLiker" class="dropdown">
+   							<a class="dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">
+   							Soy Liker
+   							<span class="caret"></span>
+    						</a>
+				    		<ul class="dropdown-menu dropdown-menu-left">
+				    			<li>
+	                       			 <a class="page-scroll" href="/quieroserliker">Inicio</a>
+	                   			</li>
+				    			<li>
+	                       			<a class="page-scroll" href="/quieroserliker#being-a-liker">Ser liker es...</a>
+	                   			</li>
+				      			<li>
+			                        <a class="page-scroll" href="/quieroserliker#our-likers">Nuestros Likers</a>
+			                    </li>
+			                    <li>
+			                        <a class="page-scroll" href="/quieroserliker#apply">Convertirme en Liker</a>
+			                    </li>
+				    		</ul>
+				 		</li>
+				 		<li>
+	                        <a class="page-scroll" href="#contact">Contacto</a>
+	                    </li>
+
+						<% if user_signed_in? %>
+	          					<li><p>Bienvenid@ <%= current_user.username%></p>
+	          						<%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %></li>
+	         				 		<% else %>
+	            				<li><%= link_to('Iniciar sesión', new_user_session_path)%></li>
+	          			<% end %>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container-fluid -->
+	 </nav>
+
+	
+	<header class="header-likeu">
+		<section id="home">
+			<div class="header-content">
+				 <div class="container">
+            		<div class="row">
+                		
+            		<div class="col-lg-3 col-md-3 col-lg-offset-1 text-center">
+						<img src="<%=image_path('logo.png')%>" class="logo img-responsive">
+					</div>	
+					<div class="col-lg-6 col-md-6 col-lg-offset-0">	
+						<h2><span>Más que Innovación en Call Center,</span></h2>
+					</div>
+					<div class="col-lg-6 col-md-6 col-lg-offset-2">	
+						<h1><span>somos como tú.</span></h1>	
+					</div>
+				</div>
+               </div>
+            </div>
+		</section>
+
+	</header>
+
+	<section class="bg-primary seccion-suave" id="what">
+		 <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                	<div class="row">
+	                	<div class="col-lg-5 col-lg-offset-0 col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-8 col-xs-offset-2">
+	                		<br>
+	                		<br>
+	                		<img src="<%=image_path('what.jpg')%>" class="wow bounceIn img-responsive img-circle img-center">
+	                		
+	                	</div>
+	                	<div class="col-lg-7 col-sm-7 col-xs-12">
+
+	                		<h2>Revolucionamos...</h2>
+	                		<p>Si crees que trabajar ya no es tomar el transporte público por horas y llegar a un espacio lleno de gente para hacer algo que no te gusta, dejame decirte que estás en lo correcto. La vida hoy se trata de equilibrio ya no somos como nuestros padres que necesitaban una corbata y un espacio frio y triste donde trabajar, ahora somos la generación del talento, en la era de la tecnología donde todo esta a la mano.</p>
+
+				 			<p>Este trabajo es para gente como tú,  gente con con talento, gente que sabe lo que quiere, gente que quiere llegar lejos, gente que entiende el valor del tiempo y su espacio, gente que vive la vida y que quiere trabaja, gente como tu. </p>
+	                	</div>
+	                </div>	
+				 	<br><h2>...¡déjanos mostrarte qué podemos hacer por ti!</h2>
+			 	</div>
+		 	</div>
+		</div>
+	</section>
+    
+
+
+     <section class="no-padding" id="how">
+     	<div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                	<br>
+     				<h2>¡Con Likers!</h2>
+     				<br>
+     				<p>Los Likers son personas que se conectan con tu marca, sin importar dónde se encuentren, para que sean ellos quienes hablen por ti. </p>
+     			</div>
+     		</div>
+     	</div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box text-center">
+                         <img src="<%=image_path('how.jpg')%>"class="wow bounceIn img-responsive img-circle img-center">
+                        <h3>No son agentes, son Likers</h3>
+                        <p>  Creemos que quien habla por ti es lo más importante. Por eso la búsqueda de likers no se limita a una ciudad, los encontramos en el mundo.</p> <br/>
+
+                        <p>Los Likers tienen en común que tienen afinidad con tu marca, que la conocen, que la elegirían, que creen en el valor de tu empresa.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="<%=image_path('how2.jpg')%>"class="wow bounceIn img-responsive img-circle img-center">
+                        <h3>Más capaces, más felices. </h3>
+                        <p class="text-muted">Tenemos la capacidad de encontrar personas con mejores perfiles, mejor preparados, que les gusta lo que hacen y cómo lo hacen, lo que se traduce en una menor rotación y mayor compromiso.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 text-center">
+                    <div class="service-box">
+                        <img src="<%=image_path('how3.jpg')%>"class="wow bounceIn img-responsive img-circle img-center">
+                        <h3>Seguimiento y control total</h3>
+                        <p class="text-muted">Se acabaron los desplazamientos.  A un click de distancia y en tiempo real puedes saber cómo va el cumplimiento de tus metas, cuál es el desempeño de los likers y disponer de estadísticas y reportes de sus resultados. Incluso puedes escuchar en línea cómo lo están haciendo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+                <div class="text-center">
+           			<h2 class="aside-sub">La satisfacción de tú cliente es el mejor resultado.</h2>
+               	</div>
+            
+
+
+
+        
+    </section>
+
+    <section class=" seccion-suave no-bottom" id="why">
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+                    <div class="hidden-lg hidden-md hidden-sm">
+                     <img width="150px" src="<%=image_path('why.jpg')%>"class="wow bounceIn img-center img-responsive img-circle">	
+                    </div>
+                    <div class="hidden-xs hidden-sm">
+                    <img width="150px" src="<%=image_path('how_aside.jpg')%>"class="img-responsive img-circle img-center">
+                    </div>
+                    <h2>Creemos que se puede hacer mejor</h2>
+                   
+                    <hr class="largo-left">
+                    <br>
+                    
+                    <p>No creemos en enormes espacios llenos de gente, trabajando por horas, haciendo algo que no les gusta y que no saben hacer bien.</p>
+                    <p>Creemos en personas que quieren lo que hacen, que agregan valor a su trabajo desde su propia experiencia y conocimiento.</p>
+                    <p>Evolucionamos, y ahora el contacto eficaz trasciende los teléfonos, los operarios y los supervisores. Ahora estamos en la era de la información, de la cercanía, la empatía y la inmediatez, y en Likeu estamos reinventando la forma de hacerlo.</p>
+
+                </div>
+                 <div class="col-lg-5 col-lg-offset-1 col-sm-6 col-sm-offset-0 hidden-xs">
+                 	 <img src="<%=image_path('why_person.png')%>"class="img-responsive img-center">
+                 </div>
+            </div>
+        </div>
+
+            
+
+    </section>
+            
+
+
+	
+
+	
+
+
+   
+
+

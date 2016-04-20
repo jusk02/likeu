@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Like U</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  
+  <script type="text/javascript" src="jquery-1.4.min.js"></script>
+  <script type="text/javascript" src="jquery.sheepItPlugin-1.1.1.min.js"></script>
+  
+
+</head>
+
+	
+<body>
+
+
+
+
+
+
+
+<%= yield %>
+
+<section id="about" class="bg-dark-sm">
+        <div class="container">
+            <div class="row">
+                <div id ="redes-sociales" class="col-lg-3 col-lg-offset-1 col-sm-4 text-center">
+                    <h3 class="section-heading">Siguenos en redes sociales!</h3>
+                    <hr class="primary">
+                    <a  href="http://www.facebook.com" target="_blank" title="Facebook"><i class="fa fa-2x fa-facebook wow bounceIn text-primary iconos-redes"></i></a>
+                    <a  href="http://www.facebook.com" target="_blank"><i class="fa fa-2x fa-instagram wow bounceIn text-primary iconos-redes"></i></a> 
+                    <a  href="http://www.facebook.com" target="_blank"><i class="fa fa-2x fa-youtube wow bounceIn text-primary iconos-redes"></i></a> 
+                    <a  href="http://www.facebook.com" target="_blank"><i class="fa fa-2x fa-twitter wow bounceIn text-primary iconos-redes"></i></a>
+                </div>
+
+                <div id ="contacto" class="col-lg-3 col-lg-offset-1 col-sm-4 contacto">
+                	<span>México</span><br/>
+                    <span >Piso 1, Presidente Masaryk 111, 11560</span><br/>
+                    <span >Ciudad de México, D.F., </span><br/>
+                    <span >(+52) 55 44 45 35 10</span><br/>
+                    <span ><a href="mailto:info@likeu.co" target="_self">info@likeu.mx</a></span><br/><br/>
+
+                    <span>Colombia</span><br/>
+                    <span >Cra 43 A # 1-50, piso 6, oficina 652,</span><br/>
+                    <span >Medellín</span><br/>
+                    <span >(+57) 4 448 08 04</span><br/>
+                    <span ><a href="mailto:info@likeu.co" target="_self">info@likeu.co</a></span><br/><br/>
+
+                </div>
+                <div id ="contacto" class="col-lg-3 col-lg-offset-1 col-sm-4 contacto">
+                <span>FAQ</span><br/>
+                <span>BLOG</span><br/>
+                </div>
+        	</div>
+        </div>	
+    </section>
+    <section id="footer" class="footer">
+    	<div class="text-center">
+    		<span>LikeU</span> <i class="fa fa-registered"></i> <span>2016</span>
+    	</div>
+    </section>
+
+</body>
+</html>
