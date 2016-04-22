@@ -17,56 +17,22 @@
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav navbar-right">
-	                    <li role="LikeU" class="dropdown">
-   							<a class="dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">
-   							LikeU
-   							<span class="caret"></span>
-    						</a>
-				    		<ul class="dropdown-menu dropdown-menu-left">
-				    			<li>
-	                       			<a class="page-scroll" href="#home">Inicio</a>
-	                   			</li>
-				    			<li>
-	                       			<a class="page-scroll" href="#what">Lo que hacemos</a>
-	                   			</li>
-	                   			<li>
-			                        <a class="page-scroll" href="#how">Como lo hacemos?</a>
-			                    </li>
-				      			<li>
-			                        <a class="page-scroll" href="#why">Por que lo hacemos?</a>
-			                    </li>
-			           		</ul>
-				 		</li>                  
-	                    <li role="SoyLiker" class="dropdown">
-   							<a class="dropdown-toggle" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">
-   							Soy Liker
-   							<span class="caret"></span>
-    						</a>
-				    		<ul class="dropdown-menu dropdown-menu-left">
-				    			<li>
-	                       			 <a class="page-scroll" href="/quieroserliker">Inicio</a>
-	                   			</li>
-				    			<li>
-	                       			<a class="page-scroll" href="/quieroserliker#being-a-liker">Ser liker es...</a>
-	                   			</li>
-				      			<li>
-			                        <a class="page-scroll" href="/quieroserliker#our-likers">Nuestros Likers</a>
-			                    </li>
-			                    <li>
-			                        <a class="page-scroll" href="/quieroserliker#apply">Convertirme en Liker</a>
-			                    </li>
-				    		</ul>
-				 		</li>
-				 		<li>
+	                   
+				    	<li>
+	                    	<a class="page-scroll" href="#what">Lo que hacemos</a>
+	                   	</li>
+	                   	<li>
+			                <a class="page-scroll" href="#how">Como lo hacemos?</a>
+			            </li>
+				      	<li>
+			                <a class="page-scroll" href="#why">Por que lo hacemos?</a>
+			            </li> 
+			            <li>
 	                        <a class="page-scroll" href="#contact">Contacto</a>
-	                    </li>
-
-						<% if user_signed_in? %>
-	          					<li><p>Bienvenid@ <%= current_user.username%></p>
-	          						<%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %></li>
-	         				 		<% else %>
-	            				<li><%= link_to('Iniciar sesión', new_user_session_path)%></li>
-	          			<% end %>
+	                    </li>                
+	                    <li>
+	                        <a class="page-scroll" href="/quieroserliker">Quiero ser Liker</a>
+	                   	</li>				 		
 	                </ul>
 	            </div>
 	            <!-- /.navbar-collapse -->
@@ -200,12 +166,96 @@
                  </div>
             </div>
         </div>
-
-            
-
     </section>
-            
 
+
+		<section id="contact">
+			<div class="contacto">
+
+				<h2>¡Saluda! Es gratis ;)</h2> 
+
+				<h3>Aquí estamos</h3>
+					
+					<p>Colombia</p>
+					<span>San Fernando Plaza, Torre Protección,</span><br/>
+					<span>Carrera 43 A # 1-50, piso 4, oficina 4018,</span><br/> 
+					<span>Medellín.(+57) 4 448 08 04.</span><br/> 
+					<span>info@likeu.co</span><br/>
+
+	 			<br/>
+
+	 				<p>México</p>
+					<span>Piso 1, Presidente Masaryk 111, 11560</span><br/> 
+					<span>Ciudad de México, D.F., </span><br/> 
+					<span>México (+52) 55 44 45 35 10.</span><br/>
+					<span>info@likeu.mx</span><br/>
+			
+					<img src="<%=image_path('contact/bubble.png')%>" style="width: 554px; height: 489px; object-fit: contain;">
+
+					<form>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">Password</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputFile">File input</label>
+					    <input type="file" id="exampleInputFile">
+					    <p class="help-block">Example block-level help text here.</p>
+					  </div>
+					  <div class="checkbox">
+					    <label>
+					      <input type="checkbox"> Check me out
+					    </label>
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+               
+            </div>
+		</section>
+
+		<section id="about" class="bg-dark-sm">
+        <div class="container">
+            <div class="row">
+                <div id ="redes-sociales" class="col-lg-3 col-lg-offset-1 col-sm-4 text-center">
+                    <h3 class="section-heading">Siguenos en redes sociales!</h3>
+                    <hr class="primary">
+                    <a  href="https://www.facebook.com/LikeU-Colombia-1726794850921997" target="_blank" title="Facebook"><i class="fa fa-2x fa-facebook wow bounceIn text-primary iconos-redes"></i></a>
+                    <a  href="http://www.facebook.com" target="_blank"><i class="fa fa-2x fa-instagram wow bounceIn text-primary iconos-redes"></i></a> 
+                    <a  href="http://www.facebook.com" target="_blank"><i class="fa fa-2x fa-youtube wow bounceIn text-primary iconos-redes"></i></a> 
+                    <a  href="http://www.facebook.com" target="_blank"><i class="fa fa-2x fa-twitter wow bounceIn text-primary iconos-redes"></i></a>
+                </div>
+
+                <div id ="contacto" class="col-lg-3 col-lg-offset-1 col-sm-4 contacto">
+                    <span>México</span><br/>
+                    <span >Piso 1, Presidente Masaryk 111, 11560</span><br/>
+                    <span >Ciudad de México, D.F., </span><br/>
+                    <span >(+52) 55 44 45 35 10</span><br/>
+                    <span ><a href="mailto:info@likeu.co" target="_self">info@likeu.mx</a></span><br/><br/>
+
+                    <span>Colombia</span><br/>
+                    <span >Cra 43 A # 1-50, piso 6, oficina 652,</span><br/>
+                    <span >Medellín</span><br/>
+                    <span >(+57) 4 448 08 04</span><br/>
+                    <span ><a href="mailto:info@likeu.co" target="_self">info@likeu.co</a></span><br/><br/>
+
+                </div>
+                <div id ="contacto" class="col-lg-3 col-lg-offset-1 col-sm-4 contacto">
+                <span>FAQ</span><br/>
+                <span>BLOG</span><br/>
+                <span><a href="/">Sitio corporativo</a></span><br/>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <section id="footer" class="footer">
+        <div class="text-center">
+            <span>LikeU</span> <i class="fa fa-registered"></i> <span>2016</span>
+        </div>
+    </section>
 
 	
 

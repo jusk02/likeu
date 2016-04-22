@@ -560,6 +560,7 @@ fieldset[disabled] .btn-default.active {
     background-color: #222;
 }
 
+
 .btn-primary {
     border-color: #f05f40;
     color: #fff;
@@ -613,6 +614,39 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff;
 }
 
+
+
+.btn-flotante {
+    box-shadow:10px 10px 25px rgba(0, 0, 0, 0.5); 
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    color: #222;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-flotante:hover,
+.btn-flotante:focus,
+.btn-flotante.focus,
+.btn-flotante:active,
+.btn-flotante.active,
+.open > .dropdown-toggle.btn-flotante {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F5E5;
+    color:  #00F5E5;
+    background-color: transparent;
+}
+
+.btn-flotante:active,
+.btn-flotante.active,
+.open > .dropdown-toggle.btn-flotante {
+    background-image: none;
+}
+
 .btn {
     border: 0;
     border-radius: 300px;
@@ -620,6 +654,7 @@ fieldset[disabled] .btn-primary.active {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
 }
+
 
 .btn-xl {
     padding: 15px 30px;
@@ -708,6 +743,32 @@ border-color: #00F5E5;
 .contacto
 {
     font-size: 11px;
+}
+
+.div-btn-flotante
+{
+
+height: 400px;
+width: 160px;
+float: right;  
+margin-top: 17%;
+          
+}
+
+.btn-permanente
+{
+
+
+position: fixed;
+
+z-index: 100;
+}
+
+.container {
+    background-image:url(yourimage.jpg);
+    background-position:center;
+    width:700px;
+    height:400px;
 }
 
 /*Campo teléfono en formulario*/
