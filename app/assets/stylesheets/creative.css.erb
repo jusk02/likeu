@@ -146,6 +146,22 @@ p {
     padding-bottom: 0px;
 }
 
+.no-top
+{
+    padding-top: 0px;
+}
+
+.top-amplio
+{
+    padding-top: 150px;
+}
+
+.contacto-pad
+{
+    padding-top: 0px;
+    padding-bottom: 200px;
+}
+
 .img-center {
     margin: 0 auto;
 }
@@ -764,12 +780,14 @@ position: fixed;
 z-index: 100;
 }
 
-.container {
-    background-image:url(yourimage.jpg);
-    background-position:center;
-    width:700px;
-    height:400px;
+.contacto-form
+ {
+    background-image:url(<%= asset_path 'contact/bubble.png' %>);
+    background-position:28% 90%;
+    background-repeat: no-repeat;
 }
+
+
 
 /*Campo teléfono en formulario*/
 
