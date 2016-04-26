@@ -312,9 +312,22 @@
             <div>
               <img src="<%=image_path('celular.png')%>" class="icono-form" class="wow bounceIn"><br/>
               <%= f.label :phone_contact, 'Celular' %><br>
-              <%= f.text_field :phone_contact %> 
+              <%= f.text_field :phone_contact%> 
             </div>
           </div>
+          <div class="form-area">
+            <%= f.label :password,"Elija una contraseña"%>
+            <% if @minimum_password_length %>
+            <em>(<% @minimum_password_length %> Mínimo 8 carácteres)</em>
+            <% end %><br/>
+            <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div class="form-area">
+            <%= f.label :password_confirmation,"Por favor confirme contraseña"%><br/>
+            <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+            
 
           <div>
             <img src="<%=image_path('correoelectronico.png')%>" class="icono-form" class="wow bounceIn"><br/>
@@ -369,26 +382,25 @@
                 <%= f.label :comfort, '¿Qué tan cómodo crees que sería para trabajar, entendiendo que debes hablar con personas a través de tu computador? (Ten en cuenta el entorno, las distracciones, el riudo, la temperatura, las interrupciones, etc).' %><br/>
                   <br/>
 
-                      <div class="variableformulario">
-                        
-                        <input type="radio" name="comfort" value="1" />Creo que funciona perfecto<br/>
-                      </div><br/>
+                      <div class="form-box round">
+                        <input type="radio" name="comfort" value="1" /><p>Creo que funciona perfecto</p>
+                      </div>
 
-                      <div class="variableformulario">
+                      <div class="form-box round">
                         
-                        <input type="radio" name="comfort" value="2" /> Creo que debo hacer algunas mejoras<br/>
-                      </div><br/>
+                        <input type="radio" name="comfort" value="2" /><p>Creo que debo hacer algunas mejoras</p>
+                      </div>
 
-                      <div class="variableformulario">
+                      <div class="form-box round">
                        
-                        <input type="radio" name="comfort" value="3" /> No estoy seguro que funcione<br/><br/>
-                      </div> <br/>
+                        <input type="radio" name="comfort" value="3" /><p> No estoy seguro que funcione</p>
+                      </div> 
                       
 
             </div>
 
         </div>
-
+<!-- 
           <div class="parte10">
 
                 <div class="form-area">
@@ -404,24 +416,12 @@
                 </div>
 
                 
-          </div>
+          </div> -->
 
 
           <div class="parte11">
 
-                <div class="form-area">
-                    <%= f.label :password,"Elija una contraseña"%>
-                    <% if @minimum_password_length %>
-                    <em>(<% @minimum_password_length %> Mínimo 8 carácteres)</em>
-                    <% end %><br/>
-                    <%= f.password_field :password, autocomplete: "off" %>
-                </div>
-
-                <div class="form-area">
-                  <%= f.label :password_confirmation,"Por favor confirme contraseña"%><br/>
-                  <%= f.password_field :password_confirmation, autocomplete: "off" %>
-                </div>
-                  <br/>
+               
                   <br/>
 
 
