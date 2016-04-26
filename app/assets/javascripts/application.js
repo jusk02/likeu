@@ -22,9 +22,9 @@
 //= require bootstrap
 //= require bootstrap.min
 //= require classie
+//= require reactive
 //= require turbolinks
-//= require jquery.sheepItPlugin.min
-//= require jquery.sheepItPlugin
+
 
 
 

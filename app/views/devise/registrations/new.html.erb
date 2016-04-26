@@ -48,30 +48,36 @@
                   
           <div class="form-box round text-center">
             <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="1" /> <p class="form-box-text">Estudiante universitario</p>
+            <input id="show_no_trabajador" type="radio" name="ocupation" value="1"/>
+            <p class="form-box-text">Estudiante universitario</p>
           </div>
           <div class="form-box round text-center">
             <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="2" /> <p class="form-box-text"> Trabajo como empleado</p>
+            <input type="radio" name="ocupation" value="2" id="show_trabajador"/>
+            <p class="form-box-text"> Trabajo como empleado</p>
           </div>
 
           <div class="form-box round text-center">
             <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="3"/> <p class="form-box-text">Estudio y trabajo como empleado</p>
+            <input type="radio" name="ocupation" value="3" id="show_trabajador"/>
+            <p class="form-box-text">Estudio y trabajo como empleado</p>
           </div>
           <div class="form-box round text-center">
             <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="4" /> <p class="form-box-text">Soy independiente</p>
+            <input type="radio" name="ocupation" value="4" id="show_trabajador"/>
+            <p class="form-box-text">Soy independiente</p>
           </div>
 
           <div class="form-box round text-center">
             <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="5" /> <p class="form-box-text"> Soy ama(o) de casa</p>
+            <input type="radio" name="ocupation" value="5" id="show_no_trabajador"/>
+            <p class="form-box-text"> Soy ama(o) de casa</p>
           </div>
 
           <div class="form-box round text-center">
             <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="6" /> <p class="form-box-text"> No trabajo ni estudio</p>
+            <input type="radio" name="ocupation" value="6" id="show_no_trabajador"/>
+            <p class="form-box-text"> No trabajo ni estudio</p>
           </div>      
         </div>
       </div>
@@ -83,8 +89,8 @@
         <br>
         <h2 class="titulo-form">¿Qué buscas?</h2>
         <div class=perfilesparte3>
-          <%= f.label :looking_for_employee, 'Perfil trabajador' %><br/>
-          <div class="form-area">
+          
+          <div id="trabajador" class="form-area">
             <div class="form-box round">
               <img src="<%=image_path('ingresosextras.png')%>" class="icono-form" class="wow bounceIn">
               <input type="radio" name="looking_for_employee" value="1" /><p class="form-box-text">Quiero ingresos extras</p>
@@ -100,8 +106,8 @@
           </div>
         </div>
         <div class=perfilesparte3>
-          <%= f.label :looking_for_independent, 'Perfil no trabajador' %><br />
-          <div class="form-area">    
+         
+          <div id="no_trabajador" class="form-area">    
             <div class="form-box round">
               <img src="<%=image_path('manejodetiempo.png')%>" class="icono-form" class="wow bounceIn">
               <input type="radio" name="looking_for_independent" value="4" /> <p class="form-box-text">Un trabajo que me permita manejar mi tiempo</p> 
@@ -129,7 +135,6 @@
         <div class="form-area">             
           <div class="form-box-multi round">
             <%= f.label :experience, 'Quiero aprender' %>
-            <%= f.label :experience, ' &nbsp' %>
             <img src="<%=image_path('quieroaprender.png')%>" class="icono-form" class="wow bounceIn"><br>
             <input type="radio" name="experience" value="1" /><p class="form-box-text">Tengo poca experiencia</p>
             <input type="radio" name="experience" value="2" /><p class="form-box-text">No tengo experiencia</p>

@@ -9,7 +9,11 @@
 (function($) {
     "use strict"; // Start of use strict
 
-
+        //secciones escondidas del formulario
+        $("div#trabajador").hide(true);
+        $("div#no_trabajador").hide(true);
+        //secciones escondidas del formulario
+        
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
@@ -52,26 +56,7 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
-     // Formulario Dinámico//
-
-    $(document).ready(function() {
-         
-        var sheepItForm = $('#sheepItForm').sheepIt({
-            separator: '',
-            allowRemoveLast: true,
-            allowRemoveCurrent: true,
-            allowRemoveAll: true,
-            allowAdd: true,
-            allowAddN: true,
-            maxFormsCount: 10,
-            minFormsCount: 0,
-            iniFormsCount: 0
-        });
-
-        
      
-    });
-    // Formulario Dinámico//
     //activador de dropdown//
    $(document).ready(function () {
         $('.dropdown-toggle').dropdown();
