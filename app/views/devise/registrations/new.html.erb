@@ -32,102 +32,14 @@
             </div>
             <div class="form-box round text-center">
               <img src="<%=image_path('femenino.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="sexo"value="Femenino" checked><br>
+              <input type="radio" name="sexo"value="Femenino"><br>
             </div>
           </div>
         </div>     
     </div> 
     
 
-    <div class="col-lg-10 col-md-10 col-lg-offset-1 text-center">            
-      <div id="parte2">
-        <br>
-        <br>
-        <h2 class="titulo-form">¿Actualmente a qué te dedicas?</h2><br/>
-        <div class="form-area">
-                  
-          <div class="form-box round text-center">
-            <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn">
-            <input id="show_no_trabajador" type="radio" name="ocupation" value="1"/>
-            <p class="form-box-text">Estudiante universitario</p>
-          </div>
-          <div class="form-box round text-center">
-            <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="2" id="show_trabajador"/>
-            <p class="form-box-text"> Trabajo como empleado</p>
-          </div>
-
-          <div class="form-box round text-center">
-            <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="3" id="show_trabajador"/>
-            <p class="form-box-text">Estudio y trabajo como empleado</p>
-          </div>
-          <div class="form-box round text-center">
-            <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="4" id="show_trabajador"/>
-            <p class="form-box-text">Soy independiente</p>
-          </div>
-
-          <div class="form-box round text-center">
-            <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="5" id="show_no_trabajador"/>
-            <p class="form-box-text"> Soy ama(o) de casa</p>
-          </div>
-
-          <div class="form-box round text-center">
-            <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn">
-            <input type="radio" name="ocupation" value="6" id="show_no_trabajador"/>
-            <p class="form-box-text"> No trabajo ni estudio</p>
-          </div>      
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center">  
-      <div id="parte3">
-        <br>
-        <br>
-        <h2 class="titulo-form">¿Qué buscas?</h2>
-        <div class=perfilesparte3>
-          
-          <div id="trabajador" class="form-area">
-            <div class="form-box round">
-              <img src="<%=image_path('ingresosextras.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_employee" value="1" /><p class="form-box-text">Quiero ingresos extras</p>
-            </div>
-            <div class="form-box round">
-              <img src="<%=image_path('busconuevosretos.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_employee" value="2" /><p class="form-box-text">Busco nuevos retos</p>
-            </div>
-            <div class="form-box round">
-              <img src="<%=image_path('calidaddevidaingresos.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_employee" value="3" /><p class="form-box-text">Balance calidad de vida - ingresos</p>
-            </div>
-          </div>
-        </div>
-        <div class=perfilesparte3>
-         
-          <div id="no_trabajador" class="form-area">    
-            <div class="form-box round">
-              <img src="<%=image_path('manejodetiempo.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_independent" value="4" /> <p class="form-box-text">Un trabajo que me permita manejar mi tiempo</p> 
-            </div>
-
-            <div class="form-box round">
-              <img src="<%=image_path('cualquierlugar.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_independent" value="5" /> <p class="form-box-text">Poder trabajar desde cualquier lugar</p>
-            </div>
-
-            <div class="form-box round">
-              <img src="<%=image_path('probarnuevo.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_independent" value="6" /><p class="form-box-text"> Quiero probar algo nuevo</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-        
-    <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
+    <div class="col-lg-10 col-md-10 col-lg-offset-1 text-center"> 
       <div class="parte4">
         <br>
         <br>
@@ -136,74 +48,36 @@
           <div class="form-box-multi round">
             <%= f.label :experience, 'Quiero aprender' %>
             <img src="<%=image_path('quieroaprender.png')%>" class="icono-form" class="wow bounceIn"><br>
-            <input type="radio" name="experience" value="1" /><p class="form-box-text">Tengo poca experiencia</p>
-            <input type="radio" name="experience" value="2" /><p class="form-box-text">No tengo experiencia</p>
+            <%= radio_button_tag(:experience, "Poca" ) %><br>
+            <%= label_tag(:experience, "Tengo poca experiencia", :class => "form-box-text") %><br>
+            <%= radio_button_tag(:experience, "Ninguna" ) %><br>
+            <%= label_tag(:experience, "No tengo experiencia", :class => "form-box-text") %><br>
           </div>
 
           <div class="form-box-multi round">
             <%= f.label :experience, 'He tenido varios trabajos (menos de 2 años)' %>         
             <img src="<%=image_path('variostrabajos.png')%>" class="icono-form" class="wow bounceIn"><br>
-            <input type="radio" name="experience" value="1" /> <p class="form-box-text">Menos de 1 año de experiencia</p>
-            <input type="radio" name="experience" value="2" /> <p class="form-box-text">Entre 1 y 2 años de experiencia</p>
+            <%= radio_button_tag(:experience, "Menos_de_1_año" ) %><br>
+            <%= label_tag(:experience, "Menos de 1 año de experiencia", :class => "form-box-text") %><br>
+            <%= radio_button_tag(:experience, "Entre_1_y_2" ) %><br>
+            <%= label_tag(:experience, "Entre 1 y 2 años de experiencia", :class => "form-box-text") %><br>
           </div>
 
           <div class="form-box-multi round">
             <%= f.label :experience, 'Tengo años de experiencia (más de 2 años)' %>
             <img src="<%=image_path('añosdeexperiencia.png')%>" class="icono-form" class="wow bounceIn"><br>
-            <input type="radio" name="experience" value="1" /><p class="form-box-text"> He tenido personas a cargo</p>
-            <input type="radio" name="experience" value="2" /><p class="form-box-text"> No he tenido personas a cargo</p>
+            <%= radio_button_tag(:experience, "Mas_de_2_con_personal" ) %><br>
+            <%= label_tag(:experience, "He tenido personas a cargo", :class => "form-box-text") %><br>
+            <%= radio_button_tag(:experience, "Mas_de_2_sin_personal") %><br>
+            <%= label_tag(:experience, "No he tenido personas a cargo", :class => "form-box-text") %><br>
           </div>
         </div>
       </div>
-    </div>
-
-
-    <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
-      <div class="parte5">
-        <br>
-        <br>
-        <h2 class="titulo-form">¿Cómo te gustaría trabajar?</h2><br/>
-        <div class="form-area">
-          <div class="form-box-multi round">
-            <%= f.label :would_work, 'Prefiero trabajar muchas horas seguidas, pero menos días a la semana.'%><br/>
-            <img src="<%=image_path('muchashoras.png')%>" class="icono-form" class="wow bounceIn"><br/>
-            <ul class="clean-list">
-              <li>
-                <input type="radio" name="would_work" value="1" /><span class="form-box-text">Menos de 4 horas</span><br>
-              </li>
-              <li>
-                <input type="radio" name="would_work" value="2" /><span class="form-box-text">6 horas</span><br>
-              </li>
-              <li>
-                <input type="radio" name="would_work" value="3" /><span class="form-box-text">8 horas</span><br>
-              </li>
-            </ul>
-          </div>
-                    
-          <div class="form-box-multi round">
-            <%= f.label :would_work, 'Prefiero trabajar pocas horas al día, más días en la semana'%><br/>
-            <img src="<%=image_path('pocashoras.png')%>" class="icono-form" class="wow bounceIn"><br/>
-            <input type="radio" name="would_work" value="1" /><span class="form-box-text">20 horas por semana</span><br>
-            <input type="radio" name="would_work" value="2" /><span class="form-box-text">30 horas por semana</span><br>
-            <input type="radio" name="would_work" value="3" /><span class="form-box-text">40 horas por semana</span><br>
-          </div>
-
-          <div class="form-box-multi round">
-            <%= f.label :would_work, 'Quiero administrar mi tiempo completamente.' %><br/>
-            <img src="<%=image_path('administrartiempo.png')%>" class="icono-form" class="wow bounceIn"><br/>
-            <input type="radio" name="would_work" value="1" /> 20 horas por semana<br/>
-            <input type="radio" name="would_work" value="2" /> 30 horas por semana<br/>
-            <input type="radio" name="would_work" value="3" /> 40 horas por semana<br/>
-          </div>
-        </div>
-      </div>
-    </div>
-
-     <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
+    
       <div class="parte6">
         <br>
         <br>
-        <h2 class="titulo-form">¿Qué tipos de trabajos has realizado?</h2><br/>         
+        <h3>¿Qué tipos de trabajos has realizado?</h3><br/>         
           <div class="form-area">
             <div class="form-box-multi round">
               <%= f.label :jobs_made, '¿Eres profesional' %><br/>
@@ -306,7 +180,176 @@
             </div>
           </div>
         </div>
+                  
+      <div id="parte2">
+        <br>
+        <br>
+        <h3>¿Actualmente a qué te dedicas?</h3><br/>
+        <div class="form-area">
+                  
+          <div class="form-box round text-center">
+            <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn">
+            <input id="show_no_trabajador" type="radio" name="ocupation" value="1"/>
+            <p class="form-box-text">Estudiante universitario</p>
+          </div>
+          <div class="form-box round text-center">
+            <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn">
+            <input type="radio" name="ocupation" value="2" id="show_trabajador"/>
+            <p class="form-box-text"> Trabajo como empleado</p>
+          </div>
+
+          <div class="form-box round text-center">
+            <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn">
+            <input type="radio" name="ocupation" value="3" id="show_trabajador"/>
+            <p class="form-box-text">Estudio y trabajo como empleado</p>
+          </div>
+          <div class="form-box round text-center">
+            <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn">
+            <input type="radio" name="ocupation" value="4" id="show_trabajador"/>
+            <p class="form-box-text">Soy independiente</p>
+          </div>
+
+          <div class="form-box round text-center">
+            <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn">
+            <input type="radio" name="ocupation" value="5" id="show_no_trabajador"/>
+            <p class="form-box-text"> Soy ama(o) de casa</p>
+          </div>
+
+          <div class="form-box round text-center">
+            <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn">
+            <input type="radio" name="ocupation" value="6" id="show_no_trabajador"/>
+            <p class="form-box-text"> No trabajo ni estudio</p>
+          </div>      
+        </div>
       </div>
+    </div>
+    
+    <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center">  
+      <div id="parte3">
+        <br>
+        <br>
+        <h2 class="titulo-form">Expectativas</h2>
+        <h3>¿Qué buscas?</h3>
+        <div class=perfilesparte3>
+          <div id="trabajador" class="form-area">
+            <div class="form-box round">
+              <img src="<%=image_path('ingresosextras.png')%>" class="icono-form" class="wow bounceIn">
+              <input type="radio" name="looking_for_employee" value="1" /><p class="form-box-text">Quiero ingresos extras</p>
+            </div>
+            <div class="form-box round">
+              <img src="<%=image_path('busconuevosretos.png')%>" class="icono-form" class="wow bounceIn">
+              <input type="radio" name="looking_for_employee" value="2" /><p class="form-box-text">Busco nuevos retos</p>
+            </div>
+            <div class="form-box round">
+              <img src="<%=image_path('calidaddevidaingresos.png')%>" class="icono-form" class="wow bounceIn">
+              <input type="radio" name="looking_for_employee" value="3" /><p class="form-box-text">Balance calidad de vida - ingresos</p>
+            </div>
+          </div>
+        </div>
+
+        <div class=perfilesparte3>
+          <div id="no_trabajador" class="form-area">    
+            <div class="form-box round">
+              <img src="<%=image_path('manejodetiempo.png')%>" class="icono-form" class="wow bounceIn">
+              <input type="radio" name="looking_for_independent" value="4" /> <p class="form-box-text">Un trabajo que me permita manejar mi tiempo</p> 
+            </div>
+
+            <div class="form-box round">
+              <img src="<%=image_path('cualquierlugar.png')%>" class="icono-form" class="wow bounceIn">
+              <input type="radio" name="looking_for_independent" value="5" /> <p class="form-box-text">Poder trabajar desde cualquier lugar</p>
+            </div>
+
+            <div class="form-box round">
+              <img src="<%=image_path('probarnuevo.png')%>" class="icono-form" class="wow bounceIn">
+              <input type="radio" name="looking_for_independent" value="6" /><p class="form-box-text"> Quiero probar algo nuevo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
+      <div class="parte5">
+        <br>
+        <br>
+        <h3>¿Cómo te gustaría trabajar?</h3><br/>
+        <div class="form-area">
+          <div class="form-box-multi round">
+            <%= f.label :would_work, 'Prefiero trabajar muchas horas seguidas, pero menos días a la semana.'%><br/>
+            <img src="<%=image_path('muchashoras.png')%>" class="icono-form" class="wow bounceIn"><br/>
+            <ul class="clean-list">
+              <li>
+                <input type="radio" name="would_work" value="1" /><span class="form-box-text">Menos de 4 horas</span><br>
+              </li>
+              <li>
+                <input type="radio" name="would_work" value="2" /><span class="form-box-text">6 horas</span><br>
+              </li>
+              <li>
+                <input type="radio" name="would_work" value="3" /><span class="form-box-text">8 horas</span><br>
+              </li>
+            </ul>
+          </div>
+                    
+          <div class="form-box-multi round">
+            <%= f.label :would_work, 'Prefiero trabajar pocas horas al día, más días en la semana'%><br/>
+            <img src="<%=image_path('pocashoras.png')%>" class="icono-form" class="wow bounceIn"><br/>
+            <input type="radio" name="would_work" value="1" /><span class="form-box-text">20 horas por semana</span><br>
+            <input type="radio" name="would_work" value="2" /><span class="form-box-text">30 horas por semana</span><br>
+            <input type="radio" name="would_work" value="3" /><span class="form-box-text">40 horas por semana</span><br>
+          </div>
+
+          <div class="form-box-multi round">
+            <%= f.label :would_work, 'Quiero administrar mi tiempo completamente.' %><br/>
+            <img src="<%=image_path('administrartiempo.png')%>" class="icono-form" class="wow bounceIn"><br/>
+            <input type="radio" name="would_work" value="1" /> 20 horas por semana<br/>
+            <input type="radio" name="would_work" value="2" /> 30 horas por semana<br/>
+            <input type="radio" name="would_work" value="3" /> 40 horas por semana<br/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+      <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
+        <div class="parte8">
+          <br>
+          <br>
+          <h3> Un liker trabaja desde donde quiere, queremos saber cómo es ese lugar </h3><br/>
+          <div class="form-area">
+            <div class="col-lg-3">
+              <%= f.label :type_computer, '¿Qué tipo de computador tienes?' %>
+              <img src="<%=image_path('tipocomputador.png')%>" class="icono-form" class="wow bounceIn"><br/>
+              <input type="radio" name="type_computer" value="1" /><br><span class="form-box-text">De escritorio</span><br>
+              <input type="radio" name="type_computer" value="2" /><br><span class="form-box-text">Portátil</span><br>
+            </div>
+            <div class="col-lg-3">
+              <%= f.label :use_computer, '¿Quién usa el equipo normalmente?' %>
+              <img src="<%=image_path('usoequipo.png')%>" class="icono-form" class="wow bounceIn"><br/>
+              <input type="radio" name="use_computer" value="1" /><br><span class="form-box-text"> Sólo lo uso yo</span><br>
+              <input type="radio" name="use_computer" value="2" /><br><span class="form-box-text">Es de uso familiar</span><br>
+            </div>
+            <div class="col-lg-3">
+              <%= f.label :connection_internet, 'Tu conexión a internet es de...' %><br/>
+              <img src="<%=image_path('conexioninternet.png')%>" class="icono-form" class="wow bounceIn"><br/>
+              <input type="radio" name="connection_internet" value="1" /><br><span class="form-box-text">Menor de 2 MB</span><br>
+              <input type="radio" name="connection_internet" value="2" /><br><span class="form-box-text">Entre 2 y 5 MB</span><br>
+              <input type="radio" name="connection_internet" value="3" /><br><span class="form-box-text">Mayor a 5 MB</span><br>
+              <input type="radio" name="connection_internet" value="4" /><br><span class="form-box-text">No sé la velocidad</span><br>
+            </div>
+            <div class="col-lg-3">
+              <%= f.label :computer_accessories, '¿Puedes hablar desde tu computador?' %>
+              <img src="<%=image_path('accesorios.png')%>" class="icono-form" class="wow bounceIn"><br/>
+              <input type="radio" name="computer_accessories" value="1" /><br><span class="form-box-text">Tengo diadema</span><br>
+              <input type="radio" name="computer_accessories" value="2" /><br><span class="form-box-text">Manos libres</span><br>
+              <input type="radio" name="computer_accessories" value="3" /><br><span class="form-box-text">Ninguna</span><br>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+
+
 
       <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
         <div class="parte7">
@@ -342,41 +385,6 @@
         </div>
       </div> 
 
-      <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
-        <div class="parte8">
-          <br>
-          <br>
-          <h2 > Un liker trabaja desde donde quiere, queremos saber cómo es ese lugar </h2><br/>
-          <div class="form-area">
-            <div class="col-lg-3">
-              <%= f.label :type_computer, '¿Qué tipo de computador tienes?' %>
-              <img src="<%=image_path('tipocomputador.png')%>" class="icono-form" class="wow bounceIn"><br/>
-              <input type="radio" name="type_computer" value="1" /><br><span class="form-box-text">De escritorio</span><br>
-              <input type="radio" name="type_computer" value="2" /><br><span class="form-box-text">Portátil</span><br>
-            </div>
-            <div class="col-lg-3">
-              <%= f.label :use_computer, '¿Quién usa el equipo normalmente?' %>
-              <img src="<%=image_path('usoequipo.png')%>" class="icono-form" class="wow bounceIn"><br/>
-              <input type="radio" name="use_computer" value="1" /><br><span class="form-box-text"> Sólo lo uso yo</span><br>
-              <input type="radio" name="use_computer" value="2" /><br><span class="form-box-text">Es de uso familiar</span><br>
-            </div>
-            <div class="col-lg-3">
-              <%= f.label :connection_internet, 'Tu conexión a internet es de...' %><br/>
-              <img src="<%=image_path('conexioninternet.png')%>" class="icono-form" class="wow bounceIn"><br/>
-              <input type="radio" name="connection_internet" value="1" /><br><span class="form-box-text">Menor de 2 MB</span><br>
-              <input type="radio" name="connection_internet" value="2" /><br><span class="form-box-text">Entre 2 y 5 MB</span><br>
-              <input type="radio" name="connection_internet" value="3" /><br><span class="form-box-text">Mayor a 5 MB</span><br>
-              <input type="radio" name="connection_internet" value="4" /><br><span class="form-box-text">No sé la velocidad</span><br>
-            </div>
-            <div class="col-lg-3">
-              <%= f.label :computer_accessories, '¿Puedes hablar desde tu computador?' %>
-              <img src="<%=image_path('accesorios.png')%>" class="icono-form" class="wow bounceIn"><br/>
-              <input type="radio" name="computer_accessories" value="1" /><br><span class="form-box-text">Tengo diadema</span><br>
-              <input type="radio" name="computer_accessories" value="2" /><br><span class="form-box-text">Manos libres</span><br>
-              <input type="radio" name="computer_accessories" value="3" /><br><span class="form-box-text">Ninguna</span><br>
-            </div>
-          </div>
-        </div>  
 
         <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
           <div class="parte9">
@@ -385,74 +393,35 @@
             <div class="form-area">
               <h2>Ahora imagina por un momento que estás trabajando desde el lugar que elegiste</h2>
                 <%= f.label :comfort, '¿Qué tan cómodo crees que sería para trabajar, entendiendo que debes hablar con personas a través de tu computador? (Ten en cuenta el entorno, las distracciones, el riudo, la temperatura, las interrupciones, etc).' %><br/>
-                  <br/>
-
-                      <div class="form-box round">
-                        <input type="radio" name="comfort" value="1" /><p>Creo que funciona perfecto</p>
-                      </div>
-
-                      <div class="form-box round">
-                        
-                        <input type="radio" name="comfort" value="2" /><p>Creo que debo hacer algunas mejoras</p>
-                      </div>
-
-                      <div class="form-box round">
-                       
-                        <input type="radio" name="comfort" value="3" /><p> No estoy seguro que funcione</p>
-                      </div> 
-                      
-
-            </div>
-
-        </div>
-<!-- 
-          <div class="parte10">
-
-                <div class="form-area">
-
-                  <%= f.label :avatar, 'Adjuntar foto de perfil'%><br/>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-lg-6 col-lg-offset-4">
-                          <input name="user[avatar]" id="user_avatar" type="file"><br/>
-                        </div>
-                      </div>
-                    </div>
+                <br/>
+                <div class="form-box round">
+                  <input type="radio" name="comfort" value="1" /><p>Creo que funciona perfecto</p>
                 </div>
-
-                
-          </div> -->
-
-
-          <div class="parte11">
-
-               
-                  <br/>
-
-
-              <div class="form-area">
-                     
-                  <form action="actualizar.php" method="get">
-                         
-                    <input type="submit" value="Borrar Datos" />
-                      
-                  </form>
-
-                  <input type="checkbox" name="recibir_info" checked>
-                    Deseo recibir notificaciones de las novedades
-                  <br> 
-
-                  <div class="actions">
-                    <%= f.submit "Enviar registro" %>
-                  </div>
-                  <% end %>
-
+                <div class="form-box round">
+                  <input type="radio" name="comfort" value="2" /><p>Creo que debo hacer algunas mejoras</p>
+                </div>
+                <div class="form-box round">
+                  <input type="radio" name="comfort" value="3" /><p> No estoy seguro que funcione</p>
+                </div> 
               </div>
+            </div>
+          </div>  
 
-             </div>
-
-          
-
-</div>
-</div>
+        <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
+          <div class="parte11">
+            <br/>
+            <div class="form-area">
+              <input type="checkbox" name="recibir_info" checked>
+                Deseo recibir notificaciones de las novedades
+              <br> 
+              <div class="actions">
+                <%= f.submit "Enviar registro" %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
 </section>
