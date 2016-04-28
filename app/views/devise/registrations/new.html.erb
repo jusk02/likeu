@@ -17,9 +17,10 @@
     <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
-        <div id="parte1">
+        <div id="datos">
           <h2 class="titulo-form">Datos personales</h2>
-          <div class="form-area">
+          <a href="#" id="show_datos_personales"><i class="fa fa-reorder text-primary"></i></a>
+          <div id="datos_personales" class="form-area page-scroll">
             <%= f.label :username, '¿Queremos saber cuál es tu nombre?' %><br>
             <%= f.text_field :username%><br>
             <%= f.label :birthdate, 'Tu fecha de nacimiento' %><br>
@@ -40,10 +41,12 @@
     
 
     <div class="col-lg-10 col-md-10 col-lg-offset-1 text-center"> 
-      <div class="parte4">
+     
         <br>
         <br>
         <h2 class="titulo-form">Cuéntanos sobre tu experiencia</h2><br/>
+        <a href="#" target="_blank" id="show_experiencia"><i class="fa fa-reorder text-primary"></i></a>
+        <div id="experiencia">
         <div class="form-area">             
           <div class="form-box-multi round">
             <%= f.label :experience, 'Quiero aprender' %>
@@ -72,9 +75,9 @@
             <%= label_tag(:experience, "No he tenido personas a cargo", :class => "form-box-text") %><br>
           </div>
         </div>
-      </div>
+      
     
-      <div class="parte6">
+      <div class="trabajo_hecho">
         <br>
         <br>
         <h3>¿Qué tipos de trabajos has realizado?</h3><br/>         
@@ -222,53 +225,56 @@
           </div>      
         </div>
       </div>
+      </div>
     </div>
     
     <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center">  
-      <div id="parte3">
+      
         <br>
         <br>
         <h2 class="titulo-form">Expectativas</h2>
-        <h3>¿Qué buscas?</h3>
-        <div class=perfilesparte3>
-          <div id="trabajador" class="form-area">
-            <div class="form-box round">
-              <img src="<%=image_path('ingresosextras.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_employee" value="1" /><p class="form-box-text">Quiero ingresos extras</p>
-            </div>
-            <div class="form-box round">
-              <img src="<%=image_path('busconuevosretos.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_employee" value="2" /><p class="form-box-text">Busco nuevos retos</p>
-            </div>
-            <div class="form-box round">
-              <img src="<%=image_path('calidaddevidaingresos.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_employee" value="3" /><p class="form-box-text">Balance calidad de vida - ingresos</p>
-            </div>
-          </div>
-        </div>
-
-        <div class=perfilesparte3>
-          <div id="no_trabajador" class="form-area">    
-            <div class="form-box round">
-              <img src="<%=image_path('manejodetiempo.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_independent" value="4" /> <p class="form-box-text">Un trabajo que me permita manejar mi tiempo</p> 
-            </div>
-
-            <div class="form-box round">
-              <img src="<%=image_path('cualquierlugar.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_independent" value="5" /> <p class="form-box-text">Poder trabajar desde cualquier lugar</p>
-            </div>
-
-            <div class="form-box round">
-              <img src="<%=image_path('probarnuevo.png')%>" class="icono-form" class="wow bounceIn">
-              <input type="radio" name="looking_for_independent" value="6" /><p class="form-box-text"> Quiero probar algo nuevo</p>
+        <a href="#expectativas" id="show_expectativas"><i class="fa fa-reorder text-primary"></i></a>
+        <div id="expectativas">
+          <h3>¿Qué buscas?</h3>
+          <div class=perfilesparte3>
+            <div id="trabajador" class="form-area">
+              <div class="form-box round">
+                <img src="<%=image_path('ingresosextras.png')%>" class="icono-form" class="wow bounceIn">
+                <input type="radio" name="looking_for_employee" value="1" /><p class="form-box-text">Quiero ingresos extras</p>
+              </div>
+              <div class="form-box round">
+                <img src="<%=image_path('busconuevosretos.png')%>" class="icono-form" class="wow bounceIn">
+                <input type="radio" name="looking_for_employee" value="2" /><p class="form-box-text">Busco nuevos retos</p>
+              </div>
+              <div class="form-box round">
+                <img src="<%=image_path('calidaddevidaingresos.png')%>" class="icono-form" class="wow bounceIn">
+                <input type="radio" name="looking_for_employee" value="3" /><p class="form-box-text">Balance calidad de vida - ingresos</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>    
 
-    <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center"> 
+          <div class=perfilesparte3>
+            <div id="no_trabajador" class="form-area">    
+              <div class="form-box round">
+                <img src="<%=image_path('manejodetiempo.png')%>" class="icono-form" class="wow bounceIn">
+                <input type="radio" name="looking_for_independent" value="4" /> <p class="form-box-text">Un trabajo que me permita manejar mi tiempo</p> 
+              </div>
+
+              <div class="form-box round">
+                <img src="<%=image_path('cualquierlugar.png')%>" class="icono-form" class="wow bounceIn">
+                <input type="radio" name="looking_for_independent" value="5" /> <p class="form-box-text">Poder trabajar desde cualquier lugar</p>
+              </div>
+
+              <div class="form-box round">
+                <img src="<%=image_path('probarnuevo.png')%>" class="icono-form" class="wow bounceIn">
+                <input type="radio" name="looking_for_independent" value="6" /><p class="form-box-text"> Quiero probar algo nuevo</p>
+              </div>
+            </div>
+          </div>
+      
+       
+
+   
       <div class="parte5">
         <br>
         <br>
@@ -307,7 +313,7 @@
           </div>
         </div>
       </div>
-    </div>
+   
 
 
 
@@ -345,7 +351,9 @@
               <input type="radio" name="computer_accessories" value="3" /><br><span class="form-box-text">Ninguna</span><br>
             </div>
           </div>
-        </div>  
+        </div> 
+        </div> 
+         </div>
       </div>
 
 
