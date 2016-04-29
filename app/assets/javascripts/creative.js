@@ -15,6 +15,7 @@
         $("div#datos_personales").hide(true);
         $("div#experiencia").hide(true);
         $("div#expectativas").hide(true);
+        $("div#contactof").hide(true);
         //secciones escondidas del formulario
         
 
