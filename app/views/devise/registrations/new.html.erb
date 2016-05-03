@@ -25,7 +25,7 @@
             <%= f.label :username, '¿Queremos saber cuál es tu nombre?' %><br>
             <%= f.text_field :username%><br>
             <%= f.label :birthdate, 'Tu fecha de nacimiento' %><br>
-            <%= f.date_select :birthdate, :order => [:day, :month, :year] %><br>
+            <%= f.date_select :birthdate, :order => [:day, :month, :year],:start_year => 1950 %><br>
             <%= f.label :gender, '¿Cuál es tu género?' %><br>
              
             <div class="form-box round text-center">
@@ -86,19 +86,12 @@
             <div class="form-box-multi round">
               <%= f.label :jobs_made, '¿Eres profesional universitario?' %><br/>
               <img src="<%=image_path('profesionaluniversitario.png')%>" class="icono-form" class="wow bounceIn"><br/>
-              <%= f.label :jobs_made, 'Área' %><br/>          
-              <%= f.select(:jobs_made, ['Artes','Ciencias agrarias','Ciencias de la salud','Ciencias económicas y administrativas','Ciencias exactas y naturales','Ciencias sociales y humanas','Comunicaciones','Derecho y ciencias políticas','Educación','Educación física, recreación y deportes','Idiomas','Ingeniería'], {}, { :class => 'likeu-select' }) %>
-                        
-              <%= f.label :jobs_made, 'Nivel' %><br/>
-              <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;" onchange="this.style.width=200">Nivel <br/>
-                <option>Técnico</option>
-                <option>Tecnológico</option>
-                <option>Pregrado</option>
-                <option>Especialización</option>
-                <option>Maestría</option>
-                <option>Doctorado</option>
-                <option>Posdoctorado</option>
-              </select><br/>
+              <%= f.label :jobs_made, 'Área' %>         
+              <%= f.select(:jobs_made, ['Artes','Ciencias agrarias','Ciencias de la salud','Ciencias económicas y administrativas','Ciencias exactas y naturales','Ciencias sociales y humanas','Comunicaciones','Derecho y ciencias políticas','Educación','Educación física, recreación y deportes','Idiomas','Ingeniería'],{:prompt => 'Seleccionar'}, { :class => 'likeu-select' }) %>
+               <br/>         
+              <%= f.label :jobs_made, 'Nivel' %>
+              <%= f.select(:jobs_made, ['Técnico','Tecnológico','Pregrado','Posgrado'], {}, { :class => 'likeu-select' }) %>
+              
             </div>
             <div class="form-box-multi round">
               <%= f.label :jobs_made, '¿Qué actividad' %><br/>

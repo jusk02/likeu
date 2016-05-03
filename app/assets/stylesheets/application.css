@@ -14,6 +14,7 @@
  
  
  *= require home
+ *= require bootstrap_and_overrides
  *= require bootstrap
  *= require creative
  *= require animate.min
