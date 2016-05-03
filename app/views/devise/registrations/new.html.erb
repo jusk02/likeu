@@ -39,6 +39,44 @@
               </div>
             </div>
 
+            <h3>¿Actualmente a qué te dedicas?</h3><br/>
+            <div class="form-area">
+                      
+              <div class="form-box round text-center">
+                <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn">
+                <%= f.radio_button :do, 'Estudiante', :id => "show_no_trabajador"%><br>
+                <p class="form-box-text">Estudiante universitario</p>
+              </div>
+              <div class="form-box round text-center">
+                <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn">
+                <%= f.radio_button :do, 'Empleado', :id => "show_trabajador"%><br>
+                <p class="form-box-text"> Trabajo como empleado</p>
+              </div>
+
+              <div class="form-box round text-center">
+                <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn">
+                <%= f.radio_button :do, 'Estudiante y empleado', :id => "show_trabajador"%><br>
+                <p class="form-box-text">Estudio y trabajo como empleado</p>
+              </div>
+              <div class="form-box round text-center">
+                <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn">
+                <%= f.radio_button :do, 'Independiente', :id => "show_trabajador"%><br>
+                <p class="form-box-text">Soy independiente</p>
+              </div>
+
+              <div class="form-box round text-center">
+                <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn">
+                <%= f.radio_button :do, 'Ama de casa', :id => "show_no_trabajador"%><br>
+                <p class="form-box-text"> Soy ama(o) de casa</p>
+              </div>
+
+              <div class="form-box round text-center">
+                <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn">
+                <%= f.radio_button :do, 'no estudia no trabaja', :id => "show_no_trabajador"%><br>
+                <p class="form-box-text"> No trabajo ni estudio</p>
+              </div>      
+            </div>
+
 
           </div>
           <div id="menu1" class="tab-pane fade">
