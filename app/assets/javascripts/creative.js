@@ -10,12 +10,12 @@
     "use strict"; // Start of use strict
 
         //secciones escondidas del formulario
-        $("div#trabajador").hide(true);
-        $("div#no_trabajador").hide(true);
-        $("div#datos_personales").hide(true);
-        $("div#experiencia").hide(true);
-        $("div#expectativas").hide(true);
-        $("div#contactof").hide(true);
+        // $("div#trabajador").hide(true);
+        // $("div#no_trabajador").hide(true);
+        // $("div#datos_personales").hide(true);
+        // $("div#experiencia").hide(true);
+        // $("div#expectativas").hide(true);
+        // $("div#contactof").hide(true);
         //secciones escondidas del formulario
         
 
