@@ -87,23 +87,10 @@
               <%= f.label :jobs_made, '¿Eres profesional universitario?' %><br/>
               <img src="<%=image_path('profesionaluniversitario.png')%>" class="icono-form" class="wow bounceIn"><br/>
               <%= f.label :jobs_made, 'Área' %><br/>          
-              <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Área <br/>
-                <option>Artes</option>
-                <option>Ciencias agrarias</option>
-                <option>Ciencias de la salud</option>
-                <option>Ciencias económicas y administrativas</option>
-                <option>Ciencias exactas y naturales</option>
-                <option>Ciencias sociales y humanas</option>
-                <option>Comunicaciones</option>
-                <option>Derecho y ciencias políticas</option>
-                <option>Educación</option>
-                <option>Educación física, recreación y deportes</option>
-                <option>Idiomas</option>
-                <option>Ingeniería</option>
-                </select><br/>
+              <%= f.select(:jobs_made, ['Artes','Ciencias agrarias','Ciencias de la salud','Ciencias económicas y administrativas','Ciencias exactas y naturales','Ciencias sociales y humanas','Comunicaciones','Derecho y ciencias políticas','Educación','Educación física, recreación y deportes','Idiomas','Ingeniería'], {}, { :class => 'likeu-select' }) %>
                         
               <%= f.label :jobs_made, 'Nivel' %><br/>
-              <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;font-size:12px" onchange="this.style.width=200">Nivel <br/>
+              <select name="jobs_made" style="width:150px;border:1px solid #00A7C4;background-color:#00F5E5;color:black;" onchange="this.style.width=200">Nivel <br/>
                 <option>Técnico</option>
                 <option>Tecnológico</option>
                 <option>Pregrado</option>
