@@ -12,12 +12,11 @@
  *
 
  
-
+ 
  *= require home
+ *= require bootstrap
  *= require creative
  *= require animate.min
- *= require bootstrap
- *= require bootstrap_and_overrides
  *= require_self
  */
 
