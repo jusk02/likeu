@@ -10,80 +10,141 @@
       <div class="col-lg-8 col-lg-offset-2">
 
         <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-          <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-          <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+          <li class="active"><a data-toggle="tab" href="#part1">Home</a></li>
+          <li><a data-toggle="tab" href="#part2">Menu 1</a></li>
+          <li><a data-toggle="tab" href="#part3">Menu 2</a></li>
         </ul>
 
         <div class="tab-content">
-          <div id="home" class="tab-pane fade in active">
+
+          <div id="part1" class="tab-pane fade in active">
             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
             <h2>Datos personales</h2>
 
-             <div id="datos_personales">
+             <div class="col-lg-12 col-sm-12 col-xs-12" id="datos_personales">
               <br>
-              <%= f.label :username, 'Mi nombre es ' %>
-              <%= f.text_field :username , :class => 'likeu-input form-control'%>
-              <%= f.label :birthdate, 'naci el ' %>
-              <%= f.date_select :birthdate,:prompt => { :year => 'Año', :month => 'Mes', :day => 'Dia' },:order => [:day , :month, :year],:start_year => 1900, :end_year => 1998,:class => "form-control"  %><br>
-              <%= f.label :gender, '¿Cuál es tu género?' %><br>
-               
-              <div class="form-box round text-center">
-                <img src="<%=image_path('masculino.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :gender, 'Masculino' %><br> 
+
+              <div class="col-lg-12 col-sm-12 col-xs-12 text-center">
+                <%= f.label :username, 'Mi nombre es ' %>
+                <%= f.text_field :username , :class => 'likeu-input form-control'%>
+                <%= f.label :birthdate, 'naci el ' %>
+                <%= f.date_select :birthdate,:prompt => { :year => 'Año', :month => 'Mes', :day => 'Dia' },:order => [:day , :month, :year],:start_year => 1900, :end_year => 1998,:class => "form-control"  %>
               </div>
-              <div class="form-box round text-center">
-                <img src="<%=image_path('femenino.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :gender, 'Femenino' %><br> 
+              <br>
+              <br>
+              <br>
+              <br>
+                  <div class="col-lg-4 col-sm-12 col-xs-12 text-center">
+                  <br>
+                  <br>
+                    <%= f.label :gender, '¿Cuál es tu género?' %>
+                  </div>
+
+                  <div class="col-lg-2 col-sm-6 col-xs-6">
+                    <div class="form-box round text-center">
+                      <img src="<%=image_path('masculino.png')%>" class="icono-form" class="wow bounceIn">
+                      <%= f.radio_button :gender, 'Masculino' %><br> 
+                    </div>
+                  </div>
+
+                  <div class="col-lg-2 col-sm-6 col-xs-6">
+                    <div class="form-box round text-center">
+                      <img src="<%=image_path('femenino.png')%>" class="icono-form" class="wow bounceIn">
+                      <%= f.radio_button :gender, 'Femenino' %><br> 
+                    </div>
+                  </div>
+                </div>
               </div>
+
+
+                    
+                     
+                    
+                    
             </div>
 
-            <h3>¿Actualmente a qué te dedicas?</h3><br/>
+            <strong>¿Actualmente a qué te dedicas?</strong><br/>
             <div class="form-area">
-                      
-              <div class="form-box round text-center">
-                <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :do, 'Estudiante', :id => "show_no_trabajador"%><br>
-                <p class="form-box-text">Estudiante universitario</p>
+              <div class="col-lg-2 col-sm-6 col-xs-6">        
+                <div class="form-box round text-center">
+                  <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn">
+                  <%= f.radio_button :do, 'Estudiante', :id => "show_no_trabajador"%><br>
+                  <p class="form-box-text">Estudiante universitario</p>
+                </div>
               </div>
-              <div class="form-box round text-center">
-                <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :do, 'Empleado', :id => "show_trabajador"%><br>
-                <p class="form-box-text"> Trabajo como empleado</p>
+              <div class="col-lg-2 col-sm-6 col-xs-6">  
+                <div class="form-box round text-center">
+                  <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn">
+                  <%= f.radio_button :do, 'Empleado', :id => "show_trabajador"%><br>
+                  <p class="form-box-text"> Trabajo como empleado</p>
+                </div>
               </div>
-
-              <div class="form-box round text-center">
-                <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :do, 'Estudiante y empleado', :id => "show_trabajador"%><br>
-                <p class="form-box-text">Estudio y trabajo como empleado</p>
+              <div class="col-lg-2 col-sm-6 col-xs-6">  
+                <div class="form-box round text-center">
+                  <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn">
+                  <%= f.radio_button :do, 'Estudiante y empleado', :id => "show_trabajador"%><br>
+                  <p class="form-box-text">Estudio y trabajo como empleado</p>
+                </div>
               </div>
-              <div class="form-box round text-center">
-                <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :do, 'Independiente', :id => "show_trabajador"%><br>
-                <p class="form-box-text">Soy independiente</p>
+              <div class="col-lg-2 col-sm-6 col-xs-6">  
+                <div class="form-box round text-center">
+                  <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn">
+                  <%= f.radio_button :do, 'Independiente', :id => "show_trabajador"%><br>
+                  <p class="form-box-text">Soy independiente</p>
+                </div>
               </div>
-
-              <div class="form-box round text-center">
-                <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :do, 'Ama de casa', :id => "show_no_trabajador"%><br>
-                <p class="form-box-text"> Soy ama(o) de casa</p>
+              <div class="col-lg-2 col-sm-6 col-xs-6">  
+                <div class="form-box round text-center">
+                  <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn">
+                  <%= f.radio_button :do, 'Ama de casa', :id => "show_no_trabajador"%><br>
+                  <p class="form-box-text"> Soy ama(o) de casa</p>
+                </div>
               </div>
-
-              <div class="form-box round text-center">
-                <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn">
-                <%= f.radio_button :do, 'no estudia no trabaja', :id => "show_no_trabajador"%><br>
-                <p class="form-box-text"> No trabajo ni estudio</p>
-              </div>      
+              <div class="col-lg-2 col-sm-6 col-xs-6">
+                <div class="form-box round text-center">
+                  <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn">
+                  <%= f.radio_button :do, 'no estudia no trabaja', :id => "show_no_trabajador"%><br>
+                  <p class="form-box-text"> No trabajo ni estudio</p>
+                </div> 
+              </div>       
             </div>
 
+            
+              <div>
+                <img src="<%=image_path('celular.png')%>" class="icono-form" class="wow bounceIn"><br/>
+                <%= f.label :phone_contact, 'Celular' %><br>
+                <%= f.text_field :phone_contact%> 
+              </div>
+            
+            <div>
+              <%= f.label :password,"Elija una contraseña"%>
+              <% if @minimum_password_length %>
+                <em>(<% @minimum_password_length %> Mínimo 8 carácteres)</em>
+              <% end %><br/>
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div>
+              <%= f.label :password_confirmation,"Por favor confirme contraseña"%><br/>
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+              
+            <div>
+              <img src="<%=image_path('correoelectronico.png')%>" class="icono-form" class="wow bounceIn"><br/>
+              <%= f.label :email, 'Correo electrónico' %><br/>
+              <input value="" name="user[email]" id="user_email" type="email" placeholder="e-mail">
+            </div>
 
           </div>
-          <div id="menu1" class="tab-pane fade">
+          
+
+
+          <div id="part2" class="tab-pane fade">
             <h3>Menu 1</h3>
             <p>Some content in menu 1.</p>
           </div>
-          <div id="menu2" class="tab-pane fade">
+          <div id="part3" class="tab-pane fade">
             <h3>Menu 2</h3>
             <p>Some content in menu 2.</p>
             <% end %>

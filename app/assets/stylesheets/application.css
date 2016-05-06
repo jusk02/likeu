@@ -21,8 +21,18 @@
  *= require_self
  */
 
- @import url(https://fonts.googleapis.com/css?family=Oswald);
 
+
+
+
+ @font-face {
+	font-family: 'Futura';
+	src: url('futuramed-bt-webfont.eot'); /* IE9 Compat Modes */
+	src: url('futuramed-bt-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('futuramed-bt-webfont.woff') format('woff'), /* Modern Browsers */
+	     url('futuramed-bt-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('futuramed-bt-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+	}
  
 h1,
 h2,
@@ -31,10 +41,10 @@ h4,
 h5,
 h6
  {
- 	font-family: Myriad Pro;
+ 	font-family: Futura;
  }
 
  body
  {
- 	font-family: 'Oswald', sans-serif;
+ 	font-family: Futura;
  }
