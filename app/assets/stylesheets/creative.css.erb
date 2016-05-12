@@ -428,7 +428,7 @@ header {
 .header-content {
     position: absolute;
     width: 100%;
-    padding: 100px 15px;
+    padding: 0px 15px;
     text-align: center;
 }
 
@@ -465,6 +465,13 @@ header .header-content .header-content-inner p {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
+
+    .header-content {
+    position: absolute;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
 
     header .header-content .header-content-inner {
         margin-right: auto;
@@ -1023,6 +1030,12 @@ background-position: center;
 -moz-background-size: cover;
 background-size: cover;
 -o-background-size: cover;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 989px) {
+#why,#home,#home-l,#our-likers {
+background-attachment: scroll !important;
+}
 }
 
 
