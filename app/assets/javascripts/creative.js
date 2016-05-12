@@ -67,63 +67,33 @@
    $(document).ready(function () {
         $('.dropdown-toggle').dropdown();
     });
-    
-
     // Prallax//
 
 
-$( window ).resize(function() {
-$window = $(window);
-if( $window .width() > 800){
-
- $('section[data-type="background"]').each(function(){
- var $bgobj = $(this); // assigning the object
-
-  $(window).scroll(function() {
-
-    // Scroll the background at var speed
-    // the yPos is a negative value because we're scrolling it UP!                              
-    var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
-
-    // Put together our final background position
-    var coords = '50% '+ yPos + 'px';
-
-    // Move the background
-    $bgobj.css({ backgroundPosition: coords });
-
- }); // window scroll Ends
-
- });    
-}
-});
-
-
-
 $(document).ready(function(){
-$window = $(window);
-if( $window.width() > 800){
-// Cache the Window object
 
- $('section[data-type="background"]').each(function(){
- var $bgobj = $(this); // assigning the object
+    var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    if (ismobile){
+ // bypass parallax effect
+    }
+    else
+    {
+    $('section[data-type="background"]').each(function(){
+        var $bgobj = $(this); // assigning the object
+    
+        $(window).scroll(function() {
+            var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+            
+            // Put together our final background position
+            var coords = '50% '+ yPos + 'px';
 
-  $(window).scroll(function() {
-
-    // Scroll the background at var speed
-    // the yPos is a negative value because we're scrolling it UP!                              
-    var yPos = -( ($window.scrollTop() - $bgobj.offset().top) / $bgobj.data('speed'));
-
-    // Put together our final background position
-    var coords = '50% '+ yPos + 'px';
-
-    // Move the background
-    $bgobj.css({ backgroundPosition: coords });
-
- }); // window scroll Ends
-
- });    
-}
+            // Move the background
+            $bgobj.css({ backgroundPosition: coords });
+        }); 
+    }); 
+    }   
 });
+
 
 
 
