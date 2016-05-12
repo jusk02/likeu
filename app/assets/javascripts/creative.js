@@ -69,15 +69,13 @@
     });
     // Prallax//
 
-
+var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 $(document).ready(function(){
 
-    var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-    if (ismobile){
+    
+    if (!ismobile){
  // bypass parallax effect
-    }
-    else
-    {
+    
     $('section[data-type="background"]').each(function(){
         var $bgobj = $(this); // assigning the object
     
