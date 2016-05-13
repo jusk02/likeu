@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   get "/quieroserliker", to: "static_pages#soyliker", as: "soyliker"
 
-  get "/contacto", to: "static_pages#contacto", as: "contacto"
+  get "/FAQ", to: "static_pages#FAQ", as: "FAQ"
+
+  get "/FAQ_likeu", to: "static_pages#FAQ_likeu", as: "FAQ_likeu"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

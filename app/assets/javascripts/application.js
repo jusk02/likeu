@@ -19,8 +19,8 @@
 //= require creative
 //= requirecbpAnimatedHeader
 //= require wow.min
+//= reqire faq
 //= require bootstrap
-//= require bootstrap.min
 //= require classie
 //= require reactive
 //= require turbolinks

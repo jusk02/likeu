@@ -3,7 +3,11 @@ class StaticPagesController < ApplicationController
 	def soyliker
   	end
 
-  	def contacto
+  	def FAQ
+  		
+  	end
+
+  	def FAQ_likeu
   		
   	end
 

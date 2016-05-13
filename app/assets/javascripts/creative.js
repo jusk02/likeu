@@ -18,7 +18,13 @@
         // $("div#contactof").hide(true);
         //secciones escondidas del formulario
         
-    
+        
+
+    $('a').click(function() {
+      this.blur();
+    });
+
+
         
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
