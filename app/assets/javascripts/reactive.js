@@ -1,81 +1,56 @@
 
+$(document).ready(function() {
+
+    $('.collapse').on('show.bs.collapse', function() {
+        var id = $(this).attr('id');
+        $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
+        $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-minus"></i>');
+
+    });
+
+    $('.collapse').on('hide.bs.collapse', function() {
+        var id = $(this).attr('id');
+        $('a[href="#' + id + '"]').closest('.panel-heading').removeClass('active-faq');
+        $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-plus"></i>');
+
+    });
 
 
+    $(function() {
 
-      $(function() {
-  		$('input#show_trabajador').change(function(event){
-    		if( $(this).is(':checked') ) ;
-    		event.preventDefault();
-    		
-    		$('div#trabajador').toggle(true);
-    		$('div#no_trabajador').toggle(false);
-  			
-  		});
-	});   
+        $('a').click(function(event){
+            var id = $(this).attr('id');
+            console.log(id);
+            $('div.open').collapse("toggle").removeClass('open');
+            console.log('div.open' + id + '');
 
-	$(function() {
-	  		$('input#show_no_trabajador').change(function(event){
-	    		if( $(this).is(':checked') ) ;
-	    		event.preventDefault();
-	    			    		
-	    		$('div#trabajador').toggle(false);
-	  			$('div#no_trabajador').toggle(true);
-	  		});
-		});   
+            $('div.' + id + '').collapse("toggle").addClass('open');
+            console.log('div."' + id + '');
 
-	$(function() {
-  		$('a#show_datos_personales').click(function(event){
-    		
-        if( $('div#datos_personales').toggle(false) ) ;
-        event.preventDefault();
+        });
+    });
+
+    $(function() {
+        $('button.cerrar').click(function(event){
+            var id = $(this).attr('id');
+            console.log(id);
+            $('div.open').collapse("toggle").removeClass('open');
+            console.log('div.' + !id + '');
+        });
+    });
+
+    $(document).keyup(function(e) {
+     if (e.keyCode == 27) { 
+        $('div.open').collapse("toggle").removeClass('open');
+            console.log('div.' + !id + '');
+        }
+    });
+
+    $('#myModal').on('hidden.bs.modal', function () {
+        $('div.open').collapse("toggle").removeClass('open');   
+    })
     
-        $('div#experiencia').toggle(false);
-        $('div#expectativas').toggle(false);
-        $('div#contactof').toggle(false);
-        $('div#datos_personales').toggle(true);
-
-  		});
-	});   
-
-  $(function() {
-      $('a#show_experiencia').click(function(event){
-        
-        if( $('div#experiencia').toggle(false) ) ;
-        event.preventDefault();
-        
-        $('div#datos_personales').toggle(false);
-        $('div#expectativas').toggle(false);
-        $('div#contactof').toggle(false);
-        $('div#experiencia').toggle(true);
-      });
-  });  
-
-$(function() {
-      $('a#show_expectativas').click(function(event){
-        
-        if( $('div#expectativas').toggle(false) ) ;
-        event.preventDefault();
-        
-        $('div#datos_personales').toggle(false);
-        $('div#experiencia').toggle(false);
-        $('div#contactof').toggle(false);
-        $('div#expectativas').toggle(true);
-
-      });
-  });  
+});
 
 
-$(function() {
-      $('a#show_contacto').click(function(event){
-        
-        if( $('div#contactof').toggle(false) ) ;
-        event.preventDefault();
-        
-        $('div#datos_personales').toggle(false);
-        $('div#experiencia').toggle(false);
-        $('div#expectativas').toggle(false);
-        $('div#contactof').toggle(true);
-
-      });
-  });  
  

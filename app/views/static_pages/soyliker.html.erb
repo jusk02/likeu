@@ -69,18 +69,18 @@
                     <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
                         <h3>Establece tu propio horario</h3>
                         <p>Tú decides cuándo y cómo quieres trabajar. Así, nunca tendrás que decidir entre ganarte la vida o vivir la vida. Eso es trabajar con LikeU.</p>
-                        <a class="gris" href="#">Te quedo alguna duda?</a>                        
+                        <a id="horarios" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>                       
                     </div>
                     <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
                         <h3>Gana dinero cómo tú quieras</h3>
                         <p>Representando a las mejores empresas para que hables por ellas. Sólo aquellas que te gustan.</p>
                         <p>Nada mas fácil y satisfactorio que ganar dinero ayudando a la gente.</p>
-                        <a class="gris" href="#">Te quedo alguna duda?</a>
+                        <a id="dinero" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                     </div>
                     <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
                         <h3>Nunca estás sólo</h3><br>
                         <p>Lo mejor es que sin importar donde estés, siempre estarán tus amigos y lideres para apoyarte.</p>
-                        <a class="gris" href="#">Te quedo alguna duda?</a>
+                        <a id="solo" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                     </div>
 			 	</div>
 		 	</div>
@@ -279,7 +279,7 @@
                         <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
                             <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Registrarme</a>  
                             <br>
-                            <a class="gris" href="#">Te quedo alguna duda?</a>
+                            <a class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                             <br>
                             <br>
                             <br>
@@ -296,7 +296,7 @@
                         <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
                             <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Grabarme</a>  
                             <br>
-                            <a class="gris" href="#">Te quedo alguna duda?</a>
+                            <a class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                             <br>
                             <br>
                             <br>
@@ -314,26 +314,25 @@
                         <div class="hidden-lg hidden-md hidden-sm col-xs-12 text-center">
                             <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Probar</a>
                             <br>
-                            <a class="gris" href="#">Te quedo alguna duda?</a>
+                            <a class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                             <br>
                             <br>
                             <br>
                         </div>                         
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-12">
+            
                 <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
                     <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Registrarme</a>  
-                    <br><a class="gris" href="#">Te quedo alguna duda?</a>
+                    <br><a id="registro" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
-                    <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Grabarme</a>  
-                    <br><a class="gris" href="#">Te quedo alguna duda?</a>
+                    <a href="#" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Grabarme</a>  
+                    <br><a id="audio" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
-                    <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Probar</a>
-                    <br><a class="gris" href="#">Te quedo alguna duda?</a>
+                    <a href="#" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Probar</a>
+                    <br><a id="entrenamiento" class="gris" href="#" data-toggle="modal" data-toggle="collapse" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                 </div>
             </div>    
         </div>
