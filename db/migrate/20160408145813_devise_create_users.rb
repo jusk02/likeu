@@ -31,25 +31,33 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.datetime :locked_at
 
       t.string :username
-      t.date :birthdate
+      t.integer :age
       t.integer :gender
-      t.text :ocupation
-      t.text :looking_for_employee
-      t.text :looking_for_independent
-      t.text :experience
-      t.string :would_work
-      t.text :jobs_made
-      t.string :phone_contact
-      t.integer :type_computer
-      t.string :use_computer
-      t.string :connection_internet
-      t.string :computer_accessories
+      t.string :cellphone
+      t.string :ocupation
+      t.text :no_contract_activities
+      t.string :felixibility_importance
+      t.integer :need_income
+      t.integer :current_income
+      t.text :achievement
+      t.integer :achievement_acomplishment
+      t.text :achievement_company
+      t.text :achievement_boss
+      t.text :achievement_phone
+      t.text :hobby
+      t.integer :hobby_time
+      t.boolean :hobby_validate
+      t.string :special_experience
+      t.integer :work_hours
+      t.integer :work_days
+      t.text :personal_achievement
+      t.text :story
+      t.string :pc_type
+      t.string :pc_use
+      t.string :internet_speed
+      t.string :can_talk
+      t.string :workplace
       t.string :comfort
-      t.text :being
-      t.text :do
-      t.text :motivation
-      t.string :avatar
-
       t.timestamps null: false
     end
 
