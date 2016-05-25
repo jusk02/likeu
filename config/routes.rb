@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :messages, only: [:new, :create]
+  get 'contact', to: 'messages#new', as: 'contact'
+  post 'contact', to: 'messages#create'
 
   devise_for :users, controllers: { registrations: "registrations" }
 
