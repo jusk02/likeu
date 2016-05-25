@@ -27,6 +27,7 @@ gem 'devise', '~> 3.2'
 
 gem 'carrierwave'
 
+gem 'scriptcam-rails'
 
 
 #gema para animaciones de jquery

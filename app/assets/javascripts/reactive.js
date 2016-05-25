@@ -50,7 +50,21 @@ $(document).ready(function() {
         $('div.open').collapse("toggle").removeClass('open');   
     })
     
+
+
 });
 
+
+
+
+
+$(document).ready(function() {
+    $("#webcam").scriptcam({ 
+        width: 640,
+        height: 480
+    });
+
+    
+});
 
  
