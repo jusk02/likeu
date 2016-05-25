@@ -75,10 +75,61 @@
     });
     // Prallax//
 
+//formulario validación celular//
+
+var cellphone = $("#cellphone");
+//Numerico//
+
+$(document).ready(function(){
+    $('input#cellphone').numeric(); 
+});
+
+//detectar cantidad numeros//
+$(document).ready(function () {
+
+    $('input#cellphone').bind('input propertychange',function(){
+
+       //Si ha introducido nada en el campo
+        if(cellphone.val().length == 10){
+            $('img#cellphoneInfo').addClass("validacion");
+            return true;
+        }
+        //si no ha introducido valor
+        else {
+            $('img#cellphoneInfo').removeClass("validacion");
+            return false;
+        } 
+
+    });
+
+});
 
 
+//Formulario validacion Email//
 
+var email= $("#user_email");
 
+//detectar email//
+$(document).ready(function () {
+
+    $('input#user_email').bind('input propertychange',function(){
+    var a = email.val();
+    var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+
+       //Si es valido
+        if(filter.test(a)){
+            $('img#emailInfo').addClass("validacion");
+            return true;
+        }
+        //si es invalido
+        else {
+             $('img#emailInfo').removeClass("validacion");
+            return false;
+        } 
+
+    });
+
+});
 
 
 })(jQuery); // End of use strict

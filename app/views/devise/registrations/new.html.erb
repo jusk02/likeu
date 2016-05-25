@@ -19,8 +19,9 @@
         <div class="tab-content">
           <!-- primera pestaña-->
           <div id="part1" class="tab-pane fade in active">
-          
-            <!--  inicio formulario -->
+
+
+          <!--  inicio formulario -->
             <div class="contenidoSecion ">
               <section id="signup">
                 <div class="tituloFormulario">
@@ -45,22 +46,47 @@
                       </div>
                       <!-- genero -->
                       <div class="col-lg-7 col-sm-7 col-xs-7">
-                        <%= f.label :gender, '¿Cuál es tu género?', class: "izquierda" %>
-                        <%= f.radio_button :gender, 'Masculino' %>
                         <div class="row">
-                          <div class="col-lg-6 col-sm-6 col-xs-6">
-                            <img src="<%=image_path('hombre.png')%>" class="icono-form wow bounceIn">
-                            <%= f.radio_button :gender, 'Masculino' %>
-                          </div>
-                          <div class="col-lg-6 col-sm-6 col-xs-6">
-                            <img src="<%=image_path('mujer.png')%>" class=" icono-form wow bounceIn">
-                            <%= f.radio_button :gender, 'Femenino' %>
-                          </div>
+                            <div class="col-lg-6 col-sm-6 col-xs-6">
+                                <%= f.label :gender, '¿Cuál es tu género?' %>
+                            </div>
+                             <div class="col-lg-4 col-sm-4 col-xs-4 alineacion">
+
+                                <%= f.radio_button :gender, 'Masculino',id:"masculino", class:"masculino" %><label for="masculino" class="grayscale ">&#160;</label>
+                                <%= f.radio_button :gender, 'Femenino',id:"femenino", class:"femenino" %><label for="femenino" class="grayscale">&#160;</label>
+                            </div>
+                        </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <strong>¿Actualmente a qué te dedicas?</strong><br/>
+                    <div class="row">
+                  
+                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 ">
+                        <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel wow bounceIn" id="cellphoneInfo" ></span>
+                        <%= f.label :cellphone, 'Celular', class:"contacto-form" %>
+                        <br>
+                        <%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
+                      </div>
+                    
+                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12">
+                        <img src="<%=image_path('email.png')%>" class="icono-form form-cel wow bounceIn" id="emailInfo">
+                        <%= f.label :email, 'Correo electrónico',class:"contacto-form" %>
+                        <br>
+                        <input value="" name="user[email]" id="user_email" type="email" class= "tamaño3 likeu-input form-control">
+                      </div>
+                    </div>
+
+                </div><!--final inputs -->
+              </section>
+
+
+
+              <!-- Seccion en blanco -->
+              <br>
+              <br>
+              <br>
+
+              <strong>¿Actualmente a qué te dedicas?</strong><br/>
                   <div class="form-area">
                     <div class="col-lg-2 col-sm-6 col-xs-6">        
                       <div class="form-box round text-center">
@@ -105,23 +131,8 @@
                       </div> 
                     </div>       
                   </div>
-
-                  <div>
-                    <img src="<%=image_path('celular.png')%>" class="icono-form" class="wow bounceIn"><br/>
-                    <%= f.label :cellphone, 'Celular' %><br>
-                    <%= f.text_field :cellphone%> 
-                  </div>
-                
-                  <div>
-                    <img src="<%=image_path('correoelectronico.png')%>" class="icono-form" class="wow bounceIn"><br/>
-                    <%= f.label :email, 'Correo electrónico' %><br/>
-                    <input value="" name="user[email]" id="user_email" type="email" placeholder="e-mail">
-                  </div>
-                </div>
-              </section> 
             </div>
-
-          </div>
+          </div><!--final parte1-->
                   
 
           <!-- segunda pestaña-->
@@ -136,7 +147,7 @@
             <p>Some content in menu 2.</p>
             </div>
             
-            <% end %>
+           <% end %>
 
           </div>
         </div>

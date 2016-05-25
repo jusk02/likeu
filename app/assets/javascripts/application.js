@@ -19,11 +19,13 @@
 //= require creative
 //= requirecbpAnimatedHeader
 //= require wow.min
+//= require jquery.numeric
 //= reqire faq
 //= require bootstrap
 //= require classie
 //= require reactive
 //= require turbolinks
+
 
 
 
