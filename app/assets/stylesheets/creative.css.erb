@@ -908,46 +908,6 @@ background: url("tituloFormulario.png") no-repeat;
 .alineacion{
    display: -webkit-box;
 }
-/* radio botton */
-
-/* genero */
-
-#signup .inputs input[type=radio].masculino {
-    display: none; 
-}
-#signup .inputs input[type=radio].masculino + label {
-    margin-top: -10px;
-    width: 80px; 
-    height: 80px; 
-    background: url(hombre.png)no-repeat; 
-    background-size: 90%;
-}
-
-#signup .inputs input[type=radio].masculino:checked + label { 
-    filter: none;
-    -webkit-filter: grayscale(0%);
-    background: url(hombre.png) 0px 0px no-repeat;
-    background-size: 90%;
-}
-
-#signup .inputs input[type=radio].femenino {
-    display: none; 
-}
-#signup .inputs input[type=radio].femenino + label { 
-    margin-top: -10px;
-    width: 80px; 
-    height: 80px; 
-    background: url(mujer.png)no-repeat; 
-    background-size: 90%;
-}
-
-
-#signup .inputs input[type=radio].femenino:checked + label { 
-    filter: none;
-    -webkit-filter: grayscale(0%);
-    background: url(mujer.png) 0px 0px no-repeat;
-    background-size: 90%;
-}
 
 .grayscale, .form-cel {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
@@ -967,7 +927,175 @@ background: url("tituloFormulario.png") no-repeat;
     -webkit-filter: grayscale(0%);
 }
 
-/*tamaños input 1(grande), 2 (pequeña)*/
+.bandera{
+    margin-left: -14%;
+    margin-right: 4px;
+}
+
+.indicativo{
+    color:#999;
+    margin-right: 4px;
+}
+
+.botones img{
+    width: 5%;
+    float: left;
+}
+
+.botones img:hover{
+    opacity: 0.5;
+}
+
+.botones .atras{
+    margin-left: -10%;
+    margin-bottom: 0px;
+}
+
+.botones .siguiente{
+    margin-right: -5%;
+    margin-bottom: 0px;
+    float:right;
+}
+
+.preguntas p{
+    width: 48%;
+    margin: auto;
+    text-align: center;
+    color: #333;
+
+}
+#signup .inputs .nivel{
+    margin-top: 2%;
+}
+/* radio botton */
+
+/* genero */
+
+/*general*/
+
+#signup .inputs input[type=radio].masculino, #signup .inputs input[type=radio].femenino  {
+    display: none; 
+}
+#signup .inputs input[type=radio].masculino + label, #signup .inputs input[type=radio].femenino + label {
+    margin-top: -10px;
+    width: 80px; 
+    height: 80px;   
+}
+
+#signup .inputs input[type=radio].masculino:checked + label, #signup .inputs input[type=radio].femenino:checked + label  { 
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+/*----------------------------*/
+
+#signup .inputs input[type=radio].masculino + label{
+    background: url(hombre.png)no-repeat; 
+    background-size: 90%;
+}
+
+#signup .inputs input[type=radio].femenino + label { 
+
+    background: url(mujer.png)no-repeat; 
+    background-size: 90%;
+}
+
+/*--------------------------*/
+/*Ocupacion*/
+
+input[type=radio].estudiante, input[type=radio].trabajador,input[type=radio].estudiotrabajo,input[type=radio].emprendedor,
+input[type=radio].amo, input[type=radio].notrabajo, input[type=radio].freelance {
+    display: none; 
+}
+input[type=radio].estudiante + label, input[type=radio].trabajador + label, input[type=radio].estudiotrabajo + label,
+input[type=radio].emprendedor + label, input[type=radio].amo + label, input[type=radio].notrabajo + label,
+input[type=radio].freelance + label {
+    margin-top: -10px;
+    width: 90%; 
+    height: 80px; 
+}
+
+input[type=radio].estudiante:checked + label, input[type=radio].trabajador:checked + label ,
+input[type=radio].estudiotrabajo:checked + label, input[type=radio].emprendedor:checked + label,
+input[type=radio].amo:checked + label, input[type=radio].notrabajo:checked + label,
+input[type=radio].freelance:checked + label{ 
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+/*----------------------------*/
+
+input[type=radio].estudiante + label {
+ 
+    background: url(soyestudiante.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=radio].trabajador + label {
+ 
+    background: url(soytrabajador.png)no-repeat; 
+    background-size: 90%;
+}
+input[type=radio].estudiotrabajo + label {
+ 
+    background: url(soytrabajador2.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=radio].emprendedor + label {
+ 
+    background: url(soyemprendedor.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=radio].amo + label {
+ 
+    background: url(soyamo.png)no-repeat; 
+    background-size: 90%;
+}
+input[type=radio].notrabajo + label {
+ 
+    background: url(notrabajo.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=radio].freelance + label {
+ 
+    background: url(soyfreelance.png)no-repeat; 
+    background-size: 90%;
+}
+/*------------------------------*/
+
+
+#signup .inputs input[type=radio].no, #signup .inputs input[type=radio].si  {
+
+   display: none;
+}
+#signup .inputs input[type=radio].no + label,#signup .inputs input[type=radio].si + label{
+    margin-left: 10%;
+    width: 30px; 
+    height: 30px;
+    background: url(radio_botton.png)no-repeat; 
+
+}
+
+#signup .inputs input[type=radio].no:checked + label, #signup .inputs input[type=radio].si:checked + label{
+     filter: none;
+    -webkit-filter: grayscale(0%);
+    background: url(radio_botton_check.png)no-repeat; 
+
+}
+/*-----------------------------*/
+
+.no-padding{
+    padding: 0px 0px;
+}
+.zona-blanca{
+    margin-left: 4.6%;
+}
+.color{
+    color: #1AA7BF;
+}
+/*tamaños input 1(grande), 2 (pequeña) , 3(grande)*/
 
 .tamaño1{
     width: 50%;
@@ -978,7 +1106,12 @@ background: url("tituloFormulario.png") no-repeat;
 } 
 
 .tamaño3{
-    width: 70%;
+    width: 83%;
+}
+
+#signup .inputs .tamaño4{
+    width: 100%;
+    height: 116px;
 }
 
 
@@ -1007,7 +1140,6 @@ background: url("tituloFormulario.png") no-repeat;
 .form-box{
     display: inline-block !important;
     vertical-align: middle;
-    border:1px solid #00F5E5;
     padding: 5px;
     width: 100%;
     height: auto;

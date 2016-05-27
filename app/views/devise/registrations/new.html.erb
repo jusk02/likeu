@@ -9,16 +9,16 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
 
-        <ul class="nav nav-tabs">
+        <!-- <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#part1">Home</a></li>
           <li><a data-toggle="tab" href="#part2">Part2</a></li>
           <li><a data-toggle="tab" href="#part3">Part3</a></li>
-        </ul>
+        </ul> -->
         <h3>barra de progreso</h3>
 
         <div class="tab-content">
           <!-- primera pestaña-->
-          <div id="part1" class="tab-pane fade in active">
+          <div id="part1" class="tab-pane fade in active ">
 
 
           <!--  inicio formulario -->
@@ -65,7 +65,7 @@
                         <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel wow bounceIn" id="cellphoneInfo" ></span>
                         <%= f.label :cellphone, 'Celular', class:"contacto-form" %>
                         <br>
-                        <%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
+                         <span class="indicativo"><img src="<%=image_path('banderacolombia.png')%>" class="bandera">(+57)</span><%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
                       </div>
                     
                       <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12">
@@ -80,71 +80,255 @@
               </section>
 
 
+              <!-- Botones siguiente y atras -->
+              <div class="botones">
+              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+                
+              </div>
 
               <!-- Seccion en blanco -->
+            
               <br>
               <br>
-              <br>
+                <div class="form-area">
+                 <p class="color">¿Actualmente a qué te dedicas?</p>
+                  <div class="col-lg-12 col-sm-12 col-xs-12 zona-blanca"> 
+                    <div class="row">
 
-              <strong>¿Actualmente a qué te dedicas?</strong><br/>
-                  <div class="form-area">
-                    <div class="col-lg-2 col-sm-6 col-xs-6">        
-                      <div class="form-box round text-center">
-                        <img src="<%=image_path('estudianteuniversitario.png')%>" class="icono-form" class="wow bounceIn">
-                        <%= f.radio_button :ocupation, 'Estudiante', :id => "show_no_trabajador"%><br>
-                        <p class="form-box-text">Estudiante universitario</p>
+                    <!--Parte1-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Estudiante',id:"estudiante", class:"estudiante" %><label for="estudiante" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Estudiante universitario</p>
+                          </div>
+                          
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                        <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Trabajador',id:"trabajador", class:"trabajador" %><label for="trabajador" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Trabajo como empleado</p>
+                          </div>
+
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-2 col-sm-6 col-xs-6">  
-                      <div class="form-box round text-center">
-                        <img src="<%=image_path('trabajocomoempleado.png')%>" class="icono-form" class="wow bounceIn">
-                        <%= f.radio_button :ocupation, 'Empleado', :id => "show_trabajador"%><br>
-                        <p class="form-box-text"> Trabajo como empleado</p>
+                    <!--Parte2-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6 ">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'EstudioTrabajo',id:"estudiotrabajo", class:"estudiotrabajo" %><label for="estudiotrabajo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Estudio y trabajo como empleado</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Emprendedor',id:"emprendedor", class:"emprendedor" %><label for="emprendedor" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Soy emprendedor</p>
+                          </div>
+
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-2 col-sm-6 col-xs-6">  
-                      <div class="form-box round text-center">
-                        <img src="<%=image_path('estudioytrabajoempleado.png')%>" class="icono-form" class="wow bounceIn">
-                        <%= f.radio_button :ocupation, 'Estudiante y empleado', :id => "show_trabajador"%><br>
-                        <p class="form-box-text">Estudio y trabajo como empleado</p>
+                    <!--Parte3-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+
+                            <%= f.radio_button :ocupation, 'Amo de casa',id:"amo", class:"amo" %><label for="amo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Soy ama(o) de casa</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'NoTrabajo',id:"notrabajo", class:"notrabajo" %><label for="notrabajo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">No estudio ni trabajo</p>
+                          </div>
+                          
+
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-2 col-sm-6 col-xs-6">  
-                      <div class="form-box round text-center">
-                        <img src="<%=image_path('soyindependiente.png')%>" class="icono-form" class="wow bounceIn">
-                        <%= f.radio_button :ocupation, 'Independiente', :id => "show_trabajador"%><br>
-                        <p class="form-box-text">Soy independiente</p>
+
+                    <!--Parte4-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Freelance',id:"freelance", class:"freelance" %><label for="freelance" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Soy freelance</p>
+                          </div>
+
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12">
+                          
+
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-2 col-sm-6 col-xs-6">  
-                      <div class="form-box round text-center">
-                        <img src="<%=image_path('soyama(o)decasa.png')%>" class="icono-form" class="wow bounceIn">
-                        <%= f.radio_button :ocupation, 'Ama de casa', :id => "show_no_trabajador"%><br>
-                        <p class="form-box-text"> Soy ama(o) de casa</p>
-                      </div>
+
+
+
                     </div>
-                    <div class="col-lg-2 col-sm-6 col-xs-6">
-                      <div class="form-box round text-center">
-                        <img src="<%=image_path('notrabajoniestudio.png')%>" class="icono-form" class="wow bounceIn">
-                        <%= f.radio_button :ocupation, 'no estudia no trabaja', :id => "show_no_trabajador"%><br>
-                        <p class="form-box-text"> No trabajo ni estudio</p>
-                      </div> 
-                    </div>       
-                  </div>
+                  </div>       
+                </div>
             </div>
           </div><!--final parte1-->
                   
 
           <!-- segunda pestaña-->
           <div id="part2" class="tab-pane fade">
-            <h3>Menu 1</h3>
-            <p>Some content in menu 1.</p>
-          </div>
+
+
+          <!--  inicio formulario -->
+            <div class="contenidoSecion ">
+              <section id="signup">
+                <div class="tituloFormulario">
+                  <h3>Formulario</h3>
+                  <br>
+                </div>
+                 <div class="inputs">
+                  <div class="row fieldformulario preguntas">
+                    <p>Qué actividades te han generado ingresos diferentes a una actividad laboral?</p>
+                  </div>
+                  <br>
+                  <br>
+                 <!--    edad y genero -->
+                  <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 alineacion">
+                  <%= f.radio_button :no_contract_activities, 'No',id:"no", class:"no" %><label for="no" class="grayscale ">&#160;</label>
+                  <%= f.label :no_contract_activities, "no no he tenido", class:"nivel" %>
+                  <%= f.radio_button :no_contract_activities, 'Si',id:"si", class:"si" %><label for="si" class="grayscale ">&#160;</label>
+                  <%= f.label :no_contract_activities, "si he tenido", class:"nivel" %>
+                    
+                  </div>
+                      <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 ">
+                      <%= f.text_area :no_contract_activities, class: "likeu-input form-control tamaño4" %>
+                       
+                      </div>
+
+                </div><!--final inputs -->
+               
+           </section>
+
+
+              <!-- Botones siguiente y atras -->
+              <div class="botones">
+              <p><a data-toggle="tab" href="#part1"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+                
+              </div>
+
+              <!-- Seccion en blanco -->
+            
+              <br>
+              <br>
+                <div class="form-area">
+                 <p class="color">En tus últimos empleos (o en tu empleo actual) cuál ha sido tu mayor reto?</p>
+                  <div class="col-lg-12 col-sm-12 col-xs-12 zona-blanca"> 
+                    <div class="row">
+
+                    <!--Parte1-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Estudiante',id:"estudiante", class:"estudiante" %><label for="estudiante" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Estudiante universitario</p>
+                          </div>
+                          
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                        <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Trabajador',id:"trabajador", class:"trabajador" %><label for="trabajador" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Trabajo como empleado</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!--Parte2-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6 ">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'EstudioTrabajo',id:"estudiotrabajo", class:"estudiotrabajo" %><label for="estudiotrabajo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Estudio y trabajo como empleado</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Emprendedor',id:"emprendedor", class:"emprendedor" %><label for="emprendedor" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Soy emprendedor</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!--Parte3-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+
+                            <%= f.radio_button :ocupation, 'Amo de casa',id:"amo", class:"amo" %><label for="amo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Soy ama(o) de casa</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'NoTrabajo',id:"notrabajo", class:"notrabajo" %><label for="notrabajo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">No estudio ni trabajo</p>
+                          </div>
+                          
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--Parte4-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :ocupation, 'Freelance',id:"freelance", class:"freelance" %><label for="freelance" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Soy freelance</p>
+                          </div>
+
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12">
+                          
+
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    </div>
+                  </div>       
+                </div>
+            </div>
+           
+          </div><!--final parte 2-->
           
           <!-- tercera pestaña-->
-          <div id="part3" class="tab-pane fade">
+          <div id="part3" class="tab-pane fade ">
             <h3>Menu 2</h3>
             <p>Some content in menu 2.</p>
+             <!-- Botones siguiente y atras -->
+              <div class="botones">
+              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class="atras wow bounceIn"></a></p>
+                
+              </div>
             </div>
             
            <% end %>
