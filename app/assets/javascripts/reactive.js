@@ -5,7 +5,7 @@ $(document).ready(function() {
         var id = $(this).attr('id');
         $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
         $('a[href="#' + id + '"] .panel-title span').html('<i class="glyphicon glyphicon-minus"></i>');
-
+        $('div.open').removeClass('open');
     });
 
     $('.collapse').on('hide.bs.collapse', function() {
@@ -58,13 +58,5 @@ $(document).ready(function() {
 
 
 
-$(document).ready(function() {
-    $("#webcam").scriptcam({ 
-        width: 640,
-        height: 480
-    });
-
-    
-});
 
  

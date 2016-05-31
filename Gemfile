@@ -27,7 +27,7 @@ gem 'devise', '~> 3.2'
 
 gem 'carrierwave'
 
-gem 'scriptcam-rails'
+
 
 
 #gema para animaciones de jquery
@@ -62,6 +62,7 @@ group :development do
   gem 'spring'
 # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
 
 end 
 group :production do

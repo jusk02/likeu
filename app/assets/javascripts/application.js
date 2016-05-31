@@ -23,8 +23,9 @@
 //= require bootstrap
 //= require classie
 //= require reactive
-//= require scriptcam
-//= require scriptcam.min
+//= require camera2
+//= require camera
+//= require RecordRTC
 //= require turbolinks
 
 

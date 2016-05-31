@@ -1,4 +1,4 @@
-<%= form_for @message do |f| %>
+
   <% if @message.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -13,27 +13,51 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
 
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :subject %>
-    <%= f.text_field :subject %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit 'Send', class: 'button' %>
-  </div>
+ <%= form_for @message, url: contact_path do |message_form| %>
+  <fieldset>
+    <div class="field">
+      <%= message_form.text_field :name, placeholder: "Name" %>
+    </div>
+    
+    <div class="field">
+      <%= message_form.email_field :email, placeholder: "Email"%>
+    </div>
+    
+    <div class="field">
+      <%= message_form.text_area :content, placeholder: "Message"%>
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <div class="field">
+      <%= message_form.submit "Send" %>
+    </div>
+  </fieldset>
 <% end %>
+
+<%= form_for(Message.new, as: :message, url: contact_path(:message)) do |f| %>
+  <div class="alert alert-danger errors" style="display: none"></div>
+  
+    <fieldset>
+    <div class="field">
+      <%= f.text_field :name, placeholder: "Name" %>
+    </div>
+    
+    <div class="field">
+      <%= f.email_field :email, placeholder: "Email"%>
+    </div>
+    
+    <div class="field">
+      <%= f.text_area :content, placeholder: "Message"%>
+    </div>
+  </fieldset>
+ 
+  <fieldset>
+    <div class="field">
+      <%= f.submit "Enviar", class: "btn btn-success btn-lg" %>
+    </div>
+  </fieldset>
+ 
+<% end %>
+<br>

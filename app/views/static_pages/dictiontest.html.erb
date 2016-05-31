@@ -1,9 +1,47 @@
-si estas en ubuntu y  tienes problemas para autorizar el uso de la camara usa este panel <a href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager06.html">aqui</a>
-
-<div id="webcam"></div>
 
 
-<input type="file" accept="image/*;capture=camera">
+
+        <section class="experiment recordrtc">
+        	<div class="container">
+		        <div class="row">
+		            <div class="col-lg-10 col-lg-offset-1 text-center">
+
+			            <div id="booth">
+		
+							<video id="video" width="400" height="300"></video>
+							<a href="#" id="capturar" class="boton-captura btn btn-dark"> capturar </a>
+							<canvas id="canvas" width="400" height="300"></canvas>
+							
+						</div>
+					
+			            <h4 class="header">
+				            <select class="recording-media"> 
+				            </select>
+				            into
+				            <select class="media-container-format">
+				                <option>WebM</option>
+				                <option>Gif</option>
+				            </select>
+				            
+				            <button class="boton-captura btn btn-dark">Start Recording</button>
+			            </h4>
+			            
+			            <div style="text-align: center; display: none;">
+			                <button id="save-to-disk">Save To Disk</button>
+			                <button id="open-new-tab">Open New Tab</button>
+			                <button id="upload-to-server">Upload To Server</button>
+			            </div>
+			            <br>
+			            <video></video>
+			        </div>
+		        </div>
+	        </div>
+        </section>
+
+
+
+
+
 
 
 
