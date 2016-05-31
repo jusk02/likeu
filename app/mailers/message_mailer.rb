@@ -7,10 +7,10 @@ class MessageMailer < ApplicationMailer
   	@msg = msg
 
     mail from: @msg.email, subject: @msg.subject, body: @msg.content
+    
   end
 
-  default from: "Your Mailer <noreply@likeu.co>"
-  default to: "Your Name <your.email@yourdomain.com>"
+  
 
   def new_message(message)
     @message = message

@@ -111,7 +111,7 @@
         </div>
     </div>        
 </section>
-<section class=" seccion-suave" id="why" data-type="background" data-speed="10">
+<section class="seccion-suave" id="why" data-type="background" data-speed="10">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">           
@@ -132,7 +132,7 @@
 				<h3>¡Saluda! Es gratis</h3>    						
 			</div>	
 			<form class="">
-                <%= form_for(Message.new, as: :message, url: contact_path(:message)) do |f| %>
+                <%= form_for(Message.new, as: :message, url: messages_path(:message)) do |f| %>
                     <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
     					<div class="form-group">
     					    <label for="Email">Email</label>
