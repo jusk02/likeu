@@ -7,6 +7,7 @@ class MessageMailer < ApplicationMailer
   	@msg = msg
 
     mail from: @msg.email, subject: @msg.subject, body: @msg.content
+    
   end
 
   
