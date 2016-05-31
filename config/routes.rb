@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :messages, only: [:new, :create]
+  get 'contacts/create'
+  
 
   devise_for :users, controllers: { registrations: "registrations" }
 
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   get "/FAQ", to: "static_pages#FAQ", as: "FAQ"
 
   get "/FAQ_likeu", to: "static_pages#FAQ_likeu", as: "FAQ_likeu"
+
+  resources :contacts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
