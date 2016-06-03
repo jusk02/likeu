@@ -24,7 +24,6 @@
 //= require classie
 //= require reactive
 //= require camera2
-//= require camera
 //= require RecordRTC
 //= require turbolinks
 

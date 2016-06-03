@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get "/quieroserliker", to: "static_pages#soyliker", as: "soyliker"
 
+  get "/ups", to: "static_pages#ups", as: "ups"
+
   get "/videoprueba", to: "static_pages#dictiontest", as: "dictiontest"
 
   get "/FAQ", to: "static_pages#FAQ", as: "FAQ"
