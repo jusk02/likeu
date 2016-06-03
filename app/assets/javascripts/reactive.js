@@ -28,6 +28,8 @@ $(document).ready(function() {
             console.log('div."' + id + '');
 
         });
+
+
     });
 
     $(function() {
@@ -52,6 +54,64 @@ $(document).ready(function() {
     
 });
 
+
+$(document).ready(function(){
+   $("#ninguno").click(function(evento){
+    
+      if (
+        $("#ninguno").is(":checked")){
+        console.log('hola')
+         $("p#opcion").show(true);
+         $(".ocultodiv").slideUp();
+      }
+      else{
+         $("p#opcion").hide(true);
+         $('.seleccion').hide();
+      }
+
+   
+    });
+
+
+    $(".botonE").click(function(){
+
+              $(".ocultodiv").slideDown();
+              
+              $("p#opcion").hide();
+
+      });
+
+
+
+});
+
+$(document).ready(function(){
+   $("#ninguno2").click(function(){
+    
+        $("#ninguno2").is(":checked")
+         $(".checkB").prop('checked', false);
+        
+
+   
+    });
+
+
+
+});
+
+$(document).ready(function(){
+   $("#otros").click(function(evento){
+    
+      if (
+        $("#otros").is(":checked")){
+        console.log('hola')
+         $("p#mas").show(true);
+      }
+      else{
+         $("p#mas").hide(true);
+      }
+   });
+});
 
 
 

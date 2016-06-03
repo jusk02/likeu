@@ -10,7 +10,8 @@
     "use strict"; // Start of use strict
 
         //secciones escondidas del formulario
-        // $("div#trabajador").hide(true);
+        $("p#opcion").hide(true);
+        $("p#mas").hide(true);
         // $("div#no_trabajador").hide(true);
         // $("div#datos_personales").hide(true);
         // $("div#experiencia").hide(true);
@@ -130,6 +131,12 @@ $(document).ready(function () {
     });
 
 });
+//mostrar select de ninguno //
+
+
+
+
+
 
 
 })(jQuery); // End of use strict

@@ -873,6 +873,11 @@ background: url("tituloFormulario.png") no-repeat;
     background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);
 }
 
+.form-area span.espacio-final{
+   display: block;
+    height: 12px; 
+}
+
 #signup .inputs {
     margin-top: 20px;
 }
@@ -907,6 +912,15 @@ background: url("tituloFormulario.png") no-repeat;
 
 .alineacion{
    display: -webkit-box;
+}
+
+.alineacion2{
+    margin: auto;
+    width: 60%;
+}
+.alineacion3{
+    display: -webkit-box;
+    margin-left: 30%;
 }
 
 .grayscale, .form-cel {
@@ -960,6 +974,13 @@ background: url("tituloFormulario.png") no-repeat;
 .preguntas p{
     width: 48%;
     margin: auto;
+    text-align: center;
+    color: #333;
+
+}
+
+.preguntas3 p{
+    width: 48%;
     text-align: center;
     color: #333;
 
@@ -1063,7 +1084,7 @@ input[type=radio].freelance + label {
     background: url(soyfreelance.png)no-repeat; 
     background-size: 90%;
 }
-/*------------------------------*/
+/*-------Si o no-----------*/
 
 
 #signup .inputs input[type=radio].no, #signup .inputs input[type=radio].si  {
@@ -1084,13 +1105,399 @@ input[type=radio].freelance + label {
     background: url(radio_botton_check.png)no-repeat; 
 
 }
-/*-----------------------------*/
+/*--------Reto----------------*/
 
+input[type=radio].aumentar, input[type=radio].herramientas, input[type=radio].servicio, 
+input[type=radio].otro, input[type=radio].ninguno, .showprueba{
+    display: none;
+}
+
+input[type=radio].aumentar + label, input[type=radio].herramientas + label , input[type=radio].servicio + label, 
+input[type=radio].otro + label, input[type=radio].ninguno + label{
+    margin-left: 20%;
+    margin-top: -10px;
+    width: 90%; 
+    height: 80px; 
+}
+
+input[type=radio].aumentar:checked + label, input[type=radio].herramientas:checked + label , input[type=radio].servicio:checked + label, 
+input[type=radio].otro:checked + label, input[type=radio].ninguno:checked + label{
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+/*-----------------------------*/
+input[type=radio].aumentar + label {
+ 
+    background: url(reto_aumentar.png)no-repeat; 
+    background-size: 67%;
+}
+
+input[type=radio].herramientas + label {
+ 
+    background: url(reto_aprender.png)no-repeat; 
+    background-size: 67%;
+}
+
+input[type=radio].servicio + label {
+ 
+    background: url(reto_mejorar.png)no-repeat; 
+    background-size: 67%;
+}
+
+input[type=radio].otro + label {
+ 
+    background: url(reto_otro.png)no-repeat; 
+    background-size: 67%;
+}
+
+input[type=radio].ninguno + label {
+ 
+    background: url(reto_ninguno.png)no-repeat; 
+    background-size: 67%;
+
+}
+
+/*-----------Validar hobby-------------*/
+
+
+#signup .inputs input[type=radio].validar-no, #signup .inputs input[type=radio].validar-si  {
+
+   display: none;
+}
+#signup .inputs input[type=radio].validar-no + label,#signup .inputs input[type=radio].validar-si + label{
+    margin-left: 10%;
+    width: 30px; 
+    height: 30px;
+    background: url(radio_botton.png)no-repeat; 
+
+}
+
+#signup .inputs input[type=radio].validar-no:checked + label, #signup .inputs input[type=radio].validar-si:checked + label{
+     filter: none;
+    -webkit-filter: grayscale(0%);
+    background: url(radio_botton_check.png)no-repeat; 
+
+}
+/*-----------------------------*/
+/*Experiencia especial*/
+
+input[type=checkbox].center, input[type=checkbox].ventas,input[type=checkbox].soporte,input[type=checkbox].servicio2,
+input[type=checkbox].teletrabajo, input[type=checkbox].catalogo, input[type=checkbox].ninguno2 {
+    display: none; 
+}
+input[type=checkbox].center + label, input[type=checkbox].ventas + label, input[type=checkbox].soporte + label,
+input[type=checkbox].servicio2 + label, input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label,
+input[type=checkbox].ninguno2 + label {
+    margin-top: -10px;
+    width: 90%; 
+    height: 80px; 
+}
+
+input[type=checkbox].center:checked + label, input[type=checkbox].ventas:checked + label ,
+input[type=checkbox].soporte:checked + label, input[type=checkbox].servicio2:checked + label,
+input[type=checkbox].teletrabajo:checked + label, input[type=checkbox].catalogo:checked + label,
+input[type=checkbox].ninguno2:checked + label{ 
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+/*----------------------------*/
+
+input[type=checkbox].center + label {
+ 
+    background: url(call_center.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=checkbox].ventas + label {
+ 
+    background: url(ventas.png)no-repeat; 
+    background-size: 90%;
+}
+input[type=checkbox].soporte + label {
+ 
+    background: url(soporte.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=checkbox].servicio2 + label {
+ 
+    background: url(servicio_cliente.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=checkbox].teletrabajo + label {
+ 
+    background: url(teletrabajo.png)no-repeat; 
+    background-size: 90%;
+}
+input[type=checkbox].catalogo + label {
+ 
+    background: url(venta_catalogo.png)no-repeat; 
+    background-size: 90%;
+}
+
+input[type=checkbox].ninguno2 + label {
+ 
+    background: url(reto_ninguno.png)no-repeat; 
+    background-size: 90%;
+}
+/*------------------------------*/
+
+/*ingreso significativo */
+
+ input[type=radio].encantaria, input[type=radio].nose, 
+ input[type=radio].estabilidad  {
+
+   display: none;
+}
+ input[type=radio].encantaria+ label, input[type=radio].nose + label,
+ input[type=radio].estabilidad + label{
+    margin-top: -10px;
+    width: 90%; 
+    height: 80px; 
+
+}
+
+ input[type=radio].encantaria:checked + label,  input[type=radio].nose:checked + label,
+ input[type=radio].estabilidad:checked + label{
+     filter: none;
+    -webkit-filter: grayscale(0%);
+}
+/*------------------------------*/
+
+input[type=radio].encantaria + label {
+ 
+    background: url(importancia1.png)no-repeat; 
+    background-size: 44%;
+}
+
+input[type=radio].nose + label {
+ 
+    background: url(importancia2.png)no-repeat; 
+    background-size: 44%;
+}
+
+input[type=radio].estabilidad + label {
+ 
+    background: url(importancia3.png)no-repeat; 
+    background-size: 44%;
+}
+/*----------------------------*/
+
+/* computador */
+#signup .inputs input[type=radio].pc, #signup .inputs input[type=radio].portatil,
+#signup .inputs input[type=radio].notengo  {
+    display: none; 
+}
+#signup .inputs input[type=radio].pc + label, #signup .inputs input[type=radio].portatil + label, 
+#signup .inputs input[type=radio].notengo + label{
+    margin-top: -10px;
+    width: 80px; 
+    height: 80px;   
+}
+
+#signup .inputs input[type=radio].pc:checked + label, #signup .inputs input[type=radio].portatil:checked + label,
+#signup .inputs input[type=radio].notengo:checked + label { 
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+/*----------------------------*/
+
+#signup .inputs input[type=radio].pc + label{
+    background: url(tipo1.png)no-repeat; 
+    background-size: 90%;
+}
+
+#signup .inputs input[type=radio].portatil + label { 
+
+    background: url(tipo2.png)no-repeat; 
+    background-size: 90%;
+}
+
+#signup .inputs input[type=radio].notengo + label { 
+
+    background: url(tipo3.png)no-repeat; 
+    background-size: 90%;
+}
+/*---------------------------*/
+
+/*-------uso--------------*/
+
+#signup .inputs input[type=radio].personal, #signup .inputs input[type=radio].familiar  {
+    display: none; 
+}
+#signup .inputs input[type=radio].personal + label, #signup .inputs input[type=radio].familiar + label {
+    margin-top: -10px;
+    width: 80px; 
+    height: 80px;  
+    margin-right: 0px; 
+}
+
+#signup .inputs input[type=radio].personal:checked + label, #signup .inputs input[type=radio].familiar:checked + label  { 
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+
+#signup .inputs input[type=radio].personal + label{
+    background: url(personal.png)no-repeat; 
+    background-size: 80%;
+
+}
+
+#signup .inputs input[type=radio].familiar + label{
+    background: url(familiar.png)no-repeat; 
+    background-size: 81%;
+
+}
+
+/*---------------------------*/ 
+
+/*---------Audifonos------------*/
+
+
+#signup .inputs input[type=radio].diadema, #signup .inputs input[type=radio].audifonos,
+#signup .inputs input[type=radio].bocina  {
+    display: none; 
+}
+#signup .inputs input[type=radio].diadema + label, #signup .inputs input[type=radio].audifonos + label ,
+#signup .inputs input[type=radio].bocina + label {
+    margin-bottom: -10px;
+    width: 80px; 
+    height: 80px;  
+    margin-right: 0px; 
+}
+
+#signup .inputs input[type=radio].diadema:checked + label, #signup .inputs input[type=radio].audifonos:checked + label,
+#signup .inputs input[type=radio].bocina:checked + label  { 
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+
+#signup .inputs input[type=radio].diadema + label{
+    background: url(auricular1.png)no-repeat; 
+    background-size: 80%;
+
+}
+
+#signup .inputs input[type=radio].audifonos + label{
+    background: url(auricular2.png)no-repeat; 
+    background-size: 81%;
+
+}
+
+#signup .inputs input[type=radio].bocina + label{
+    background: url(auricular3.png)no-repeat; 
+    background-size: 81%;
+
+}
+
+/*-----------------------------*/
+/*Lugares*/
+
+input[type=radio].sala, input[type=radio].universidad,input[type=radio].habitacion,input[type=radio].oficina,
+input[type=radio].biblioteca, input[type=radio].otros {
+    display: none; 
+}
+input[type=radio].sala + label, input[type=radio].universidad + label, input[type=radio].habitacion + label,
+input[type=radio].oficina + label, input[type=radio].biblioteca + label, input[type=radio].otros + label{
+    margin-top: -10px;
+    width: 90%; 
+    height: 80px; 
+}
+
+input[type=radio].sala:checked + label, input[type=radio].universidad:checked + label ,
+input[type=radio].habitacion:checked + label, input[type=radio].oficina:checked + label,
+input[type=radio].biblioteca:checked + label, input[type=radio].otros:checked + label{ 
+
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+
+/*----------------------------*/
+
+input[type=radio].sala + label{
+
+    background: url(espacio1.png)no-repeat; 
+    background-size: 72%;
+
+}
+
+input[type=radio].universidad + label{
+
+    background: url(espacio2.png)no-repeat; 
+    background-size: 72%;
+
+}
+
+input[type=radio].habitacion + label{
+
+    background: url(espacio3.png)no-repeat; 
+    background-size: 72%;
+
+}
+
+input[type=radio].oficina + label{
+
+    background: url(espacio4.png)no-repeat; 
+    background-size: 72%;
+
+}
+
+input[type=radio].biblioteca + label{
+
+    background: url(espacio5.png)no-repeat; 
+    background-size: 72%;
+
+}
+
+input[type=radio].otros + label{
+
+    background: url(espacio6.png)no-repeat; 
+    background-size: 72%;
+
+}
+
+/*----------------------------*/
+.seleccion{
+    font-size: 13px;
+    width: 100%;
+}
+
+p#opcion{
+    margin-top: -13%;
+}
+
+.pregunta2{
+    margin-top: -6%;
+    width: 76%;
+    margin-left: 38%;
+    text-align: left;
+}
+
+.espaciado{
+        margin-left: -40%;
+}
+.espaciado-arriba{
+    margin-top: 21%;
+}
 .no-padding{
+    padding: 0px 0px;
+}
+
+.no-padding2{
+    margin-bottom: 10px;
     padding: 0px 0px;
 }
 .zona-blanca{
     margin-left: 4.6%;
+}
+
+.separacion{
+    border-top: solid rgba(26, 167, 191, 0.29);
+    padding-top: 3%;
 }
 .color{
     color: #1AA7BF;
@@ -1105,9 +1512,27 @@ input[type=radio].freelance + label {
     width: 25%;
 } 
 
+.tamaño2_2{
+    width: 25%;
+    float: left;
+    margin-left: 11%;
+}
+
 .tamaño3{
     width: 83%;
 }
+
+.tamaño4{
+    width: 35%;
+}
+.tamaño4_4{
+    width: 46%;
+}
+
+.tamaño5{
+    width: 100%;
+}
+
 
 #signup .inputs .tamaño4{
     width: 100%;
@@ -1136,6 +1561,20 @@ input[type=radio].freelance + label {
     text-align: center;
 }
 
+.form-area span{
+    font-size: 11px;
+    color:#999;
+}
+
+.form-area p.color2{
+    margin-top: -2%;
+    font-size: 13px;
+    color: #1AA7BF;
+    float: left;
+    width: 31%
+}
+
+
 
 .form-box{
     display: inline-block !important;
@@ -1159,6 +1598,13 @@ input[type=radio].freelance + label {
 .form-box-text{
     font-size: 11px;
 
+}
+
+.form-box-text2{
+    text-align: center;
+    font-size: 11px;
+    width: 70%;
+    margin-left: -8%;
 }
 
 .round 
@@ -1414,5 +1860,9 @@ input { font-size: 14px; }
 
 input[type="submit"] { margin: 10px 0; background: #0088B2; color: #fff; padding: 8px 14px; font-weight: bold; display: inline-block; border: none; cursor: pointer; }
 input[type="submit"]:hover { background: #444; }
+
+.ocultodiv{
+    display: none;
+}
 
 /*Fin estilo formulario*/

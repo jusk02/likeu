@@ -31,9 +31,18 @@
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                 <%= devise_error_messages! %>
                 <div class="inputs">
-                  <div class="fieldformulario">
-                    <strong><%= f.label :name, '¿Cuál es tu nombre?', class: "izquierda" %></strong>
+                  <div class=" row fieldformulario">
+
+                  <div class="col-lg-7 col-sm-7 col-xs-12">
+                  <strong><%= f.label :name, '¿Cuál es tu nombre?', class: "izquierda" %></strong>
+                    <%= f.text_field :name, class: "tamaño4_4 likeu-input form-control" %><br>
+                  </div>
+
+                  <div class="col-lg-5 col-sm-5 col-xs-12 no-padding">
+                  <strong><%= f.label :city, 'Ciudad', class: "izquierda" %></strong>
                     <%= f.text_field :name, class: "tamaño1 likeu-input form-control" %><br>
+                  </div>
+
                   </div>
                   <br>
                   <br>
@@ -75,6 +84,7 @@
                         <input value="" name="user[email]" id="user_email" type="email" class= "tamaño3 likeu-input form-control">
                       </div>
                     </div>
+            
 
                 </div><!--final inputs -->
               </section>
@@ -199,7 +209,7 @@
                   </div>
                   <br>
                   <br>
-                 <!--    edad y genero -->
+                 <!--    si o no -->
                   <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 alineacion">
                   <%= f.radio_button :no_contract_activities, 'No',id:"no", class:"no" %><label for="no" class="grayscale ">&#160;</label>
                   <%= f.label :no_contract_activities, "no no he tenido", class:"nivel" %>
@@ -209,7 +219,7 @@
                   </div>
                       <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 ">
                       <%= f.text_area :no_contract_activities, class: "likeu-input form-control tamaño4" %>
-                       
+                    
                       </div>
 
                 </div><!--final inputs -->
@@ -234,21 +244,187 @@
                     <div class="row">
 
                     <!--Parte1-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-sm-6 col-xs-6">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
 
                           <div class="form-box round text-center">
-                            <%= f.radio_button :ocupation, 'Estudiante',id:"estudiante", class:"estudiante" %><label for="estudiante" class="grayscale ">&#160;</label>
-                            <p class="form-box-text">Estudiante universitario</p>
+                            <%= f.radio_button :achievement, 'Aumentar las Ventas',id:"aumentar", class:"botonE aumentar" %><label for="aumentar" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Aumentar las ventas</p>
                           </div>
                           
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
 
                         <div class="form-box round text-center">
-                            <%= f.radio_button :ocupation, 'Trabajador',id:"trabajador", class:"trabajador" %><label for="trabajador" class="grayscale ">&#160;</label>
-                            <p class="form-box-text">Trabajo como empleado</p>
+                            <%= f.radio_button :achievement, 'Aprender nuevas Herramientas',id:"herramientas", class:"botonE herramientas" %><label for="herramientas" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Aprender nuevas herramientas</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!--Parte2-->
+                    <div class="col-lg-4 col-sm-6 col-xs-6 ">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :achievement, 'Mejorar servicio',id:"servicio", class:"botonE servicio" %><label for="servicio" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Mejorar el servicio</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :achievement, 'Otro',id:"otro", class:"botonE otro" %><label for="otro" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Otro</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!--Parte3-->
+                    <div class="col-lg-4 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+
+                            <%= f.radio_button :achievement, 'Ninguno',id:"ninguno", class:"ninguno" %><label for="ninguno" class="grayscale">&#160;</label>
+
+                            <p class="form-box-text">Ninguno</p>
+                            <p id="opcion"><%= f.select(:achievement,options_for_select(['' ,'No tengo experiencia', 'No habia retos importantes para mi']),{},{ class:"seleccion"})%></p>
+
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">  
+
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <!--Parte4 cumplimiento-->
+                    <div class="col-lg-10 col-sm-12 col-xs-12 separacion ocultodiv">
+                        <div class="row">
+
+                          <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                           <%= f.label :achievement_acomplishment, '¿En que % cumpliste el reto?', class: "form-box-text" %>
+                           <%= f.number_field :achievement_acomplishment, min: 0 , max: 100, class:"tamaño4 likeu-input form-control" %><span style="margin-left: 5%">%</span>
+                          </div>
+
+                          <div class="col-lg-3 col-sm-6 col-xs-6">
+                           <%= f.label :achievement_company, 'Nombre de la empresa', class: "form-box-text" %>
+                            <%= f.text_field :achievement_company, class: "tamaño3 likeu-input form-control" %>
+                          </div>
+
+                          <div class="col-lg-3 col-sm-6 col-xs-6">
+                           <%= f.label :achievement_boss, 'Nombre del jefe', class: "form-box-text" %>
+                            <%= f.text_field :achievement_boss, class: "tamaño3 likeu-input form-control" %>
+                          </div>
+
+                          <div class="col-lg-3 col-sm-6 col-xs-6">
+                           <%= f.label :achievement_phone, 'Teléfono', class: "form-box-text" %>
+                            <p><!--<%= f.select(:achievement_phone,options_for_select(['Fijo', 'Movil']),{}, { class:"seleccion"})%>-->
+                            <%= f.text_field :achievement_phone, class: "tamaño3 likeu-input form-control" %></p>
+                          </div>
+                      
+                        </div>
+                        
+                    </div>
+
+
+                    </div>
+                  </div>       
+                </div>
+            </div>
+           
+          </div><!--final parte 2-->
+          
+          <!-- tercera pestaña-->
+          <div id="part3" class="tab-pane fade ">
+             <div class="contenidoSecion ">
+              <section id="signup">
+                <div class="tituloFormulario">
+                  <h3>Formulario</h3>
+                  <br>
+                </div>
+        
+                <div class="inputs form-area">
+                  <div class="row fieldformulario ">
+                    <p>¿Cuál es tu hobby o actividad que te apasiona?</p>
+                    <p><%= f.text_field :hobby, class: "tamaño1 likeu-input form-control" %></p>
+                  </div>
+                  <br>
+                 <!--    Pregunta2 -->
+                  <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <div class="row fieldformulario">
+                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-5">
+                        <p class="pregunta2">¿cuánto tiempo le dedicas a esta actividad?</p>
+                      </div>
+                      <!-- Tiempo hobby -->
+                      <div class="col-lg-5 col-sm-5 col-xs-5">
+                      <%= f.number_field :hobby_time, min: 0 , max: 100, class:"tamaño2_2 likeu-input form-control" %><p class="color2">Horas a la semana</p>
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <br>
+                    <div class="row fieldformulario preguntas">
+                    <p>¿Podríamos validar el conocimiento de esta actividad en cualquier momento?</p>
+                  </div>
+    
+                 <!--    si o no -->
+                  <div class="col-lg-8 col-lg-offset-3 col-sm-8 col-sm-offset-3 col-xs-12 alineacion">
+                  
+                  <%= f.radio_button :hobby_validate, 'Si',id:"validar-si", class:"validar-si" %><label for="validar-si" class="grayscale ">&#160;</label>
+                  <%= f.label :hobby_validate, "Si", class:"nivel" %>
+                  <%= f.radio_button :hobby_validate, 'No',id:"validar-no", class:"validar-no" %><label for="validar-no" class="grayscale ">&#160;</label>
+                  <%= f.label :hobby_validate, "No", class:"nivel" %>
+                    
+                  </div>
+
+                </div><!--final inputs -->
+              </section>
+
+
+              <!-- Botones siguiente y atras -->
+              <div class="botones">
+              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+                
+              </div>
+
+              <!-- Seccion en blanco -->
+            
+              <br>
+              <br>
+                <div class="form-area">
+                 <p class="color alineacion2">¿Como sabes no necesitas tener experiencia laboral, pero queremos saber si has tenido experiencia en:?</p>
+                 <span>( Puedes escoger varios )</span>
+                 <br>
+                 <br>
+                  <div class="col-lg-12 col-sm-12 col-xs-12 zona-blanca"> 
+                    <div class="row">
+
+                    <!--Parte1-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                          <div class="form-box round text-center">
+                         
+                            <%= f.check_box :special_experience,{class: "center checkB",id: "center"},'Call center' %><label for="center" class="grayscale ">&#160;</label>
+
+                            <p class="form-box-text">Call center</p>
+                          </div>
+                          
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                        <div class="form-box round text-center">
+                            <%= f.check_box :special_experience,{class: "ventas checkB",id: "ventas"},'Ventas' %><label for="ventas" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Ventas</p>
                           </div>
 
                         </div>
@@ -260,14 +436,14 @@
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           
                           <div class="form-box round text-center">
-                            <%= f.radio_button :ocupation, 'EstudioTrabajo',id:"estudiotrabajo", class:"estudiotrabajo" %><label for="estudiotrabajo" class="grayscale ">&#160;</label>
-                            <p class="form-box-text">Estudio y trabajo como empleado</p>
+                            <%= f.check_box :special_experience,{class: "soporte checkB",id: "soporte"},'Soporte' %><label for="soporte" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Soporte técnico</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           <div class="form-box round text-center">
-                            <%= f.radio_button :ocupation, 'Emprendedor',id:"emprendedor", class:"emprendedor" %><label for="emprendedor" class="grayscale ">&#160;</label>
-                            <p class="form-box-text">Soy emprendedor</p>
+                            <%= f.check_box :special_experience,{class: "servicio2 checkB",id: "servicio2"},'Servicio al cliente' %><label for="servicio2" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Servicio al cliente</p>
                           </div>
 
                         </div>
@@ -279,14 +455,14 @@
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           <div class="form-box round text-center">
 
-                            <%= f.radio_button :ocupation, 'Amo de casa',id:"amo", class:"amo" %><label for="amo" class="grayscale ">&#160;</label>
-                            <p class="form-box-text">Soy ama(o) de casa</p>
+                            <%= f.check_box :special_experience,{class: "teletrabajo checkB",id: "teletrabajo"},'teletrabajo' %><label for="teletrabajo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Teletrabajo</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                         <div class="form-box round text-center">
-                            <%= f.radio_button :ocupation, 'NoTrabajo',id:"notrabajo", class:"notrabajo" %><label for="notrabajo" class="grayscale ">&#160;</label>
-                            <p class="form-box-text">No estudio ni trabajo</p>
+                            <%= f.check_box :special_experience,{class: "catalogo checkB",id: "catalogo"},'catalogo' %><label for="catalogo" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Ventas por catálogo</p>
                           </div>
                           
 
@@ -299,8 +475,8 @@
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           <div class="form-box round text-center">
-                            <%= f.radio_button :ocupation, 'Freelance',id:"freelance", class:"freelance" %><label for="freelance" class="grayscale ">&#160;</label>
-                            <p class="form-box-text">Soy freelance</p>
+                           <%= f.check_box :special_experience,{class: "ninguno2",id: "ninguno2"},'Ninguno' %><label for="ninguno2" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Ninguno</p>
                           </div>
 
                         </div>
@@ -317,18 +493,267 @@
                   </div>       
                 </div>
             </div>
-           
-          </div><!--final parte 2-->
-          
-          <!-- tercera pestaña-->
-          <div id="part3" class="tab-pane fade ">
-            <h3>Menu 2</h3>
-            <p>Some content in menu 2.</p>
-             <!-- Botones siguiente y atras -->
+            </div><!--final pestaña 3-->
+
+            <!--inicio pestaña 4-->
+
+               <div id="part4" class="tab-pane fade ">
+             <div class="contenidoSecion ">
+              <section id="signup">
+                <div class="tituloFormulario">
+                  <h3>Formulario</h3>
+                  <br>
+                </div>
+        
+                <div class="inputs form-area">
+                  <div class="fieldformulario preguntas">
+                    <p>Los ingresos necesarios para cumplir tus obligaciones familiares y personales son:</p><br>
+                    <p><%= f.select(:current_income,options_for_select(['' ,'500.000 - 1´00.000 Mensuales', '1’000.000 - 1’500.000 Mensuales' , '1’500.000 - 2’000.000 Mensuales', '2’000.000 - 3’000.000 Mensuales', '3’000.000   -   Más      Mensuales']),{},{ class:"  form-control"})%></p>
+                    <br>
+                    <br>
+                  </div>
+
+                 <!--    Pregunta2 -->
+                  <div class="fieldformulario preguntas">
+                    <p>Tus ingresos actuales son:</p><br>
+                    <p><%= f.select(:current_income,options_for_select(['' ,'0 - 500.000 Mensuales','500.000 - 1´00.000 Mensuales', '1’000.000 - 1’500.000 Mensuales' , '1’500.000 - 2’000.000 Mensuales', '2’000.000 - 3’000.000 Mensuales', '3’000.000   -   Más      Mensuales']),{},{ class:"  form-control"})%></p><br>
+                     <span class="espacio-final"></span>
+                  </div>
+                    
+
+                </div><!--final inputs -->
+              </section>
+
+
+              <!-- Botones siguiente y atras -->
               <div class="botones">
-              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class="atras wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
                 
               </div>
+
+              <!-- Seccion en blanco -->
+            
+              <br>
+              <br>
+                <div class="form-area">
+                 <p class="color alineacion2">¿Para ti, qué tan signicativo es generar ingresos en cualquier momento y segun el tiempo que elijas?</p>
+                 <br>
+                 <br>
+                  <div class="col-lg-12 col-sm-12 col-xs-12 zona-blanca"> 
+
+                    <!--Parte1-->
+                    <div class="col-lg-3 col-lg-offset-1 col-sm-6 col-xs-6 no-padding">
+
+                    <div class="form-box round text-center">
+                            <%= f.radio_button :felixibility_importance, 'Me encantaria',id:"encantaria", class:"encantaria" %><label for="encantaria" class="grayscale ">&#160;</label>
+                            <p class="form-box-text2">Me encantaria</p>
+                          </div>
+
+                    </div>
+                    <!--Parte2-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                      
+                      <div class="form-box round text-center">
+                            <%= f.radio_button :felixibility_importance, 'Nose pero quiero conocer',id:"nose", class:"nose" %><label for="nose" class="grayscale ">&#160;</label>
+                            <p class="form-box-text2">Nose pero quiero conocer</p>
+                          </div>
+                    </div>
+                    <!--Parte3-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+
+                      <div class="form-box round text-center">
+                            <%= f.radio_button :felixibility_importance, 'Prefiero estabilidad',id:"estabilidad", class:"estabilidad" %><label for="estabilidad" class="grayscale ">&#160;</label>
+                            <p class="form-box-text2">Prefiero estabilidad en mis ingresos</p>
+                          </div>
+                    </div>
+
+
+                    
+                  </div>       
+                </div>
+            </div>
+            </div><!--final pestaña 4-->
+
+
+
+            <!-- pestaña 5-->
+          <div id="part5" class="tab-pane fade">
+
+
+          <!--  inicio formulario -->
+            <div class="contenidoSecion ">
+              <section id="signup">
+                <div class="tituloFormulario">
+                  <h3>Formulario</h3>
+                  <br>
+                </div>
+                 <div class="inputs">
+                  <div class="row fieldformulario preguntas3">
+                  
+                  <div class="col-lg-6 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-12 alineacion">
+                      <p>¿Que tipo de computador tienes?</p>
+                 
+                     <%= f.radio_button :pc_type, 'PC',id:"pc", class:"pc" %><label for="pc" class="grayscale ">&#160;</label>
+                     <%= f.radio_button :pc_type, 'portatil',id:"portatil", class:"portatil" %><label for="portatil" class="grayscale">&#160;</label>
+                      <%= f.radio_button :pc_type, 'No tengo',id:"notengo", class:"notengo" %><label for="notengo" class="grayscale">&#160;</label>
+                    
+                    </div>
+
+                    <div class="col-lg-4 col-lg-offset-1 col-sm-3- col-xs-12">
+                    <p>Es de uso
+                    <%= f.select(:pc_use,options_for_select(['' ,'Personal', 'Familiar']),{},{ class:"  form-control tamaño5"})%></p>
+                    </div>
+
+
+                  </div>
+                 <!--    tipo de pc -->
+                
+                    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-xs-12 separacion">
+                        <div class="row">
+                        <div class="col-lg-7 col-sm-6 col-xs-12">
+                        <p class="no-padding2">¿cual es la velocidad de tu internet?:</p>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-3 col-xs-12 no-padding">
+                       <%= f.select(:internet_speed ,options_for_select(['' ,'< 2 Megas', '3 - 5 Megas' , '5 - + Megas', 'nose']),{},{ class:"  form-control"})%>
+                        </div>
+                        </div>
+                        
+                    </div>
+
+
+
+                     <div class="col-lg-12 col-sm-12 col-xs-12 preguntas"> 
+
+                     <p>¿Cual de estos auriculales tienes?</p>
+
+                    <!--Parte1-->
+                    <div class="col-lg-3 col-lg-offset-2 col-sm-6 col-xs-6 no-padding">
+
+                    <div class="text-center">
+                            <%= f.radio_button :can_talk, 'Manos libres',id:"diadema", class:"diadema" %><label for="diadema" class="grayscale ">&#160;</label>
+                          </div>
+
+                    </div>
+                    <!--Parte2-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                      
+                      <div class="text-center">
+                            <%= f.radio_button :can_talk, 'Audifonos',id:"audifonos", class:"audifonos" %><label for="audifonos" class="grayscale ">&#160;</label>
+                          </div>
+                    </div>
+                    <!--Parte3-->
+                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+
+                      <div class=" text-center">
+                            <%= f.radio_button :can_talk, 'Bocina pc',id:"bocina", class:"bocina" %><label for="bocina" class="grayscale ">&#160;</label>
+                          </div>
+                    </div>
+
+                  </div>
+
+
+                </div><!--final inputs -->
+               
+           </section>
+
+
+              <!-- Botones siguiente y atras -->
+              <div class="botones">
+              <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+                
+              </div>
+
+              <!-- Seccion en blanco -->
+            
+              <br>
+              <br>
+                <div class="form-area">
+                 <p class="color">¿En qué espacio vas a trabajar con nosotros?</p>
+                  <div class="col-lg-12 col-sm-12 col-xs-12 zona-blanca"> 
+                    <div class="row">
+
+                    <!--Parte1-->
+                    <div class="col-lg-4 col-sm-6 col-xs-6">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :workplace, 'Sala',id:"sala", class:"sala" %><label for="sala" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Sala</p>
+                          </div>
+                          
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+
+                        <div class="form-box round text-center">
+                            <%= f.radio_button :workplace, 'Universidad',id:"universidad", class:"universidad" %><label for="universidad" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Universidad</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!--Parte2-->
+                    <div class="col-lg-4 col-sm-6 col-xs-6 ">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :workplace, 'Habitacion',id:"habitacion", class:"habitacion" %><label for="habitacion" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Habitacion</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :workplace, 'Oficina personal',id:"oficina", class:"oficina" %><label for="oficina" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Oficina</p>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <!--Parte3-->
+                    <div class="col-lg-4 col-sm-6 col-xs-6">
+                      <div class="row">
+
+                      <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+                            <%= f.radio_button :workplace, 'Bibioteca',id:"biblioteca", class:"biblioteca" %><label for="biblioteca" class="grayscale ">&#160;</label>
+                            <p class="form-box-text">Biblioteca</p>
+                          </div>
+
+                        </div>
+
+
+                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                          <div class="form-box round text-center">
+
+                            <%= f.radio_button :workplace, 'Otro',id:"otros", class:"otros" %><label for="otros" class="grayscale">&#160;</label>
+
+                            <p class="form-box-text">Otro</p>
+                            <p id="mas"><%= f.text_field :workplace, class: "tamaño1 likeu-input form-control" %></p>
+
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+
+
+                    </div>
+                  </div>       
+                </div>
+            </div>
+           
+          </div><!--final parte 2-->
+
+
+
+
+
             </div>
             
            <% end %>
