@@ -12,4 +12,5 @@ def facebook_likes
     @likes = JSON.parse(data)['likes']
 end
 	  
+
 end

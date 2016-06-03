@@ -532,11 +532,14 @@
             
             var button = this;
             uploadToServer(recordRTC, function(progress, fileURL) {
-                if(progress === 'ended') {
+                console.log("aqui va pasando algo");
+                if(progress === 'progress-ended') {
+                    console.log("aqui va pasando mas");
+                    console.log(fileURL);
                     button.disabled = false;
                     button.innerHTML = 'Click to download from server';
                     button.onclick = function() {
-                        window.open(fileURL);
+                    window.open(fileURL);
                     };
                     return;
                 }
@@ -564,10 +567,13 @@
         formData.append(fileType + '-blob', blob);
 
         callback('Uploading ' + fileType + ' recording to server.');
+        console.log("aqui va a llamar el rb");
 
-        makeXMLHttpRequest('save.php', formData, function(progress) {
+        makeXMLHttpRequest('save.rb', formData, function(progress) {
+
             if (progress !== 'upload-ended') {
                 callback(progress);
+                console.log("aqui va pasando" + progress);
                 return;
             }
 
@@ -576,7 +582,7 @@
             callback('ended', initialURL + fileName);
 
             // to make sure we can delete as soon as visitor leaves
-            listOfFilesUploaded.push(initialURL + fileName);
+           // listOfFilesUploaded.push(initialURL + fileName);
         });
     }
 

@@ -1,16 +1,21 @@
+<script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/gif-recorder.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/getScreenId.js"></script>
 
+    <!-- for Edige/FF/Chrome/Opera/etc. getUserMedia support -->
+    <script src="https://cdn.webrtc-experiment.com/gumadapter.js"></script>
 
 
         <section class="experiment recordrtc">
         	<div class="container">
 		        <div class="row">
 		            <div class="col-lg-10 col-lg-offset-1 text-center">
-
+		            <p>antes de iniciar la prueba aseguremonos que tu equipo funciona bien, comprueba que puedes verte en el recuadro de abajo, y que la barra lateral se mueve cuando hablas</p>
 			            <div id="booth">
 		
-							<video id="video" width="400" height="300"></video>
+							
 							<a href="#" id="capturar" class="boton-captura btn btn-dark"> capturar </a>
-							<canvas id="canvas" width="400" height="300"></canvas>
+						
 							
 						</div>
 					
@@ -32,7 +37,7 @@
 			                <button id="upload-to-server">Upload To Server</button>
 			            </div>
 			            <br>
-			            <video></video>
+			            <video controls muted></video>
 			        </div>
 		        </div>
 	        </div>

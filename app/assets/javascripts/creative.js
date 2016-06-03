@@ -6,6 +6,21 @@
 
  $(document).ready( function () {
 
+    $(window).scroll(function(){
+        console.log($(this).scrollTop());
+        if ($(this).scrollTop() > 250) {
+            $(".scrollToTop").fadeIn(1000)
+        } else {
+            $(".scrollToTop").fadeOut(1000);
+        }
+    });
+
+    //Click event to scroll to top
+    $(".scrollToTop").click(function(){
+        $('html, body').animate({scrollTop : 0},500);
+        return false;
+    });
+
 (function($) {
     "use strict"; // Start of use strict
 
