@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :clicks
   get 'contacts/create'
   
 
@@ -25,6 +26,8 @@ Rails.application.routes.draw do
   get "/FAQ_likeu", to: "static_pages#FAQ_likeu", as: "FAQ_likeu"
 
   resources :contacts
+
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
