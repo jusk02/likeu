@@ -25,10 +25,12 @@ class ClicksController < ApplicationController
   # POST /clicks.json
   def create
     @click = Click.new(click_params)
+    @click.ip_address=request.remote_ip
+    puts @click.ip_address
 
     respond_to do |format|
       if @click.save
-        format.html { redirect_to @click, notice: 'Click was successfully created.' }
+        format.html { redirect_to "/ups", notice: 'Click was successfully created.' }
         format.json { render :show, status: :created, location: @click }
       else
         format.html { render :new }
