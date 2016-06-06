@@ -33,7 +33,7 @@ class ClicksController < ApplicationController
         format.html { redirect_to "/ups", notice: 'Click was successfully created.' }
         format.json { render :show, status: :created, location: @click }
       else
-        format.html { render :new }
+        format.html { redirect_to "/ups", notice: 'Click was successfully created.'}
         format.json { render json: @click.errors, status: :unprocessable_entity }
       end
     end
