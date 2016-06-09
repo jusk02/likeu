@@ -6,6 +6,14 @@ module ApplicationHelper
     	content_tag(:iframe, nil, src: "//www.youtube.com/embed/#{youtube_id}")
   	end
 
+  	def holi
+  		"hola juan!"
+  		
+  	end
+
+  	 def original_url
+  	 	 request.fullpath
+  end
 
 end
 

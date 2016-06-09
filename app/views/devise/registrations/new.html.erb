@@ -1,69 +1,24 @@
-<section>
-  <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center">
-    <h1>Cuéntanos sobre ti</h1>
-     
-    <p>Contesta las siguientes preguntas con la mayor sinceridad. No hay respuestas correctas ni equivocadas, sólo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p>
-  </div> 
+<h2>Sign up</h2>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
-        <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#part1">Home</a></li>
-          <li><a data-toggle="tab" href="#part2">Part2</a></li>
-          <li><a data-toggle="tab" href="#part3">Part3</a></li>
-        </ul>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
 
-        <div class="tab-content">
-          <!-- primera pestaña-->
-          <div id="part1" class="tab-pane fade in active"> 
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
-            <h2>Datos personales</h2>
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
 
-            <div class="col-lg-12 col-sm-12 col-xs-12" id="datos_personales">
-              <br>
-              <div class="col-lg-12 col-sm-12 col-xs-12 text-center">
-                <%= f.label :name, 'Mi nombre es ' %>
-                <%= f.text_field :name , :class => 'likeu-input form-control'%>
-                </div>
-            
-            <div>
-              <%= f.label :password,"Elija una contraseña"%>
-              <% if @minimum_password_length %>
-                <em>(<% @minimum_password_length %> Mínimo 8 carácteres)</em>
-              <% end %><br/>
-              <%= f.password_field :password, autocomplete: "off" %>
-            </div>
+  
 
-            <div>
-              <%= f.label :password_confirmation,"Por favor confirme contraseña"%><br/>
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
-            </div>
-              
-            <div>
-              <img src="<%=image_path('correoelectronico.png')%>" class="icono-form" class="wow bounceIn"><br/>
-              <%= f.label :email, 'Correo electrónico' %><br/>
-              <input value="" name="user[email]" id="user_email" type="email" placeholder="e-mail">
-            </div>
-          </div> 
-
-          <!-- segunda pestaña-->
-          <div id="part2" class="tab-pane fade">
-            <h3>Menu 1</h3>
-            <p>Some content in menu 1.</p>
-          </div>
-          
-          <!-- tercera pestaña-->
-          <div id="part3" class="tab-pane fade">
-            <h3>Menu 2</h3>
-            <p>Some content in menu 2.</p>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>  
-</section>
-
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>

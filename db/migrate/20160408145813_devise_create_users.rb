@@ -59,6 +59,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :workplace
       t.string :comfort
       t.integer :role
+      t.string :video
+      t.string :active
+      t.string :fase
       t.timestamps null: false
     end
 
