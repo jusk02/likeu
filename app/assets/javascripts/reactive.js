@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
 
+
     $('.collapse').on('show.bs.collapse', function() {
         var id = $(this).attr('id');
         $('a[href="#' + id + '"]').closest('.panel-heading').addClass('active-faq');
@@ -91,8 +92,18 @@ $(document).ready(function(){
         $("#ninguno2").is(":checked")
          $(".checkB").prop('checked', false);
         
+    });
 
-   
+
+
+});
+
+$(document).ready(function(){
+   $(".checkB").click(function(){
+    
+        $(".checkB").is(":checked")
+         $("#ninguno2").prop('checked', false);
+        
     });
 
 
@@ -111,6 +122,16 @@ $(document).ready(function(){
          $("p#mas").hide(true);
       }
    });
+
+   $(".lugar").click(function(){
+
+              
+              $("p#mas").hide();
+
+      });
+
+
+
 });
 
 

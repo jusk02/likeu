@@ -24,6 +24,7 @@
 //= require bootstrap
 //= require classie
 //= require reactive
+
 //= require turbolinks
 
 

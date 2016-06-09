@@ -923,6 +923,7 @@ background: url("tituloFormulario.png") no-repeat;
     margin-left: 30%;
 }
 
+
 .grayscale, .form-cel {
     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+, IE10 */
     filter: gray; /* IE6-9 */
@@ -985,6 +986,17 @@ background: url("tituloFormulario.png") no-repeat;
     color: #333;
 
 }
+
+.preguntas4 p{
+    width: 93%;
+}
+
+.reloj{
+    width: 95%;
+}
+
+
+
 #signup .inputs .nivel{
     margin-top: 2%;
 }
@@ -1327,28 +1339,18 @@ input[type=radio].estabilidad + label {
 #signup .inputs input[type=radio].personal, #signup .inputs input[type=radio].familiar  {
     display: none; 
 }
-#signup .inputs input[type=radio].personal + label, #signup .inputs input[type=radio].familiar + label {
-    margin-top: -10px;
-    width: 80px; 
-    height: 80px;  
-    margin-right: 0px; 
+
+#signup .inputs input[type=radio].personal + label,#signup .inputs input[type=radio].familiar + label{
+    width: 30px; 
+    height: 30px;
+    background: url(radio_botton.png)no-repeat; 
+
 }
 
-#signup .inputs input[type=radio].personal:checked + label, #signup .inputs input[type=radio].familiar:checked + label  { 
-    filter: none;
+#signup .inputs input[type=radio].personal:checked + label, #signup .inputs input[type=radio].familiar:checked + label{
+     filter: none;
     -webkit-filter: grayscale(0%);
-}
-
-
-#signup .inputs input[type=radio].personal + label{
-    background: url(personal.png)no-repeat; 
-    background-size: 80%;
-
-}
-
-#signup .inputs input[type=radio].familiar + label{
-    background: url(familiar.png)no-repeat; 
-    background-size: 81%;
+    background: url(radio_botton_check.png)no-repeat; 
 
 }
 
@@ -1487,6 +1489,10 @@ p#opcion{
     padding: 0px 0px;
 }
 
+#signup .inputs .no-margin{
+    margin: 0px;
+}
+
 .no-padding2{
     margin-bottom: 10px;
     padding: 0px 0px;
@@ -1499,9 +1505,19 @@ p#opcion{
     border-top: solid rgba(26, 167, 191, 0.29);
     padding-top: 3%;
 }
+
+.barra img{
+    margin-left: -5px;
+}
+
+.separacion-dereha{
+    margin-right: -6%;
+    border-right: solid rgba(26, 167, 191, 0.29);
+}
 .color{
     color: #1AA7BF;
 }
+
 /*tamaños input 1(grande), 2 (pequeña) , 3(grande)*/
 
 .tamaño1{
@@ -1596,15 +1612,58 @@ p#opcion{
 }
 
 .form-box-text{
-    font-size: 11px;
+    font-size: 12px;
 
 }
 
 .form-box-text2{
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
     width: 70%;
     margin-left: -8%;
+}
+
+.form-box-text3 {
+    font-size: 12px;
+    margin-left: -30%;
+}
+
+.posicion-reloj{
+    clear: both;
+    position: absolute;
+    width: 30%;
+    bottom: 3%;
+    left: 12%;
+}
+
+.posicion-manija{
+    clear: both;
+    position: absolute;
+    width: 7%;
+    bottom: 18%;
+    left: 22%;
+   
+  transform-origin: 49% 81%;
+
+}
+
+.posicion-manija.active {
+   transform: rotar(42deg)!important;
+    -moz-transform: rotar(42deg);
+    -o-transform: rotate(42deg);
+    -webkit-transform: rotate(42deg);
+}
+
+
+@keyframes rotar {
+    top{transform: rotar(0deg);
+    -moz-transform: rotar(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);}
+    from{transform: rotar(-360deg);
+    -moz-transform: rotar(-360deg);
+    -o-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);}
 }
 
 .round 
@@ -1622,6 +1681,11 @@ p#opcion{
 }
 
 
+.campo-horas{
+    position: absolute;
+    bottom: 17%;
+    right: 19%;
+}
 
 
 input:focus {
