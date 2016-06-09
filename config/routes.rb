@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations" }
 
+  resources :users, only: [:show, :edit, :update]
+
   #get 'home/index'
 
   
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
   get "/FAQ_likeu", to: "static_pages#FAQ_likeu", as: "FAQ_likeu"
 
   resources :contacts
+
+  post "/upload", to: "static_pages#upload", as: "upload"
 
   
 

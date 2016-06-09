@@ -9,15 +9,15 @@
     $(window).scroll(function(){
         console.log($(this).scrollTop());
         if ($(this).scrollTop() > 250) {
-            $(".scrollToTop").fadeIn(1000)
+            $(".scrollToTop").fadeIn(900)
         } else {
-            $(".scrollToTop").fadeOut(1000);
+            $(".scrollToTop").fadeOut(900);
         }
     });
 
     //Click event to scroll to top
     $(".scrollToTop").click(function(){
-        $('html, body').animate({scrollTop : 0},500);
+        $('html, body').animate({scrollTop : 0},1250, 'easeInOutExpo');
         return false;
     });
 

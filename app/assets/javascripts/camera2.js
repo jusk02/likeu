@@ -569,11 +569,11 @@
         callback('Uploading ' + fileType + ' recording to server.');
         console.log("aqui va a llamar el rb");
 
-        makeXMLHttpRequest('save.rb', formData, function(progress) {
+        makeXMLHttpRequest('save.php', formData, function(progress) {
 
             if (progress !== 'upload-ended') {
                 callback(progress);
-                console.log("aqui va pasando" + progress);
+                
                 return;
             }
 

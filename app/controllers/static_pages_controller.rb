@@ -13,6 +13,11 @@ class StaticPagesController < ApplicationController
   		
   	end
 
+    def dictiontest
+      @user = User.new
+      @users = User.order("created_at DESC")  
+    end
+
   	def ups
   		@click = Click.new
   		@clicks = Click.order("created_at DESC")	
