@@ -9,7 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
     session["user_return_to"] || root_path
   end
 
-def update_resource(resource, params)
+ def update_resource(resource, params)
     resource.update_without_password(params)
   end
   
