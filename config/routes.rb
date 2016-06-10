@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   resources :contacts
 
-  post "/upload", to: "static_pages#upload", as: "upload"
+  get "/status", to: "static_pages#status", as: "status"
 
   
 

@@ -23,9 +23,7 @@
                 <li>
                     <a class="page-scroll" href="#apply">Convertirme en liker</a>
                 </li>  
-                <li>
-                    <%= link_to 'Edit', edit_user_path(current_user) %></td>
-                </li>               
+                            
             </ul>
         </div>
     </div>
@@ -310,7 +308,13 @@
                 <br><a id="registro" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
-               <!--  <a href="#" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> -->  
+                    <% if user_signed_in? %>
+                     <%= edit_user_path(current_user) %>
+                     <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %>
+                     <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> 
+                    <% else %>
+                     <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+                    <% end %>             
                 <br><a id="audio" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
