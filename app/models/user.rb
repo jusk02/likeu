@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     	self.fase = 1
     	self.active = "activo"
     	self.role = 1 if role.blank?
-    	self.password = self.cellphone
+    	#self.password = self.cellphone
   	end
 
  
