@@ -50,7 +50,17 @@ $(document).ready(function() {
         $('div.open').collapse("toggle").removeClass('open');   
     })
     
-
+     $(function() {
+        $('a.video-iniciar').click(function(event){
+            
+            var id = $(this).attr('id');
+            
+            $('input.guarda-video').removeClass('hidden');
+            
+            $('a.video-iniciar').addClass('hidden');
+            
+        });
+    });
 
 });
 

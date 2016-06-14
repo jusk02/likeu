@@ -200,7 +200,7 @@
                                 “Con LikeU entendí que una vida feliz, la tranquilidad y el trabajo pueden ser sinónimos, porque los puedo combinar como más me gusta”
                             </div>
                             <div class="project-foot">
-                                - Andrea - 1 pm desde la finca de sus abuelos -
+                                - Andrea - 1 pm desde >>>EDIT PLACE<<< -
                             </div>
                         </div>
                     </div>
@@ -309,9 +309,11 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
                     <% if user_signed_in? %>
-                     <%= edit_user_path(current_user) %>
-                     <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %>
-                     <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> 
+
+                     
+                     <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %><br>
+                     <a href="/status" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+                     <!-- <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> --> 
                     <% else %>
                      <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
                     <% end %>             
