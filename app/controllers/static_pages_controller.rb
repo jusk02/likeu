@@ -13,6 +13,12 @@ class StaticPagesController < ApplicationController
   		
   	end
 
+    def status
+      unless current_user
+        redirect_to login_url
+      end
+    end
+
     def dictiontest
       @user = User.new
       @users = User.order("created_at DESC")  

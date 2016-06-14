@@ -12,6 +12,13 @@ class User < ActiveRecord::Base
 # validates :gender, presence: true
 
 
+	before_create do
+    	self.fase = 1
+    	self.active = "activo"
+    	self.role = 1 if role.blank?
+    	self.password = self.cellphone
+  	end
+
  
 
 
