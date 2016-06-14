@@ -16,7 +16,7 @@
 				ya está (la grabación se realiza una sola vez).
 				</p>
 
-				<a href="http://makemarkhosting.com/video/video/" class="btn btn-primary btn-xl" target="_blank">Empezar</a>
+				<a href="http://makemarkhosting.com/video/video3ddd/" class="video-iniciar btn btn-primary btn-xl" target="_blank">Empezar</a>
 
 
 				<%= form_for(current_user) do |f| %>
@@ -36,11 +36,11 @@
 
 			      <div class="field">
 			        <br>
-			        <%= f.hidden_field :video %>
+			        <%= f.hidden_field :video, :value => original_url %>
 			      </div>
 			      <br>
 			      <div class="actions">
-			        <%= f.submit 'guardar', :class => 'btn btn-success hidden' %>
+			        <%= f.submit 'guardar', :class => 'guarda-video btn btn-success hidden' %>
 			      </div>
 			     
 			<% end %>
