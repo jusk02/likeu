@@ -12,9 +12,15 @@ module ApplicationHelper
   	 def original_url
   	 	 @hola=request.fullpath
        @encoded_url = request.fullpath.split("url=").last
-
-       @encoded_url = Base64.decode64(@encoded_url)
-      
+       
+      if @encoded_url.length>15
+        
+        @encoded_url = Base64.decode64(@encoded_url)
+        @encoded_url
+      else
+        @hola
+       
+      end
        
       
   end
