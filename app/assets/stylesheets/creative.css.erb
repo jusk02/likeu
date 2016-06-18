@@ -298,73 +298,6 @@ aside {
     background-color: transparent;
 }
 
-
-
-@media(min-width:768px) {
-
-
-
-    .movil-desaparece
-    {
-    visibility: hidden;
-    }
-
-    .logo
-    {
-        margin-top: 100px;
-        width: 220px;
-    }
-
-    .navbar-default {
-        border-color: rgba(255,255,255,.3);
-        background-color: transparent;
-    }
-
-    .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
-    }
-
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
-    }
-
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
-    }
-
-    .navbar-default .nav > li>a:hover,
-    .navbar-default .nav>li>a:focus:hover {
-        color: #00F5E5;
-    }
-
-    .navbar-default.affix {
-        border-color: rgba(34,34,34,.05);
-        background-color: #fff;
-    }
-
-    .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
-        color: #00F5E5;
-    }
-
-    .navbar-default.affix .navbar-header .navbar-brand:hover,
-    .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #00F5E5;
-    }
-
-    .navbar-default.affix .nav > li>a,
-    .navbar-default.affix .nav>li>a:focus {
-        color: #222;
-    }
-
-    .navbar-default.affix .nav > li>a:hover,
-    .navbar-default.affix .nav>li>a:focus:hover {
-        color: #00F5E5;
-    }
-}
-
 .login{
 
     position: relative;
@@ -452,41 +385,6 @@ header .header-content .header-content-inner p {
     color: rgba(255,255,255,.7);
 }
 
-@media(min-width:768px) {
-    header {
-        min-height: 100%;
-    }
-
-
-    header .header-content {
-        position: absolute;
-        top: 50%;
-        padding: 0 50px;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
-
-    .header-content {
-    position: absolute;
-    width: 100%;
-    padding: 100px 15px;
-    text-align: center;
-}
-
-    header .header-content .header-content-inner {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 1000px;
-    }
-
-    header .header-content .header-content-inner p {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 80%;
-        font-size: 18px;
-    }
-}
 
 
 .section-heading {
@@ -497,20 +395,6 @@ header .header-content .header-content-inner p {
     margin: 50px auto 0;
     max-width: 400px;
 }
-
-@media(min-width:992px) {
-
-    .logo
-    {
-        margin-top: 0px;
-    width: 260px;
-    }
-    .service-box {
-        margin: 20px auto 0;
-    }
-}
-
-
 
 .portfolio-box {
     display: block;
@@ -566,16 +450,6 @@ header .header-content .header-content-inner p {
 
 .portfolio-box:hover .portfolio-box-caption {
     opacity: 1;
-}
-
-@media(min-width:768px) {
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
-    }
-
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
-    }
 }
 
 .call-to-action h2 {
@@ -861,7 +735,7 @@ background: url("tituloFormulario.png") no-repeat;
 
 #signup { 
     padding: 0px 25px 25px;
-    width: 720px;
+    width: 96%;
     box-shadow: 
         0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
         0px 4px 20px rgba( 0,0,0,0.33 );
@@ -911,7 +785,7 @@ background: url("tituloFormulario.png") no-repeat;
 
 
 .alineacion{
-   display: -webkit-box;
+   display: inline-flex;
 }
 
 .alineacion2{
@@ -919,8 +793,13 @@ background: url("tituloFormulario.png") no-repeat;
     width: 60%;
 }
 .alineacion3{
-    display: -webkit-box;
+    display: inline-flex;
     margin-left: 30%;
+}
+
+.alineacion4 {
+    margin: auto;
+    width: 81%;
 }
 
 
@@ -981,7 +860,7 @@ background: url("tituloFormulario.png") no-repeat;
 }
 
 .preguntas3 p{
-    width: 48%;
+    width: 43%;
     text-align: center;
     color: #333;
 
@@ -994,8 +873,6 @@ background: url("tituloFormulario.png") no-repeat;
 .reloj{
     width: 95%;
 }
-
-
 
 #signup .inputs .nivel{
     margin-top: 2%;
@@ -1463,6 +1340,47 @@ input[type=radio].otros + label{
 }
 
 /*----------------------------*/
+
+/*Funciona o no funciona */
+
+ input[type=radio].funciona, input[type=radio].ajustes, 
+ input[type=radio].noFunciona  {
+
+   display: none;
+}
+ input[type=radio].funciona+ label, input[type=radio].ajustes + label,
+ input[type=radio].noFunciona + label{
+    margin-top: -10px;
+    width: 90%; 
+    height: 80px; 
+
+}
+
+ input[type=radio].funciona:checked + label,  input[type=radio].ajustes:checked + label,
+ input[type=radio].noFunciona:checked + label{
+     filter: none;
+    -webkit-filter: grayscale(0%);
+}
+/*------------------------------*/
+
+input[type=radio].funciona + label {
+ 
+    background: url(encantaria.png)no-repeat; 
+    background-size: 44%;
+}
+
+input[type=radio].ajustes + label {
+ 
+    background: url(encantaria2.png)no-repeat; 
+    background-size: 44%;
+}
+
+input[type=radio].noFunciona + label {
+ 
+    background: url(reto_ninguno.png)no-repeat; 
+    background-size: 44%;
+}
+/*----------------------------*/
 .seleccion{
     font-size: 13px;
     width: 100%;
@@ -1491,6 +1409,10 @@ p#opcion{
 
 #signup .inputs .no-margin{
     margin: 0px;
+}
+
+.nivelacion-retos{
+    margin-bottom: 13%;
 }
 
 .no-padding2{
@@ -1553,6 +1475,11 @@ p#opcion{
 #signup .inputs .tamaño4{
     width: 100%;
     height: 116px;
+}
+
+#signup .inputs .tamaño1-1{
+    width: 60%;
+    
 }
 
 
@@ -1683,8 +1610,23 @@ p#opcion{
 
 .campo-horas{
     position: absolute;
-    bottom: 17%;
-    right: 19%;
+    bottom: 14%;
+    right: 22%;
+}
+
+.posicion-calendario {
+    clear: both;
+    position: absolute;
+    width: 29%;
+    bottom: 3%;
+    left: 12%;
+}
+.reflejo-dias{
+    position: absolute;
+    left: 22%;
+    bottom: 4%;
+    font-size: 46px;
+    color: #ee8d1e;
 }
 
 
@@ -1718,25 +1660,6 @@ margin-top: 17%;
 position: fixed;
 z-index: 100;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* codigo para hacer el embed de videos de youtube responsive*/
@@ -1836,6 +1759,479 @@ background-position: center;
 background-size: cover;
 -o-background-size: cover;
 }
+
+
+
+
+/*Barra de progreso */
+
+.slider{
+   
+    width: 100%;
+    position: relative;
+   
+}
+
+
+
+
+
+/*-----------------------------------------------------*/
+/*RESPONSIVE*/
+@media screen and (max-width:1024px) {
+
+
+.reto{
+    display: block;
+}
+.reto2{
+    margin-top: 9%;
+}
+
+}  
+
+@media screen and (max-width:800px) {
+
+
+.botones .atras{
+    margin-left: 0%;
+}
+
+.botones .siguiente{
+    margin-right: 0%;
+}   
+
+} 
+
+@media screen and (max-width:600px) {
+
+ .botones .atras{
+    margin-left: 4%;
+}
+
+.botones .siguiente{
+    margin-right: 2%;
+}
+
+.tituloFormulario h3 {
+    margin-left: 11%;
+    
+}
+
+#signup .inputs label.text-genero{
+    margin-left: 13%;
+}
+
+.bandera {
+    margin-left: -25%;
+
+}
+
+.tamaño3 {
+    width: 64%;
+}
+
+.tamaño3-3 {
+    width: 91%;
+}
+
+.marging-top{
+    margin-top: 5%;
+    margin-left: 7%;
+    position: relative;
+}
+
+.form-box-text {
+    font-size: 15px;
+    width: 80%;
+    margin-left: 6%;
+}
+
+#signup {
+
+    margin-left: 4%;
+}
+
+#signup .inputs label.contacto-form {
+    margin-top: 5%;
+}
+
+
+#signup .inputs label.izquierda {
+    margin-left: 10%;
+}
+
+#signup .inputs label {
+    font-size: 15px;
+}
+
+.edad{
+    position: absolute;
+    top: -95%;
+    left: 44%;
+}
+
+input[type=radio].estudiante + label, input[type=radio].trabajador + label, 
+input[type=radio].estudiotrabajo + label, input[type=radio].emprendedor + label,
+input[type=radio].amo + label, input[type=radio].notrabajo + label, 
+input[type=radio].freelance + label {
+    width: 61%;
+    height: 121px;
+}
+
+input[type=checkbox].center + label, input[type=checkbox].ventas + label, 
+input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label, 
+input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label, 
+input[type=checkbox].ninguno2 + label{
+
+width: 61%;
+    height: 121px;
+}
+
+}  
+
+
+
+
+/*@media screen and (max-width:450px) {
+
+
+.tituloFormulario h3 {
+    margin-left: 17%;
+    
+}
+
+.likeu-input {
+    font-size: 15px;
+}
+
+.tamaño4_4 {
+    width: 100%;
+}
+
+.tamaño1 {
+    width: 79%;
+}
+
+.tamaño3 {
+    width: 100%;
+}
+
+.edad {
+    top: -108%;
+    left: 56%;
+}
+
+.tamaño2 {
+    width: 56%;
+}
+
+.tamaño2_2 {
+    width: 60%;
+    margin-left: 0;
+}
+
+.marging-top {
+    margin-left: 4%;
+
+}
+
+.botones img {
+    width: 8%;
+ 
+}
+
+.form-area span {
+    font-size: 13px;
+   
+}
+
+.pregunta2 {
+    margin-top: -6%;
+    width: 100%;
+    margin-left: 0%;
+    text-align: center;
+}
+.form-area p.color2 {
+  
+    width: 33%;
+}
+
+.alineacion2 {
+    width: 88%;
+}
+
+#signup .inputs label.text-genero {
+    margin-left: 0%;
+    text-align: center;
+    margin-top: -6%;
+}
+#signup .inputs input[type=radio].no + label, #signup .inputs input[type=radio].si + label {
+    margin-left: 0%;
+    width: 30px;
+    height: 30px;
+}
+
+#signup .inputs input[type=radio].masculino + label, #signup .inputs input[type=radio].femenino + label {
+
+    margin-left: 15%;
+}
+
+#signup .inputs input[type=radio].validar-no + label, #signup .inputs input[type=radio].validar-si + label {
+    margin-left: 16%;
+}
+
+input[type=radio].encantaria+ label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+    width: 100%;
+    height: 110px;
+}
+
+input[type=radio].encantaria + label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+    background-size: 56%;
+}
+
+
+#signup .inputs input[type=radio].pc + label, #signup .inputs input[type=radio].portatil + label, 
+#signup .inputs input[type=radio].notengo + label {
+    float: inherit;
+    margin-left: 10%;
+    width: 65px;
+    height: 75px;
+}
+
+.no-padding-pequeño{
+    padding: 0px;
+} 
+
+.sin-alineacion{
+    display: block;
+}
+
+.preguntas3 p {
+    width: 100%
+}
+
+.bandera {
+    margin-left: 0%;
+    width: 12%;
+    margin-bottom: 2%;
+}
+
+.desaparecer{
+    display: none;
+}
+
+.indicativo {
+    display: block;
+    margin-top: -10%;
+    margin-right: 4px;
+}
+
+.smart-pequeño {
+    float: none;
+    display: block;
+    margin: 2px auto;
+}
+
+
+.preguntas p {
+    width: 89%;
+}
+#signup .inputs label.texto-smart-pequeño{
+    display: block;
+    margin: 0 13%;
+    text-align: center;
+    padding: 0;
+}
+
+input[type=radio].aumentar + label, input[type=radio].herramientas + label, 
+input[type=radio].servicio + label, input[type=radio].otro + label, 
+input[type=radio].ninguno + label {
+    width: 82%;
+    height: 115px;
+}
+
+.texto-uso{
+    text-align: center;
+}
+
+}
+
+@media screen and (max-width: 360px) {
+
+
+ .tituloFormulario h3 {
+    margin-left: 28%;
+    
+}   
+
+input[type=radio].estudiante + label, input[type=radio].trabajador + label, 
+input[type=radio].estudiotrabajo + label, input[type=radio].emprendedor + label, 
+input[type=radio].amo + label, input[type=radio].notrabajo + label, 
+input[type=radio].freelance + label {
+    
+    height: 89px;
+}
+
+#signup .inputs input[type=radio].no + label, #signup .inputs input[type=radio].si + label {
+    
+    width: 40px;
+    background-size: contain;
+}
+
+input[type=radio].aumentar + label, input[type=radio].herramientas + label, 
+input[type=radio].servicio + label, input[type=radio].otro + label, 
+input[type=radio].ninguno + label {
+
+    height: 83px;
+}
+
+input[type=checkbox].center + label, input[type=checkbox].ventas + label, 
+input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label, 
+input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label, 
+input[type=checkbox].ninguno2 + label{
+    height: 89px;
+}
+
+
+input[type=radio].encantaria+ label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+   
+    height: 84px;
+}
+
+input[type=radio].encantaria + label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+    background-size: 64%;
+}
+
+#signup .inputs input[type=radio].pc + label, #signup .inputs input[type=radio].portatil + label, 
+#signup .inputs input[type=radio].notengo + label {
+ 
+    margin-left: 0%;
+    
+}
+
+}    
+*/
+@media screen and (min-width:768px) {
+
+
+
+    .movil-desaparece
+    {
+    visibility: hidden;
+    }
+
+    .logo
+    {
+        margin-top: 100px;
+        width: 220px;
+    }
+
+    .navbar-default {
+        border-color: rgba(255,255,255,.3);
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:focus:hover {
+        color: #00F5E5;
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34,34,34,.05);
+        background-color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #00F5E5;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #00F5E5;
+    }
+
+    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a:focus {
+        color: #222;
+    }
+
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:focus:hover {
+        color: #00F5E5;
+    }
+
+     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+
+
+     header {
+        min-height: 100%;
+    }
+
+
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .header-content {
+    position: absolute;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+
+    header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:992px) {
+
+    .logo
+    {
+        margin-top: 0px;
+    width: 260px;
+    }
+    .service-box {
+        margin: 20px auto 0;
+    }
+}
+
 
 @media only screen and (min-width: 120px) and (max-width: 989px) 
 {

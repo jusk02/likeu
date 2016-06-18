@@ -1,5 +1,5 @@
 <section>
-  <div class="col-lg-8 col-md-8 col-lg-offset-2 text-center">
+  <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
     <h1>Cuéntanos sobre ti</h1>
      
     <p>Contesta las siguientes preguntas con la mayor sinceridad. No hay respuestas correctas ni equivocadas, sólo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p>
@@ -7,7 +7,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 
         <!-- <ul class="nav nav-tabs">
           <li class="active"><a data-toggle="tab" href="#part1">Home</a></li>
@@ -15,17 +15,18 @@
           <li><a data-toggle="tab" href="#part3">Part3</a></li>
         </ul> -->
 
-        <div class="alineacion barra">
+        <div class="alineacion barra slider">
         
-        <span><img src="<%=image_path('punto1.png')%>" class=" wow bounceIn"></span>
-        <span><img src="<%=image_path('punto2.png')%>" class=" wow bounceIn"></span>
-        <span><img src="<%=image_path('punto2.png')%>" class=" wow bounceIn"></span>
-        <span><img src="<%=image_path('punto2.png')%>" class=" wow bounceIn"></span>
-        <span><img src="<%=image_path('punto2.png')%>" class=" wow bounceIn"></span>
-        <span><img src="<%=image_path('punto3.png')%>" class=" wow bounceIn"></span>
+        <span><img src="<%=image_path('punto1.png')%>" class="img-responsive wow bounceIn" id="bola1"></span>
+        <span><img src="<%=image_path('punto2.png')%>" class="grayscale img-responsive wow bounceIn" id="bola2"></span>
+        <span><img src="<%=image_path('punto2.png')%>" class="grayscale img-responsive wow bounceIn" id="bola3"></span>
+        <span><img src="<%=image_path('punto2.png')%>" class="grayscale img-responsive wow bounceIn" id="bola4"></span>
+        <span><img src="<%=image_path('punto2.png')%>" class="grayscale img-responsive wow bounceIn" id="bola5"></span>
+        <span><img src="<%=image_path('punto3.png')%>" class="grayscale img-responsive wow bounceIn" id="bola6"></span>
         
 
         </div>
+
         <br><br>
 
         
@@ -38,8 +39,8 @@
 
 
           <!--  inicio formulario -->
-            <div class="contenidoSecion ">
-              <section id="signup">
+            <div>
+              <div id="signup">
                 <div class="tituloFormulario">
                   <h3>Formulario</h3>
                   <br>
@@ -50,12 +51,12 @@
                   <div class=" row fieldformulario">
 
                   <div class="col-lg-7 col-sm-7 col-xs-12">
-                  <strong><%= f.label :name, '¿Cuál es tu nombre?', class: "izquierda" %></strong>
+                  <strong><%= f.label :name, '¿Cuál es tu nombre?', class: "izquierda texto-smart-pequeño" %></strong>
                     <%= f.text_field :name, class: "tamaño4_4 likeu-input form-control" %><br>
                   </div>
 
-                  <div class="col-lg-5 col-sm-5 col-xs-12 no-padding">
-                  <strong><%= f.label :city, 'Ciudad', class: "izquierda" %></strong>
+                  <div class="col-lg-5 col-sm-5 col-xs-6 no-padding marging-top">
+                  <strong><%= f.label :city, 'Ciudad', class: "izquierda texto-smart-pequeño" %></strong>
                     <%= f.text_field :name, class: "tamaño1 likeu-input form-control" %><br>
                   </div>
 
@@ -65,17 +66,17 @@
                  <!--    edad y genero -->
                   <div class="col-lg-12 col-sm-12 col-xs-12">
                     <div class="row fieldformulario">
-                      <div class="col-lg-5 col-sm-5 col-xs-5">
-                        <%= f.label :age, "Edad", class: "centrado" %>
+                      <div class="col-lg-5 col-sm-5 col-xs-6 edad">
+                        <%= f.label :age, "Edad", class: "centrado texto-smart-pequeño" %>
                         <%= f.number_field :age, min: 0 , max: 100, class:"tamaño2 likeu-input form-control" %> Años
                       </div>
                       <!-- genero -->
-                      <div class="col-lg-7 col-sm-7 col-xs-7">
+                      <div class="col-lg-7 col-sm-7 col-xs-12">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-xs-6">
-                                <%= f.label :gender, '¿Cuál es tu género?' %>
+                            <div class="col-lg-6 col-sm-6 col-xs-12">
+                                <%= f.label :gender, '¿Cuál es tu género?', class:"text-genero" %>
                             </div>
-                             <div class="col-lg-4 col-sm-4 col-xs-4 alineacion">
+                             <div class="col-lg-4 col-sm-4 col-xs-12 alineacion no-padding-pequeño">
 
                                 <%= f.radio_button :gender, 'Masculino',id:"masculino", class:"masculino" %><label for="masculino" class="grayscale ">&#160;</label>
                                 <%= f.radio_button :gender, 'Femenino',id:"femenino", class:"femenino" %><label for="femenino" class="grayscale">&#160;</label>
@@ -86,29 +87,29 @@
                     </div>
                     <div class="row">
                   
-                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 ">
-                        <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel wow bounceIn" id="cellphoneInfo" ></span>
-                        <%= f.label :cellphone, 'Celular', class:"contacto-form" %>
-                        <br>
+                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 col-xs-offset-0 ">
+                        <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeño wow bounceIn" id="cellphoneInfo" ></span>
+                        <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeño" %>
+                        <br class="desaparecer">
                          <span class="indicativo"><img src="<%=image_path('banderacolombia.png')%>" class="bandera">(+57)</span><%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
                       </div>
                     
-                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12">
-                        <img src="<%=image_path('email.png')%>" class="icono-form form-cel wow bounceIn" id="emailInfo">
-                        <%= f.label :email, 'Correo electrónico',class:"contacto-form" %>
-                        <br>
-                        <input value="" name="user[email]" id="user_email" type="email" class= "tamaño3 likeu-input form-control">
+                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                        <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeño wow bounceIn" id="emailInfo">
+                        <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeño" %>
+                        <br class="desaparecer">
+                        <input value="" name="user[email]" id="user_email" type="email" class= "tamaño3 tamaño3-3 likeu-input form-control">
                       </div>
                     </div>
             
 
                 </div><!--final inputs -->
-              </section>
+              </div>
 
 
               <!-- Botones siguiente y atras -->
               <div class="botones">
-              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente1"></a></p>
                 
               </div>
 
@@ -122,9 +123,9 @@
                     <div class="row">
 
                     <!--Parte1-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-sm-3 col-xs-12">
                       <div class="row">
-                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
 
                           <div class="form-box round text-center">
                             <%= f.radio_button :ocupation, 'Estudiante',id:"estudiante", class:"estudiante" %><label for="estudiante" class="grayscale ">&#160;</label>
@@ -132,7 +133,7 @@
                           </div>
                           
                         </div>
-                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
 
                         <div class="form-box round text-center">
                             <%= f.radio_button :ocupation, 'Trabajador',id:"trabajador", class:"trabajador" %><label for="trabajador" class="grayscale ">&#160;</label>
@@ -143,16 +144,16 @@
                       </div>
                     </div>
                     <!--Parte2-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 ">
+                    <div class="col-lg-3 col-sm-3 col-xs-12 ">
                       <div class="row">
-                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
                           
                           <div class="form-box round text-center">
                             <%= f.radio_button :ocupation, 'EstudioTrabajo',id:"estudiotrabajo", class:"estudiotrabajo" %><label for="estudiotrabajo" class="grayscale ">&#160;</label>
                             <p class="form-box-text">Estudio y trabajo como empleado</p>
                           </div>
                         </div>
-                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
                           <div class="form-box round text-center">
                             <%= f.radio_button :ocupation, 'Emprendedor',id:"emprendedor", class:"emprendedor" %><label for="emprendedor" class="grayscale ">&#160;</label>
                             <p class="form-box-text">Soy emprendedor</p>
@@ -162,16 +163,16 @@
                       </div>
                     </div>
                     <!--Parte3-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-sm-3 col-xs-12">
                       <div class="row">
-                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
                           <div class="form-box round text-center">
 
                             <%= f.radio_button :ocupation, 'Amo de casa',id:"amo", class:"amo" %><label for="amo" class="grayscale ">&#160;</label>
                             <p class="form-box-text">Soy ama(o) de casa</p>
                           </div>
                         </div>
-                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
                         <div class="form-box round text-center">
                             <%= f.radio_button :ocupation, 'NoTrabajo',id:"notrabajo", class:"notrabajo" %><label for="notrabajo" class="grayscale ">&#160;</label>
                             <p class="form-box-text">No estudio ni trabajo</p>
@@ -183,16 +184,16 @@
                     </div>
 
                     <!--Parte4-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-sm-3 col-xs-12">
                       <div class="row">
-                        <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
+                        <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
                           <div class="form-box round text-center">
                             <%= f.radio_button :ocupation, 'Freelance',id:"freelance", class:"freelance" %><label for="freelance" class="grayscale ">&#160;</label>
                             <p class="form-box-text">Soy freelance</p>
                           </div>
 
                         </div>
-                        <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-sm-6 col-xs-6">
                           
 
                         </div>
@@ -213,7 +214,7 @@
 
 
           <!--  inicio formulario -->
-            <div class="contenidoSecion ">
+            
               <section id="signup">
                 <div class="tituloFormulario">
                   <h3>Formulario</h3>
@@ -245,8 +246,8 @@
 
               <!-- Botones siguiente y atras -->
               <div class="botones">
-              <p><a data-toggle="tab" href="#part1"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
-              <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part1"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
+              <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
                 
               </div>
 
@@ -260,7 +261,7 @@
                     <div class="row">
 
                     <!--Parte1-->
-                    <div class="col-lg-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-sm-4 col-xs-6">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
 
@@ -281,7 +282,7 @@
                       </div>
                     </div>
                     <!--Parte2-->
-                    <div class="col-lg-4 col-sm-6 col-xs-6 ">
+                    <div class="col-lg-4 col-sm-4 col-xs-6 ">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           
@@ -300,7 +301,7 @@
                       </div>
                     </div>
                     <!--Parte3-->
-                    <div class="col-lg-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-sm-4 col-xs-6">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           <div class="form-box round text-center">
@@ -324,23 +325,23 @@
                     <div class="col-lg-10 col-sm-12 col-xs-12 separacion ocultodiv">
                         <div class="row">
 
-                          <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
-                           <%= f.label :achievement_acomplishment, '¿En que % cumpliste el reto?', class: "form-box-text" %>
+                          <div class="col-lg-3 col-sm-6 col-xs-12 no-padding">
+                           <%= f.label :achievement_acomplishment, '¿En que % cumpliste el reto?', class: "form-box-text reto" %>
                            <%= f.number_field :achievement_acomplishment, min: 0 , max: 100, class:"tamaño4 likeu-input form-control" %><span style="margin-left: 5%">%</span>
                           </div>
 
-                          <div class="col-lg-3 col-sm-6 col-xs-6">
+                          <div class="col-lg-3 col-sm-6 col-xs-12">
                            <%= f.label :achievement_company, 'Nombre de la empresa', class: "form-box-text" %>
                             <%= f.text_field :achievement_company, class: "tamaño3 likeu-input form-control" %>
                           </div>
 
-                          <div class="col-lg-3 col-sm-6 col-xs-6">
-                           <%= f.label :achievement_boss, 'Nombre del jefe', class: "form-box-text" %>
+                          <div class="col-lg-3 col-sm-6 col-xs-12">
+                           <%= f.label :achievement_boss, 'Nombre del jefe', class: "form-box-text nivelacion-retos reto2" %>
                             <%= f.text_field :achievement_boss, class: "tamaño3 likeu-input form-control" %>
                           </div>
 
-                          <div class="col-lg-3 col-sm-6 col-xs-6">
-                           <%= f.label :achievement_phone, 'Teléfono', class: "form-box-text" %>
+                          <div class="col-lg-3 col-sm-6 col-xs-12">
+                           <%= f.label :achievement_phone, 'Teléfono', class: "form-box-text nivelacion-retos reto2" %><br>
                             <p><!--<%= f.select(:achievement_phone,options_for_select(['Fijo', 'Movil']),{}, { class:"seleccion"})%>-->
                             <%= f.text_field :achievement_phone, class: "tamaño3 likeu-input form-control" %></p>
                           </div>
@@ -353,13 +354,13 @@
                     </div>
                   </div>       
                 </div>
-            </div>
+            
            
           </div><!--final parte 2-->
           
           <!-- tercera pestaña-->
           <div id="part3" class="tab-pane fade ">
-             <div class="contenidoSecion ">
+             
               <section id="signup">
                 <div class="tituloFormulario">
                   <h3>Formulario</h3>
@@ -375,11 +376,11 @@
                  <!--    Pregunta2 -->
                   <div class="col-lg-12 col-sm-12 col-xs-12">
                     <div class="row fieldformulario">
-                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-5">
+                      <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12">
                         <p class="pregunta2">¿cuánto tiempo le dedicas a esta actividad?</p>
                       </div>
                       <!-- Tiempo hobby -->
-                      <div class="col-lg-5 col-sm-5 col-xs-5">
+                      <div class="col-lg-5 col-sm-5 col-xs-12">
                       <%= f.number_field :hobby_time, min: 0 , max: 100, class:"tamaño2_2 likeu-input form-control" %><p class="color2">Horas a la semana</p>
                         </div>
                       </div>
@@ -406,8 +407,8 @@
 
               <!-- Botones siguiente y atras -->
               <div class="botones">
-              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
-              <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras2"></a></p>
+              <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente3"></a></p>
                 
               </div>
 
@@ -424,7 +425,7 @@
                     <div class="row">
 
                     <!--Parte1-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-sm-3 col-xs-6">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
 
@@ -447,7 +448,7 @@
                       </div>
                     </div>
                     <!--Parte2-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 ">
+                    <div class="col-lg-3 col-sm-3 col-xs-6 ">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           
@@ -466,7 +467,7 @@
                       </div>
                     </div>
                     <!--Parte3-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-sm-3 col-xs-6">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           <div class="form-box round text-center">
@@ -487,7 +488,7 @@
                     </div>
 
                     <!--Parte4-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6">
+                    <div class="col-lg-3 col-sm-3 col-xs-6">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           <div class="form-box round text-center">
@@ -508,13 +509,12 @@
                     </div>
                   </div>       
                 </div>
-            </div>
+           
             </div><!--final pestaña 3-->
 
             <!--inicio pestaña 4-->
 
                <div id="part4" class="tab-pane fade ">
-             <div class="contenidoSecion ">
               <section id="signup">
                 <div class="tituloFormulario">
                   <h3>Formulario</h3>
@@ -543,8 +543,8 @@
 
               <!-- Botones siguiente y atras -->
               <div class="botones">
-              <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
-              <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras3"></a></p>
+              <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente4"></a></p>
                 
               </div>
 
@@ -559,7 +559,7 @@
                   <div class="col-lg-12 col-sm-12 col-xs-12 zona-blanca"> 
 
                     <!--Parte1-->
-                    <div class="col-lg-3 col-lg-offset-1 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-lg-offset-1 col-sm-3 col-sm-offset-1 col-xs-6 no-padding">
 
                     <div class="form-box round text-center">
                             <%= f.radio_button :felixibility_importance, 'Me encantaria',id:"encantaria", class:"encantaria" %><label for="encantaria" class="grayscale ">&#160;</label>
@@ -568,7 +568,7 @@
 
                     </div>
                     <!--Parte2-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-sm-3 col-xs-6 no-padding">
                       
                       <div class="form-box round text-center">
                             <%= f.radio_button :felixibility_importance, 'Nose pero quiero conocer',id:"nose", class:"nose" %><label for="nose" class="grayscale ">&#160;</label>
@@ -576,7 +576,7 @@
                           </div>
                     </div>
                     <!--Parte3-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-sm-3 col-xs-6 no-padding">
 
                       <div class="form-box round text-center">
                             <%= f.radio_button :felixibility_importance, 'Prefiero estabilidad',id:"estabilidad", class:"estabilidad" %><label for="estabilidad" class="grayscale ">&#160;</label>
@@ -588,7 +588,6 @@
                     
                   </div>       
                 </div>
-            </div>
             </div><!--final pestaña 4-->
 
 
@@ -598,7 +597,7 @@
 
 
           <!--  inicio formulario -->
-            <div class="contenidoSecion ">
+           
               <section id="signup">
                 <div class="tituloFormulario">
                   <h3>Formulario</h3>
@@ -607,7 +606,7 @@
                  <div class="inputs">
                   <div class="row fieldformulario preguntas3">
                   
-                  <div class="col-lg-5 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-12 alineacion">
+                  <div class="col-lg-7 col-lg-offset-1 col-sm-7 col-sm-offset-1 col-xs-12 alineacion sin-alineacion">
                       <p>¿Que tipo de computador tienes?</p>
                  
                      <%= f.radio_button :pc_type, 'PC',id:"pc", class:"pc" %><label for="pc" class="grayscale ">&#160;</label>
@@ -616,7 +615,7 @@
                     
                     </div>
 
-                    <div class="col-lg-4 col-lg-offset-2 col-sm-3- col-xs-12">
+                    <div class="col-lg-3 col-sm-4 col-xs-12 texto-uso">
                     <span>Es de uso</span><br>
                     <span class="alineacion"><%= f.radio_button :pc_use, 'Personal',id:"personal", class:"personal" %><label for="personal" class="grayscale no-margin ">&#160;</label>Personal</span>
                     <span class="alineacion"><%= f.radio_button :pc_use, 'Familiar',id:"familiar", class:"familiar" %><label for="familiar" class="grayscale no-margin">&#160;</label>Familiar</span>
@@ -627,9 +626,9 @@
                   </div>
                  <!--    tipo de pc -->
                 
-                    <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-xs-12 separacion">
+                    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 separacion">
                         <div class="row">
-                        <div class="col-lg-7 col-sm-6 col-xs-12">
+                        <div class="col-lg-7 col-sm-7 col-xs-12">
                         <p class="no-padding2">¿cual es la velocidad de tu internet?:</p>
                         </div>
 
@@ -647,7 +646,7 @@
                      <p>¿Cual de estos auriculales tienes?</p>
 
                     <!--Parte1-->
-                    <div class="col-lg-3 col-lg-offset-2 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-lg-offset-2 col-sm-3 col-sm-offset-2 col-xs-4 no-padding">
 
                     <div class="text-center">
                             <%= f.radio_button :can_talk, 'Manos libres',id:"diadema", class:"diadema" %><label for="diadema" class="grayscale ">&#160;</label>
@@ -655,14 +654,14 @@
 
                     </div>
                     <!--Parte2-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-sm-3 col-xs-4 no-padding">
                       
                       <div class="text-center">
                             <%= f.radio_button :can_talk, 'Audifonos',id:"audifonos", class:"audifonos" %><label for="audifonos" class="grayscale ">&#160;</label>
                           </div>
                     </div>
                     <!--Parte3-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-sm-3 col-xs-4 no-padding">
 
                       <div class=" text-center">
                             <%= f.radio_button :can_talk, 'Bocina pc',id:"bocina", class:"bocina" %><label for="bocina" class="grayscale ">&#160;</label>
@@ -679,8 +678,8 @@
 
               <!-- Botones siguiente y atras -->
               <div class="botones">
-              <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
-              <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras4"></a></p>
+              <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente5"></a></p>
                 
               </div>
 
@@ -694,7 +693,7 @@
                     <div class="row">
 
                     <!--Parte1-->
-                    <div class="col-lg-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-sm-4 col-xs-6">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
 
@@ -715,7 +714,7 @@
                       </div>
                     </div>
                     <!--Parte2-->
-                    <div class="col-lg-4 col-sm-6 col-xs-6 ">
+                    <div class="col-lg-4 col-sm-4 col-xs-6 ">
                       <div class="row">
                         <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
                           
@@ -734,7 +733,7 @@
                       </div>
                     </div>
                     <!--Parte3-->
-                    <div class="col-lg-4 col-sm-6 col-xs-6">
+                    <div class="col-lg-4 col-sm-4 col-xs-6">
                       <div class="row">
 
                       <div class="col-lg-6 col-sm-6 col-xs-12 no-padding">
@@ -764,7 +763,7 @@
                     </div>
                   </div>       
                 </div>
-            </div>
+            
            
           </div><!--final parte 5-->
 
@@ -793,7 +792,7 @@
                   <span><img src="<%=image_path('reloj.png')%>" class="posicion-reloj wow bounceIn"></span>
                   <span><img src="<%=image_path('manija.png')%>" class="posicion-manija", id="manija"></span>
 
-                  <span class="campo-horas"><%= f.number_field :work_hours, min: 0 , max: 12, id:"hora", class:"tamaño1 likeu-input form-control" %> Años</span>
+                  <span class="campo-horas"><%= f.number_field :work_hours, min: 0 , max: 12, id:"hora", class:"tamaño1-1 likeu-input form-control" %> Años</span>
 
                   </div>
 
@@ -801,7 +800,11 @@
                   <p>Cuántos Días quieres dedicarle a este trabajo, en el horario anterior?</p>
                   <br>
                   <br>
-                  <span><img src="<%=image_path('marco.png')%>" class="reloj wow bounceIn"></span>
+                  <span><img src="<%=image_path('marco2.png')%>" class="reloj wow bounceIn"></span>
+                  <img src="<%=image_path('dias.png')%>" class="posicion-calendario wow bounceIn"></span>
+                  <div id="reflejar" class="reflejo-dias"></div>
+                   <span class="campo-horas"><%= f.number_field :work_days, min: 1 , max: 7, id:"dias", class:"tamaño1-1 likeu-input form-control" %> Días</span>
+
 
                   </div>
 
@@ -819,7 +822,7 @@
 
               <!-- Botones siguiente y atras -->
               <div class="botones">
-              <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn"></a></p>
+              <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras5"></a></p>
            
                 
               </div>
@@ -829,35 +832,35 @@
               <br>
               <br>
                <div class="form-area">
-                 <p class="color alineacion2">Ahora imagina por un momento que estás trabajando desde  el lugar  que elegiste.</p>
-                 <p class="alineacion2">¿Qué tan cómodo crees que sería para trabajar, entendiendo que debes hablar con personas a través de tu computador? (Ten en cuenta el entorno, las distracciones, el riudo, la temperatura,     las interrupciones, etc)</p>
+                 <p class="color alineacion4">Ahora imagina por un momento que estás trabajando desde  el lugar  que elegiste.</p>
+                 <p class="alineacion4">¿Qué tan cómodo crees que sería para trabajar, entendiendo que debes hablar con personas a través de tu computador? (Ten en cuenta el entorno, las distracciones, el riudo, la temperatura,     las interrupciones, etc)</p>
                  <br>
                  <br>
                   <div class="col-lg-12 col-sm-12 col-xs-12 zona-blanca"> 
 
                     <!--Parte1-->
-                    <div class="col-lg-3 col-lg-offset-1 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-lg-offset-1 col-sm-3 col-sm-offset-1 col-xs-6 no-padding">
 
                     <div class="form-box round text-center">
-                            <%= f.radio_button :felixibility_importance, 'Me encantaria',id:"encantaria", class:"encantaria" %><label for="encantaria" class="grayscale ">&#160;</label>
-                            <p class="form-box-text2">Me encantaria</p>
+                            <%= f.radio_button :comfort, 'Funciona',id:"funciona", class:"funciona" %><label for="funciona" class="grayscale ">&#160;</label>
+                            <p class="form-box-text2">Creo que funciona perfecto</p>
                           </div>
 
                     </div>
                     <!--Parte2-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-sm-3 col-xs-6 no-padding">
                       
                       <div class="form-box round text-center">
-                            <%= f.radio_button :felixibility_importance, 'Nose pero quiero conocer',id:"nose", class:"nose" %><label for="nose" class="grayscale ">&#160;</label>
-                            <p class="form-box-text2">Nose pero quiero conocer</p>
+                            <%= f.radio_button :comfort, 'Debo hacer ajustes',id:"ajustes", class:"ajustes" %><label for="ajustes" class="grayscale ">&#160;</label>
+                            <p class="form-box-text2">Debo hacer ajustes</p>
                           </div>
                     </div>
                     <!--Parte3-->
-                    <div class="col-lg-3 col-sm-6 col-xs-6 no-padding">
+                    <div class="col-lg-3 col-sm-3 col-xs-6 no-padding">
 
                       <div class="form-box round text-center">
-                            <%= f.radio_button :felixibility_importance, 'Prefiero estabilidad',id:"estabilidad", class:"estabilidad" %><label for="estabilidad" class="grayscale ">&#160;</label>
-                            <p class="form-box-text2">Prefiero estabilidad en mis ingresos</p>
+                            <%= f.radio_button :comfort, 'No funciona',id:"noFunciona", class:"noFunciona" %><label for="noFunciona" class="grayscale ">&#160;</label>
+                            <p class="form-box-text2">No creo que Funcione</p>
                           </div>
                     </div>
 
@@ -880,7 +883,7 @@
 
           </div>
         </div>
-      </div>
+</div>
       
 </section>
 

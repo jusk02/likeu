@@ -16,7 +16,14 @@ $(document).ready(function () {
             });
         }
             
-        
+        //campo dias
+
+        $('#dias').bind('keyup mouseup', function(){
+
+          var valor = $('#dias').val();
+          $('#reflejar').text(valor);
+
+          });
 
 
 
@@ -120,6 +127,116 @@ $(document).ready(function () {
                 });
 
 
+
+
+                 // slider
+                  var control = 2;
+
+
+                $('#botonSiguiente1, #botonSiguiente2, #botonSiguiente3, #botonSiguiente4, #botonSiguiente5').click(function(event){
+
+                    if (control >= 6) {
+
+                    $('#bola'+ control).removeClass("grayscale");
+                  console.log("con el gray ultima"+ control)
+
+                  var ubicacion = ('bola'+ control);
+                  console.log("con la ubicacion"+ control)
+
+                  $('#bola'+ (control-1)).attr("src","<%=image_path("punto2.png")%>", ubicacion); 
+                   
+
+                $('#bola'+ control).attr("src","<%=image_path("punto4.png")%>", ubicacion); 
+
+                   console.log("holi"+ control)
+
+                   control += 1;
+
+                    }
+
+                    else {
+
+
+                    
+                   
+                  $('#bola'+ control).removeClass("grayscale");
+                  console.log("con el gray"+ control)
+
+                  var ubicacion = ('bola'+ control);
+                  console.log("con la ubicacion"+ control)
+
+                  $('#bola'+ (control-1)).attr("src","<%=image_path("punto2.png")%>", ubicacion); 
+
+                   
+
+                $('#bola'+ control).attr("src","<%=image_path("punto1.png")%>", ubicacion); 
+
+                   console.log("holi"+ control)
+
+                   control += 1;
+
+
+                   }
+
+                });
+
+
+
+                $('#botonAtras1, #botonAtras2, #botonAtras3, #botonAtras4, #botonAtras5').click(function(event){
+
+                    control = control-1;
+
+
+                    if (control >= 6) {
+                        
+
+                    $('#bola'+ control).addClass("grayscale");
+                  console.log("con el gray ultima"+ control)
+
+                  var ubicacion = ('bola'+ control);
+                  console.log("con la ubicacion"+ control)
+
+                  $('#bola'+ (control-1)).attr("src","<%=image_path("punto1.png")%>", ubicacion); 
+                   
+
+                $('#bola'+ control).attr("src","<%=image_path("punto3.png")%>", ubicacion); 
+
+                   console.log("holi"+ control)
+
+                    }
+
+                    else {
+
+                       
+
+
+                    
+                   
+                  $('#bola'+ control).addClass("grayscale");
+                  console.log("con el gray"+ control)
+
+                  var ubicacion = ('bola'+ control);
+                  console.log("con la ubicacion"+ control)
+
+                  $('#bola'+ control).attr("src","<%=image_path("punto2.png")%>", ubicacion); 
+
+                   
+
+                $('#bola'+ (control-1)).attr("src","<%=image_path("punto1.png")%>", ubicacion); 
+
+                   console.log("holi"+ control)
+
+                   
+
+
+                   }
+
+             console.log("holi"+ ubicacion)
+
+
+                });
+
+
                 //Formulario validacion Email//
 
                 var email= $("#user_email");
@@ -146,6 +263,7 @@ $(document).ready(function () {
 
                  });
 //mostrar select de ninguno //
+          
 
 
 
