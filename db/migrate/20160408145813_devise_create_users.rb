@@ -62,6 +62,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :video
       t.string :active
       t.string :fase
+      t.boolean :video_done
+      t.string :approved
+      t.string :time_count
       t.timestamps null: false
     end
 

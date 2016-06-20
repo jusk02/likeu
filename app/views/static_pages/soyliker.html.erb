@@ -1,3 +1,6 @@
+
+
+
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -83,7 +86,7 @@
                 </div>
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <p>
-                        Cuando quieras ganar dinero, solo tienes que abrir nuestra aplicación y empezaras a recibir llamadas,Nosotros te enseñamos que debes decir y cómo lo debes decir.
+                        Cuando quieras ganar dinero, solo tienes que abrir nuestra aplicación y empezaras a recibir llamadas,nosotros te enseñamos que debes decir y cómo lo debes decir.
                     </p>
                     <p>
                        Tu decides cuanto tiempo y desde donde quieres trabajar; al finalizar el día te diremos cuánto ganaste y recibirás cada semana tu dinero cada semana vía electrónica. 
@@ -108,7 +111,7 @@
             	<br>
  				<h2 class="section-heading">Nuestros Likers</h2>
  				<br>
- 				<p>Nuestros Likers son personas como tú, con familia, con metas y sueños, personas que objetivos que cumplir. Tambien son gerentes, formadores, Vendedores, especialistas y amigos. Tan diversos y unicos a la vez. Bienvenidos a nuestro mundo Likers</p>
+ 				<p>Nuestros Likers son personas como tú, con familia, con metas y sueños, personas que objetivos que cumplir. Tambien son gerentes, formadores, vendedores, especialistas y amigos. Tan diversos y unicos a la vez. Bienvenidos a nuestro mundo Likers</p>
                 <br>
                 <br>
  			</div>
@@ -185,7 +188,7 @@
                                “Mis amigos no creían lo fácil que era hacer parte de LikeU y ahora que lo saben ya todos quieren ser felices como yo”
                             </div>
                             <div class="project-foot">
-                                - Tatiana - 11 am desde su universidad -
+                                - Tatiana - 11 am desde la universidad -
                             </div>
                         </div>
                     </div>
@@ -200,7 +203,7 @@
                                 “Con LikeU entendí que una vida feliz, la tranquilidad y el trabajo pueden ser sinónimos, porque los puedo combinar como más me gusta”
                             </div>
                             <div class="project-foot">
-                                - Andrea - 1 pm desde >>>EDIT PLACE<<< -
+                                - Andrea - 1 pm desde la playa -
                             </div>
                         </div>
                     </div>
@@ -304,19 +307,11 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
-                <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Registrarme</a>  
+                
                 <br><a id="registro" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
-                    <% if user_signed_in? %>
-
-                     
-                     <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %><br>
-                     <a href="/status" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
-                     <!-- <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> --> 
-                    <% else %>
-                     <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
-                    <% end %>             
+                              
                 <br><a id="audio" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center hidden-xs">
@@ -326,6 +321,18 @@
           
              <div class="col-lg-12 col-md-12 col-sm-12 text-center centered">
                 <br><br>
+                 <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Registrarme</a> 
+                 <br>
+                  <% if user_signed_in? %>
+
+                     
+                     <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %><br>
+                     <a href="/status" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+                     <!-- <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> --> 
+                    <% else %>
+                     <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+                <% end %> 
+
                 
                  <%= form_for(@click, :method => :post) do |f| %>
                      

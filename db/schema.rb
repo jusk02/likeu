@@ -71,6 +71,9 @@ ActiveRecord::Schema.define(version: 20160604010049) do
     t.string   "video"
     t.string   "active"
     t.string   "fase"
+    t.boolean  "video_done"
+    t.string   "approved"
+    t.string   "time_count"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.string   "confirmation_token"

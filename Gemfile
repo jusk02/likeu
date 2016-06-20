@@ -27,7 +27,8 @@ gem 'devise', '~> 3.2'
 
 gem 'carrierwave'
 
-gem 'pusher'
+gem 'meta-tags'
+
 
 
 #gema para animaciones de jquery
