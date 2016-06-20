@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  resources :messages, only: [:new, :create]
+  resources :clicks
+  get 'contacts/create'
+  
 
   devise_for :users, controllers: { registrations: "registrations" }
+
+  resources :users, only: [:show, :edit, :update]
 
   #get 'home/index'
 
@@ -15,9 +19,19 @@ Rails.application.routes.draw do
 
   get "/quieroserliker", to: "static_pages#soyliker", as: "soyliker"
 
+  get "/ups", to: "static_pages#ups", as: "ups"
+
+  get "/videoprueba", to: "static_pages#dictiontest", as: "dictiontest"
+
   get "/FAQ", to: "static_pages#FAQ", as: "FAQ"
 
   get "/FAQ_likeu", to: "static_pages#FAQ_likeu", as: "FAQ_likeu"
+
+  resources :contacts
+
+  get "/status", to: "static_pages#status", as: "status"
+
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

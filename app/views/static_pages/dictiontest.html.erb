@@ -1,0 +1,51 @@
+
+<section>
+	<div class="container">
+        <div class="row">
+        	<div class="text-center">
+	        	<p>
+	        	Al fin te vamos a escuchar, por eso te pedimos que nos regales tu mejor voz para la
+				siguente prueba, será algo muy simple pero debes estar muy atento.
+				</p>
+				<p>
+				A continuación, cuando des click en el botón, aparecerá un texto corto que
+				necesitamos que leas en voz alta para que te escuchemos fuerte y claro.
+				</p>
+				<p>
+				Léelo a tu ritmo, no tienes que apurarte y si te equivocas fresco, solo sigue leyendo y
+				ya está (la grabación se realiza una sola vez).
+				</p>
+
+				<a href="http://makemarkhosting.com/video/video3/" class="btn btn-primary btn-xl" target="blank">Empezar</a>
+
+				<%= form_for(@user) do |f| %>
+				  <% if @user.errors.any? %>
+				    <div id="error_explanation">
+				      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+				      <ul>
+				      <% @user.errors.full_messages.each do |message| %>
+				        <li><%= message %></li>
+				      <% end %>
+				      </ul>
+				    </div>
+				  <% end %>
+
+				   <%= f.hidden_field :location_id %>
+
+			      <div class="field">
+			      
+			        <%= f.text_area :message, :class => 'form-control user-area' %>
+			      </div>
+			      <br>
+			      <div class="actions">
+			        <%= f.submit 'Crear', :class => 'btn btn-success' %>
+			      </div>
+			     
+			<% end %>
+				
+        	</div>
+    	</div>
+	</div>
+</section>
+

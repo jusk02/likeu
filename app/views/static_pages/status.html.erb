@@ -1,0 +1,26 @@
+<div>
+	
+	<% if current_user.fase == nil %>
+
+	    testeo
+	    <%= current_user.video %>
+
+	     
+	    <% elsif current_user.fase == 1 %>
+	    genial pasaste la primera fase, puedes iniciar la segunda fase.
+	    para esta fase necesitaras un espacio calmado,una camara web, microfono y toda tu disposicion.
+	    <a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+
+	    <% elsif current_user.fase == 2 %>
+	    fase 2 listo ahora podras empezar tu entrenamiento
+	     <a href="#" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+
+	    <% elsif current_user.fase == 3 %>
+	    Lo sentimos pero en el momento no tenemos campañas que se acoplen a tu perfil, sin embargo te tendremos en cuanta para cualquier proceso en el que creamos que te ira bien.
+
+	     <% else%>
+
+	     lo sentimos parece haber un error
+	    <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+    <% end %>       
+</div>
