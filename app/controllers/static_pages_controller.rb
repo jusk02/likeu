@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 
 	def soyliker
 		@click = Click.new
+    @page_title       = 'Likers'
 
   	end
 
@@ -15,8 +16,9 @@ class StaticPagesController < ApplicationController
 
     def status
       unless current_user
-        redirect_to login_url
+        redirect_to new_user_session_path
       end
+       @page_title       = 'Estado del proceso'
     end
 
     def dictiontest

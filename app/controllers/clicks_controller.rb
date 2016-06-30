@@ -1,4 +1,5 @@
 class ClicksController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :create
   before_action :set_click, only: [:show, :edit, :update, :destroy]
 
   # GET /clicks

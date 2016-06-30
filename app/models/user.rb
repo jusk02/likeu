@@ -12,12 +12,15 @@ class User < ActiveRecord::Base
 # validates :gender, presence: true
 
 
-	before_create do
-    	self.fase = 1
-    	self.active = "activo"
-    	self.role = 1 if role.blank?
-    	#self.password = self.cellphone
-  	end
+	after_create do
+		self.update_attribute(:fase, 1)
+    	self.update_attribute(:active, "activo")
+    	if role.blank?
+    		self.update_attribute(:role, 1)
+    	end
+    	self.password = self.cellphone
+    	self.update_attribute(:video_done, false)
+   	end
 
  
 

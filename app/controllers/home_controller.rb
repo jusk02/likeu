@@ -4,6 +4,9 @@ require 'net/http'
 
 def index
 		@contact = Contact.new
+		@page_description = 'El mejor talento, en todo lugar y en todo momento. Soluciones de outsorcing.'
+		@page_keywords    = 'LikeU, Like, Outsorcing, Contact, Center, likers, agentes, on, demand, inmediato, Soluciones'
+		
 	end
 
 def facebook_likes

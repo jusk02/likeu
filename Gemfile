@@ -27,7 +27,11 @@ gem 'devise', '~> 3.2'
 
 gem 'carrierwave'
 
-gem 'pusher'
+gem 'geocoder'
+
+gem 'meta-tags'
+
+
 
 
 #gema para animaciones de jquery
@@ -37,6 +41,8 @@ gem 'jquery-easing-rails'
 gem "twitter-bootstrap-rails"
 
 gem "letter_opener", :group => :development
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 #Framework portal administrativo
 #gem 'activeadmin', '~> 1.0.0.pre2' 

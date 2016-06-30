@@ -3,51 +3,60 @@
 	<div class="container">
         <div class="row">
         	<div class="text-center">
-	        	<p>
-	        	Al fin te vamos a escuchar, por eso te pedimos que nos regales tu mejor voz para la
-				siguente prueba, será algo muy simple pero debes estar muy atento.
-				</p>
-				<p>
-				A continuación, cuando des click en el botón, aparecerá un texto corto que
-				necesitamos que leas en voz alta para que te escuchemos fuerte y claro.
-				</p>
-				<p>
-				Léelo a tu ritmo, no tienes que apurarte y si te equivocas fresco, solo sigue leyendo y
-				ya está (la grabación se realiza una sola vez).
-				</p>
-
-				<a href="http://makemarkhosting.com/video/video3ddd?<%= current_user.id %>" class="video-iniciar btn btn-primary btn-xl" target="_blank">Empezar</a>
-
-
-				<%= form_for(current_user) do |f| %>
-				  <% if current_user.errors.any? %>
-				    <div id="error_explanation">
-				      <h2><%= pluralize(current_user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-				      <ul>
-				      <% current_user.errors.full_messages.each do |message| %>
-				        <li><%= message %></li>
-				      <% end %>
-				      </ul>
-				    </div>
-				  <% end %>
-
-				   <%= original_url %>
-
-			      <div class="field">
-			        <br>
-			        <%= f.hidden_field :video, :value => original_url %>
-			      </div>
-			      <br>
-			      <div class="actions">
-			        <%= f.submit 'guardar', :class => 'guarda-video btn btn-success hidden' %>
-			      </div>
-			     
-			<% end %>
+	        
+				
+				<% if current_user.video_done == false %>
+					<p>
+		        		Al fin te vamos a escuchar, por eso te pedimos que nos regales tu mejor voz para la
+						siguente prueba, será algo muy simple pero debes estar muy atento.
+					</p>
+					<p>
+						A continuación, cuando des click en el botón, aparecerá un texto corto que
+						necesitamos que leas en voz alta para que te escuchemos fuerte y claro.
+					</p>
+					<p>
+						Léelo a tu ritmo, no tienes que apurarte y si te equivocas fresco, solo sigue leyendo y
+						ya está (la grabación se realiza una sola vez).
+					</p>
+										
+					<%= form_for(current_user) do |f| %>
+						<div class="field">
+				    	    <br>
+					        <%= f.hidden_field :video_done, :value => true %>
+				    	</div>
+			      		<br>
+			      		<div class="actions ">
+			        		<%= f.submit 'Iniciar', :class => 'btn btn-primary', :id => 'startButton' %>
+			      		</div>
+			      		<a href="http://makemarkhosting.com/video/video3ddd/index.html?=<%= current_user.id %>" class="video-iniciar btn btn-primary btn-xl" id="startAll">Empezar</a>
+					<% end %>
+				<% elsif current_user.video_done == true %>
+					<p>
+						Genial tu video ya fue grabado!, es importante que le des guardar si quieres seguir con el proceso
+					</p>
+					<%= form_for(current_user) do |f| %>
+				      	<div class="field">
+				        	<br>
+				        	<%= f.hidden_field :video1, :value => video_url[4] %>
+				        	<%= f.hidden_field :video2, :value => video_url[5] %>
+				        	<%= f.hidden_field :video3, :value => video_url[6] %>
+				        	<%= f.hidden_field :video_ans1, :value => video_url[1] %>
+				        	<%= f.hidden_field :video_ans2, :value => video_url[2] %>
+				        	<%= f.hidden_field :video_ans3, :value => video_url[3] %>
+			    		</div>
+					    <br>
+					    <div class="actions">
+					        <%= f.submit 'guardar', :class => 'guarda-video btn btn-success' %>
+					    </div>  
+					<% end %>
+				<% end %>
+				
+				
+				
+				
 				
         	</div>
     	</div>
 	</div>
 </section>
 
-<script src="http://makemarkhosting.com/video/video3/controller-video.js"></script>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'contacts/create'
   
 
-  devise_for :users, controllers: { registrations: "registrations" }
+  devise_for :users, controllers: { registrations: "registrations" , confirmations: 'confirmations'}
 
   resources :users, only: [:show, :edit, :update]
 
