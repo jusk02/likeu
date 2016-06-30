@@ -59,9 +59,9 @@
 
                   <div class="col-lg-5 col-sm-5 col-xs-6 no-padding marging-top">
                   <strong><%= f.label :city, 'Ciudad', class: "izquierda texto-smart-pequeño" %></strong>
-                    <%= f.text_field :name, class: "tamaño1 likeu-input form-control" %><br>
+                    <%= f.text_field :city, class: "tamaño1 likeu-input form-control", :value => '<%= request.location.city %>' %><br>
                   </div>
-
+                   
                   </div>
                   <br>
                   <br>
@@ -90,10 +90,18 @@
                     <div class="row">
                   
                       <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 col-xs-offset-0 ">
-                        <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeño wow bounceIn" id="cellphoneInfo" ></span>
+                        <span> <img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeño wow bounceIn" id="cellphoneInfo">
+                        </span>
                         <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeño" %>
                         <br class="desaparecer">
-                         <span class="indicativo"><img src="<%=image_path('banderacolombia.png')%>" class="bandera">(+57)</span><%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
+                         <span class="indicativo">
+                         <% if request.location.country == 'Colombia' %>
+                           <img src="<%=image_path('banderacolombia.png')%>" class="bandera">
+                        <%end%>
+                          <% if request.location.country == 'Colombia' %>
+                           <img src="<%=image_path('banderamexico.png')%>" class="bandera">
+                        <%end%>
+                         (+57)</span><%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
                       </div>
                     
                       <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 col-xs-offset-0">
