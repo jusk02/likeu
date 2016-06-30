@@ -95,12 +95,9 @@
                         <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeño" %>
                         <br class="desaparecer">
                          <span class="indicativo">
-                          <% if request.location.country == 'Colombia' %>
-                           <img src="<%=image_path('banderacolombia.png')%>" class="bandera">
-                        <%end%>
-                          <% if request.location.country == 'Mexico' %>
-                           <img src="<%=image_path('banderamexico.png')%>" class="bandera">
-                        <%end%>
+                         
+                         <img src="<%=image_path('banderacolombia.png')%>" class="bandera">
+
                          (+57)</span><%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
                       </div>
                     
