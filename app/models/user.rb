@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     	if role.blank?
     		self.update_attribute(:role, 1)
     	end
-    	#self.password = self.cellphone
+    	self.password = self.cellphone
     	self.update_attribute(:video_done, false)
    	end
 

@@ -34,6 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :age
       t.integer :gender
       t.string :cellphone
+      t.string :city
       t.string :ocupation
       t.text :no_contract_activities
       t.string :felixibility_importance
@@ -59,9 +60,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :workplace
       t.string :comfort
       t.integer :role
-      t.string :video
+      t.string :video1
+      t.string :video2
+      t.string :video3
+      t.string :video_ans1
+      t.string :video_ans2
+      t.string :video_ans3
       t.string :active
-      t.string :fase
+      t.integer :fase
       t.boolean :video_done
       t.string :approved
       t.string :time_count

@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-
+  
 
     $('.collapse').on('show.bs.collapse', function() {
         var id = $(this).attr('id');
@@ -64,6 +64,12 @@ $(document).ready(function() {
             
         });
     });
+
+     $('a#startAll').click(function(event){
+      console.log("clickity")
+
+      $("#startButton").trigger('click');    
+});
 
 });
 

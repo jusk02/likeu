@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def after_sign_in_path_for(resource)
-   "/status"
+   user_path(resource)
 	end
 
   def remote_ip
@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:name, :age, :gender, :cellphone, :ocupation,
+    devise_parameter_sanitizer.for(:sign_up) << [:name, :age, :gender, :city, :cellphone, :ocupation,
     	:no_contract_activities, :felixibility_importance, :need_income, :current_income, :achievement, :achievement_acomplishment, :achievement_company,
     	:achievement_boss, :achievement_phone, :hobby, :hobby_time, :hobby_validate, :special_experience, :work_hours, :work_days, :personal_achievement, :story, :pc_type, :pc_use, :internet_speed, :can_talk, :workplace, :comfort, :role, :video, :fase, :video_done, :active, :approved ]
   end
