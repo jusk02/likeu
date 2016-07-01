@@ -27,6 +27,7 @@ gem 'devise', '~> 3.2'
 
 gem 'carrierwave'
 
+gem 'geocoder'
 
 gem 'meta-tags'
 

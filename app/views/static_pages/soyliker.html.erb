@@ -344,26 +344,20 @@
                 <br><br>
                  <a href="<%= new_user_registration_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Registrarme</a> 
                  <br>
+                 <br>
                   <% if user_signed_in? %>
 
                      
                      <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %><br>
-                     <a href="<%=user_path(current_user)%>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+
+                     <a href="<%= user_path(current_user)%>" target="blank" class="btn btn-primary" onclick="this.blur();" >Consultar mi proceso</a>
+
                      <!-- <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> --> 
                     <% else %>
-                     <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+                     <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary" onclick="this.blur();" >Consultar mi proceso</a>
                 <% end %> 
-                <%=link_to('Cerar sesion', destroy_user_session_path, :method=> :delete)%>
 
-                
-                 <%= form_for(@click, :method => :post) do |f| %>
-                     
-                   
-                    <%= f.hidden_field :ip_address %>
- 
-                 <%= f.submit "Quiero registrarme", class: "btn btn-primary btn-xl" %>
-                     
-                <% end %>
+
             </div>    
         </div>    
     </div>
