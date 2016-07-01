@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
 
 	after_create do
-		self.update_attribute(:fase, 1)
+		  self.update_attribute(:fase, 1)
     	self.update_attribute(:active, "activo")
     	if role.blank?
     		self.update_attribute(:role, 1)
