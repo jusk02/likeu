@@ -70,6 +70,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :fase
       t.boolean :video_done
       t.string :approved
+      t.boolean :rejected
       t.string :time_count
       t.timestamps null: false
     end
