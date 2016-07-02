@@ -31,7 +31,7 @@
         </div>
     </div>
 </nav>
-<a href="#" class="scrollToTop btn btn-primary"><i class="fa fa-angle-up"></i> Volver al inicio</a>
+<a href="#" class="scrollToTop"><img src="<%=image_path('boton-arriba.png')%>" class="img-responsive wow bounceIn fa fa-angle-up"></a>
 <section class="headliker" id="home" data-type="background" data-speed="10">
 	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xs-offset-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 hidden-xs text-center">
         <img src="<%=image_path('logo.png')%>" class="logo img-responsive">
@@ -42,8 +42,10 @@
             <div class="col-xs-12 hidden-xl hidden-lg hidden-md hidden-sm text-center">
                 <img src="<%=image_path('logo.png')%>" class="logo img-responsive img-center">
             </div>	
+
         		<div class="col-lg-6 col-md-6 col-sm-7 col-xs-10 col-lg-offset-3 col-xs-offset-1 col-md-offset-4 col-sm-offset-3">	
         			<h2><span>LikeU mejora tu calidad de vida, permitiendote trabajar</span></h2>                        
+
         		</div>
         		<div class="col-lg-7 col-md-6 col-lg-offset-5 col-md-offset-5 col-sm-offset-4">	
         			<h1 class="header-big"><span>donde quieres y cuando quieres.</span></h1>	
@@ -51,6 +53,16 @@
         	</div>
         </div>
     </div>
+
+<!-- boton permanente quiero ser likers-->
+
+    <div class="boton-likers">
+    <p>Quiero ser likers </p>
+    <img src="<%=image_path('boton-fijo.png')%>" class="img-responsive wow bounceIn">
+
+    </div>
+<!-- ************************************* -->
+
 </section>
 <section class="" id="what">
 	 <div class="container">
@@ -65,7 +77,7 @@
                 	<div class="col-lg-7 col-sm-7 col-xs-12">
 
                 
-                		<h2>Revolucionamos...</h2>
+                		<h2 class="color">Revolucionamos...</h2>
                         <p>Si crees que el trabajo es algo más que madrugar, tomar un transporte para llegar a un lugar cerrado y aburrido, para trabajar en algo que no es divertido, estás en lo correcto.</p>
                         <p>Hoy la vida se trata de equilibrio, ya no se busca el mismo modelo de trabajo en que creían los padres del pasado, que pensaban en un traje, una corbata y una oficina cerrada y triste para trabajar como la opción ideal; la generación actual está llena de talento que, mezclado con la tecnología, sabe que todo está a la mano y hay diferentes formas de lograr cada objetivo.</p>
                         <p>Hoy ofrecemos una posibilidad real para gente real, con talento, que sabe lo que quiere y que quiere llegar lejos, que entiende el valor del tiempo y de cada espacio, gente que vive la vida y que quiere trabajar, ese es el perfil de nuestros Likers<span class="mini">®</span>.</p>
@@ -89,7 +101,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 text-center">
-                <div class="service-box">
+                <div class="service-box separacion-dereha2">
                     <img src="<%=image_path('how_sm.jpg')%>" class="wow bounceIn img-responsive img-circle img-center">
                     <h3>Mucho más que agentes, ¡son Likers<span class="mini">®</span>!</h3>
                     <p> Creemos que quien habla por ti es lo más importante. Por eso la búsqueda de likers no se limita a una ciudad, los encontramos en el mundo.</p> 
@@ -97,10 +109,14 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 text-center">
-                <div class="service-box">
+                <div class="service-box separacion-dereha2">
                     <img src="<%=image_path('how2.jpg')%>" class="wow bounceIn img-responsive img-circle img-center">
                     <h3>Más capaces, más felices. </h3>
                     <p>Buscamos y encontramos personas con mejores perfiles, mejor preparados, que les gusta lo que hacen y cómo lo hacen, lo que se traduce en una menor rotación y mayor compromiso.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 text-center">
@@ -131,7 +147,7 @@
     	<div class="row">
        		<div class="col-lg-10 col-lg-offset-1 text-center">
        			<br>				
-				<h3>¡Saluda! Es gratis</h3>    						
+				<h3 class="color">¡Saluda! Es gratis</h3>    						
 			</div>	
 			
                  <%= form_for(@contact, :method => :post) do |f| %>

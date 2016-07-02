@@ -179,7 +179,8 @@ input[type="radio"]{
 }
 
 .bg-primary {
-    background-color: #00a7c4;
+    color: #373737;
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);
 }
 
 .bg-dark {
@@ -313,23 +314,38 @@ aside {
 
     position: relative;
     width: 100%;
-    background-image: url(login.jpg);
     
     }
 
 .contenedorlogin{
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
+    
+     padding: 34px;
     position: relative;
     overflow: hidden;
-    max-width: 60%;
     text-align: center;
     margin: auto;
-    color: white;
+    width: 80%;
+    box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: table;
+    color: #555;
+    background: rgba(255,255,255,1);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);
+
+
+}
+
+.contenedorlogin img{
+    margin: auto;
+    
 }
 
 .contenedorlogin .campo{
-    color: black;
+    color: #555;
 }
 
 
@@ -853,7 +869,7 @@ background: url("tituloFormulario.png") no-repeat;
 }
 
 .preguntas p{
-    width: 48%;
+    width: 53%;
     margin: auto;
     text-align: center;
     color: #333;
@@ -873,6 +889,23 @@ background: url("tituloFormulario.png") no-repeat;
 
 .reloj{
     width: 95%;
+}
+
+.boton-likers{
+    position: fixed;
+    bottom: 28.5%;
+    right: 0;
+    z-index: 100;
+    display: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.boton-likers p{
+    position: absolute;
+    top: 23%;
+    right: 13%;
+    font-size: 20px;
 }
 
 #signup .inputs .nivel{
@@ -1440,48 +1473,67 @@ p#opcion{
     margin-right: -6%;
     border-right: solid rgba(26, 167, 191, 0.29);
 }
+
+.separacion-dereha2{
+    padding: inherit;
+    margin-right: -1%;
+    border-right: solid rgba(26, 167, 191, 0.29);
+}
+
 .color{
     color: #1AA7BF;
 }
 
-/*tamaños input 1(grande), 2 (pequeña) , 3(grande)*/
+.links a{
+    color:#555;
+    font-size: 15px;
 
-.tamaño1{
+}
+
+.links a:hover{
+    color:#00F5E5;
+    text-decoration: none;
+
+}
+
+/*tamanos input 1(grande), 2 (pequena) , 3(grande)*/
+
+.tamano1{
     width: 50%;
 }
 
-.tamaño2{
+.tamano2{
     width: 25%;
 } 
 
-.tamaño2_2{
+.tamano2_2{
     width: 25%;
     float: left;
     margin-left: 11%;
 }
 
-.tamaño3{
+.tamano3{
     width: 83%;
 }
 
-.tamaño4{
+.tamano4{
     width: 35%;
 }
-.tamaño4_4{
+.tamano4_4{
     width: 46%;
 }
 
-.tamaño5{
+.tamano5{
     width: 100%;
 }
 
 
-#signup .inputs .tamaño4{
+#signup .inputs .tamano4{
     width: 100%;
     height: 116px;
 }
 
-#signup .inputs .tamaño1-1{
+#signup .inputs .tamano1-1{
     width: 60%;
     
 }
@@ -1713,8 +1765,8 @@ section.module.parallax-1 {
 }
 
 
-#our-likers { 
-background: url(<%= asset_path 'parallax1.jpg' %>) 50% 0 repeat fixed;
+#how-it-works { 
+background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(<%= asset_path 'parallax1.jpg' %>) 50% 0 repeat fixed;
 color: white;
 margin: 0 auto; 
 width: 100%; 
@@ -1726,6 +1778,8 @@ background-size: cover;
 -o-background-size: cover;
 
 }
+
+
 
 #home-l { 
 background: url(<%= asset_path 'header2.jpg' %>) 50% 0 repeat fixed;
@@ -1784,11 +1838,54 @@ background-size: cover;
 }
 
 
+#contenido-user { 
+    padding: 36px 25px 25px;
+    margin-top: 12%;
+    width: 60%;
+    box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: table;
+    background: rgba(255,255,255,1);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);
+}
 
+.respuesta p{
+    margin: auto;
+    width: 70%;
+    font-size: 18px;
+}
+
+.respuesta img{
+    margin: auto;
+}
+
+.invitacion{
+    padding: 0px 25px 25px;
+    width: 60%;
+    display: table;
+
+}
+
+.imagen-centrada{
+    margin: auto;
+}
 
 
 /*-----------------------------------------------------*/
 /*RESPONSIVE*/
+@media screen and (max-width:1319px) {
+
+    .separacion-dereha{
+    margin-right: 2%;
+    
+}
+
+}
+
 @media screen and (max-width:1024px) {
 
 
@@ -1799,22 +1896,16 @@ background-size: cover;
     margin-top: 9%;
 }
 
-}  
-
-@media screen and (max-width:800px) {
-
-
-.botones .atras{
-    margin-left: 0%;
+.separacion-dereha2{
+    padding: 0;
+    margin-right: auto;
+    border-right: solid 0;
 }
 
-.botones .siguiente{
-    margin-right: 0%;
-}   
+}  
 
-} 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:800px) {
 
  .botones .atras{
     margin-left: 4%;
@@ -1824,28 +1915,116 @@ background-size: cover;
     margin-right: 2%;
 }
 
+.botones img {
+    width: 8%;
+ 
+}
+
+.alineacion5{
+   display: inline-flex;
+}
+
+.seleccion {
+    font-size: 16px;
+}
+
 .tituloFormulario h3 {
     margin-left: 11%;
     
 }
+.form-area span {
+    font-size: 17px;
+   
+}
+
+#signup { 
+    box-shadow:none;
+    background: white;
+}
 
 #signup .inputs label.text-genero{
-    margin-left: 13%;
+    margin-left: 33%;
+}
+
+#signup .inputs .icon-genero{
+    margin-left: 33%;
+}
+
+#signup .inputs label.centrado {
+    text-align: center;
+    float: none;
+    margin-left: 0;
 }
 
 .bandera {
-    margin-left: -25%;
+    margin-left: -21%;
+}
+
+.reto2 {
+    margin-top: 1%;
+}
+
+.nivelacion-retos {
+    margin-bottom: 1%;
+}
+
+.form-area p.color2 {
+    float: right;
+    width: 31%;
+    margin-left: -15%;
+    margin-right: 20%;
+    margin-top: 1%;
 
 }
 
-.tamaño3 {
-    width: 64%;
+.texto-uso{
+    text-align: center;
+}
+.texto-uso span{
+    color: #202020;
+    margin-bottom: 5%;
 }
 
-.tamaño3-3 {
-    width: 91%;
+.form-box-text3 {
+    margin-left: -17%;
 }
 
+.tamano2 {
+   width: 38%;
+    margin-left: 29%;
+    height: 33px;
+}
+
+.tamano2-3 {
+    width: 38%;
+    height: 33px;
+}
+
+.tamano3 {
+    width: 70%;
+    margin-left: 15%;
+    height: 33px;
+
+}
+
+.tamano3-3{
+    width: 70%;
+    height: 33px;
+}
+.tamano6 {
+    width: 70%;
+    
+    height: 33px;
+}
+
+.div2{
+    width: 50%;
+
+}
+.div2-2{
+    width: 50%;
+    padding-top: 2%;
+}
 .marging-top{
     margin-top: 5%;
     margin-left: 7%;
@@ -1855,9 +2034,19 @@ background-size: cover;
 .form-box-text {
     font-size: 15px;
     width: 80%;
-    margin-left: 6%;
+    margin-left: 10%;
+}
+.icono-form {
+    width: 22%;
 }
 
+.icon-centrado{
+    margin-left: 27%;
+}
+
+.icon-centrado2 {
+    margin-left: 34%;
+}
 #signup {
 
     margin-left: 4%;
@@ -1878,16 +2067,44 @@ background-size: cover;
 
 .edad{
     position: absolute;
-    top: -95%;
+    top: -65%;
     left: 44%;
 }
+.pregunta2 {
+   
+    margin-left: 21%;
+}
+.tamano2_2 {
+
+    margin-left: 22%;
+
+}
+
+.sonido{
+        margin-left: 10%;
+}
+
+.ubicacion-ninguno{
+    margin-left: -104%;
+}
+
 
 input[type=radio].estudiante + label, input[type=radio].trabajador + label, 
 input[type=radio].estudiotrabajo + label, input[type=radio].emprendedor + label,
 input[type=radio].amo + label, input[type=radio].notrabajo + label, 
 input[type=radio].freelance + label {
-    width: 61%;
-    height: 121px;
+       width: 38%;
+    height: 132px;
+
+}
+input[type=radio].aumentar + label, input[type=radio].herramientas + label, 
+input[type=radio].servicio + label, input[type=radio].otro + label, 
+input[type=radio].ninguno + label {
+     width: 50%;
+    height: 130px;
+}
+#signup .inputs input[type=radio].validar-no + label, #signup .inputs input[type=radio].validar-si + label {
+    margin-left: 24%;
 }
 
 input[type=checkbox].center + label, input[type=checkbox].ventas + label, 
@@ -1895,12 +2112,588 @@ input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label,
 input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label, 
 input[type=checkbox].ninguno2 + label{
 
-width: 61%;
-    height: 121px;
+    width: 38%;
+    height: 132px;
 }
+input[type=radio].encantaria+ label, input[type=radio].nose + label, 
+input[type=radio].estabilidad + label {
+
+    height: 137px;
+    width: 82%;
+}
+#signup .inputs input[type=radio].pc + label, #signup .inputs input[type=radio].portatil + label,
+#signup .inputs input[type=radio].notengo + label {
+    float: inherit;
+    margin-left: 15%;
+    width: 86px;
+    height: 80px;
+}
+#signup .inputs input[type=radio].diadema + label, #signup .inputs input[type=radio].audifonos + label, 
+#signup .inputs input[type=radio].bocina + label {
+    margin-bottom: 13px;
+    width: 92px;
+    height: 95px;
+    margin-right: 51px;
+}
+
+input[type=radio].sala + label, input[type=radio].universidad + label, 
+input[type=radio].habitacion + label, input[type=radio].oficina + label, 
+input[type=radio].biblioteca + label, input[type=radio].otros + label {
+
+   width: 48%;
+    height: 127px;
+}
+
+
+
+#contenido-user, .invitacion { 
+width: 100%;
+
+}
+
+input[type=radio].funciona+ label, input[type=radio].ajustes + label, 
+input[type=radio].noFunciona + label {
+    height: 137px;
+    width: 82%;
+}
+
+.reloj {
+    margin-left: 16%;
+    width: 50%;
+}
+
+.posicion-reloj {
+    width: 17%;
+    bottom: 3%;
+    left: 22%;
+}
+.posicion-manija {
+  
+    width: 4%;
+    bottom: 28%;
+    left: 27.6%;
+    transform-origin: 52% 81%;
+}
+
+.campo-horas {
+    right: 44%;
+    width: 13%;
+}
+
+.posicion-calendario {
+    width: 17%;
+    bottom: 3%;
+    left: 22%;
+}
+.reflejo-dias {
+    left: 28%;
+    bottom: 12%;
 
 }  
 
+
+
+
+@media screen and (max-width:600px) {
+
+.tituloFormulario h3 {
+    margin-left: 13%;
+    padding-top: 7px;
+    
+}
+
+
+.likeu-input {
+    font-size: 15px;
+}
+
+.tamano4_4 {
+    width: 100%;
+}
+
+.tamano2 {
+    width: 30%;
+    margin-left: 33%;
+    height: 33px;
+}
+.tamano2-3{
+    width: 30%;
+    margin-left: 3%;
+    height: 33px;
+
+}
+
+.tamano3 {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.tamano3-3{
+    width: 100%;
+}
+
+#signup .inputs .tamano4 {
+    width: 100%;
+    height: 179px;
+}
+.edad {
+    top: -108%;
+    left: 56%;
+}
+
+.div2{
+    width: 100%;
+    
+}
+
+.div2-2{
+    width: 100%;
+    padding-top: 7%;
+}
+
+.no-padding2{
+    text-align: center;
+}
+
+.marging-top {
+    margin-left: 4%;
+
+}
+
+.sonido {
+    margin-left: 3%;
+}
+
+.botones .siguiente {
+    margin-right: 24%;
+}
+.botones .atras {
+    margin-left: 25%;
+}
+
+.pregunta2 {
+    margin-top: -6%;
+    width: 100%;
+    margin-left: 0%;
+    text-align: center;
+}
+.form-area p.color2 {
+  
+    width: 33%;
+}
+
+.alineacion2 {
+    width: 88%;
+}
+
+#signup .inputs label.text-genero {
+    margin-left: 0%;
+    text-align: center;
+    margin-top: -6%;
+}
+#signup .inputs input[type=radio].no + label, #signup .inputs input[type=radio].si + label {
+    margin-left: 10%;
+    width: 30px;
+    height: 30px;
+}
+
+#signup .inputs input[type=radio].masculino + label, #signup .inputs input[type=radio].femenino + label {
+
+    margin-left: 21%;
+}
+
+input[type=radio].estudiante + label, input[type=radio].trabajador + label, 
+input[type=radio].estudiotrabajo + label, input[type=radio].emprendedor + label,
+input[type=radio].amo + label, input[type=radio].notrabajo + label, 
+input[type=radio].freelance + label {
+       width: 44%;
+    height: 120px;
+
+}
+
+input[type=radio].aumentar + label, input[type=radio].herramientas + label, 
+input[type=radio].servicio + label, input[type=radio].otro + label, 
+input[type=radio].ninguno + label {
+     width: 60%;
+    height: 126px;
+}
+
+input[type=radio].sala + label, input[type=radio].universidad + label, 
+input[type=radio].habitacion + label, input[type=radio].oficina + label, 
+input[type=radio].biblioteca + label, input[type=radio].otros + label {
+
+   width: 53%;
+    height: 118px;
+}
+
+#signup .inputs input[type=radio].validar-no + label, #signup .inputs input[type=radio].validar-si + label {
+    margin-left: 22%;
+}
+
+input[type=checkbox].center + label, input[type=checkbox].ventas + label, 
+input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label, 
+input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label, 
+input[type=checkbox].ninguno2 + label{
+
+    width: 44%;
+    height: 120px;
+}
+
+
+input[type=radio].encantaria+ label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+   width: 85%;
+    height: 116px;
+}
+
+input[type=radio].encantaria + label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+    background-size: 47%;
+}
+
+input[type=radio].funciona+ label, input[type=radio].ajustes + label, 
+input[type=radio].noFunciona + label {
+    width: 85%;
+    height: 116px;
+}
+
+input[type=radio].funciona+ label, input[type=radio].ajustes + label, 
+input[type=radio].noFunciona + label {
+    background-size: 47%;
+
+}
+#signup .inputs input[type=radio].pc + label, #signup .inputs input[type=radio].portatil + label,
+#signup .inputs input[type=radio].notengo + label {
+
+    margin-left: 15%;
+    
+}
+
+
+.no-padding-pequeno{
+    padding: 0px;
+} 
+
+.sin-alineacion{
+    display: block;
+}
+
+.preguntas3 p {
+    width: 100%
+}
+
+.bandera {
+    margin-left: 0%;
+    width: 10%;
+    margin-bottom: 2%;
+}
+
+.desaparecer{
+    display: none;
+}
+
+.indicativo {
+    display: block;
+    margin-top: -10%;
+    margin-right: 4px;
+}
+
+.smart-pequeno {
+    float: none;
+    display: block;
+    margin: 2px auto;
+}
+
+
+.preguntas p {
+    width: 79%;
+}
+#signup .inputs label.texto-smart-pequeno{
+    display: block;
+    margin: 0 8%;
+    text-align: center;
+    padding: 0;
+}
+
+.reloj {
+    width: 64%;
+}
+
+.posicion-reloj {
+    bottom: 6%;
+    left: 26%;
+}
+.posicion-manija {
+    bottom: 23%;
+    left: 31.6%;
+}
+
+.campo-horas {
+    width: 15%;
+    right: 35%;
+}
+
+.posicion-calendario {
+    width: 17%;
+    bottom: 3%;
+    left: 22%;
+}
+.reflejo-dias {
+
+    bottom: 6%;
+}
+
+
+}
+
+@media screen and (max-width: 449px) {
+
+.tituloFormulario h3 {
+    margin-left: 28%;
+    
+}  
+
+.botones img {
+    width: 16%;
+ 
+}
+
+.tamano2 {
+    height: 50px;
+    width: 35%;
+    margin-left: 29%;
+}
+
+.tamano3, .tamano6 {
+    height: 50px;
+    
+}
+
+.tamano2-3 {
+    height: 50px;
+    width: 42%;
+    margin-left: -5%;
+    
+}
+
+.tamano3-3{
+  height: 50px;
+}
+.tamano-selector{
+    height: 50px;
+}
+
+.icono-form {
+    width: 36%;
+} 
+
+.icon-centrado2 {
+    margin-left: 26%;
+}
+
+.preguntas p {
+    width: 100%;
+}
+
+.alineacion5{
+   display: block;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.form-area p.color2 {
+    margin-right: 12%;
+ 
+}
+#signup .inputs .nivel {
+    text-align: left;
+    margin-left: 41%;
+    margin-top: -16%;
+    margin-bottom: 14%;
+}
+
+#signup .inputs .nivel2 {
+    margin-left: 59%;
+    margin-top: -12%;
+    margin-bottom: 10%;
+}
+
+#signup .inputs input[type=radio].masculino + label, #signup .inputs input[type=radio].femenino + label {
+    margin-left: 10%;
+}
+
+
+input[type=radio].estudiante + label, input[type=radio].trabajador + label, 
+input[type=radio].estudiotrabajo + label, input[type=radio].emprendedor + label, 
+input[type=radio].amo + label, input[type=radio].notrabajo + label, 
+input[type=radio].freelance + label {
+    width: 70%;
+    height: 127px;
+
+}
+
+#signup .inputs input[type=radio].no + label, #signup .inputs input[type=radio].si + label {
+       width: 75px;
+    background-size: 72%;
+    height: 55px;
+    margin-left: 15%;
+  
+}
+
+input[type=radio].aumentar + label, input[type=radio].herramientas + label, 
+input[type=radio].servicio + label, input[type=radio].otro + label, 
+input[type=radio].ninguno + label {
+
+  width: 91%;
+    height: 120px;
+}
+
+
+
+#signup .inputs input[type=radio].validar-no + label, #signup .inputs input[type=radio].validar-si + label {
+    margin-left: 2%;
+     width: 75px;
+    background-size: 72%;
+    height: 55px;
+    margin: auto;
+}
+
+#signup .inputs input[type=radio].personal + label, #signup .inputs input[type=radio].familiar + label {
+
+    margin-left: 2%;
+     width: 75px;
+    background-size: 72%;
+    height: 55px;
+    margin: auto;
+    
+}
+
+#signup .inputs input[type=radio].diadema + label, #signup .inputs input[type=radio].audifonos + label, 
+#signup .inputs input[type=radio].bocina + label {
+    margin-bottom: -5px;
+    width: 100px;
+    margin-right: 0px;
+    margin-left: 34%;
+}
+
+input[type=radio].sala + label, input[type=radio].universidad + label, 
+input[type=radio].habitacion + label, input[type=radio].oficina + label, 
+input[type=radio].biblioteca + label, input[type=radio].otros + label {
+
+   width: 85%;
+    height: 125px;
+}
+
+
+input[type=checkbox].center + label, input[type=checkbox].ventas + label, 
+input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label, 
+input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label, 
+input[type=checkbox].ninguno2 + label{
+   width: 70%;
+    height: 127px;
+}
+
+
+input[type=radio].encantaria+ label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+   
+    height: 128px;
+    width: 99%;
+}
+
+input[type=radio].encantaria + label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+    background-size: 64%;
+}
+
+input[type=radio].funciona+ label, input[type=radio].ajustes + label, 
+input[type=radio].noFunciona + label {
+  height: 128px;
+    width: 99%;
+}
+input[type=radio].funciona+ label, input[type=radio].ajustes + label, 
+input[type=radio].noFunciona + label {
+   background-size: 64%;
+}
+
+#signup .inputs input[type=radio].pc + label, #signup .inputs input[type=radio].portatil + label, 
+#signup .inputs input[type=radio].notengo + label {
+ 
+    margin-left: 37%;
+    
+}
+
+.reloj {
+    width: 85%;
+    margin-left: 0%;
+}
+.posicion-reloj {
+    width: 24%;
+    left: 14%;
+}
+
+.posicion-manija {
+    width: 5%;
+    left: 22.3%;
+    bottom: 25%;
+
+}
+
+.posicion-calendario {
+    width: 24%;
+    left: 14%;
+}
+.reflejo-dias {
+    left: 21%;
+}
+.campo-horas {
+    bottom: 5%;
+    width: 25%;
+}
+
+}    
+
+
+@media screen and (max-width: 360px) {
+
+.tituloFormulario {
+    background-size: 100%;
+}
+
+#signup .inputs input[type=radio].pc + label, #signup .inputs input[type=radio].portatil + label, 
+#signup .inputs input[type=radio].notengo + label {
+ 
+    margin-left: 29%;
+    
+}
+
+#signup .inputs input[type=radio].diadema + label, #signup .inputs input[type=radio].audifonos + label, 
+#signup .inputs input[type=radio].bocina + label {
+    margin-left: 17%;
+}
+.posicion-manija {
+    bottom: 21%;
+}
+.reflejo-dias {
+    left: 20%;
+    bottom: -1%;
+}
+
+}
+@media screen and (max-width: 320px) {
+
+#signup .inputs .nivel {
+ 
+    margin-top: -22%;
+}
+
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1325px) {
+
+.margen-separacion{
+    margin-left: 1%;
+}
+
+
+}
 
 @media screen and (min-width:768px) {
 

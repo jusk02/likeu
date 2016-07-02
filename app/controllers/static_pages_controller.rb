@@ -31,6 +31,10 @@ class StaticPagesController < ApplicationController
   		@clicks = Click.order("created_at DESC")	
   	end
 
+    def formulariomovil
+      @user = User.new
+    end
+
   	
 
 end

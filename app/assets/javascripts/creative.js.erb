@@ -8,20 +8,23 @@ $(document).ready(function () {
     reloj();
       // Control del reloj
         function reloj(){
-           $('#hora').bind('keyup mouseup',function(){
+           $('#hora, #hora2').bind('keyup mouseup',function(){
+                console.log('resposn reloj')
                 var hora = $(this).val();
                 var now = hora*30;
-                $('#manija').css('transform','rotate('+now+'deg)'); 
+                $('#manija, #manija2').css('transform','rotate('+now+'deg)'); 
                 console.log(hora);
             });
         }
             
         //campo dias
 
-        $('#dias').bind('keyup mouseup', function(){
+        $('#dias, #dias2').bind('keyup mouseup', function(){
 
           var valor = $('#dias').val();
+          var valor2 = $('#dias2').val();
           $('#reflejar').text(valor);
+          $('#reflejar2').text(valor2);
 
           });
 
@@ -31,6 +34,16 @@ $(document).ready(function () {
             $(".scrollToTop").fadeIn(900)
         } else {
             $(".scrollToTop").fadeOut(900);
+        }
+    });
+
+
+        $(window).scroll(function(){
+        console.log($(this).scrollTop());
+        if ($(this).scrollTop() > 250) {
+            $(".boton-likers").fadeIn(900)
+        } else {
+            $(".boton-likers").fadeOut(900);
         }
     });
 
