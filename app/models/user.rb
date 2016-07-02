@@ -18,6 +18,13 @@ class User < ActiveRecord::Base
     	if role.blank?
     		self.update_attribute(:role, 1)
     	end
+
+      if pc_type = 'No tengo'
+        self.update_attribute(:rejected, true)
+      end
+      if achievement = 'No tengo experiencia'
+        self.update_attribute(:rejected, true)
+      end
     	self.password = self.cellphone
     	self.update_attribute(:video_done, false)
    	end
