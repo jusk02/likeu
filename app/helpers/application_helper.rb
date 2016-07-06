@@ -20,6 +20,13 @@ module ApplicationHelper
         end  
       end
 
+      def ciudad
+        @ciudad = request.location.country
+
+        @ciudad
+        
+      end
+
 
 
 end

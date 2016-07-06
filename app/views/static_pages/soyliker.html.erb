@@ -49,10 +49,10 @@
     <!-- boton permanente quiero ser likers-->
 
     <div class="boton-likers">
-        <p>
-        Quiero ser liker 
-        </p>
-        <img src="<%=image_path('boton-fijo.png')%>" class="img-responsive wow bounceIn">
+    
+    <a class="page-scroll" href="#apply"><p>Quiero trabajar <br>con LikeU </p></a>
+    <img src="<%=image_path('boton-fijo.png')%>" class="img-responsive wow bounceIn">
+
     </div>
 <!-- ************************************* -->     
 </section>
@@ -345,11 +345,11 @@
                      
                      <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %><br>
 
-                     <a href="<%= user_path(current_user)%>" target="blank" class="btn btn-primary" onclick="this.blur();" >Consultar mi proceso</a>
+                     <a href="<%= user_path(current_user)%>" target="blank" class="small gris" onclick="this.blur();" >Consultar mi proceso</a>
 
                      <!-- <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> --> 
                     <% else %>
-                     <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary" onclick="this.blur();" >Consultar mi proceso</a>
+                     <a href="<%= new_user_session_path %>" target="blank" class="small gris" onclick="this.blur();" >Consultar mi proceso</a>
                 <% end %> 
 
 
