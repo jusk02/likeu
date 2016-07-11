@@ -101,6 +101,116 @@ $(document).ready(function(){
 
       });
 
+$("#si").click(function(evento){
+    
+      if (
+        $("#si").is(":checked")){
+        console.log('hola')
+        $("#no-laboral-text").slideDown();
+        
+      }
+      
+
+   
+    });
+
+$("#no").click(function(evento){
+    
+      if (
+        $("#no").is(":checked")){
+        console.log('hola')
+        $("#no-laboral-text").slideUp();
+        $("#text-no-contract").val("No he tenido");
+        
+      }
+      
+
+   
+    });
+
+$("#aumentar").click(function(evento){
+     if ($("#aumentar").is(":checked")){
+        console.log('hola')
+        $("#achievement").val("Aumentar las ventas"); 
+      }
+    });
+$("#herramientas").click(function(evento){
+     if ($("#herramientas").is(":checked")){
+        console.log('hola')
+        $("#achievement").val("Aprender nuevas Herramientas"); 
+      }
+    });
+$("#servicio").click(function(evento){
+     if ($("#servicio").is(":checked")){
+        console.log('hola')
+        $("#achievement").val("Mejorar servicio"); 
+      }
+    });
+$("#otro").click(function(evento){
+     if ($("#otro").is(":checked")){
+        console.log('hola')
+        $("#achievement").val("otro"); 
+      }
+    });
+$("#ninguno").click(function(evento){
+     if ($("#ninguno").is(":checked")){
+        var ninguno = $("#select-reto").val();
+        $("#achievement").val(ninguno); 
+      }
+    });
+$("#select-reto").click(function(evento){
+
+
+        var ninguno = $("#select-reto").val();
+        $("#achievement").val(ninguno); 
+      
+    });
+
+$('input#hobby-time').bind('input propertychange',function(){
+
+        var horas =   $('input#hobby-time').val();
+         //Si ha introducido nada en el campo
+      if(horas > 0){
+          $('#validacion-hobby').slideDown();
+          
+      }
+      //si no ha introducido valor
+      else {
+         $('#validacion-hobby').slideUp();
+      } 
+
+  });
+
+$("#sala").click(function(evento){
+     if ($("#sala").is(":checked")){      
+        $("#lugar-trabajo").val("sala"); 
+      }
+    });
+$("#universidad").click(function(evento){
+     if ($("#universidad").is(":checked")){      
+        $("#lugar-trabajo").val("universidad"); 
+      }
+    });
+$("#habitacion").click(function(evento){
+     if ($("#habitacion").is(":checked")){      
+        $("#lugar-trabajo").val("habitacion"); 
+      }
+    });
+$("#oficina").click(function(evento){
+     if ($("#oficina").is(":checked")){      
+        $("#lugar-trabajo").val("oficina"); 
+      }
+    });
+$("#biblioteca").click(function(evento){
+     if ($("#biblioteca").is(":checked")){      
+        $("#lugar-trabajo").val("biblioteca"); 
+      }
+    });
+$("#otros").click(function(evento){
+     if ($("#otros").is(":checked")){      
+        $("#lugar-trabajo").val(""); 
+      }
+    });
 
 
 });
@@ -112,7 +222,13 @@ $(document).ready(function(){
          $(".checkB").prop('checked', false);
         
     });
-
+   
+$(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
 
 
 });

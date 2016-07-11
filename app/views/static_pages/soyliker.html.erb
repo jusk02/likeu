@@ -30,8 +30,11 @@
             </ul>
         </div>
     </div>
-</nav> 
-<a href="#" class="scrollToTop btn btn-primary"><i class="fa fa-angle-up"></i> Volver al inicio</a> 
+
+</nav>  
+<a href="#" class="scrollToTop"><img src="<%=image_path('boton-arriba.png')%>" class="img-responsive wow bounceIn fa fa-angle-up"></a>
+
+
 
 
 <section class="headliker" id="home-l" data-type="background" data-speed="10">
@@ -44,32 +47,49 @@
                 </div>
             </div>
         </div>
-    </div>      
+    </div> 
+    <!-- boton permanente quiero ser likers-->
+
+    <div class="boton-likers">
+    
+    <a class="page-scroll" href="#apply"><p>Quiero trabajar <br>con LikeU </p></a>
+    <img src="<%=image_path('boton-fijo.png')%>" class="img-responsive wow bounceIn">
+
+    </div>
+<!-- ************************************* -->     
 </section>
-<section class="bg-primary" id="being-a-liker">
-	 <div class="container">
+<section class="" id="being-a-liker">
+     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
+                <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center separacion-dereha2">
+
+                <img src="<%=image_path('icono-reloj.png')%>" class="img-responsive wow bounceIn imagen-centrada">
                
                     <h3>Establece tu propio horario</h3>
                     <p>Tú decides cuándo y cómo quieres trabajar. Así, nunca tendrás que decidir entre ganarte la vida o vivir la vida. Eso es trabajar con LikeU.</p>
-                    <a id="horarios" class="small" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>                       
+                    <a id="horarios" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
+                    <br>
+                    <br>
+                    <br>                       
                 </div>
-                <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
+                <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center separacion-dereha2">
+
+                <img src="<%=image_path('icono-economico.png')%>" class="img-responsive wow bounceIn imagen-centrada">
                     <h3>Gana dinero cómo tú quieras</h3>
                     <p>Representando a las mejores empresas para que hables por ellas. Sólo aquellas que te gustan.</p>
                     <p>Nada mas fácil y satisfactorio que ganar dinero ayudando a la gente.</p>
-                    <a id="dinero" class="small" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
+                    <a id="dinero" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                 </div>
                 <div class="col-lg-4 col-lg-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
+                <img src="<%=image_path('icono-juntos.png')%>" class="img-responsive wow bounceIn imagen-centrada">
                     <h3>Nunca estás sólo</h3><br>
                     <p>Lo mejor es que sin importar donde estés, siempre estarán tus amigos y lideres para apoyarte.</p>
-                    <a id="solo" class="small" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
+                    <a id="solo" class="gris" href="#" data-toggle="modal" data-target="#myModal" onclick="this.blur();">Te quedo alguna duda?</a>
                 </div>
-		 	</div>
-	 	</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </section>
 <section class="" id="how-it-works">
     <div class="container">
@@ -84,7 +104,7 @@
                         Cuando quieras ganar dinero, solo tienes que abrir nuestra aplicación y empezaras a recibir llamadas,nosotros te enseñamos que debes decir y cómo lo debes decir.
                     </p>
                     <p>
-                       Tu decides cuanto tiempo y desde donde quieres trabajar; al finalizar el día te diremos cuánto ganaste y recibirás cada semana tu dinero cada semana vía electrónica. 
+                       Tu decides cuanto tiempo y desde donde quieres trabajar; al finalizar el día te diremos cuánto ganaste y recibirás cada semana tu dinero vía electrónica. 
                     </p>
                     <p>                          
                         Sólo necesitas un computador, una diadema, y muchas ganas de aprender y divertirte.
@@ -104,7 +124,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
             	<br>
- 				<h2 class="section-heading">Nuestros Likers</h2>
+ 				<h2 class="section-heading color">Nuestros Likers</h2>
  				<br>
  				<p>Nuestros Likers son personas como tú, con familia, con metas y sueños, personas que objetivos que cumplir. Tambien son gerentes, formadores, vendedores, especialistas y amigos. Tan diversos y unicos a la vez. Bienvenidos a nuestro mundo Likers</p>
                 <br>
@@ -241,7 +261,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Como ser un Liker.</h2>
+                <h2 class="section-heading color">Como ser un Liker.</h2>
                 <hr class="largo">
             </div>
         </div>
@@ -250,7 +270,8 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="service-box text-center">
-                    <i class="fa fa-4x fa-file-text-o wow bounceIn text-primary"></i>
+                    <!-- <i class="fa fa-4x fa-file-text-o wow bounceIn text-primary"></i> -->
+                    <img src="<%=image_path('icono-registrar.png')%>" class="img-responsive wow bounceIn imagen-centrada">
                     <h3>Regístrate en pocos minutos</h3>
                     <p class="text-muted">
                         Hablamos de ti y tu entorno, donde quisieras trabajar y el tiempo que le quieres dedicar.
@@ -268,7 +289,8 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-microphone wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                    <!-- <i class="fa fa-4x fa-microphone wow bounceIn text-primary" data-wow-delay=".2s"></i> -->
+                    <img src="<%=image_path('icono-escuchar.png')%>" class="img-responsive wow bounceIn imagen-centrada">
                     <h3>Queremos escucharte</h3>
                     <p class="text-muted">
                         Sabemos que tienes una vos fabulosa, déjanos escucharla por primera vez.
@@ -285,7 +307,8 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 text-center">
                 <div class="service-box">
-                    <i class="fa fa-4x fa-bar-chart wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                 <img src="<%=image_path('icono-aprender.png')%>" class="img-responsive wow bounceIn imagen-centrada">
+                    <!-- <i class="fa fa-4x fa-bar-chart wow bounceIn text-primary" data-wow-delay=".1s"></i> -->
                     <h3>Aprende y Diviértete</h3>
                     <p class="text-muted">
                         Hacemos las cosas diferentes por eso nuestro proceso de aprendizaje es único, es fácil e inteligente.
@@ -323,11 +346,15 @@
 
                      
                      <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %><br>
-                     <a href="<%= user_path(current_user)%>" target="blank" class="btn btn-primary" onclick="this.blur();" >Consultar mi proceso</a>
+
+                     <a href="<%= user_path(current_user)%>" target="blank" class="small gris" onclick="this.blur();" >Consultar mi proceso</a>
+
                      <!-- <a href="<%= user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a> --> 
                     <% else %>
-                     <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary" onclick="this.blur();" >Consultar mi proceso</a>
+                     <a href="<%= new_user_session_path %>" target="blank" class="small gris" onclick="this.blur();" >Consultar mi proceso</a>
                 <% end %> 
+
+
             </div>    
         </div>    
     </div>

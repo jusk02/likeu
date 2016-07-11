@@ -1,8 +1,15 @@
-hola <%= current_user.email%>
-tu video es <%= current_user.video %>
 
 
-<div>
+<div class="col-lg-8 col-lg-offset-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
+<section id="contenido-user">
+                  <div class="row fieldformulario respuesta">
+
+
+<span><img src="<%=image_path('corazon.png')%>" class="img-responsive wow bounceIn"></span>
+
+<p><h2 class="color">Hola <%= current_user.email%></h2></p>
+
+ 
 	
 	<% if current_user.fase == nil %>
 
@@ -10,21 +17,52 @@ tu video es <%= current_user.video %>
 
 	     
 	    <% elsif current_user.fase == 1 %>
-	   en el momentyo estamos analizando tu aplicacion, nos pondremos en contacto contigo en cuanto halla algun cambio
+	   <p>En el momento estamos analizando tu aplicacion, nos pondremos en contacto contigo en cuanto halla algun cambio</p>
+	   <a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a>
+	   <% if current_user.role == 3 %>
+	   	<%= form_for(current_user) do |f| %>
+	   		<%= f.hidden_field :fase, :value => 2 %>
+	   		 <%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
+	   	<% end %> 
+	   <% end %> 
 
 	    <% elsif current_user.fase == 2 %>
-	    genial pasaste la primera fase, puedes iniciar la segunda fase.
-	    para esta fase necesitaras un espacio calmado,una camara web, microfono y toda tu disposicion.
+	    <p>Genial pasaste la primera fase, puedes iniciar la segunda fase.
+	    para esta fase necesitaras un espacio calmado,una camara web, microfono y toda tu disposicion.</p>
 	    <a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a>
-	    
+	    <% if current_user.role == 3 %>
+	   	<%= form_for(current_user) do |f| %>
+	   		<%= f.hidden_field :fase, :value => 3 %>
+	   		 <%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
+	   	<% end %> 
+	   <% end %> 
 
 	    <% elsif current_user.fase == 3 %>
-	   fase 2 listo ahora podras empezar tu entrenamiento
-	     <a href="#" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+	   <p>Fase 2 listo ahora podras empezar tu entrenamiento</p>
+	     <a href="www.playvox.com" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Levame a entrenar!</a>
 
 	     <% else%>
 
-	     lo sentimos parece haber un error
-	    <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+	     <p>lo sentimos parece haber un error por favor contacta a soporte</p>
+	    <a href="mailto:soporte@likeu.co" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >contactar a soporte</a>
     <% end %>       
+
+</div>
+</section>
+<br>
+<br>
+<div class="invitacion">
+<p><strong>¡Te invitamos a seguirnos en nuestras redes sociales para mantenerte al tanto de todo lo que pasa, y asi saber cuando se abre nuestra convocatoria!</strong></p><br>
+
+	<div id ="redes-sociales" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
+                
+                <hr class="text-secondary">
+                <a  href="https://www.facebook.com/LikeU-Colombia-1726794850921997" target="_blank" title="Facebook"><i class="fa fa-2x fa-facebook wow bounceIn text-secondary iconos-redes"></i></a>
+                <a  href="https://www.instagram.com/likeuglobal" target="_blank"><i class="fa fa-2x fa-instagram wow bounceIn text-secondary iconos-redes"></i></a> 
+                <a  href=" https://www.youtube.com/channel/UC6YEdwm69F9emOf3NDFFwzw" target="_blank"><i class="fa fa-2x fa-youtube wow bounceIn text-secondary iconos-redes"></i></a> 
+                <a  href="https://twitter.com/LikeUcolombia" target="_blank"><i class="fa fa-2x fa-twitter wow bounceIn text-secondary iconos-redes"></i></a>
+            </div>
+
+</div>
+
 </div>

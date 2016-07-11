@@ -1,8 +1,9 @@
-
+ <% if current_user.fase == 2 %>
 <section>
 	<div class="container">
         <div class="row">
         	<div class="text-center">
+
 	        
 				
 				<% if current_user.video_done == false %>
@@ -19,6 +20,7 @@
 						ya está (la grabación se realiza una sola vez).
 					</p>
 										
+
 					<%= form_for(current_user) do |f| %>
 						<div class="field">
 				    	    <br>
@@ -35,6 +37,7 @@
 						Genial tu video ya fue grabado!, es importante que le des guardar si quieres seguir con el proceso
 					</p>
 					<%= form_for(current_user) do |f| %>
+
 				      	<div class="field">
 				        	<br>
 				        	<%= f.hidden_field :video1, :value => video_url[4] %>
@@ -47,16 +50,18 @@
 					    <br>
 					    <div class="actions">
 					        <%= f.submit 'guardar', :class => 'guarda-video btn btn-success' %>
-					    </div>  
+
+					    </div>
 					<% end %>
 				<% end %>
-				
-				
-				
-				
-				
+	
         	</div>
     	</div>
 	</div>
 </section>
 
+ <% else%>
+
+ <h1>No deberias estar aqui :(</h1>
+
+  <% end %>

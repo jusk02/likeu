@@ -1,30 +1,43 @@
 
+<div class="col-lg-8 col-lg-offset-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
+<section>
+
 <header class= "login">
-  <div class= "row">
 
-
-      <div class="header-content">
       <div class="contenedorlogin">
 
+      <span><img src="<%=image_path('buscar.png')%>" class="img-responsive wow bounceIn"></span>
 
-              <h2>Inicio de sesión</h2>
+
+              <h2>Consultar</h2>
 
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
               <div class="field">
                 <%= f.label :email, "Correo electrónico" %><br />
                 <div class="campo">
-                <%= f.email_field :email, autofocus: true %>
+                <%= f.email_field :email, autofocus: true, class: "tamaño1 likeu-input form-control" %>
                 </div>
               </div>
+
+              <br>
 
               <div class="field">
-                <%= f.label :password, "Contraseña" %><br />
+                <%= f.label :password, "Celular" %><br />
                 <div class="campo">
-                <%= f.password_field :password, autocomplete: "off" %>
+                <%= f.text_field :password, autocomplete: "off", class: "tamaño1 likeu-input form-control" %>
+                </div>
+              </div>
+              <br>
+
+              <div class="actions">
+              <div class="campo">
+                <%= f.submit "Iniciar", class: "btn btn-primary btn-xl" %>
                 </div>
               </div>
 
-              <% if devise_mapping.rememberable? -%>
+
+
+               <% if devise_mapping.rememberable? -%>
                 <div class="field">
                   <%= f.check_box :remember_me %>
          
@@ -33,23 +46,20 @@
                 </div>
               <% end -%>
 
-              <div class="actions">
-              <div class="campo">
-                <%= f.submit "Iniciar" %>
-                </div>
-              </div>
               <% end %>
 
 
 
-          <%= render "devise/shared/links" %>
+          <p class="links"><%= render "devise/shared/links" %></p>
         
+      </div>
 
-      </div>
-      </div>
-  </div>
 
 </header>
+</section>
+</div>
+
+
 
 
 
