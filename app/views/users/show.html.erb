@@ -19,22 +19,32 @@
 	    <% elsif current_user.fase == 1 %>
 	   <p>En el momento estamos analizando tu aplicacion, nos pondremos en contacto contigo en cuanto halla algun cambio</p>
 	   <a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a>
-
+	   <% if current_user.role == 3 %>
+	   	<%= form_for(current_user) do |f| %>
+	   		<%= f.hidden_field :fase, :value => 2 %>
+	   		 <%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
+	   	<% end %> 
+	   <% end %> 
 
 	    <% elsif current_user.fase == 2 %>
 	    <p>Genial pasaste la primera fase, puedes iniciar la segunda fase.
 	    para esta fase necesitaras un espacio calmado,una camara web, microfono y toda tu disposicion.</p>
 	    <a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a>
-	    
+	    <% if current_user.role == 3 %>
+	   	<%= form_for(current_user) do |f| %>
+	   		<%= f.hidden_field :fase, :value => 3 %>
+	   		 <%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
+	   	<% end %> 
+	   <% end %> 
 
 	    <% elsif current_user.fase == 3 %>
 	   <p>Fase 2 listo ahora podras empezar tu entrenamiento</p>
-	     <a href="#" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+	     <a href="www.playvox.com" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Levame a entrenar!</a>
 
 	     <% else%>
 
-	     <p>lo sentimos parece haber un error</p>
-	    <a href="<%= new_user_session_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Consultar mi proceso</a>
+	     <p>lo sentimos parece haber un error por favor contacta a soporte</p>
+	    <a href="mailto:soporte@likeu.co" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >contactar a soporte</a>
     <% end %>       
 
 </div>

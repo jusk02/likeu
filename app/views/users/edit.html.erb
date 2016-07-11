@@ -1,4 +1,4 @@
-
+ <% if current_user.fase == 2 %>
 <section>
 	<div class="container">
         <div class="row">
@@ -52,17 +52,16 @@
 					        <%= f.submit 'guardar', :class => 'guarda-video btn btn-success' %>
 
 					    </div>
-					     
-
 					<% end %>
 				<% end %>
-				
-				
-				
-				
-				
+	
         	</div>
     	</div>
 	</div>
 </section>
 
+ <% else%>
+
+ <h1>No deberias estar aqui :(</h1>
+
+  <% end %>

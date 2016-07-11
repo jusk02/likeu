@@ -21,7 +21,7 @@
         <br>
         <br>
         <div class="tab-content">
-          <!-- primera pestaña-->
+          <!-- primera pestana-->
           <div id="part1" class="tab-pane fade in active ">
             <!--  inicio formulario -->
             <div>
@@ -36,13 +36,13 @@
                   <div class=" row fieldformulario">
 
                     <div class="col-lg-7 col-sm-7 col-xs-12">
-                      <strong><%= f.label :name, '¿Cuál es tu nombre?', class: "izquierda texto-smart-pequeño" %></strong>
-                      <%= f.text_field :name, class: "tamaño4_4 likeu-input form-control" %><br>
+                      <strong><%= f.label :name, '¿Cuál es tu nombre?', class: "izquierda texto-smart-pequeno" %></strong>
+                      <%= f.text_field :name, class: "tamano4_4 likeu-input form-control" %><br>
                     </div>
 
                     <div class="col-lg-5 col-sm-5 col-xs-6 no-padding marging-top">
-                      <strong><%= f.label :city, 'Ciudad', class: "izquierda texto-smart-pequeño" %></strong>
-                      <%= f.text_field :city, class: "tamaño1 likeu-input form-control" %><br>
+                      <strong><%= f.label :city, 'Ciudad', class: "izquierda texto-smart-pequeno" %></strong>
+                      <%= f.text_field :city, class: "tamano1 likeu-input form-control" %><br>
                     </div>
 
                   </div>
@@ -52,8 +52,8 @@
                   <div class="col-lg-12 col-sm-12 col-xs-12">
                     <div class="row fieldformulario">
                       <div class="col-lg-5 col-sm-5 col-xs-6 edad">
-                        <%= f.label :age, "Edad", class: "centrado texto-smart-pequeño" %>
-                        <%= f.number_field :age, min: 0 , max: 100, class:"tamaño2 likeu-input form-control" %> Años
+                        <%= f.label :age, "Edad", class: "centrado texto-smart-pequeno" %>
+                        <%= f.number_field :age, min: 0 , max: 100, class:"tamano2 likeu-input form-control" %> Anos
                       </div>
                       <!-- genero -->
                       <div class="col-lg-7 col-sm-7 col-xs-12 ">
@@ -61,7 +61,7 @@
                           <div class="col-lg-6 col-sm-6 col-xs-12">
                             <%= f.label :gender, '¿Cuál es tu género?', class:"text-genero" %>
                           </div>
-                          <div class="col-lg-4 col-sm-4 col-xs-12 alineacion icon-genero no-padding-pequeño">
+                          <div class="col-lg-4 col-sm-4 col-xs-12 alineacion icon-genero no-padding-pequeno">
 
                             <%= f.radio_button :gender, 'Masculino',id:"masculino", class:"masculino" %><label for="masculino" class="grayscale ">&#160;</label>
                             <%= f.radio_button :gender, 'Femenino',id:"femenino", class:"femenino" %><label for="femenino" class="grayscale">&#160;</label>
@@ -72,9 +72,9 @@
                   </div>
                   <div class="row">
                     <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-12 col-xs-offset-0 ">
-                      <span> <img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeño wow bounceIn" id="cellphoneInfo">
+                      <span> <img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="cellphoneInfo">
                       </span>
-                      <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeño" %>
+                      <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeno" %>
                       <br class="desaparecer">
                       <span class="indicativo">
                         <% if (request.location.country) == 'Colombia' %>
@@ -86,14 +86,15 @@
                         <% if (request.location.country) == 'México' %>
                         <img src="<%=image_path('banderamexico.png')%>" class="bandera">(+52)
                         <% end %>
-                      </span><%= f.text_field :cellphone, id:"cellphone", class: "tamaño3 likeu-input form-control"%> 
+                      </span><%= f.text_field :cellphone, id:"cellphone", class: "tamano3 likeu-input form-control"%>
+                        <%= f.hidden_field :password, :value => "cellphone"%> 
                     </div>
 
                     <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-6 col-xs-offset-0">
-                      <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeño wow bounceIn" id="emailInfo">
-                      <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeño" %>
+                      <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="emailInfo">
+                      <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeno" %>
                       <br class="desaparecer">
-                      <input value="" name="user[email]" id="user_email" type="email" class= "tamaño3 tamaño3-3 likeu-input form-control">
+                      <input value="" name="user[email]" id="user_email" type="email" class= "tamano3 tamano3-3 likeu-input form-control">
                     </div>
                   </div>
                 </div><!--final inputs -->
@@ -186,7 +187,7 @@
             </div>
           </div><!--final parte1-->
 
-          <!-- segunda pestaña-->
+          <!-- segunda pestana-->
           <div id="part2" class="tab-pane fade">
             <!--  inicio formulario -->         
             <section id="signup">
@@ -207,8 +208,8 @@
                   <%= f.radio_button :no_contract_activities, 'Si',id:"si", class:"si" %><label for="si" class="grayscale ">&#160;</label>
                   <%= f.label :no_contract_activities, "Si he tenido", class:"nivel" %>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 ">
-                  <%= f.text_area :no_contract_activities, class: "likeu-input form-control tamaño4" %>
+                <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 desaparecer" id= "no-laboral-text">
+                  <%= f.text_area :no_contract_activities, class: "likeu-input form-control tamano4", id:"text-no-contract" %>
                 </div>
               </div><!--final inputs -->
             </section>
@@ -271,7 +272,8 @@
 
                           <%= f.radio_button :achievement, 'Ninguno',id:"ninguno", class:"ninguno" %><label for="ninguno" class="grayscale">&#160;</label>
                           <p class="form-box-text">Ninguno</p>
-                          <p id="opcion"><%= f.select(:achievement,options_for_select(['' ,'No tengo experiencia', 'No había retos importantes para mi']),{},{ class:"seleccion"})%></p>
+                          <p id="opcion"><%= f.select(:achievement,options_for_select(['--' ,'No tengo experiencia', 'No había retos importantes para mi']),{},{ class:"seleccion",id:"select-reto"})%></p>
+                          <%=f.hidden_field :achievement , id: "achievement" %>
                         </div>
                       </div>
                       <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">  
@@ -287,21 +289,21 @@
                     <div class="row">
                       <div class="col-lg-3 col-sm-6 col-xs-12 no-padding">
                         <%= f.label :achievement_acomplishment, '¿En que % cumpliste el reto?', class: "form-box-text reto" %>
-                        <%= f.number_field :achievement_acomplishment, min: 0 , max: 100, class:"tamaño4 likeu-input form-control" %><span style="margin-left: 5%">%</span>
+                        <%= f.number_field :achievement_acomplishment, min: 0 , max: 100, class:"tamano4 likeu-input form-control" %><span style="margin-left: 5%">%</span>
                       </div>
 
                       <div class="col-lg-3 col-sm-6 col-xs-12">
                         <%= f.label :achievement_company, 'Nombre de la empresa', class: "form-box-text" %>
-                        <%= f.text_field :achievement_company, class: "tamaño3 likeu-input form-control" %>
+                        <%= f.text_field :achievement_company, class: "tamano3 likeu-input form-control" %>
                       </div>
                       <div class="col-lg-3 col-sm-6 col-xs-12">
                         <%= f.label :achievement_boss, 'Nombre del jefe', class: "form-box-text nivelacion-retos reto2" %>
-                        <%= f.text_field :achievement_boss, class: "tamaño3 likeu-input form-control" %>
+                        <%= f.text_field :achievement_boss, class: "tamano3 likeu-input form-control" %>
                       </div>
                       <div class="col-lg-3 col-sm-6 col-xs-12">
                         <%= f.label :achievement_phone, 'Teléfono', class: "form-box-text nivelacion-retos reto2" %><br>
                         <p><!--<%= f.select(:achievement_phone,options_for_select(['Fijo', 'Movil']),{}, { class:"seleccion"})%>-->
-                          <%= f.text_field :achievement_phone, class: "tamaño3 likeu-input form-control" %></p>
+                          <%= f.text_field :achievement_phone, id:"achievement_phone", class: "tamano3 likeu-input form-control" %></p>
                         </div>
                       </div>
                     </div>
@@ -309,7 +311,7 @@
                 </div>       
               </div>
             </div><!--final parte 2-->
-            <!-- tercera pestaña-->
+            <!-- tercera pestana-->
             <div id="part3" class="tab-pane fade ">
               <section id="signup">
                 <div class="tituloFormulario">
@@ -320,7 +322,7 @@
                 <div class="inputs form-area">
                   <div class="row fieldformulario ">
                     <p>¿Cuál es tu hobby o actividad que te apasiona?</p>
-                    <p><%= f.text_field :hobby, class: "tamaño1 likeu-input form-control" %></p>
+                    <p><%= f.text_field :hobby, class: "tamano1 likeu-input form-control" %></p>
                   </div>
                   <br>
                   <!--    Pregunta2 -->
@@ -331,20 +333,22 @@
                       </div>
                       <!-- Tiempo hobby -->
                       <div class="col-lg-5 col-sm-5 col-xs-12">
-                        <%= f.number_field :hobby_time, min: 0 , max: 100, class:"tamaño2_2 likeu-input form-control" %><p class="color2">Horas a la semana</p>
+                        <%= f.number_field :hobby_time, min: 0 , max: 100, class:"tamano2_2 likeu-input form-control", id:"hobby-time" %><p class="color2">Horas a la semana</p>
                       </div>
                     </div>
                   </div>
                   <br>
+                  <div class="desaparecer" id="validacion-hobby">
                   <div class="row fieldformulario preguntas">
                     <p>¿Podríamos validar el conocimiento de esta actividad en cualquier momento?</p>
                   </div>
                   <!--    si o no -->
                   <div class="col-lg-8 col-lg-offset-3 col-sm-8 col-sm-offset-3 col-xs-8 col-xs-offset-3 alineacion">
-                    <%= f.radio_button :hobby_validate, 'Si',id:"validar-si", class:"validar-si" %><label for="validar-si" class="grayscale ">&#160;</label>
+                    <%= f.radio_button :hobby_validate, true ,id:"validar-si", class:"validar-si" %><label for="validar-si" class="grayscale ">&#160;</label>
                     <%= f.label :hobby_validate, "Si", class:"nivel" %>
-                    <%= f.radio_button :hobby_validate, 'No',id:"validar-no", class:"validar-no" %><label for="validar-no" class="grayscale ">&#160;</label>
+                    <%= f.radio_button :hobby_validate, false ,id:"validar-no", class:"validar-no" %><label for="validar-no" class="grayscale ">&#160;</label>
                     <%= f.label :hobby_validate, "No", class:"nivel" %>
+                  </div>
                   </div>
                 </div><!--final inputs -->
               </section>
@@ -437,9 +441,9 @@
                   </div>
                 </div>       
               </div>
-            </div><!--final pestaña 3-->
+            </div><!--final pestana 3-->
 
-            <!--inicio pestaña 4-->
+            <!--inicio pestana 4-->
             <div id="part4" class="tab-pane fade ">
               <section id="signup">
                 <div class="tituloFormulario">
@@ -457,7 +461,7 @@
                   <!--    Pregunta2 -->
                   <div class="fieldformulario preguntas">
                     <p>Tus ingresos actuales son:</p><br>
-                    <p><%= f.select(:current_income,options_for_select(['' ,'0 - 500.000 Mensuales','500.000 - 1´000.000 Mensuales', '1’000.000 - 1’500.000 Mensuales' , '1’500.000 - 2’000.000 Mensuales', '2’000.000 - 3’000.000 Mensuales', '3’000.000   -   Más      Mensuales']),{},{ class:"  form-control"})%></p><br>
+                    <p><%= f.select(:need_income,options_for_select(['' ,'0 - 500.000 Mensuales','500.000 - 1´000.000 Mensuales', '1’000.000 - 1’500.000 Mensuales' , '1’500.000 - 2’000.000 Mensuales', '2’000.000 - 3’000.000 Mensuales', '3’000.000   -   Más      Mensuales']),{},{ class:"  form-control"})%></p><br>
                     <span class="espacio-final"></span>
                   </div>
                 </div><!--final inputs -->
@@ -502,8 +506,8 @@
                   </div>
                 </div>       
               </div>
-            </div><!--final pestaña 4-->
-            <!-- pestaña 5-->
+            </div><!--final pestana 4-->
+            <!-- pestana 5-->
             <div id="part5" class="tab-pane fade">
               <!--  inicio formulario -->
               <section id="signup">
@@ -564,7 +568,7 @@
               <div class="botones">
                 <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras4"></a></p>
                 <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente5"></a></p>
-              </div>_
+              </div>
               <!-- Seccion en blanco -->          
               <br>
               <br>
@@ -619,7 +623,7 @@
                           <div class="form-box round text-center">
                             <%= f.radio_button :workplace, 'Otro',id:"otros", class:"otros" %><label for="otros" class="grayscale">&#160;</label>
                             <p class="form-box-text3">Otro</p>
-                            <p id="mas"><%= f.text_field :workplace, class: "tamaño5 likeu-input form-control" %></p>
+                            <p id="mas"><%= f.text_field :workplace, class: "tamano5 likeu-input form-control", id:"lugar-trabajo" %></p>
                           </div>
                         </div>
                       </div>
@@ -630,7 +634,7 @@
             </div><!--final parte 5-->
 
 
-            <!-- pestaña 6-->
+            <!-- pestana 6-->
             <div id="part6" class="tab-pane fade">
               <!--  inicio formulario -->
               <section id="signup">
@@ -640,18 +644,18 @@
                 </div>
                 <div class="inputs">
                   <div class="row fieldformulario preguntas4">
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-ofsset-1 col-xs-6 separacion-dereha">
+                    <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-6 separacion-dereha">
                       <p>Cuántas horas quieres dedicarle a este trabajo, entre las 7 am y las 10 pm?</p>
                       <br>
                       <br>
                       <span><img src="<%=image_path('marco.png')%>" class="reloj wow bounceIn"></span>
                       <span><img src="<%=image_path('reloj.png')%>" class="posicion-reloj wow bounceIn"></span>
                       <span><img src="<%=image_path('manija.png')%>" class="posicion-manija", id="manija"></span>
-                      <span class="campo-horas"><%= f.number_field :work_hours, min: 0 , max: 12, id:"hora", class:"tamaño1-1 likeu-input form-control" %> Años</span>
+                      <span class="campo-horas"><%= f.number_field :work_hours, min: 0 , max: 12, id:"hora", class:"tamano1-1 likeu-input form-control" %> Anos</span>
 
                     </div>
 
-                    <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-ofsset-1 col-xs-5 ">
+                    <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-5 ">
                       <p>Cuántos Días quieres dedicarle a este trabajo, en el horario anterior?</p>
                       <br>
                       <br>
@@ -659,7 +663,7 @@
                       <span><img src="<%=image_path('dias.png')%>" class="posicion-calendario wow bounceIn"></span>
                       <div id="reflejar" class="reflejo-dias">
                       </div>
-                      <span class="campo-horas"><%= f.number_field :work_days, min: 1 , max: 7, id:"dias", class:"tamaño1-1 likeu-input form-control" %> Días</span>
+                      <span class="campo-horas"><%= f.number_field :work_days, min: 1 , max: 7, id:"dias", class:"tamano1-1 likeu-input form-control" %> Días</span>
                     </div>
                   </div>
                 </div><!--final inputs -->
@@ -766,7 +770,7 @@
                         <div class="col-xs-12 div2">
                           <br>
                           <%= f.label :age, "Edad", class: "centrado texto-smart-pequeno" %>
-                          <%= f.number_field :age, min: 0 , max: 100, class:"tamano2 likeu-input form-control" %> Años
+                          <%= f.number_field :age, min: 0 , max: 100, class:"tamano2 likeu-input form-control" %> Anos
                         </div>
 
 
@@ -791,7 +795,18 @@
                       <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="cellphoneInfo" ></span>
                       <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeno" %>
                       <br class="desaparecer">
-                      <span class="indicativo"><img src="<%=image_path('banderacolombia.png')%>" class="bandera">(+57)</span><%= f.text_field :cellphone, id:"cellphone", class: "tamano3-3 likeu-input form-control"%> 
+                      <span class="indicativo">
+
+                      <% if (request.location.country) == 'Colombia' %>
+                        <img src="<%=image_path('banderacolombia.png')%>" class="bandera">(+57)
+                        <% end %>
+                        <% if (request.location.country) == 'Mexico' %>
+                        <img src="<%=image_path('banderamexico.png')%>" class="bandera">(+52)
+                        <% end %>
+                        <% if (request.location.country) == 'México' %>
+                        <img src="<%=image_path('banderamexico.png')%>" class="bandera">(+52)
+                        <% end %>
+                        </span><%= f.text_field :cellphone, id:"cellphone", class: "tamano3-3 likeu-input form-control"%> 
                     </div>
 
                     <div class="col-xs-12 div2">
@@ -952,10 +967,10 @@
                     <%= f.label :no_contract_activities, "Si he tenido", class:"nivel" %>
 
                   </div>
-                  <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 ">
-                    <%= f.text_area :no_contract_activities, class: "likeu-input form-control tamano4" %>
 
-                  </div>
+                  <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 desaparecer" id= "no-laboral-text">
+                  <%= f.text_area :no_contract_activities, class: "likeu-input form-control tamano4", id:"text-no-contract" %>
+                </div>
 
                 </div><!--final inputs -->
 
@@ -1036,12 +1051,11 @@
                         <div class="col-xs-6 icon-centrado no-padding">
                           <div class="form-box round text-center">
 
-                            <%= f.radio_button :achievement, 'Ninguno',id:"ninguno", class:"ninguno" %><label for="ninguno" class="grayscale">&#160;</label>
-
-                            <p class="form-box-text">Ninguno</p>
-                            <p id="opcion"><%= f.select(:achievement,options_for_select(['' ,'No tengo experiencia', 'No había retos importantes para mi']),{},{ class:" tamano-selector seleccion"})%></p>
-
-                          </div>
+                          <%= f.radio_button :achievement, 'Ninguno',id:"ninguno", class:"ninguno" %><label for="ninguno" class="grayscale">&#160;</label>
+                          <p class="form-box-text">Ninguno</p>
+                          <p id="opcion"><%= f.select(:achievement,options_for_select(['--' ,'No tengo experiencia', 'No había retos importantes para mi']),{},{ class:"seleccion",id:"select-reto"})%></p>
+                          <%=f.hidden_field :achievement , id: "achievement" %>
+                        </div>
                         </div>
                         <div class="col-xs-6 no-padding">  
 
@@ -1079,7 +1093,7 @@
                           <br>
                           <%= f.label :achievement_phone, 'Teléfono', class: "form-box-text nivelacion-retos reto2" %><br>
                           <p><!--<%= f.select(:achievement_phone,options_for_select(['Fijo', 'Movil']),{}, { class:"seleccion"})%>-->
-                            <%= f.text_field :achievement_phone, class: "tamano3 likeu-input form-control" %></p>
+                            <%= f.text_field :achievement_phone, id:"achievement_phone", class: "tamano3 likeu-input form-control" %></p>
                           </div>
 
                         </div>
@@ -1124,12 +1138,13 @@
                         </div>
                         <!-- Tiempo hobby -->
                         <div class="col-xs-12">
-                          <%= f.number_field :hobby_time, min: 0 , max: 100, class:"tamano2-3 likeu-input form-control" %><p class="color2">Horas a la semana</p>
+                          <%= f.number_field :hobby_time, min: 0 , max: 100, class:"tamano2-3 likeu-input form-control", id:"hobby-time" %><p class="color2">Horas a la semana</p>
                         </div>
                       </div>
                     </div>
 
                     <br>
+                     <div class="desaparecer" id="validacion-hobby">
                     <div class="row fieldformulario preguntas">
                       <p>¿Podríamos validar el conocimiento de esta actividad en cualquier momento?</p>
                     </div>
@@ -1143,7 +1158,7 @@
                       <%= f.label :hobby_validate, "No", class:"nivel nivel2" %>
 
                     </div>
-
+                    </div>
                   </div><!--final inputs -->
                 </section>
 
@@ -1539,7 +1554,7 @@
                               <%= f.radio_button :workplace, 'Otro',id:"otros", class:"otros" %><label for="otros" class="grayscale">&#160;</label>
 
                               <p class="form-box-text3">Otro</p>
-                              <p id="mas"><%= f.text_field :workplace, class: "tamano5 likeu-input form-control" %></p>
+                              <p id="mas"><%= f.text_field :workplace, class: "tamano5 likeu-input form-control", id:"lugar-trabajo" %></p>
 
                             </div>
                           </div>
@@ -1579,7 +1594,7 @@
                         <span><img src="<%=image_path('reloj.png')%>" class="posicion-reloj wow bounceIn"></span>
                         <span><img src="<%=image_path('manija.png')%>" class="posicion-manija", id="manija2"></span>
 
-                        <span class="campo-horas"><%= f.number_field :work_hours, min: 0 , max: 12, id:"hora2", class:"tamano5 form-control" %> Años</span>
+                        <span class="campo-horas"><%= f.number_field :work_hours, min: 0 , max: 12, id:"hora2", class:"tamano5 form-control" %> Anos</span>
 
                       </div>
                       <br>
@@ -1654,7 +1669,7 @@
                     <!--Parte3-->
                     <div class="col-xs-6 no-padding">
 
-                      <div class="form-box round icon-centrado2 text-center">
+                      <div class="form-box round icon-centrado2-2 text-center">
                         <%= f.radio_button :comfort, 'No funciona',id:"noFunciona", class:"noFunciona" %><label for="noFunciona" class="grayscale ">&#160;</label>
                         <p class="form-box-text2">No creo que Funcione</p>
                       </div>
@@ -1675,14 +1690,6 @@
                   <%= f.submit 'guardar', :class => 'guarda-video btn btn-success' %>
                 </div>   
               </div>
-
-
-
-
-
-
-
-
 
 
 

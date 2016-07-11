@@ -94,6 +94,10 @@ a:focus {
     color: #00F5E5;
 }
 
+.desaparecer{
+    display: none;
+}
+
 .mini
 {
     font-size: 8px;
@@ -931,13 +935,13 @@ background: url("tituloFormulario.png") no-repeat;
 
 #signup .inputs input[type=radio].masculino + label{
     background: url(hombre.png)no-repeat; 
-    background-size: 90%;
+    background-size: 111%;
 }
 
 #signup .inputs input[type=radio].femenino + label { 
 
     background: url(mujer.png)no-repeat; 
-    background-size: 90%;
+    background-size: 111%;
 }
 
 /*--------------------------*/
@@ -1872,16 +1876,7 @@ background-size: cover;
 }
 
 
-/*-----------------------------------------------------*/
-/*RESPONSIVE*/
-@media screen and (max-width:1319px) {
 
-    .separacion-dereha{
-    margin-right: 2%;
-    
-}
-
-}
 
 @media screen and (max-width:1024px) {
 
@@ -1889,6 +1884,7 @@ background-size: cover;
 .reto{
     display: block;
 }
+
 .reto2{
     margin-top: 9%;
 }
@@ -1899,10 +1895,16 @@ background-size: cover;
     border-right: solid 0;
 }
 
+.separacion-dereha {
+    margin-right: 7% !important;
+}
+
+
+
 }  
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:768px) {
 
  .botones .atras{
     margin-left: 4%;
@@ -2033,6 +2035,12 @@ background-size: cover;
     font-size: 15px;
     width: 80%;
     margin-left: 10%;
+}
+
+.form-box-text2{
+
+    font-size: 15px;
+
 }
 .icono-form {
     width: 22%;
@@ -2396,9 +2404,7 @@ input[type=radio].noFunciona + label {
     margin-bottom: 2%;
 }
 
-.desaparecer{
-    display: none;
-}
+
 
 .indicativo {
     display: block;
@@ -2423,7 +2429,7 @@ input[type=radio].noFunciona + label {
     padding: 0;
 }
 
-..reloj {
+.reloj {
     width: 64%;
 }
 
@@ -2449,6 +2455,9 @@ input[type=radio].noFunciona + label {
 .reflejo-dias {
 
     bottom: 6%;
+}
+.icon-centrado2-2 {
+    margin-left: -73%;
 }
 
 }
@@ -2682,6 +2691,11 @@ input[type=radio].noFunciona + label {
     bottom: -1%;
 }
 
+.icon-centrado2 {
+    margin-left: 30%;
+}
+
+
 }
 @media screen and (max-width: 320px) {
 
@@ -2692,11 +2706,17 @@ input[type=radio].noFunciona + label {
 
 
 }
-
-@media only screen and (min-width: 1200px) and (max-width: 1325px) {
+@media screen and (min-width: 1280px)and(max-width: 1366px) {
 
 .margen-separacion{
-    margin-left: 1%;
+    margin-right:-3%;
+}
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1280px) {
+
+.margen-separacion{
+    margin-right: -2%;
 }
 
 

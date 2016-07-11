@@ -32,14 +32,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       t.string :name
       t.integer :age
-      t.integer :gender
+      t.string :gender
       t.string :cellphone
       t.string :city
       t.string :ocupation
       t.text :no_contract_activities
       t.string :felixibility_importance
-      t.integer :need_income
-      t.integer :current_income
+      t.string :need_income
+      t.string :current_income
       t.text :achievement
       t.integer :achievement_acomplishment
       t.text :achievement_company
