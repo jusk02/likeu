@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
 
   def after_sign_up_path_for(resource)
-    '/' # Or :prefix_to_your_route
+    '/quieroserliker' # Or :prefix_to_your_route
   end
 	# GET /comments/1/edit
   def edit

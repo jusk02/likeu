@@ -92,12 +92,37 @@ $(document).ready(function(){
    
     });
 
+   $("#ninguno-m").click(function(evento){
+    
+      if (
+        $("#ninguno-m").is(":checked")){
+        console.log('hola')
+         $("p#opcion-m").show(true);
+         $(".ocultodiv").slideUp();
+      }
+      else{
+         $("p#opcion-m").hide(true);
+         $('.seleccion').hide();
+      }
+
+   
+    });
+
 
     $(".botonE").click(function(){
 
               $(".ocultodiv").slideDown();
               
               $("p#opcion").hide();
+
+      });
+
+
+    $(".botonE").click(function(){
+
+              $(".ocultodiv").slideDown();
+              
+              $("p#opcion-m").hide();
 
       });
 
@@ -213,6 +238,119 @@ $("#otros").click(function(evento){
     });
 
 
+/*js para movil*/
+
+$("#si-m").click(function(evento){
+    
+      if (
+        $("#si-m").is(":checked")){
+        console.log('hola')
+        $("#no-laboral-text-m").slideDown();
+        
+      }
+      
+
+   
+    });
+
+$("#no-m").click(function(evento){
+    
+      if (
+        $("#no").is(":checked")){
+        console.log('hola')
+        $("#no-laboral-text-m").slideUp();
+        $("#text-no-contract-m").val("No he tenido");
+        
+      }
+      
+
+   
+    });
+
+$("#aumentar-m").click(function(evento){
+     if ($("#aumentar-m").is(":checked")){
+        console.log('hola')
+        $("#achievement-m").val("Aumentar las ventas"); 
+      }
+    });
+$("#herramientas-m").click(function(evento){
+     if ($("#herramientas-m").is(":checked")){
+        console.log('hola')
+        $("#achievement-m").val("Aprender nuevas Herramientas"); 
+      }
+    });
+$("#servicio-m").click(function(evento){
+     if ($("#servicio-m").is(":checked")){
+        console.log('hola')
+        $("#achievement-m").val("Mejorar servicio"); 
+      }
+    });
+$("#otro-m").click(function(evento){
+     if ($("#otro-m").is(":checked")){
+        console.log('hola')
+        $("#achievement-m").val("otro"); 
+      }
+    });
+$("#ninguno-m").click(function(evento){
+     if ($("#ninguno-m").is(":checked")){
+        var ninguno = $("#select-reto-m").val();
+        $("#achievement-m").val(ninguno); 
+      }
+    });
+$("#select-reto-m").click(function(evento){
+
+
+        var ninguno = $("#select-reto-m").val();
+        $("#achievement-m").val(ninguno); 
+      
+    });
+
+$('input#hobby-time-m').bind('input propertychange',function(){
+
+        var horas =   $('input#hobby-time-m').val();
+         //Si ha introducido nada en el campo
+      if(horas > 0){
+          $('#validacion-hobby-m').slideDown();
+          
+      }
+      //si no ha introducido valor
+      else {
+         $('#validacion-hobby-m').slideUp();
+      } 
+
+  });
+
+$("#sala-m").click(function(evento){
+     if ($("#sala-m").is(":checked")){      
+        $("#lugar-trabajo-m").val("sala"); 
+      }
+    });
+$("#universidad-m").click(function(evento){
+     if ($("#universidad-m").is(":checked")){      
+        $("#lugar-trabajo-m").val("universidad"); 
+      }
+    });
+$("#habitacion-m").click(function(evento){
+     if ($("#habitacion-m").is(":checked")){      
+        $("#lugar-trabajo-m").val("habitacion"); 
+      }
+    });
+$("#oficina-m").click(function(evento){
+     if ($("#oficina-m").is(":checked")){      
+        $("#lugar-trabajo-m").val("oficina"); 
+      }
+    });
+$("#biblioteca-m").click(function(evento){
+     if ($("#biblioteca-m").is(":checked")){      
+        $("#lugar-trabajo-m").val("biblioteca"); 
+      }
+    });
+$("#otros-m").click(function(evento){
+     if ($("#otros-m").is(":checked")){      
+        $("#lugar-trabajo-m").val(""); 
+      }
+    });
+
 });
 
 $(document).ready(function(){
@@ -262,6 +400,31 @@ $(document).ready(function(){
 
               
               $("p#mas").hide();
+
+      });
+
+
+
+});
+
+
+$(document).ready(function(){
+   $("#otros-m").click(function(evento){
+    
+      if (
+        $("#otros-m").is(":checked")){
+        console.log('hola')
+         $("p#mas-m").show(true);
+      }
+      else{
+         $("p#mas-m").hide(true);
+      }
+   });
+
+   $(".lugar").click(function(){
+
+              
+              $("p#mas-m").hide();
 
       });
 

@@ -902,6 +902,10 @@ background: url("tituloFormulario.png") no-repeat;
     color: #ffffff;
 }
 
+.minuscula{
+        text-transform: inherit;
+}
+
 .boton-likers p{
     position: absolute;
     top: 9%;
@@ -1535,7 +1539,7 @@ p#opcion{
 }
 
 #signup .inputs .tamano1-1{
-    width: 60%;
+    width: 77%;
     
 }
 
@@ -1667,8 +1671,10 @@ p#opcion{
 
 .campo-horas{
     position: absolute;
-    bottom: 14%;
-    right: 22%;
+    bottom: 7%;
+    right: 21%;
+    width: 36%;
+    text-align: center;
 }
 
 .posicion-calendario {
@@ -1813,7 +1819,7 @@ background-size: cover;
 }
 
 #why { 
-background: url(<%= asset_path 'make_it_better.jpg' %>) 50% 0 repeat fixed;
+background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(<%= asset_path 'make_it_better_2.jpg' %>) 50% 0 repeat fixed;
 color: white;
 margin: 0 auto; 
 max-width: 100%; 
@@ -1875,7 +1881,30 @@ background-size: cover;
     margin: auto;
 }
 
+.img-pequena{
+    display: none;
+}
 
+
+
+@media screen and (max-width:1319px) {
+
+    .separacion-dereha2{
+    padding: 0;
+    margin-right: auto;
+    border-right: solid 0;
+}
+
+.img-grande{
+    display: none;
+}
+
+.img-pequena{
+    display: block;
+}
+
+
+}
 
 
 @media screen and (max-width:1024px) {
@@ -1889,14 +1918,10 @@ background-size: cover;
     margin-top: 9%;
 }
 
-.separacion-dereha2{
-    padding: 0;
-    margin-right: auto;
-    border-right: solid 0;
-}
+
 
 .separacion-dereha {
-    margin-right: 7% !important;
+    margin-right: -1% !important;
 }
 
 
@@ -2112,6 +2137,14 @@ input[type=radio].ninguno + label {
 #signup .inputs input[type=radio].validar-no + label, #signup .inputs input[type=radio].validar-si + label {
     margin-left: 24%;
 }
+
+#signup .inputs input[type=radio].validar-no:checked + label, #signup .inputs input[type=radio].validar-si:checked + label{
+     filter: none;
+    -webkit-filter: grayscale(0%);
+    background: url(radio_botton_check.png)no-repeat; 
+
+}
+
 
 input[type=checkbox].center + label, input[type=checkbox].ventas + label, 
 input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label, 
@@ -2556,6 +2589,16 @@ input[type=radio].freelance + label {
     margin-left: 15%;
 }
 
+#signup .inputs input[type=radio].no:checked + label, #signup .inputs input[type=radio].si:checked + label{
+     width: 75px;
+    background-size: 72%;
+    height: 55px;
+    margin-left: 15%;
+
+
+}
+
+
 input[type=radio].aumentar + label, input[type=radio].herramientas + label, 
 input[type=radio].servicio + label, input[type=radio].otro + label, 
 input[type=radio].ninguno + label {
@@ -2574,6 +2617,16 @@ input[type=radio].ninguno + label {
     margin: auto;
 }
 
+#signup .inputs input[type=radio].validar-no:checked + label, #signup .inputs input[type=radio].validar-si:checked + label{
+     filter: none;
+    -webkit-filter: grayscale(0%);
+     width: 75px;
+    background-size: 72%;
+    height: 55px;
+    
+
+}
+
 #signup .inputs input[type=radio].personal + label, #signup .inputs input[type=radio].familiar + label {
 
     margin-left: 2%;
@@ -2583,6 +2636,15 @@ input[type=radio].ninguno + label {
     margin: auto;
     
 }
+
+#signup .inputs input[type=radio].personal:checked + label, #signup .inputs input[type=radio].familiar:checked + label{
+     filter: none;
+     width: 75px;
+    background-size: 72%;
+    height: 55px;
+    -webkit-filter: grayscale(0%);
+    
+   } 
 
 #signup .inputs input[type=radio].diadema + label, #signup .inputs input[type=radio].audifonos + label, 
 #signup .inputs input[type=radio].bocina + label {
