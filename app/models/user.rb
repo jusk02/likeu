@@ -15,14 +15,17 @@ class User < ActiveRecord::Base
 	after_create do
 		  self.update_attribute(:fase, 1)
     	self.update_attribute(:active, "activo")
-      if self.email = 'andres.garcia@dreamjobs.com.co'
+
+      if self.email == 'andres.garcia@dreamjobs.com.co'
         self.role = 3
         self.update_attribute(:role, 3)
       end
-      if self.email = 'juanesrincon@gmail.com'
+
+      if self.email == 'juanesrincon@gmail.com'
         self.role = 3
         self.update_attribute(:role, 3)
       end
+      
       if ocupation.blank?
         self.update_attribute(:ocupation, "No respondio")
       end

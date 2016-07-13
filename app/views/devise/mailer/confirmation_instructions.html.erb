@@ -1,48 +1,4 @@
-<style type="text/css">
 
-.respuesta p{
-    margin: auto;
-    width: 70%;
-    font-size: 18px;
-    text-align: center;
-}
-
-
-.color{
-    color: #1AA7BF;
-    margin:0 auto;
-    text-align: center;
-
-}
-
-#contenido-user { 
-    padding: 30px 25px 25px;
-    margin-top: 12%;
-    width: 50%;
-    box-shadow: 
-        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
-        0px 4px 20px rgba( 0,0,0,0.33 );
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    display: table;
-    background: rgba(255,255,255,1);
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);
-}
-
-.link{
-	color: #1AA7BF;
-	text-decoration: none;
-}
-
-.link:hover {
-	color: color:#00F5E5;
-	text-decoration: none;
-}
-
-
-
-</style>
 
 
 <!-- Latest compiled and minified CSS -->
@@ -50,16 +6,23 @@
 
 
 
-<div class="col-lg-8 col-lg-offset-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 ">
-<section id="contenido-user">
+<div">
+<section style="padding: 30px 25px 25px;margin:auto; margin-top: 12%; width: 50%; box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; display: table; background: rgba(255,255,255,1);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);text-align:center;">
                   <div class="row fieldformulario respuesta">
 
+<<<<<<< HEAD
 <h2 class="color">Bienvenido <%= @name %>!</h2>
+=======
+<h2 style="color:#1AA7BF; margin:0 auto; text-align:center;">Bienvenido <%= @email %>!</h2>
+>>>>>>> 5842000cc4848a8da95314d8bb22ddf3be18ce80
 
-<p>Puedes confirmar tu cuenta a través del siguiente link </p>
+<p style="margin: auto; width: 70%; font-size: 18px; text-align: center;">Puedes confirmar tu cuenta a través del siguiente link </p>
 
 
-<p><%= link_to 'Confirmar mi cuenta', confirmation_url(@resource, confirmation_token: @token), :class=>"link" %></p>
+<p><%= link_to 'Confirmar mi cuenta', confirmation_url(@resource, confirmation_token: @token), :style=>"color: #1AA7BF;
+    text-decoration: none;" %></p>
 </div>
 </section>
 </div>
