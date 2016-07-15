@@ -60,6 +60,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :workplace
       t.string :comfort
       t.integer :role
+      t.integer :form_score
       t.string :video1
       t.string :video2
       t.string :video3
