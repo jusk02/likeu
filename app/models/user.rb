@@ -59,6 +59,8 @@ class User < ActiveRecord::Base
       end
     	self.password = self.cellphone
     	self.update_attribute(:video_done, false)
+
+      
    	end
 
  

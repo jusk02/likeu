@@ -17,6 +17,8 @@ $(document).ready(function() {
     });
 
 
+
+
     $(function() {
 
         $('a').click(function(event){
@@ -104,6 +106,13 @@ $(document).ready(function(){
          $("p#opcion-m").hide(true);
          $('.seleccion').hide();
       }
+
+   
+    });
+
+    $("#user_name").click(function(evento){
+    
+      $("#form-head").slideUp();
 
    
     });

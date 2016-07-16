@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   resources :contacts
 
-  get "/status", to: "static_pages#status", as: "status"
+  get "/terminos", to: "static_pages#terminos", as: "terminos"
 
   
 

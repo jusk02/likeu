@@ -1,5 +1,5 @@
 <section class="hidden-xs">
-  <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
+  <div id="form-head" class="col-lg-8 col-lg-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
     <h1>Cuéntanos sobre ti</h1>
 
     <p>Contesta las siguientes preguntas con la mayor sinceridad. No hay respuestas correctas ni equivocadas, solo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p>
@@ -75,7 +75,7 @@
                       <span> <img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="cellphoneInfo">
                       </span>
                       <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeno" %><br>
-                      <br class="desaparecer">
+                      
                       <span class="indicativo">
                         <% if (request.location.country) == 'Colombia' %>
                         <img src="<%=image_path('banderacolombia.png')%>" class="bandera">(+57)
@@ -100,7 +100,10 @@
                 </div><!--final inputs -->
               </div>
 
-
+               <!-- Botones siguiente y atras -->
+              <div class="botones">
+                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente1"></a></p>
+              </div>
              
 
               <!-- Seccion en blanco -->
@@ -181,12 +184,7 @@
                   </div>
                 </div>      
               </div>
-
-
-               <!-- Botones siguiente y atras -->
-              <div class="botones">
-                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente1"></a></p>
-              </div>
+             
             </div>
 
           </div><!--final parte1-->
@@ -217,6 +215,17 @@
                 </div>
               </div><!--final inputs -->
             </section>
+
+                <!-- Botones siguiente y atras -->
+          <div class="botones">
+          
+              <p>
+                <a data-toggle="tab" href="#part1"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a>
+              </p>
+              <p>
+                <a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a>
+              </p>
+            </div>
             
             <!-- Seccion en blanco -->
 
@@ -307,16 +316,7 @@
               </div>       
             </div>
 
-            <!-- Botones siguiente y atras -->
-          <div class="botones">
-          <p>&nbsp;</p>
-              <p>
-                <a data-toggle="tab" href="#part1"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a>
-              </p>
-              <p>
-                <a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a>
-              </p>
-            </div>
+        
 
 
             </div><!--final parte 2-->
@@ -361,6 +361,14 @@
                   </div>
                 </div><!--final inputs -->
               </section>
+
+               <!-- Botones siguiente y atras -->
+              <div class="botones">
+             
+                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras2"></a></p>
+                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente3"></a></p>
+              </div>
+
               <!-- Seccion en blanco -->
               <br>
               <br>
@@ -445,12 +453,7 @@
                   </div>
                 </div>       
               </div>
-              <!-- Botones siguiente y atras -->
-              <div class="botones">
-              <p>&nbsp;</p>
-                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras2"></a></p>
-                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente3"></a></p>
-              </div>
+             
             </div><!--final pestana 3-->
 
             <!--inicio pestana 4-->
@@ -477,6 +480,12 @@
                 </div><!--final inputs -->
               </section>
 
+               <!-- Botones siguiente y atras -->
+              <div class="botones">
+              
+                <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras3"></a></p>
+                <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente4"></a></p>
+              </div>
 
               
 
@@ -512,13 +521,7 @@
                   </div>
                 </div>       
               </div>
-              <!-- Botones siguiente y atras -->
-              <div class="botones">
-              <p>&nbsp;</p>
-                <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras3"></a></p>
-                <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente4"></a></p>
-              </div>
-
+             
             </div><!--final pestana 4-->
             <!-- pestana 5-->
             <div id="part5" class="tab-pane fade">
@@ -577,6 +580,13 @@
                   </div>
                 </div><!--final inputs -->
               </section>
+               <!-- Botones siguiente y atras -->
+              <div class="botones">
+              
+                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras4"></a></p>
+                <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente5"></a></p>
+              </div>
+
               
               <!-- Seccion en blanco -->          
               <br>
@@ -648,12 +658,8 @@
                 </div>       
               </div>
 
-              <!-- Botones siguiente y atras -->
-              <div class="botones">
-              <p>&nbsp;</p>
-                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras4"></a></p>
-                <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente5"></a></p>
-              </div>
+             
+              
             </div><!--final parte 5-->
 
 
@@ -691,6 +697,7 @@
                   </div>
                 </div><!--final inputs -->
               </section>
+
               
               <!-- Seccion en blanco -->
               <br>
@@ -819,7 +826,7 @@
                     <div class="col-xs-12 div2 ">
                       <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="cellphoneInfo" ></span>
                       <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeno" %><br>
-                      <br class="desaparecer">
+                      
                       <span class="indicativo">
 
                       <% if (request.location.country) == 'Colombia' %>
@@ -1712,8 +1719,10 @@
 
                 <div class="botones">
                   <p><a data-toggle="tab" href="#part17"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
+                </div>
 
-
+                <div>
+                  <p>Al presionar finalizar aceptas los <a href="/terminos"> terminos y condiciones </a> </p>
                 </div>
 
                 <div class="actions text-center">

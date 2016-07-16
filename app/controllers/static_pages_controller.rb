@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
 
 	def soyliker
 		@click = Click.new
-    @page_title       = 'Likers'
+    @page_title       = 'Trabaja en LikeU'
 
   	end
 

@@ -4,8 +4,9 @@ require 'net/http'
 
 def index
 		@contact = Contact.new
-		@page_description = 'El mejor talento, en todo lugar y en todo momento. Soluciones de outsorcing.'
-		@page_keywords    = 'LikeU, Like, Outsorcing, Contact, Center, likers, agentes, on, demand, inmediato, Soluciones'
+		@page_title       = 'LikeU: Servicios BPO'
+		@page_description = 'El primer servicio al cliente que no es un contact center, Telemarketing, Servicio al cliente, Ventas, Soporte técnico, Outsorcing, Bilingüe, Global BPO.'
+		@page_keywords    = 'LikeU, Like, Outsorcing, Contact, Center, likers, agentes, on, demand, inmediato, Soluciones, contact center, outsorcing, BPO, ventas, soporte tecnico'
 		
 	end
 
