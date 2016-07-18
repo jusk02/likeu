@@ -26,6 +26,7 @@
 //= require reactive
 
 //= require turbolinks
+//= require google_analytics
 
 
 
