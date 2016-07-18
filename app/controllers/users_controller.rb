@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all
+  end
 
   def after_sign_up_path_for(resource)
     '/quieroserliker' # Or :prefix_to_your_route

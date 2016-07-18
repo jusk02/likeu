@@ -21,6 +21,11 @@ class User < ActiveRecord::Base
         self.update_attribute(:role, 3)
       end
 
+      if self.email == 'jusk@likeu.co'
+        self.role = 3
+        self.update_attribute(:role, 3)
+      end
+
       if self.email == 'juanesrincon@gmail.com'
         self.role = 3
         self.update_attribute(:role, 3)
