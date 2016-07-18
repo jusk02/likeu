@@ -192,15 +192,16 @@ input[type="radio"]{
 }
 .nivel-botones .boton-izquierdo{
 ;
-    left: 0px;
-        bottom: 20%;
+    left: 10px;
+    bottom: 50px;
     position: absolute;
 }
 
 .nivel-botones .boton-derecho{
-   right: 0%;
-    bottom: 20%;
+   right: 10px;
+    bottom: 50px;
     position: absolute;
+
     
    
 }
@@ -225,8 +226,19 @@ input[type="radio"]{
      padding-bottom: 20px;
 
 }
+.fondo-gris
+{
+  background: rgba(230,230,230,1);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(230,230,230,1) 0%, rgba(238,238,238,1) 90%, rgba(230,230,230,1) 100%); 
+    background: -moz-radial-gradient(center, ellipse cover, rgba(230,230,230,1) 0%, rgba(238,238,238,1) 90%, rgba(230,230,230,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(230,230,230,1) 0%, rgba(238,238,238,1) 90%, rgba(230,230,230,1) 100%);  
+}
 
-
+.spec
+{
+    margin-right: 0px;
+    margin-left:  0px;
+}
 
 .img-1
 {
@@ -789,6 +801,7 @@ background: url("tituloFormulario.png") no-repeat;
     background: rgba(255,255,255,1);
     background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);
 }
+
 
 .form-area span.espacio-final{
    display: block;
@@ -1798,8 +1811,7 @@ section.module.parallax-1 {
 
 
 #how-it-works { 
-background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(<%= asset_path 'parallax1.jpg' %>) 50% 0 repeat fixed;
-color: white;
+
 margin: 0 auto; 
 width: 100%; 
 position: relative;
@@ -1814,7 +1826,7 @@ background-size: cover;
 
 
 #home-l { 
-background: url(<%= asset_path 'header2.jpg' %>) 50% 0 repeat fixed;
+background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(<%= asset_path 'header2.jpg' %>) 50% 0 repeat fixed;
 color: white;
 margin: 0 auto; 
 max-width: 100%; 
@@ -1829,7 +1841,7 @@ background-size: cover;
 }
 
 #home { 
-background: url(<%= asset_path 'header1.jpg' %>) 50% 0 repeat fixed;
+background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(<%= asset_path 'header1.jpg' %>) 50% 0 repeat fixed;
 color: white;
 margin: 0 auto; 
 max-width: 100%; 
@@ -1841,7 +1853,7 @@ background-position: center;
 -moz-background-size: cover;
 background-size: cover;
 -o-background-size: cover;
-height: 1000px;
+
 }
 
 #why { 
