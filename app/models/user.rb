@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
 
 # mount_uploader :avatar, AvatarUploader
 
-# validates :name, presence: true
-# validates :age, presence: true
-# validates :gender, presence: true
+validates :name, presence: true
+validates :age, presence: true
+validates :gender, presence: true
 
 
 	after_create do
