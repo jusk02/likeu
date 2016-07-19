@@ -24,7 +24,6 @@
 //= require bootstrap
 //= require classie
 //= require reactive
-
 //= require turbolinks
 //= require google_analytics
 

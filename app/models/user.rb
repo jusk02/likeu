@@ -21,6 +21,11 @@ validates :gender, presence: true
         self.update_attribute(:role, 3)
       end
 
+      if self.email == 'comunicaciones@likeu.co'
+        self.role = 3
+        self.update_attribute(:role, 3)
+      end
+
       if self.email == 'jusk@likeu.co'
         self.role = 3
         self.update_attribute(:role, 3)
