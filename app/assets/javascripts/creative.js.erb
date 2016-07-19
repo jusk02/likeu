@@ -130,10 +130,12 @@ $(document).ready(function () {
                 //formulario validación celular//
 
                 var cellphone = $("#cellphone");
+                var cellphone_m = $("#cellphone-m");
                 //Numerico//
 
                 $(document).ready(function(){
                     $('input#cellphone').numeric(); 
+                    $('input#cellphone-m').numeric(); 
                     $('input#achievement_phone').numeric(); 
                      $('input#achievement_phone2').numeric();
                 });
@@ -151,6 +153,21 @@ $(document).ready(function () {
                     //si no ha introducido valor
                     else {
                         $('img#cellphoneInfo').removeClass("validacion");
+                        return false;
+                    } 
+
+                });
+
+                     $('input#cellphone-m').bind('input propertychange',function(){
+
+                    //Si ha introducido nada en el campo
+                    if(cellphone_m.val().length == 10){
+                        $('img#cellphoneInfo-m').addClass("validacion");
+                        return true;
+                    }
+                    //si no ha introducido valor
+                    else {
+                        $('img#cellphoneInfo-m').removeClass("validacion");
                         return false;
                     } 
 
@@ -272,6 +289,7 @@ $(document).ready(function () {
                 //Formulario validacion Email//
 
                 var email= $("#user_email");
+                var email_m= $("#user_email-m");
 
                 //detectar email//
                 $(document).ready(function () {
@@ -293,10 +311,54 @@ $(document).ready(function () {
 
                 });
 
+                $('input#user_email-m').bind('input propertychange',function(){
+                        var a = email_m.val();
+                        var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+
+                //Si es valido
+                if(filter.test(a)){
+                    $('img#emailInfo-m').addClass("validacion");
+                    return true;
+                }
+                //si es invalido
+                else {
+                    $('img#emailInfo-m').removeClass("validacion");
+                    return false;
+                } 
+
+                });
+
                  });
 //mostrar select de ninguno //
           
 
+          
+
+                  $(document).ready(function() {
+                    $('.btnMoverse').click(function(){
+                      $('html, body').animate({scrollTop:0}, 'slow');
+                      
+                    });
+                    var scrollBottom = $('body').scrollTop()+ $('body').height();
+                    $('.botonE').click(function(){
+                      $('html, body').animate({scrollTop:scrollBottom}, 'slow');
+                      
+                    });
+                    $('.ninguno').click(function(){
+                      $('html, body').animate({scrollTop:scrollBottom}, 'slow');
+                      
+                    });
+
+                    $('.ano').click(function(){
+                      $('html, body').animate({scrollTop:500}, 'slow');
+                      
+                    });
+
+
+                  });
+
+
+                 
 
 
 

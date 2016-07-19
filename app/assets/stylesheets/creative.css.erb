@@ -61,7 +61,7 @@ a {
     
 }
 
-a.gris{
+a.gris, .gris{
     color: gray!important;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -829,8 +829,9 @@ background: url("tituloFormulario.png") no-repeat;
 }
 
 #signup .inputs label.izquierda{
-    float: left;
-    margin-left: 10%;
+   
+    margin-left: 17%;
+   
 }
 
 
@@ -937,7 +938,7 @@ background: url("tituloFormulario.png") no-repeat;
 
 .boton-likers{
     position: fixed;
-    bottom: 28.5%;
+    top: 28.5%;
     right: -17px;
     z-index: 100;
     display: none;
@@ -1561,14 +1562,15 @@ p#opcion{
 }
 
 .tamano3{
-    width: 83%;
+    width: 81%;
 }
 
 .tamano4{
-    width: 35%;
+    width: 45%;
 }
 .tamano4_4{
-    width: 46%;
+    width: 67%;
+    margin-left: 18%;
 }
 
 .tamano5{
@@ -2297,6 +2299,7 @@ input[type=radio].noFunciona + label {
 }
 
 .tamano4_4 {
+    margin-left: 0px;
     width: 100%;
 }
 
@@ -2552,6 +2555,13 @@ input[type=radio].noFunciona + label {
     
 }  
 
+section {
+    padding: 24px 0;
+}
+.margin-lef{
+        margin-left: -4%;
+}
+
 .botones img {
     width: 16%;
  
@@ -2583,11 +2593,11 @@ input[type=radio].noFunciona + label {
 }
 
 .icono-form {
-    width: 36%;
+    width: 25%;
 } 
 
 .icon-centrado2 {
-    margin-left: 26%;
+    margin-left: 30%;
 }
 
 .preguntas p {
@@ -2626,8 +2636,8 @@ input[type=radio].estudiante + label, input[type=radio].trabajador + label,
 input[type=radio].estudiotrabajo + label, input[type=radio].emprendedor + label, 
 input[type=radio].amo + label, input[type=radio].notrabajo + label, 
 input[type=radio].freelance + label {
-    width: 70%;
-    height: 121px;
+        width: 57%;
+    height: 105px;
 
 }
 
@@ -2653,8 +2663,8 @@ input[type=radio].aumentar + label, input[type=radio].herramientas + label,
 input[type=radio].servicio + label, input[type=radio].otro + label, 
 input[type=radio].ninguno + label {
 
-  width: 91%;
-    height: 120px;
+  width: 79%;
+  height: 108px;
 }
 
 
@@ -2708,8 +2718,8 @@ input[type=radio].sala + label, input[type=radio].universidad + label,
 input[type=radio].habitacion + label, input[type=radio].oficina + label, 
 input[type=radio].biblioteca + label, input[type=radio].otros + label {
 
-   width: 85%;
-    height: 125px;
+  width: 74%;
+    height: 111px;
 }
 
 
@@ -2717,19 +2727,16 @@ input[type=checkbox].center + label, input[type=checkbox].ventas + label,
 input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label, 
 input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label, 
 input[type=checkbox].ninguno2 + label{
-   width: 70%;
-    height: 127px;
+       width: 57%;
+    height: 105px;
+
 }
 
 
 input[type=radio].encantaria+ label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
-   
-    height: 128px;
+   background-size: 53%;
+    height: 107px;
     width: 99%;
-}
-
-input[type=radio].encantaria + label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
-    background-size: 64%;
 }
 
 input[type=radio].funciona+ label, input[type=radio].ajustes + label, 
@@ -2771,10 +2778,24 @@ input[type=radio].noFunciona + label {
 }
 .reflejo-dias {
     left: 21%;
+    bottom: 2%;
 }
+
 .campo-horas {
     bottom: 5%;
     width: 25%;
+}
+}
+
+@media screen and (max-width: 411px) {
+    .posicion-manija {
+    bottom: 22%;
+}
+
+}
+@media screen and (max-width: 375px) {
+    .posicion-manija {
+    bottom: 22%;
 }
 }
 
@@ -2814,6 +2835,31 @@ input[type=radio].noFunciona + label {
 #signup .inputs .nivel {
  
     margin-top: -22%;
+}
+input[type=radio].estudiante + label, input[type=radio].trabajador + label, 
+input[type=radio].estudiotrabajo + label, input[type=radio].emprendedor + label, 
+input[type=radio].amo + label, input[type=radio].notrabajo + label, 
+input[type=radio].freelance + label {
+    height: 80px;
+
+}
+input[type=radio].aumentar + label, input[type=radio].herramientas + label, 
+input[type=radio].servicio + label, input[type=radio].otro + label, 
+input[type=radio].ninguno + label {
+    height: 74px;
+}
+
+input[type=checkbox].center + label, input[type=checkbox].ventas + label, 
+input[type=checkbox].soporte + label, input[type=checkbox].servicio2 + label, 
+input[type=checkbox].teletrabajo + label, input[type=checkbox].catalogo + label, 
+input[type=checkbox].ninguno2 + label{
+        height: 80px;
+
+}
+
+input[type=radio].encantaria+ label, input[type=radio].nose + label, input[type=radio].estabilidad + label {
+  
+    height: 80px;
 }
 
 

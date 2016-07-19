@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 
-        <div class="alineacion barra slider">
+        <div class="alineacion barra slider" id="barra">
 
           <span><img src="<%=image_path('punto1.png')%>" class="img-responsive wow bounceIn" id="bola1"></span>
           <span><img src="<%=image_path('punto2.png')%>" class="grayscale img-responsive wow bounceIn" id="bola2"></span>
@@ -93,7 +93,7 @@
                     <div class="col-lg-5 col-lg-offset-1 col-sm-5 col-sm-offset-1 col-xs-6 col-xs-offset-0">
                       <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="emailInfo">
                       <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeno" %>
-                      <br class="desaparecer">
+                      <br>
                       <input value="" name="user[email]" id="user_email" type="email" class= "tamano3 tamano3-3 likeu-input form-control">
                     </div>
                   </div>
@@ -102,7 +102,7 @@
 
                <!-- Botones siguiente y atras -->
               <div class="botones">
-                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente1"></a></p>
+                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente1"></a></p>
               </div>
              
 
@@ -199,7 +199,7 @@
               </div>
               <div class="inputs">
                 <div class="row fieldformulario preguntas">
-                  <p>Qué actividades te han generado ingresos diferentes a una actividad laboral?</p>
+                  <p>¿Has tenido actividades que te han generado ingresos diferentes a una actividad laboral?</p>
                 </div>
                 <br>
                 <br>
@@ -208,7 +208,7 @@
                   <%= f.radio_button :no_contract_activities, 'No',id:"no", class:"no" %><label for="no" class="grayscale ">&#160;</label>
                   <%= f.label :no_contract_activities, "No, no he tenido", class:"nivel" %>
                   <%= f.radio_button :no_contract_activities, 'Si',id:"si", class:"si" %><label for="si" class="grayscale ">&#160;</label>
-                  <%= f.label :no_contract_activities, "Si he tenido", class:"nivel" %>
+                  <%= f.label :no_contract_activities, "Si he tenido, cual", class:"nivel" %>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 desaparecer" id= "no-laboral-text">
                   <%= f.text_area :no_contract_activities, class: "likeu-input form-control tamano4", id:"text-no-contract" %>
@@ -220,10 +220,10 @@
           <div class="botones">
           
               <p>
-                <a data-toggle="tab" href="#part1"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a>
+                <a data-toggle="tab" href="#part1"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras1"></a>
               </p>
               <p>
-                <a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a>
+                <a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a>
               </p>
             </div>
             
@@ -365,8 +365,8 @@
                <!-- Botones siguiente y atras -->
               <div class="botones">
              
-                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras2"></a></p>
-                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente3"></a></p>
+                <p><a data-toggle="tab" href="#part2"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras2"></a></p>
+                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente3"></a></p>
               </div>
 
               <!-- Seccion en blanco -->
@@ -483,8 +483,8 @@
                <!-- Botones siguiente y atras -->
               <div class="botones">
               
-                <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras3"></a></p>
-                <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente4"></a></p>
+                <p><a data-toggle="tab" href="#part3"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras3"></a></p>
+                <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente4"></a></p>
               </div>
 
               
@@ -583,8 +583,8 @@
                <!-- Botones siguiente y atras -->
               <div class="botones">
               
-                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras4"></a></p>
-                <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente5"></a></p>
+                <p><a data-toggle="tab" href="#part4"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras4"></a></p>
+                <p><a data-toggle="tab" href="#part6"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow btnMoverse bounceIn" id="botonSiguiente5"></a></p>
               </div>
 
               
@@ -698,6 +698,10 @@
                 </div><!--final inputs -->
               </section>
 
+               <div class="botones">
+                <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras5"></a></p>     
+              </div>
+
               
               <!-- Seccion en blanco -->
               <br>
@@ -732,16 +736,15 @@
                   </div>
                 </div>       
               </div>
+
                 <div class="text-center">
+              
                   <p class="gris">Al presionar finalizar aceptas los <a class="gris" href="/terminos"> terminos y condiciones </a> </p>
                 </div>
               <div class="actions text-center">
                 <%= f.submit "Finalizar", class: "btn btn-primary" %>
               </div>
-              <!-- Botones siguiente y atras -->
-              <div class="botones">
-                <p><a data-toggle="tab" href="#part5"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras5"></a></p>     
-              </div>
+              
             </div>
             <% end %>
           </div>
@@ -755,10 +758,9 @@
 
   <section class="hidden-lg hidden-md hidden-sm">
 
-    <div class="col-xs-12 text-center">
+    <div class="col-xs-12 text-center" id="form-head-m">
       <h1>Cuéntanos sobre ti</h1>
-
-      <p>Contesta las siguientes preguntas con la mayor sinceridad. No hay respuestas correctas ni equivocadas, solo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p>
+        <p>Contesta las siguientes preguntas con la mayor sinceridad. No hay respuestas correctas ni equivocadas, solo queremos conocerte lo mejor posible para encontrar la mejor forma de trabajar juntos.</p>
     </div> 
 
     <div class="container">
@@ -805,7 +807,7 @@
                         <div class="col-xs-12 div2">
                           <br>
                           <%= f.label :age, "Edad", class: "centrado texto-smart-pequeno" %>
-                          <%= f.number_field :age, min: 0 , max: 100, class:"tamano2 likeu-input form-control" %> Años
+                          <%= f.number_field :age, min: 0 , max: 100, class:"tamano2 ano likeu-input form-control" %> Años
                         </div>
 
 
@@ -827,7 +829,7 @@
 
 
                     <div class="col-xs-12 div2 ">
-                      <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="cellphoneInfo" ></span>
+                      <span><img src="<%=image_path('celular.png')%>" class="icono-form form-cel smart-pequeno " id="cellphoneInfo-m" ></span>
                       <%= f.label :cellphone, 'Celular', class:"contacto-form texto-smart-pequeno" %><br>
                       
                       <span class="indicativo">
@@ -841,14 +843,16 @@
                         <% if (request.location.country) == 'México' %>
                         <img src="<%=image_path('banderamexico.png')%>" class="bandera">(+52)
                         <% end %>
-                        </span><%= f.text_field :cellphone, id:"cellphone", class: "tamano3-3 likeu-input form-control"%> 
+                        </span><%= f.text_field :cellphone, id:"cellphone-m", class: "tamano3-3 likeu-input form-control"%> 
+                         <%= f.hidden_field :password, :value => "cellphone-m"%>
                     </div>
 
                     <div class="col-xs-12 div2">
-                      <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="emailInfo">
+                    <br>
+                      <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeno" id="emailInfo-m">
                       <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeno" %>
                       <br class="desaparecer">
-                      <input value="" name="user[email]" id="user_email" type="email" class= "tamano3 tamano3-3 likeu-input form-control">
+                      <input value="" name="user[email]" id="user_email-m" type="email" class= "tamano3 tamano3-3 likeu-input form-control">
                     </div>
 
 
@@ -859,7 +863,7 @@
 
                 <!-- Botones siguiente y atras -->
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part8"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente1"></a></p>
+                  <p><a data-toggle="tab" href="#part8"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente1"></a></p>
 
                 </div>
 
@@ -972,8 +976,8 @@
               </div>
 
               <div class="botones">
-                <p><a data-toggle="tab" href="#part7"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                <p><a data-toggle="tab" href="#part9"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                <p><a data-toggle="tab" href="#part7"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras1"></a></p>
+                <p><a data-toggle="tab" href="#part9"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a></p>
 
               </div>
 
@@ -990,7 +994,7 @@
                 </div>
                 <div class="inputs">
                   <div class="row fieldformulario preguntas">
-                    <p>Qué actividades te han generado ingresos diferentes a una actividad laboral?</p>
+                    <p>¿Has tenido actividades que te han generado ingresos diferentes a una actividad laboral?</p>
                   </div>
                   <br>
                   <br>
@@ -999,7 +1003,7 @@
                     <%= f.radio_button :no_contract_activities, 'No',id:"no-m", class:"no" %><label for="no-m" class="grayscale ">&#160;</label>
                     <%= f.label :no_contract_activities, "No, no he tenido", class:"nivel" %>
                     <%= f.radio_button :no_contract_activities, 'Si',id:"si-m", class:"si" %><label for="si-m" class="grayscale ">&#160;</label>
-                    <%= f.label :no_contract_activities, "Si he tenido", class:"nivel" %>
+                    <%= f.label :no_contract_activities, "Si he tenido, cual", class:"nivel" %>
 
                   </div>
 
@@ -1012,8 +1016,8 @@
               </section>
 
               <div class="botones">
-                <p><a data-toggle="tab" href="#part8"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                <p><a data-toggle="tab" href="#part10"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                <p><a data-toggle="tab" href="#part8"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras1"></a></p>
+                <p><a data-toggle="tab" href="#part10"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow btnMoverse bounceIn" id="botonSiguiente2"></a></p>
 
               </div>
 
@@ -1110,21 +1114,21 @@
                           <br>
                         </div>
 
-                        <div class="col-xs-12">
+                        <div class="col-xs-12 margin-lef">
                           <br>
                           <%= f.label :achievement_company, 'Nombre de la empresa', class: "form-box-text" %>
                           <%= f.text_field :achievement_company, class: "tamano3 likeu-input form-control" %>
                           <br>
                         </div>
 
-                        <div class="col-xs-12">
+                        <div class="col-xs-12 margin-lef">
                           <br>
                           <%= f.label :achievement_boss, 'Nombre del jefe', class: "form-box-text nivelacion-retos reto2" %>
                           <%= f.text_field :achievement_boss, class: "tamano3 likeu-input form-control" %>
                           <br>
                         </div>
 
-                        <div class="col-xs-12">
+                        <div class="col-xs-12 margin-lef">
                           <br>
                           <%= f.label :achievement_phone, 'Teléfono', class: "form-box-text nivelacion-retos reto2" %><br>
                           <p><!--<%= f.select(:achievement_phone,options_for_select(['Fijo', 'Movil']),{}, { class:"seleccion"})%>-->
@@ -1141,8 +1145,8 @@
                 </div>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part9"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part11"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part9"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part11"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1198,8 +1202,8 @@
                 </section>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part10"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part12"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part10"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part12"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1313,8 +1317,8 @@
                 </div>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part11"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part13"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part11"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part13"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1348,8 +1352,8 @@
                 </section>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part12"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part14"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part12"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part14"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow btnMoverse bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1407,8 +1411,8 @@
                 </div>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part13"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part15"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part13"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part15"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1429,8 +1433,8 @@
                       <div class="col-xs-12 alineacion sin-alineacion">
 
                         <%= f.radio_button :pc_type, 'PC',id:"pc-m", class:"pc" %><label for="pc-m" class="grayscale ">&#160;</label>
-                        <%= f.radio_button :pc_type, 'portatil-m',id:"portatil", class:"portatil" %><label for="portatil-m" class="grayscale">&#160;</label>
-                        <%= f.radio_button :pc_type, 'No tengo-m',id:"notengo", class:"notengo" %><label for="notengo-m" class="grayscale">&#160;</label>
+                        <%= f.radio_button :pc_type, 'portatil-m',id:"portatil-m", class:"portatil" %><label for="portatil-m" class="grayscale">&#160;</label>
+                        <%= f.radio_button :pc_type, 'No tengo-m',id:"notengo-m", class:"notengo" %><label for="notengo-m" class="grayscale">&#160;</label>
 
                       </div>
 
@@ -1506,8 +1510,8 @@
                 </section>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part14"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part16"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part14"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part16"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow btnMoverse bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1607,8 +1611,8 @@
                 </div>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part15"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part17"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part15"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part17"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1662,8 +1666,8 @@
                 </section>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part16"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
-                  <p><a data-toggle="tab" href="#part18"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente wow bounceIn" id="botonSiguiente2"></a></p>
+                  <p><a data-toggle="tab" href="#part16"><img src="<%=image_path('boton-atras.png')%>" class=" atras btnMoverse wow bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part18"><img src="<%=image_path('boton-siguiente.png')%>" class=" siguiente btnMoverse wow bounceIn" id="botonSiguiente2"></a></p>
 
                 </div>
 
@@ -1721,10 +1725,11 @@
                 </div>
 
                 <div class="botones">
-                  <p><a data-toggle="tab" href="#part17"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow bounceIn" id="botonAtras1"></a></p>
+                  <p><a data-toggle="tab" href="#part17"><img src="<%=image_path('boton-atras.png')%>" class=" atras wow btnMoverse bounceIn" id="botonAtras1"></a></p>
                 </div>
 
-                 <div class="text-center">
+                <div class="text-center">
+                <br>&#160;<br>&#160;<br>&#160;<br>&#160;
                   <p class="gris">Al presionar finalizar aceptas los <a class="gris" href="/terminos"> terminos y condiciones </a> </p>
                 </div>
 

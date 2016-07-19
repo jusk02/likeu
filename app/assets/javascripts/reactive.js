@@ -110,12 +110,14 @@ $(document).ready(function(){
    
     });
 
-    $("#user_name").click(function(evento){
+    $("input").click(function(evento){
     
       $("#form-head").slideUp();
+      $("#form-head-m").slideUp();
 
    
     });
+
 
 
     $(".botonE").click(function(){
