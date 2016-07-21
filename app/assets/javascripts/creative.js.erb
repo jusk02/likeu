@@ -32,7 +32,7 @@ $(document).ready(function () {
           });
 
         $(window).scroll(function(){
-        console.log($(this).scrollTop());
+        
         if ($(this).scrollTop() > 250) {
             $(".scrollToTop").fadeIn(900)
         } else {
@@ -51,7 +51,14 @@ $(document).ready(function () {
     });
 
         
-      
+        if ($(document).offsetTop() > 250) {
+            $(".boton-likers").fadeIn(1200);
+             
+
+        } else {
+            $(".boton-likers").fadeOut(1200);
+           
+        }
 
 
 

@@ -1,24 +1,22 @@
 
 
-
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
 
 
 
-<div">
-<section style="padding: 30px 25px 25px;margin:auto; margin-top: 12%; width: 50%; box-shadow:0px 0px 0px 5px rgba( 255,255,255,0.4 ),0px 4px 20px rgba( 0,0,0,0.33 );
-    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; display: table; background: rgba(255,255,255,1);
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);text-align:center;">
-                  <div class="row fieldformulario respuesta">
+<div" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+<section style="padding: 30px 25px 25px;margin: auto;margin-top: 12%;width: 50%;box-shadow: 0px 0px 0px 5px rgba( 255,255,255,0.4 ),0px 4px 20px rgba( 0,0,0,0.33 );-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;display: table;background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 90%, rgba(243,243,243,1) 100%);text-align: center;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+                  <div class="row fieldformulario respuesta" style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-right: -15px;margin-left: -15px;">
 
-<h2 style="color:#1AA7BF; margin:0 auto; text-align:center;">Bienvenido <%= @name %>!</h2>
+<h2 style="color: #1AA7BF;margin: 0 auto;text-align: center;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;page-break-after: avoid;font-family: inherit;font-weight: 500;line-height: 1.1;margin-top: 20px;margin-bottom: 10px;font-size: 30px;">Bienvenido <%= @name %>!</h2>
 
-<p style="margin: auto; width: 70%; font-size: 18px; text-align: center;">Puedes confirmar tu cuenta a través del siguiente link </p>
+<p style="margin: auto;width: 70%;font-size: 18px;text-align: center;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;">Puedes confirmar tu cuenta a través del siguiente link </p>
 
 
-<p><%= link_to 'Confirmar mi cuenta', confirmation_url(@resource, confirmation_token: @token), :style=>"color: #1AA7BF;
+<p style="-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;orphans: 3;widows: 3;margin: 0 0 10px;"><%= link_to 'Confirmar mi cuenta', confirmation_url(@resource, confirmation_token: @token), :style=>"color: #1AA7BF;
     text-decoration: none;" %></p>
 </div>
 </section>
-</div>
+
+</div">

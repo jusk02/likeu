@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get "/quieroserliker", to: "static_pages#soyliker", as: "soyliker"
 
-  get "/formulariomovil", to: "static_pages#formulariomovil", as: "formulariomovil"
+  get "/confirmed", to: "static_pages#confirmed", as: "confirmed"
 
   get "/ups", to: "static_pages#ups", as: "ups"
 
