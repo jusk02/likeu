@@ -87,7 +87,7 @@ validates :gender, presence: true
       if workplace.blank?
         self.update_attribute(:workplace, "No respondio")
       end
-      if comfork?
+      if comfort?
         self.update_attribute(:comfort, "No respondio")
       end
     	if role.blank?
