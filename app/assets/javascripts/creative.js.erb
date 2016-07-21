@@ -42,7 +42,7 @@ $(document).ready(function () {
 
 
         $(window).scroll(function(){
-        console.log($(this).scrollTop());
+        
         if ($(this).scrollTop() > 250) {
             $(".boton-likers").fadeIn(1200)
         } else {
@@ -50,15 +50,8 @@ $(document).ready(function () {
         }
     });
 
-
-        if ($('body').offsetTop() > 250) {
-            $(".boton-likers").fadeIn(1200);
-             console.log("si entra");
-
-        } else {
-            $(".boton-likers").fadeOut(1200);
-           
-        }
+        
+      
 
 
 
@@ -113,6 +106,8 @@ $(document).ready(function () {
                 offset: 51
             })
 
+
+
                 // Closes the Responsive Menu on Menu Item Click
                 $('.navbar-collapse ul li a').click(function() {
                     $('.navbar-toggle:visible').click();
@@ -131,6 +126,7 @@ $(document).ready(function () {
                 offset: {
                     top: 100
                 }
+
             });
 
             // Initialize WOW.js Scrolling Animations
