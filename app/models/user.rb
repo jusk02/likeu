@@ -72,7 +72,7 @@ validates :gender, presence: true
       if ocupation.blank?
         self.update_attribute(:ocupation, "No respondio")
       end
-      if achievemenk?
+      if achievement?
         self.update_attribute(:achievement, "No respondio")
       end
       if special_experience.blank?
