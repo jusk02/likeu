@@ -110,10 +110,18 @@ $(document).ready(function(){
    
     });
 
+   var controlStart = 0;
+
     $("input").click(function(evento){
     
       $("#form-head").slideUp();
       $("#form-head-m").slideUp();
+      
+      if (controlStart == 0) {
+        $('html, body').animate({scrollTop:0}, 'slow');
+          controlStart=1;
+      }
+      
 
    
     });

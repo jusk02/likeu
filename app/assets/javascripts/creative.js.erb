@@ -5,6 +5,9 @@
 */
 
 $(document).ready(function () {
+
+
+  
     reloj();
       // Control del reloj
         function reloj(){
@@ -46,6 +49,19 @@ $(document).ready(function () {
             $(".boton-likers").fadeOut(1200);
         }
     });
+
+
+        if ($('body').offsetTop() > 250) {
+            $(".boton-likers").fadeIn(1200);
+             console.log("si entra");
+
+        } else {
+            $(".boton-likers").fadeOut(1200);
+           
+        }
+
+
+
 
     //Click event to scroll to top
     $(".scrollToTop").click(function(){

@@ -11,6 +11,39 @@ validates :name, presence: true
 validates :age, presence: true
 validates :gender, presence: true
 
+      # :age
+      # :gender
+      # :cellphone
+      # :city
+      # :ocupation
+      # :no_contract_activities
+      # :felixibility_importance
+      # :need_income
+      # :current_income
+      # :achievement
+      # :achievement_acomplishment
+      # :achievement_company
+      # :achievement_boss
+      # :achievement_phone
+      # :hobby
+      # :hobby_time
+      # :hobby_validate
+      # :special_experience
+      # :work_hours
+      # :work_days
+      # :personal_achievement
+      # :story
+      # :pc_type
+      # :pc_use
+      # :internet_speed
+      # :can_talk
+      # :workplace
+      # :comfort
+
+
+   
+     
+
 
 	after_create do
 		  self.update_attribute(:fase, 1)
@@ -39,7 +72,7 @@ validates :gender, presence: true
       if ocupation.blank?
         self.update_attribute(:ocupation, "No respondio")
       end
-      if achievement.blank?
+      if achievemenk?
         self.update_attribute(:achievement, "No respondio")
       end
       if special_experience.blank?
@@ -54,7 +87,7 @@ validates :gender, presence: true
       if workplace.blank?
         self.update_attribute(:workplace, "No respondio")
       end
-      if comfort.blank?
+      if comfork?
         self.update_attribute(:comfort, "No respondio")
       end
     	if role.blank?
