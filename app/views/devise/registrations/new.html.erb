@@ -94,8 +94,8 @@
                       <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeno wow bounceIn" id="emailInfo">
                       <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeno" %>
                       <br>
-                      <%= f.text_field :email, id:"user_email", class: "tamano3 tamano3-3 likeu-input form-control"%>
-                      <input value="" name="user[email]" id="user_email" type="email" class= "tamano3 tamano3-3 likeu-input form-control">
+                      <%= f.text_field :email, id:"user_email", class: "tamano3 tamano3-3 likeu-input form-control", id:"user_email"%>
+                      
                     </div>
                   </div>
                 </div><!--final inputs -->
@@ -851,9 +851,9 @@
                     <div class="col-xs-12 div2">
                     <br>
                       <img src="<%=image_path('email.png')%>" class="icono-form form-cel smart-pequeno" id="emailInfo-m">
-                      <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeno" %>
+                      <%= f.label :email, 'Correo electrónico',class:"contacto-form texto-smart-pequeno",id:"user_email-m" %>
                       <br class="desaparecer">
-                      <input value="" name="user[email]" id="user_email-m" type="email" class= "tamano3 tamano3-3 likeu-input form-control">
+                     
                     </div>
 
 
