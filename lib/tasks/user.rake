@@ -13,7 +13,7 @@ namespace :user do
 
 #heroku run rake user:testeo
   task :testeo => :environment do
-    users = User.where('email:jusk@likeu.co')
+    users = User.where(email:'jusk@likeu.co')
     users.each do |user|
       user.send_confirmation_instructions
     end
