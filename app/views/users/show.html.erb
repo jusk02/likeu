@@ -1,5 +1,42 @@
 
+<% if current_user.role == 3 %>
+	    
+	<p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user.gender %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>Cellphone:</strong>
+  <%= @user.cellphone %>
+</p>
+
+
+
+
+	    <% end %> 
 <div class="col-lg-8 col-lg-offset-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
 <section id="contenido-user">
                   <div class="row fieldformulario respuesta">
