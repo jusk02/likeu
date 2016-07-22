@@ -30,14 +30,14 @@
                   <h3>Formulario</h3>
                   <br>
                 </div>
-                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                <%= form_for(resource, as: resource_name, validate: true, url: registration_path(resource_name)) do |f| %>
                 <%= devise_error_messages! %>
                 <div class="inputs">
                   <div class=" row fieldformulario">
 
                     <div class="col-lg-7 col-sm-7 col-xs-12">
                       <strong><%= f.label :name, '¿Cuál es tu nombre completo?', class: "izquierda texto-smart-pequeno" %></strong>
-                      <%= f.text_field :name, class: "tamano4_4 likeu-input form-control" %><br>
+                      <%= f.text_field :name, class: "tamano4_4 likeu-input form-control", validate: { presence: true } %><br>
                     </div>
 
                     <div class="col-lg-5 col-sm-5 col-xs-6 no-padding marging-top">
@@ -86,7 +86,7 @@
                         <% if (request.location.country) == 'México' %>
                         <img src="<%=image_path('banderamexico.png')%>" class="bandera">(+52)
                         <% end %>
-                      </span><%= f.text_field :cellphone, id:"cellphone", class: "tamano3 likeu-input form-control"%>
+                      </span><%= f.text_field :cellphone, id:"cellphone", class: "tamano3 likeu-input form-control" , validate: { presence: true }%>
                         <%= f.hidden_field :password, :value => "cellphone"%> 
                     </div>
 

@@ -25,6 +25,7 @@
 //= require classie
 //= require reactive
 //= require turbolinks
+//= require rails.validations
 //= require google_analytics
 
 

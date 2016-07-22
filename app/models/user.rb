@@ -4,12 +4,18 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
+include ActiveRecord::Validations
+  attr_accessor :email
+validates_uniqueness_of :email, client_validations: { class:'User' }
 
 # mount_uploader :avatar, AvatarUploader
 
-validates :name, presence: true
-validates :age, presence: true
-validates :gender, presence: true
+validates :name, presence:  {message: "Es indispensable que sepamos como te llamas"}
+validates :age, presence:  {message: "Necesitamos saber tu edad"}
+validates :gender, presence:  {message: "Escoje tu genero"}
+validates :email, presence: {message: "Debes introcucir un correo electronico"}
+
+
 
       # :age
       # :gender

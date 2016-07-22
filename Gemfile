@@ -37,6 +37,8 @@ gem 'meta-tags'
 #gema para animaciones de jquery
 gem 'jquery-easing-rails'
 
+gem 'client_side_validations'
+
 #Estilo del trabajo
 gem "twitter-bootstrap-rails"
 
