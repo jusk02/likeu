@@ -14,7 +14,8 @@ validates :name, presence:  {message: "Es indispensable que sepamos como te llam
 validates :age, presence:  {message: "Necesitamos saber tu edad"}
 validates :gender, presence:  {message: "Escoje tu genero"}
 validates :email, presence: {message: "Debes introcucir un correo electronico"}
-
+validates :cellphone, presence: {message: "Necesitamos este numero para'poder contactarte"}
+validates :city, presence: {message: "La mejor forma de encontrar campañas afines a ti es saber donde estas"}
 
 
       # :age
