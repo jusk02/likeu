@@ -4,9 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-include ActiveRecord::Validations
-  attr_accessor :email
-validates_uniqueness_of :email, client_validations: { class:'User' }
 
 # mount_uploader :avatar, AvatarUploader
 

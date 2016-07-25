@@ -13,11 +13,11 @@
 <p><h2 class="color">Gracias por confirmar tu correo</h2></p>
 <p>Si deseas puedes verificar el estado de tu proceso  
 <% if user_signed_in? %>
-<a href="<%= user_path(current_user)%>" target="blank" class="gris-n" onclick="this.blur();" >aqui</a>
+<a href="<%= user_path(current_user)%>" class="gris-n" onclick="this.blur();" >aqui</a>
 
                      
     <% else %>
-    <a href="<%= new_user_session_path %>" target="blank" class="gris-n" onclick="this.blur();" >aqui</a>
+    <a href="<%= new_user_session_path %>"  class="gris-n" onclick="this.blur();" >aqui</a>
 <% end %> </p>
 
  	
