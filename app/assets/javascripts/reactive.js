@@ -373,6 +373,14 @@ $("#otros-m").click(function(evento){
 });
 
 $(document).ready(function(){
+
+  $(function() {
+                jeoquery.defaultData.userName = 'jusk';
+                $("#city").jeoCityAutoComplete();
+                $("#city2").jeoCityAutoComplete();
+
+            });
+  
    $("#ninguno2").click(function(){
     
         $("#ninguno2").is(":checked")

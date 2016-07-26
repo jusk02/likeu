@@ -16,6 +16,7 @@
 //= require jquery.easing
 //= require jquery.easing.min
 //= require jquery.fittext
+//= require jeoquery
 //= require creative
 //= requirecbpAnimatedHeader
 //= require wow.min

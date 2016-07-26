@@ -15,6 +15,7 @@
  
 
  *= require bootstrap_and_overrides
+ *= require jeoquery
  *= require bootstrap
  *= require creative
  *= require animate.min
