@@ -377,6 +377,7 @@ $(document).ready(function(){
     
         $("#ninguno2").is(":checked")
          $(".checkB").prop('checked', false);
+         $("#special-capture").val("Ninguno"); 
         
     });
    
@@ -388,15 +389,173 @@ $(window).keydown(function(event){
   });
 
 
-});
 
-$(document).ready(function(){
    $(".checkB").click(function(){
     
         $(".checkB").is(":checked")
          $("#ninguno2").prop('checked', false);
         
     });
+
+  $("#catalogo").click(function(){
+
+        var expEspecial = $("#special-capture").val();
+        if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture").val(expEspecial + "Catalogo -"); 
+       
+        
+    });
+  $("#teletrabajo").click(function(){
+     
+        var expEspecial = $("#special-capture").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture").val(expEspecial + "Teletrabajo -"); 
+       
+        
+    });
+  $("#servicio2").click(function(){
+     
+        var expEspecial = $("#special-capture").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture").val(expEspecial + "Servicio al cliente -"); 
+       
+        
+    });
+  $("#soporte").click(function(){
+     
+        var expEspecial = $("#special-capture").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture").val(expEspecial + "Soporte tecnico -"); 
+       
+        
+    });
+  $("#ventas").click(function(){
+     
+        var expEspecial = $("#special-capture").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture").val(expEspecial + "Ventas -"); 
+       
+        
+    });
+  $("#center").click(function(){
+     
+        var expEspecial = $("#special-capture").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture").val(expEspecial + "Call center -"); 
+       
+        
+    });
+
+
+
+
+
+
+});
+
+$(document).ready(function(){
+   $("#ninguno2-m").click(function(){
+    
+        $("#ninguno2-m").is(":checked")
+         $(".checkB-m").prop('checked', false);
+         $("#special-capture-m").val("Ninguno"); 
+        
+    });
+   
+$(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+
+
+
+   $(".checkB-m").click(function(){
+       
+        $(".checkB-m").is(":checked")
+         $("#ninguno2-m").prop('checked', false);
+         if (expEspecial== "Ninguno") {
+
+         }
+        
+    });
+
+  $("#catalogo-m").click(function(){
+     
+        var expEspecial = $("#special-capture-m").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture-m").val(expEspecial + "Catalogo -"); 
+       
+        
+    });
+  $("#teletrabajo-m").click(function(){
+     
+        var expEspecial = $("#special-capture-m").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture-m").val(expEspecial + "Teletrabajo -"); 
+       
+        
+    });
+  $("#servicio2-m").click(function(){
+     
+        var expEspecial = $("#special-capture-m").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture-m").val(expEspecial + "Servicio al cliente -"); 
+       
+        
+    });
+  $("#soporte-m").click(function(){
+     
+        var expEspecial = $("#special-capture-m").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture-m").val(expEspecial + "Soporte tecnico -"); 
+       
+        
+    });
+  $("#ventas-m").click(function(){
+     
+        var expEspecial = $("#special-capture-m").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture-m").val(expEspecial + "Ventas -"); 
+       
+        
+    });
+  $("#center-m").click(function(){
+     
+        var expEspecial = $("#special-capture-m").val();
+         if (expEspecial == "Ninguno") {
+          expEspecial="";
+         }
+        $("#special-capture-m").val(expEspecial + "Call center -"); 
+       
+        
+    });
+
+
+
 
 
 

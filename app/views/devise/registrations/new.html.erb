@@ -422,13 +422,13 @@
                         <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
                           <div class="form-box round text-center">
 
-                            <%= f.check_box :special_experience,{class: "teletrabajo checkB",id: "teletrabajo"},'teletrabajo' %><label for="teletrabajo" class="grayscale ">&#160;</label>
+                            <%= f.check_box :special_experience,{class: "teletrabajo checkB",id: "teletrabajo"},'Teletrabajo' %><label for="teletrabajo" class="grayscale ">&#160;</label>
                             <p class="form-box-text">Teletrabajo</p>
                           </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-6 no-padding">
                           <div class="form-box round text-center">
-                            <%= f.check_box :special_experience,{class: "catalogo checkB",id: "catalogo"},'catalogo' %><label for="catalogo" class="grayscale ">&#160;</label>
+                            <%= f.check_box :special_experience,{class: "catalogo checkB",id: "catalogo"},'Catalogo' %><label for="catalogo" class="grayscale ">&#160;</label>
                             <p class="form-box-text">Ventas por catálogo</p>
                           </div>
 
@@ -447,10 +447,13 @@
                           </div>
                         </div>
                         <div class="col-lg-6 col-sm-6 col-xs-6">
-
+                           <div>
+                      <p><%= f.hidden_field :special_experience, id: "special-capture"%></p>
+                    </div>
                         </div>
                       </div>
                     </div>
+                   
                   </div>
                 </div>       
               </div>
@@ -1238,7 +1241,7 @@
 
                             <div class="form-box round text-center">
 
-                              <%= f.check_box :special_experience,{class: "center checkB",id: "center-m"},'Call center' %><label for="center-m" class="grayscale ">&#160;</label>
+                              <%= f.check_box :special_experience,{class: "center checkB-m",id: "center-m"},'Call center' %><label for="center-m" class="grayscale ">&#160;</label>
 
                               <p class="form-box-text">Call center</p>
                             </div>
@@ -1247,7 +1250,7 @@
                           <div class="col-xs-6 no-padding">
 
                             <div class="form-box round text-center">
-                              <%= f.check_box :special_experience,{class: "ventas checkB",id: "ventas-m"},'Ventas' %><label for="ventas-m" class="grayscale ">&#160;</label>
+                              <%= f.check_box :special_experience,{class: "ventas checkB-m",id: "ventas-m"},'Ventas' %><label for="ventas-m" class="grayscale ">&#160;</label>
                               <p class="form-box-text">Ventas</p>
                             </div>
 
@@ -1260,13 +1263,13 @@
                           <div class="col-xs-6 no-padding">
 
                             <div class="form-box round text-center">
-                              <%= f.check_box :special_experience,{class: "soporte checkB",id: "soporte-m"},'Soporte' %><label for="soporte-m" class="grayscale ">&#160;</label>
+                              <%= f.check_box :special_experience,{class: "soporte checkB-m",id: "soporte-m"},'Soporte' %><label for="soporte-m" class="grayscale ">&#160;</label>
                               <p class="form-box-text">Soporte técnico</p>
                             </div>
                           </div>
                           <div class="col-xs-6 no-padding">
                             <div class="form-box round text-center">
-                              <%= f.check_box :special_experience,{class: "servicio2 checkB",id: "servicio2-m"},'Servicio al cliente' %><label for="servicio2-m" class="grayscale ">&#160;</label>
+                              <%= f.check_box :special_experience,{class: "servicio2 checkB-m",id: "servicio2-m"},'Servicio al cliente' %><label for="servicio2-m" class="grayscale ">&#160;</label>
                               <p class="form-box-text">Servicio al cliente</p>
                             </div>
 
@@ -1279,13 +1282,13 @@
                           <div class="col-xs-6 no-padding">
                             <div class="form-box round text-center">
 
-                              <%= f.check_box :special_experience,{class: "teletrabajo checkB",id: "teletrabajo-m"},'teletrabajo' %><label for="teletrabajo-m" class="grayscale ">&#160;</label>
+                              <%= f.check_box :special_experience,{class: "teletrabajo checkB-m",id: "teletrabajo-m"},'teletrabajo' %><label for="teletrabajo-m" class="grayscale ">&#160;</label>
                               <p class="form-box-text">Teletrabajo</p>
                             </div>
                           </div>
                           <div class="col-xs-6 no-padding">
                             <div class="form-box round text-center">
-                              <%= f.check_box :special_experience,{class: "catalogo checkB",id: "catalogo-m"},'catalogo' %><label for="catalogo-m" class="grayscale ">&#160;</label>
+                              <%= f.check_box :special_experience,{class: "catalogo checkB-m",id: "catalogo-m"},'catalogo' %><label for="catalogo-m" class="grayscale ">&#160;</label>
                               <p class="form-box-text">Ventas por catálogo</p>
                             </div>
 
@@ -1310,7 +1313,9 @@
                           </div>
                         </div>
                       </div>
-
+                       <div>
+                      <p><%= f.hidden_field :special_experience, id: "special-capture-m"%></p>
+                    </div>
 
 
                     </div>
