@@ -10,14 +10,14 @@
 <table>
   <thead>
     <tr>
-      <th>ID</th>&#160;
-      <th>Name</th>&#160;
+      
+      <th>Nombre</th>&#160;
       <th>Email</th>&#160;
-      <th>Age</th>&#160;
-      <th>Gender</th>&#160;
-      <th>City</th>&#160;
-      <th>Cellphone</th>&#160;
-      <th>Exp. especial</th>&#160;
+      <th>Edad</th>&#160;
+      <th>Genero</th>&#160;
+      <th>Ciudad</th>&#160;
+      <th>Celular</th>&#160;
+      <th>Experiencia especial</th>&#160;
       <th colspan="3"></th>&#160;
     </tr>
   </thead>
@@ -25,7 +25,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.id %></td>&#160;
+     
         <td><%= user.name %></td>&#160;
         <td><%= user.email %></td>&#160;
         <td><%= user.age %></td>&#160;
@@ -35,7 +35,7 @@
         <td><%= user.special_experience %></td>&#160;
         <td><%= link_to 'Mostrar', user ,class: "gris"%></td>
         <td><%= link_to 'Editar', edit_user_path(user), class: "gris" %></td>
-        <td><%= link_to 'Destruir', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "gris" %></td>
+       <!--  <td><%= link_to 'Destruir', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "gris" %></td> -->
       </tr>
     <% end %>
   </tbody>

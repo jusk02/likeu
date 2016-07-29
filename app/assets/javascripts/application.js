@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.easing
 //= require jquery.easing.min
+
 //= require jquery.fittext
 //= require jeoquery
 //= require creative
@@ -25,7 +26,6 @@
 //= require bootstrap
 //= require classie
 //= require reactive
-//= require turbolinks
 //= require rails.validations
 //= require google_analytics
 
