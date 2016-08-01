@@ -18,14 +18,18 @@ namespace :user do
       user.send_confirmation_instructions
     end
   end
-end
 
 
 #heroku run rake user:spec
 task :spec => :environment do
     users = User.where(special_experience:'0')
     users.each do |user|
-      puts "algo?"
+      user.special_experience = "Si"
+      user.save!
       
     end
   end
+
+  
+end
+
