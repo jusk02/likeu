@@ -17,6 +17,12 @@ class UsersController < ApplicationController
       
   end
 
+  def special_exp
+
+    @user.special_experience = "Si"
+    
+  end
+
   # PATCH/PUT /comments/1
   # PATCH/PUT /comments/1.json
   def update

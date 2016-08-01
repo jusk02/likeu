@@ -24,8 +24,8 @@ end
 #heroku run rake user:update_special
 task :update_special => :environment do
     users = User.where(special_experience:'0')
-    
-      self.update_attribute(:special_experience => "Si");
+    users.each do |user|
+      user.special_exp
       
-   
+    end
   end
