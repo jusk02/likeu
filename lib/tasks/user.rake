@@ -21,12 +21,11 @@ namespace :user do
 end
 
 
-#heroku run rake user:update_special
-task :update_special => :environment do
+#heroku run rake user:spec
+task :spec => :environment do
     users = User.where(special_experience:'0')
     users.each do |user|
-      user.special_experience = "Si"
-      user.save!
+      puts "algo?"
       
     end
   end
