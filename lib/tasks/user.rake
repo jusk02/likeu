@@ -24,8 +24,8 @@ namespace :user do
 task :spec => :environment do
     users = User.where(special_experience:'0')
     users.each do |user|
-      user.special_experience = "Si"
       
+      user.update_attribute(:special_experience, "Si")
       
     end
   end
