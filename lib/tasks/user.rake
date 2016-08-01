@@ -25,11 +25,11 @@ task :spec => :environment do
     users = User.where(special_experience:'0')
     users.each do |user|
       user.special_experience = "Si"
-      user.save!
+      
       
     end
   end
 
-  
+
 end
 
