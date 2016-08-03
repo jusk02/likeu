@@ -63,12 +63,8 @@
 						siguente prueba, será algo muy simple pero debes estar muy atento.
 					</p>
 					<p>
-						A continuación, cuando des click en el botón, aparecerá un texto corto que
-						necesitamos que leas en voz alta para que te escuchemos fuerte y claro.
-					</p>
-					<p>
-						Léelo a tu ritmo, no tienes que apurarte y si te equivocas fresco, solo sigue leyendo y
-						ya está (la grabación se realiza una sola vez).
+						<strong>Te recomendamos muy expresamente usar el navegador Mozilla:Firefox ya que es el que mejor rendimiento tendra en estea prueba y sera una excelente opcion una vez empieces a trabajar con LikeU:</strong>
+						Si no tienes el navegador puedes descargarlo en este <a class="fuerte" href="https://www.mozilla.org/es-ES/firefox/new/" target="blank">Link</a>
 					</p>
 										
 
@@ -78,7 +74,7 @@
 					        <%= f.hidden_field :video_done, :value => true %>
 				    	</div>
 			      		<br>
-			      		<div class="actions ">
+			      		<div class="actions" style="display:none;">
 			        		<%= f.submit 'Iniciar', :class => 'btn btn-primary', :id => 'startButton' %>
 			      		</div>
 			      		<a href="http://makemarkhosting.com/video/video3ddd/index.html?=<%= current_user.id %>" class="video-iniciar btn btn-primary btn-xl" id="startAll">Empezar</a>
@@ -112,7 +108,16 @@
 </section>
 
  <% else%>
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-lg-8 col-lg-offset-2 text-center">
+			<h1>No deberias estar aqui :(</h1><br>
+			<%= link_to "Volver al perfil", current_user , :class=> 'fuerte'%>
+			
+		</div>
+ 	</div>
+ </div>
 
- <h1>No deberias estar aqui :(</h1>
+ 
 
   <% end %>
