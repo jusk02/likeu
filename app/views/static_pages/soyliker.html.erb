@@ -345,7 +345,7 @@
                   <% if user_signed_in? %>
 
                      
-                     <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete) %><br>
+                     <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete,:class =>"fondo-blanco") %><br>
 
                      <a href="<%= user_path(current_user)%>" target="blank" class="small gris" onclick="this.blur();" >Consultar mi proceso</a>
 

@@ -98,6 +98,8 @@
 	    <a href="mailto:soporte@likeu.co" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >contactar a soporte</a>
     <% end %>       
 
+<%=link_to "Volver a la pagina principal" , root_path , :class => "fondo-blanco"%> |
+ <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete,:class =>"fondo-blanco") %>
 </div>
 </section>
 <br>
