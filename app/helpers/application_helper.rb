@@ -11,7 +11,7 @@ module ApplicationHelper
  
   	  def video_url
     	  @hola=request.fullpath
-        @encoded_url = request.fullpath.split("param=")
+        @encoded_url = request.fullpath.split("par=")
         if @encoded_url.length>1  
           @encoded_url = Base64.decode64(@encoded_url)
           @encoded_url
