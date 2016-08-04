@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Felicitaciones <%= @user.name %>!</h1>
+    <p>
+      Has pasado la primera prueba y ahora podras tomar el segundo reto!<br>
+    </p>
+    <p>
+      Es importante que tengas disponible una camara web, un microfono y la mejor actitud para hacer esta prueba 
+    </p>
+    <p><%= link_to "Tomar la prueba" edit_user_path(@user) %></p>
+  </body>
+</html>

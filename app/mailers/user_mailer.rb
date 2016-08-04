@@ -13,4 +13,10 @@ class UserMailer < ActionMailer::Base
     mail(:to => user.email,
          :subject => 'Notificacion de actualizacion de datos')
   end
+
+  def video_test(user)
+  	@resource = user
+  	mail(:to => user.email,
+         :subject => 'Siguiente fase disponible')
+  end
 end

@@ -9,11 +9,11 @@
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "¿Olvidaste tu contraseña?", new_password_path(resource_name) %><br />
+  <%= link_to "¿No recuerdas estos datos?", new_password_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Reenviar links de confirmación", new_confirmation_path(resource_name) %><br />
+  <%= link_to "Reenviar link de confirmación", new_confirmation_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>

@@ -9,11 +9,20 @@ class UsersController < ApplicationController
   end
 	# GET /comments/1/edit
   def edit
+    if @user.nil?
+       redirect_to new_user_session_path    
+    else
   	@user = User.find(params[:id])
+    end
+
   end
 
   def show
-      @user = User.find(params[:id])
+      if @user.nil?
+       redirect_to new_user_session_path    
+    else
+    @user = User.find(params[:id])
+    end
       
   end
 
