@@ -50,7 +50,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:video, :active, :fase, :id, :city, :name, :age, :gender, :cellphone, :ocupation,
+      params.require(:user).permit(:video1,:video2,:video3,:video_ans1,:video_ans2,:video_ans3, :active, :fase, :id, :city, :name, :age, :gender, :cellphone, :ocupation,
       :no_contract_activities, :felixibility_importance, :need_income, :current_income, :achievement, :achievement_acomplishment, :achievement_company,
       :achievement_boss, :achievement_phone, :hobby, :hobby_time, :hobby_validate, :special_experience, :work_hours, :work_days, :personal_achievement, :story, :pc_type, :pc_use, :internet_speed, :can_talk, :workplace, :comfort, :role, :video, :fase ,:confirmation_token,:confirmed_at,:confirmation_sent_at,:confirmation_token, :video_done, :active, :approved )
 
