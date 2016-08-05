@@ -38,6 +38,14 @@
     <%= f.label :cellphone %><br>
     <%= f.text_field :cellphone %>
   </div>
+   <div class="field">
+    <%= f.label :fase %><br>
+    <%= f.text_field :fase %>
+  </div>
+   <div class="field">
+    <%= f.label :video_done %><br>
+    <%= f.text_field :video_done %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
@@ -61,7 +69,7 @@
         		<section id="contenido-user2">
 	        
 				
-				<% if current_user.video_done == true %>
+				<% if current_user.video_done == false %>
 					<p>
 		        		Al fin te vamos a escuchar, por eso te pedimos que nos regales tu mejor voz para la
 						siguente prueba, será algo muy simple pero debes estar muy atento.
@@ -109,9 +117,14 @@
 
 					<% elsif current_user.video1 != nil %>
 
-						<p>Tu prueba ha sido procesada y se revisara pronto.</p>
 
-						si tuviste algun inconveniente tecnico durante la prueba conatactanos enviando un correo a soporte@likeu.co o a travez de <a class="fondo-blanco" href="https://www.facebook.com/LikeU-Colombia-1726794850921997">Facebook</a>.<br><br>
+						<h3>¡Eso es! hemos terminado la entrevista sabrosa, ¿cierto?</h3>
+
+					<p>Lo que sigue es que revisaremos tus respuestas, el equipo de expertos revisará tu nivel de enamoramiento con nosotros y pronto te estaremos dando buenas nuevas.</p>
+
+					<p>Pero, si por cualquier razón cayó un meteorito y se fue la luz, se desató otro diluvio o te secuestraron los extraterrestres y tu computador se apagó, se dañó, se cayó irremediablemente el internet o algo así y por un tema técnico no pudiste terminar la prueba, pues escríbenos a soporte@likeu.co o a nuestra pagina de <a class="fondo-blanco" href="https://www.facebook.com/LikeU-Colombia-1726794850921997">Facebook</a>, pero solo si tuvimos un problema técnico; confiamos en ti, ¿vale?</p>
+
+						<br><br>
 
 					<%end%>
 
