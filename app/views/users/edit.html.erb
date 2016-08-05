@@ -57,31 +57,31 @@
 	
         <div class="row">
         
-        	<div class="col-lg-9 col-lg-offset-3 text-center">
-        		<section id="contenido-user">
+        	<div class="col-lg-8 col-lg-offset-2 text-center">
+        		<section id="contenido-user2">
 	        
 				
-				<% if current_user.video_done == false %>
+				<% if current_user.video_done == true %>
 					<p>
 		        		Al fin te vamos a escuchar, por eso te pedimos que nos regales tu mejor voz para la
 						siguente prueba, será algo muy simple pero debes estar muy atento.
 					</p>
 					<p>
-						<strong>Te recomendamos muy expresamente usar el navegador Mozilla:Firefox ya que es el que mejor rendimiento tendra en estea prueba y sera una excelente opcion una vez empieces a trabajar con LikeU:</strong>
-						Si no tienes el navegador puedes descargarlo en este <a class="fuerte" href="https://www.mozilla.org/es-ES/firefox/new/" target="blank">Link</a>
+						<strong>Debes usar el navegador Mozilla:Firefox ya que es el que mejor rendimiento tendra en estea prueba y sera una excelente opcion una vez empieces a trabajar con LikeU:</strong>
+						Si no tienes el navegador puedes descargarlo en este enlace:<br> <a class="fuerte" href="https://www.mozilla.org/es-ES/firefox/new/" target="blank"><img src="<%=image_path('boton_firefox.png')%>"></a>
 					</p>
 										
 
 					<%= form_for(current_user) do |f| %>
 						<div class="field">
-				    	    <br>
+				    	   
 					        <%= f.hidden_field :video_done, :value => true %>
 				    	</div>
-			      		<br>
+			      		
 			      		<div class="actions" style="display:none;">
 			        		<%= f.submit 'Iniciar', :class => 'btn btn-primary', :id => 'startButton' %>
 			      		</div>
-			      		<a href="http://makemarkhosting.com/video/videotest/index.html?=<%= current_user.id %>" class="video-iniciar btn btn-primary btn-xl" id="startAll">Empezar</a>
+			      		<a href="http://makemarkhosting.com/video/videotest/index.html?=<%= current_user.id %>" class="video-iniciar btn btn-primary btn-xl" id="startAll">Ir a la prueba</a>
 					<% end %>
 				<% elsif current_user.video_done == true %>
 
@@ -117,13 +117,16 @@
 
 
 				<% end %>
+				<br>
 
 				<%=link_to "Volver a la pagina principal" , root_path , :class => "fondo-blanco"%> |
+				<%=link_to "Volver a mi informacion" , user_path(@user) , :class => "fondo-blanco"%> |
  <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete,:class =>"fondo-blanco") %>
 				</section>
         	</div>
         	
     	</div>
+
     	
 	</div>
 
