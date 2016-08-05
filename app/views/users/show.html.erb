@@ -95,9 +95,9 @@
 	<% elsif current_user.fase == 2 %>
 
    		<% if current_user.video_done == false %>
-   			<p>Genial, pasaste la primera fase y puedes iniciar la segunda;
+   			<p>Genial, pasaste la primera fase y puedes iniciar la segunda (Esta prueba no puede presentarse desde un celular);
     		para esta fase necesitaras un espacio calmado, verte bonito como un pastelito ,una camara web, microfono y toda tu disposicion.</p>
-    		<a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a>
+    		<a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a><br>
 
     		<% if current_user.role == 3 %>
    				<%= form_for(current_user) do |f| %>
