@@ -1,179 +1,149 @@
 
-<% if current_user.role == 3 %>
-	    
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<% if current_user.role == 3 %>    
+	<%= form_for(@user) do |f| %>
+	  <% if @user.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	      <ul>
+	      <% @user.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :cellphone %><br>
-    <%= f.text_field :cellphone %>
-  </div>
-   <div class="field">
-    <%= f.label :fase %><br>
-    <%= f.text_field :fase %>
-  </div>
-   <div class="field">
-    <%= f.label :video_done %><br>
-    <%= f.text_field :video_done %>
-  </div>
-  <div class="field">
-    <%= f.label :calificacion_video_1 %><br>
-    <%= f.text_field :video1_score %>
-  </div>
-  <div class="field">
-    <%= f.label :calificacion_respuestas_video_1 %><br>
-    <%= f.text_field :video1_ans_score %>
-  </div>
-  <div class="field">
-    <%= f.label :calificacion_video_2 %><br>
-    <%= f.text_field :video2_score %>
-  </div>
-  <div class="field">
-    <%= f.label :calificacion_video_3 %><br>
-    <%= f.text_field :video3_score %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-
-
-
+	  <div class="field">
+	    <%= f.label :name %><br>
+	    <%= f.text_field :name %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :email %><br>
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :age %><br>
+	    <%= f.number_field :age %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :gender %><br>
+	    <%= f.text_field :gender %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :city %><br>
+	    <%= f.text_field :city %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :cellphone %><br>
+	    <%= f.text_field :cellphone %>
+	  </div>
+	   <div class="field">
+	    <%= f.label :fase %><br>
+	    <%= f.text_field :fase %>
+	  </div>
+	   <div class="field">
+	    <%= f.label :video_done %><br>
+	    <%= f.text_field :video_done %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :calificacion_video_1 %><br>
+	    <%= f.text_field :video1_score %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :calificacion_respuestas_video_1 %><br>
+	    <%= f.text_field :video1_ans_score %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :calificacion_video_2 %><br>
+	    <%= f.text_field :video2_score %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :calificacion_video_3 %><br>
+	    <%= f.text_field :video3_score %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
 <% end %> 
-
-
-			
 	
- <% if current_user.fase == 2 %>
-
+<% if current_user.fase == 2 %>
 	<div class="container">
-	
-        <div class="row">
-        
+        <div class="row">   
         	<div class="col-lg-8 col-lg-offset-2 text-center">
         		<section id="contenido-user2">
-	        
-				
-				<% if current_user.video_done == false %>
-					<p>
-		        		Al fin te vamos a escuchar, por eso te pedimos que nos regales tu mejor voz para la
-						siguente prueba, será algo muy simple pero debes estar muy atento.
-					</p>
-					<p>
-						<strong>Debes usar el navegador Mozilla:Firefox ya que es el que mejor rendimiento tendra en estea prueba y sera una excelente opcion una vez empieces a trabajar con LikeU:</strong>
-						Si no tienes el navegador puedes descargarlo en este enlace:<br> <a class="fuerte" href="https://www.mozilla.org/es-ES/firefox/new/" target="blank"><img src="<%=image_path('boton_firefox.png')%>"></a>
-					</p>
-										
+	        		<% if current_user.video_done == false %>
+						<p>
+		        			Al fin te vamos a escuchar, por eso te pedimos que nos regales tu mejor voz para la
+							siguente prueba, será algo muy simple pero debes estar muy atento.
+						</p>
+						<p>
+							<strong>Debes usar el navegador Mozilla:Firefox ya que es el que mejor rendimiento tendra en estea prueba y sera una excelente opcion una vez empieces a trabajar con LikeU:</strong>
+							Si no tienes el navegador puedes descargarlo en este enlace:<br> <a class="fuerte" href="https://www.mozilla.org/es-ES/firefox/new/" target="blank"><img src="<%=image_path('boton_firefox.png')%>"></a>
+						</p>
 
-					<%= form_for(current_user) do |f| %>
-						<div class="field">
-				    	   
-					        <%= f.hidden_field :video_done, :value => true %>
-				    	</div>
-			      		
-			      		<div class="actions" style="display:none;">
-			        		<%= f.submit 'Iniciar', :class => 'btn btn-primary', :id => 'startButton' %>
-			      		</div>
-			      		<a href="http://makemarkhosting.com/video/videotest/index.html?=<%= current_user.id %>" class="video-iniciar btn btn-primary btn-xl" id="startAll">Ir a la prueba</a>
+						<%= form_for(current_user) do |f| %>
+							<div class="field">
+						        <%= f.hidden_field :video_done, :value => true %>
+					    	</div>
+				      		<div class="actions" style="display:none;">
+				        		<%= f.submit 'Iniciar', :class => 'btn btn-primary', :id => 'startButton' %>
+				      		</div>
+				      		<a href="http://makemarkhosting.com/video/videotest/index.html?=<%= current_user.id %>" class="video-iniciar btn btn-primary btn-xl" id="startAll">Ir a la prueba</a>
+						<% end %>
+
+					<% elsif current_user.video_done == true %>
+
+						<% if current_user.video1 == nil || current_user.video1 == ""%>
+							<p>
+								Genial tu video ya fue grabado!, es importante que le des guardar si quieres seguir con el proceso
+							</p>
+							<%= form_for(current_user) do |f| %>
+						      	<div class="field">
+						        	<br>
+						        	<%= f.hidden_field :video1, :value => video_url[4] %>
+						        	<%= f.hidden_field :video2, :value => video_url[5] %>
+						        	<%= f.hidden_field :video3, :value => video_url[6] %>
+						        	<%= f.hidden_field :video_ans1, :value => video_url[1] %>
+						        	<%= f.hidden_field :video_ans2, :value => video_url[2] %>
+						        	<%= f.hidden_field :video_ans3, :value => video_url[3] %>
+					    		</div>
+							    <br>
+							    <div class="actions">
+							        <%= f.submit 'guardar', :class => 'guarda-video btn btn-success' %>
+							    </div>
+							<% end %>
+
+						<% elsif current_user.video1 != nil %>
+							<h3>¡Eso es! hemos terminado la entrevista sabrosa, ¿cierto?</h3>
+
+							<p>Lo que sigue es que revisaremos tus respuestas, el equipo de expertos revisará tu nivel de enamoramiento con nosotros y pronto te estaremos dando buenas nuevas.</p>
+
+							<p>Pero, si por cualquier razón cayó un meteorito y se fue la luz, se desató otro diluvio o te secuestraron los extraterrestres y tu computador se apagó, se dañó, se cayó irremediablemente el internet o algo así y por un tema técnico no pudiste terminar la prueba, pues escríbenos a soporte@likeu.co o a nuestra pagina de <a class="fondo-blanco" href="https://www.facebook.com/LikeU-Colombia-1726794850921997">Facebook</a>, pero solo si tuvimos un problema técnico; confiamos en ti, ¿vale?</p>
+							<br>
+							<br>
+						<%end%>
 					<% end %>
-				<% elsif current_user.video_done == true %>
-
-					<% if current_user.video1 == nil %>
-					<p>
-						Genial tu video ya fue grabado!, es importante que le des guardar si quieres seguir con el proceso
-					</p>
-					<%= form_for(current_user) do |f| %>
-
-				      	<div class="field">
-				        	<br>
-				        	<%= f.hidden_field :video1, :value => video_url[4] %>
-				        	<%= f.hidden_field :video2, :value => video_url[5] %>
-				        	<%= f.hidden_field :video3, :value => video_url[6] %>
-				        	<%= f.hidden_field :video_ans1, :value => video_url[1] %>
-				        	<%= f.hidden_field :video_ans2, :value => video_url[2] %>
-				        	<%= f.hidden_field :video_ans3, :value => video_url[3] %>
-			    		</div>
-					    <br>
-					    <div class="actions">
-					        <%= f.submit 'guardar', :class => 'guarda-video btn btn-success' %>
-
-					    </div>
-					<% end %>
-
-					<% elsif current_user.video1 != nil %>
-
-
-						<h3>¡Eso es! hemos terminado la entrevista sabrosa, ¿cierto?</h3>
-
-					<p>Lo que sigue es que revisaremos tus respuestas, el equipo de expertos revisará tu nivel de enamoramiento con nosotros y pronto te estaremos dando buenas nuevas.</p>
-
-					<p>Pero, si por cualquier razón cayó un meteorito y se fue la luz, se desató otro diluvio o te secuestraron los extraterrestres y tu computador se apagó, se dañó, se cayó irremediablemente el internet o algo así y por un tema técnico no pudiste terminar la prueba, pues escríbenos a soporte@likeu.co o a nuestra pagina de <a class="fondo-blanco" href="https://www.facebook.com/LikeU-Colombia-1726794850921997">Facebook</a>, pero solo si tuvimos un problema técnico; confiamos en ti, ¿vale?</p>
-
-						<br><br>
-
-					<%end%>
-
-
-				<% end %>
-				<br>
-
-				<%=link_to "Volver a la pagina principal" , root_path , :class => "fondo-blanco"%> |
-				<%=link_to "Volver a mi informacion" , user_path(@user) , :class => "fondo-blanco"%> |
- <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete,:class =>"fondo-blanco") %>
+					<br>
+					<%=link_to "Volver a la pagina principal" , root_path , :class => "fondo-blanco"%> |
+					<%=link_to "Volver a mi informacion" , user_path(@user) , :class => "fondo-blanco"%> |
+					<%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete,:class =>"fondo-blanco") %>
 				</section>
-        	</div>
-        	
-    	</div>
-
-    	
+	        </div>	
+	    </div>
 	</div>
 
+	<% else%>
+	
+	<div class="container">
+	 	<div class="row">
+	 		<div class="col-lg-8 col-lg-offset-2 text-center">
+				<h1>No deberias estar aqui :(</h1><br>
+				<%= link_to "Volver al perfil", current_user , :class=> 'fuerte'%>
+				
+			</div>
+	 	</div>
+	</div>
 
-
-
- <% else%>
- <div class="container">
- 	<div class="row">
- 		<div class="col-lg-8 col-lg-offset-2 text-center">
-			<h1>No deberias estar aqui :(</h1><br>
-			<%= link_to "Volver al perfil", current_user , :class=> 'fuerte'%>
-			
-		</div>
- 	</div>
- </div>
-
- 
-
-  <% end %>
+<% end %>
 

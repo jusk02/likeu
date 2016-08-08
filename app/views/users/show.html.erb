@@ -1,156 +1,139 @@
 
 <% if current_user.role == 3 %>
-	    
-	<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+  <p>
+    <strong>Age:</strong>
+    <%= @user.age %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <p>
+    <strong>Gender:</strong>
+    <%= @user.gender %>
+  </p>
+  <p>
+    <strong>City:</strong>
+    <%= @user.city %>
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
+  <p>
+    <strong>Cellphone:</strong>
+    <%= @user.cellphone %>
+  </p>
 
-<p>
-  <strong>Gender:</strong>
-  <%= @user.gender %>
-</p>
+  <p>
+    <strong>Ocupacion:</strong>
+    <%= @user.ocupation %>
+  </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @user.city %>
-</p>
+  <p>
+    <strong>Actividades no laborales:</strong>
+    <%= @user.no_contract_activities %>
+  </p>
 
-<p>
-  <strong>Cellphone:</strong>
-  <%= @user.cellphone %>
-</p>
+  <p>
+    <strong>experiencia especial:</strong>
+    <%= @user.special_experience %>
+  </p>
 
-<p>
-  <strong>Ocupacion:</strong>
-  <%= @user.ocupation %>
-</p>
-
-<p>
-  <strong>Actividades no laborales:</strong>
-  <%= @user.no_contract_activities %>
-</p>
-
-<p>
-  <strong>experiencia especial:</strong>
-  <%= @user.special_experience %>
-</p>
-
-<p>
-  <strong>primer audio:</strong>
-  <%= @user.video1 %>
-</p>
-<p>
-  <strong>puntaje primer audio:</strong>
-  <%= @user.video1_score %>
-</p>
-<p>
-  <strong>segundo audio:</strong>
-  <%= @user.video2 %>
-</p>
-<p>
-  <strong>puntaje segundo audio:</strong>
-  <%= @user.video2_score %>
-</p>
-<p>
-  <strong>tercer audio:</strong>
-  <%= @user.video3 %>
-</p>
-<p>
-  <strong>puntaje tercer audio:</strong>
-  <%= @user.video3_score %>
-</p>
-
-
+  <p>
+    <strong>primer audio:</strong>
+    <a href="<%= @user.video1 %>">Escuchar</a> 
+  </p>
+  <p>
+    <strong>puntaje primer audio:</strong>
+    <%= @user.video1_score %>
+  </p>
+  <p>
+    <strong>segundo audio:</strong>
+    <a href="<%= @user.video2 %>">Escuchar</a> 
+  </p>
+  <p>
+    <strong>puntaje segundo audio:</strong>
+    <%= @user.video2_score %>
+  </p>
+  <p>
+    <strong>tercer audio:</strong>
+     <a href="<%= @user.video3 %>">Escuchar</a> 
+  </p>
+  <p>
+    <strong>puntaje tercer audio:</strong>
+    <%= @user.video3_score %>
+  </p>
 
 <% end %> 
+
 <div class="col-lg-8 col-lg-offset-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
-<section id="contenido-user">
-                  <div class="row fieldformulario respuesta">
+  <section id="contenido-user">
+    <div class="row fieldformulario respuesta">
+      
+      <span><img src="<%=image_path('corazon.png')%>" class="img-responsive wow bounceIn"></span>
 
+      <p><h2 class="color">Hola <%= current_user.name%></h2></p>
 
-<span><img src="<%=image_path('corazon.png')%>" class="img-responsive wow bounceIn"></span>
+	    <% if current_user.fase == nil %>
 
-<p><h2 class="color">Hola <%= current_user.name%></h2></p>
+	      testeo
 
- 
-	
-	<% if current_user.fase == nil %>
-
-	    testeo
-
-	     
-	<% elsif current_user.fase == 1 %>
-	    <p>En el momento estamos analizando tu perfil, nos pondremos en contacto contigo en cuanto halla algun cambio</p>
+    	<% elsif current_user.fase == 1 %>
+	      <p>En el momento estamos analizando tu perfil, nos pondremos en contacto contigo en cuanto halla algun cambio</p>
 	   
-	    <% if current_user.role == 3 %>
-	   		<%= form_for(current_user) do |f| %>
-	   			<%= f.hidden_field :fase, :value => 2 %>
-	   		 	<%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
-	   		<% end %> 
-	    <% end %> 
+	      <% if current_user.role == 3 %>
+	   		  <%= form_for(current_user) do |f| %>
+	   			  <%= f.hidden_field :fase, :value => 2 %>
+	   		 	  <%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
+	   		  <% end %> 
+	      <% end %> 
 
-	<% elsif current_user.fase == 2 %>
+	    <% elsif current_user.fase == 2 %>
+   		  <% if current_user.video_done == false %>
+     			<p>Genial, pasaste la primera fase y puedes iniciar la segunda (Esta prueba no puede presentarse desde un celular);
+    		  para esta fase necesitaras un espacio calmado, verte bonito como un pastelito ,una camara web, microfono y toda tu disposicion.</p>
+    		  <a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a><br>
 
-   		<% if current_user.video_done == false %>
-   			<p>Genial, pasaste la primera fase y puedes iniciar la segunda (Esta prueba no puede presentarse desde un celular);
-    		para esta fase necesitaras un espacio calmado, verte bonito como un pastelito ,una camara web, microfono y toda tu disposicion.</p>
-    		<a href="<%= edit_user_path(current_user) %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Hacer la prueba</a><br>
+    		  <% if current_user.role == 3 %>
+   				  <%= form_for(current_user) do |f| %>
+   					  <%= f.hidden_field :fase, :value => 3 %>
+   					  <%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
+   				  <% end %> 
+   			  <%end%>	
 
-    		<% if current_user.role == 3 %>
-   				<%= form_for(current_user) do |f| %>
-   					<%= f.hidden_field :fase, :value => 3 %>
-   					<%= f.submit 'pasar de fase', :class => 'btn btn-success' %>
-   				<% end %> 
-   			<%end%>	
-   		<% elsif current_user.video_done == true %>
+   		  <% elsif current_user.video_done == true %>
+				  <p>Lo que sigue es que revisaremos tus respuestas, el equipo de expertos revisará tu nivel de enamoramiento con nosotros y pronto te estaremos dando buenas nuevas.</p>
 
-				<p>Lo que sigue es que revisaremos tus respuestas, el equipo de expertos revisará tu nivel de enamoramiento con nosotros y pronto te estaremos dando buenas nuevas.</p>
+   		  <% end %> 
 
-   		<% end %> 
-   		
-	
+	    <% elsif current_user.fase == 3 %>
+	      <p>Fase 2 listo ahora podras empezar tu entrenamiento</p>
+	      <a href="www.playvox.com" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Levame a entrenar!</a>
 
-	<% elsif current_user.fase == 3 %>
-	   <p>Fase 2 listo ahora podras empezar tu entrenamiento</p>
-	     <a href="www.playvox.com" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Levame a entrenar!</a>
+	    <% else%>
+        <p>lo sentimos parece haber un error por favor contacta a soporte</p>
+	      <a href="mailto:soporte@likeu.co" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >contactar a soporte</a>
+      <% end %>       
 
-	<% else%>
-
-	     <p>lo sentimos parece haber un error por favor contacta a soporte</p>
-	    <a href="mailto:soporte@likeu.co" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >contactar a soporte</a>
-    <% end %>       
-
-<%=link_to "Volver a la pagina principal" , root_path , :class => "fondo-blanco"%> |
- <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete,:class =>"fondo-blanco") %>
-</div>
-</section>
-<br>
-<br>
-<div class="invitacion">
-<p><strong>¡Te invitamos a seguirnos en nuestras redes sociales para mantenerte al tanto de todo lo que pasa!</strong></p><br>
-
-	<div id ="redes-sociales" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">
-                
-                <hr class="text-secondary">
-                <a  href="https://www.facebook.com/LikeU-Colombia-1726794850921997" target="_blank" title="Facebook"><i class="fa fa-2x fa-facebook wow bounceIn text-secondary iconos-redes"></i></a>
-                <a  href="https://www.instagram.com/likeuglobal" target="_blank"><i class="fa fa-2x fa-instagram wow bounceIn text-secondary iconos-redes"></i></a> 
-                <a  href=" https://www.youtube.com/channel/UC6YEdwm69F9emOf3NDFFwzw" target="_blank"><i class="fa fa-2x fa-youtube wow bounceIn text-secondary iconos-redes"></i></a> 
-                <a  href="https://twitter.com/LikeUcolombia" target="_blank"><i class="fa fa-2x fa-twitter wow bounceIn text-secondary iconos-redes"></i></a>
-            </div>
-
-</div>
-
+    <%=link_to "Volver a la pagina principal" , root_path , :class => "fondo-blanco"%> |
+    <%= link_to('Cerrar sesión', destroy_user_session_path, :method => :delete,:class =>"fondo-blanco") %>
+    </div>
+  </section>
+  <br>
+  <br>
+  <div class="invitacion">
+    <p><strong>¡Te invitamos a seguirnos en nuestras redes sociales para mantenerte al tanto de todo lo que pasa!</strong></p><br>
+	  <div id ="redes-sociales" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 text-center">           
+      <hr class="text-secondary">
+      <a  href="https://www.facebook.com/LikeU-Colombia-1726794850921997" target="_blank" title="Facebook"><i class="fa fa-2x fa-facebook wow bounceIn text-secondary iconos-redes"></i></a>
+      <a  href="https://www.instagram.com/likeuglobal" target="_blank"><i class="fa fa-2x fa-instagram wow bounceIn text-secondary iconos-redes"></i></a> 
+      <a  href=" https://www.youtube.com/channel/UC6YEdwm69F9emOf3NDFFwzw" target="_blank"><i class="fa fa-2x fa-youtube wow bounceIn text-secondary iconos-redes"></i></a> 
+      <a  href="https://twitter.com/LikeUcolombia" target="_blank"><i class="fa fa-2x fa-twitter wow bounceIn text-secondary iconos-redes"></i></a>
+    </div>
+  </div>
 </div>
