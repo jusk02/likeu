@@ -14,41 +14,80 @@ validates :cellphone, presence: {message: "Necesitamos este numero para'poder co
 validates :city, presence: {message: "La mejor forma de encontrar campañas afines a ti es saber donde estas"}
 
 
-      # :age
-      # :gender
-      # :cellphone
-      # :city
-      # :ocupation
-      # :no_contract_activities
-      # :felixibility_importance
-      # :need_income
-      # :current_income
-      # :achievement
-      # :achievement_acomplishment
-      # :achievement_company
-      # :achievement_boss
-      # :achievement_phone
-      # :hobby
-      # :hobby_time
-      # :hobby_validate
-      # :special_experience
-      # :work_hours
-      # :work_days
-      # :personal_achievement
-      # :story
-      # :pc_type
-      # :pc_use
-      # :internet_speed
-      # :can_talk
-      # :workplace
-      # :comfort
-
-
-   
-     
-
+      #achievement and comfort must be updated in live for all users registered  in 8/8/2016 or prior
 
 	after_create do
+
+      # self.form_score = 0
+
+      # unless name.blank? || city.blank? || age.blank? || gender.blank? || cellphone.blank? || email.blank?
+      #   self.form_score += 5
+      # end
+
+      # unless self.no_contract_activities == "No he tenido"
+      #   self.form_score += 10
+      # end
+
+      # if self.achievement ==  "Aumentar las ventas" || self.achievement == "Mejorar servicio"
+      #   self.form_score += 10
+      # end
+
+      # if self.hobby_time >= 4
+      #   if self.hobby_validate ==  true
+      #     self.form_score += 10
+      #   end
+      # end
+
+      # if self.special_experience.include? "Call center"
+      #   self.form_score += 15
+      # elsif self.special_experience.include? "Teletrabajo"
+      #   self.form_score += 10        
+      # elsif self.special_experience.include? "Ventas"
+      #   self.form_score += 10
+      # elsif self.special_experience.include? "Soporte tecnico"
+      #   self.form_score += 5        
+      # end
+
+      # if self.need_income == "500.000 - 1´000.000 Mensuales"
+      #   self.form_score += 5
+      #   if self.current_income == self.need_income
+      #     self.form_score += 5
+      #   end
+      # end
+
+      #  if self.need_income == "1’000.000 - 1’500.000 Mensuales"
+      #   self.form_score += 5
+      #   if self.need_income == self.current_income || self.current_income == "500.000 - 1´000.000 Mensuales"
+      #     self.form_score += 5
+      #   end
+      # end
+
+      # if self.felixibility_importance ==  "Me encantaria"
+      #   self.form_score += 10
+      # elsif self.felixibility_importance == "Nose pero quiero conocer"
+      #   self.form_score += 5        
+      # end
+
+      # unless self.pc_type == "No tengo"
+      #   self.form_score += 5
+      # end
+      
+      # if self.pc_use == "Personal"
+      #   self.form_score += 5
+      # end
+
+      # if self.work_hours * self.work_days >= 20
+      #   self.form_score += 10
+      # end
+      
+      # if self.comfort == "Funciona"
+      #   self.form_score += 10
+      # elsif self.comfort == "Debo hacer ajustes"
+      #   self.form_score += 5     
+      # end
+
+
+
 		  self.update_attribute(:fase, 1)
     	self.update_attribute(:active, "activo")
 
@@ -75,7 +114,7 @@ validates :city, presence: {message: "La mejor forma de encontrar campañas afin
       if ocupation.blank?
         self.update_attribute(:ocupation, "No respondio")
       end
-      if achievement?
+      if achievement.blank?
         self.update_attribute(:achievement, "No respondio")
       end
       if special_experience.blank?
@@ -90,7 +129,7 @@ validates :city, presence: {message: "La mejor forma de encontrar campañas afin
       if workplace.blank?
         self.update_attribute(:workplace, "No respondio")
       end
-      if comfort?
+      if comfort.blank?
         self.update_attribute(:comfort, "No respondio")
       end
     	if role.blank?
@@ -105,12 +144,7 @@ validates :city, presence: {message: "La mejor forma de encontrar campañas afin
       end
     	self.password = self.cellphone
     	self.update_attribute(:video_done, false)
-
-      
+   
    	end
-
- 
-
-
 
 end
