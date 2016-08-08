@@ -23,7 +23,7 @@
         <%= user.video_done %><br>
         <%= link_to 'Mostrar', user ,class: "gris"%>
         <%= link_to 'Editar', edit_user_path(user), class: "gris" %>
-       <!--  <td><%= link_to 'Destruir', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "gris" %></td> -->
+        <%= link_to 'Destruir', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "gris" %>
         <% if current_user.role == 3 %>
           <%= form_for(user) do |f| %>
             <%= f.hidden_field :fase, :value => 2 %>

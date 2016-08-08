@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations" , confirmations: 'confirmations'}
 
-  resources :users, only: [:index,:show, :edit, :update]
+  resources :users, only: [:index,:show, :edit, :update, :destroy]
 
   #get 'home/index'
 

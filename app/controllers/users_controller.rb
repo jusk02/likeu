@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :authenticate_user!, only: [:show, :edit, :index]
+  before_action :authenticate_user!, only: [:show, :edit, :index, :destroy]
 
   def index
     @users = User.all
@@ -37,12 +37,21 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     respond_to do |format|
       if @user.update_attributes(user_params)
-        format.html { redirect_to "/users", notice: 'user was successfully updated.' }
+        format.html { redirect_to users_url, notice: 'user was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
