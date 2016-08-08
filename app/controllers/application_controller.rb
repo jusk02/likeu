@@ -26,6 +26,8 @@ class ApplicationController < ActionController::Base
    user_path(resource)
 	end
 
+ 
+
   def remote_ip
     if request.remote_ip == '127.0.0.1'
       # Hard coded remote address

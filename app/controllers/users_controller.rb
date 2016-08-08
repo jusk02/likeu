@@ -9,6 +9,10 @@ class UsersController < ApplicationController
   def after_sign_up_path_for(resource)
     '/quieroserliker' # Or :prefix_to_your_route
   end
+
+ def after_update_path_for(resource)
+       user_index_path
+  end
 	# GET /comments/1/edit
   def edit
 
@@ -33,7 +37,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
     respond_to do |format|
       if @user.update_attributes(user_params)
-        format.html { redirect_to edit_user_path, notice: 'user was successfully updated.' }
+        format.html { redirect_to "/users", notice: 'user was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }

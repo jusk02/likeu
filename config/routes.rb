@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   get "/terminos", to: "static_pages#terminos", as: "terminos"
 
-  
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
