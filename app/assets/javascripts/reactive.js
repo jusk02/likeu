@@ -408,63 +408,123 @@ $(window).keydown(function(event){
         
     });
 
+   var center = "";
+   var servicio = "";
+   var ventas = "";
+   var soporte = "";
+   var catalogo = "";
+   var teletrabajo = "";
+   var expEspecial = "";
+
   $("#catalogo").click(function(){
 
-        var expEspecial = $("#special-capture").val();
+       
+        catalogo = $("#catalogo-f").val();
         if (expEspecial == "Ninguno") {
           expEspecial="";
          }
-        $("#special-capture").val(expEspecial + "Catalogo -"); 
+         if (catalogo == "Catalogo") {
+          catalogo="";
+          $("#catalogo-f").val(catalogo); 
+         }else{
+          catalogo="Catalogo";
+          $("#catalogo-f").val(catalogo);
+         }
+
+         $("#special-capture").val(catalogo +" "+ teletrabajo +" "+ servicio +" "+ soporte +" "+ ventas +" "+ center);   
        
         
     });
   $("#teletrabajo").click(function(){
      
-        var expEspecial = $("#special-capture").val();
-         if (expEspecial == "Ninguno") {
+        
+        teletrabajo = $("#teletrabajo-f").val();
+        if (expEspecial == "Ninguno") {
           expEspecial="";
          }
-        $("#special-capture").val(expEspecial + "Teletrabajo -"); 
-       
+         if (teletrabajo == "Teletrabajo") {
+          teletrabajo="";
+          $("#teletrabajo-f").val(teletrabajo); 
+         }else{
+          teletrabajo="Teletrabajo";
+          $("#teletrabajo-f").val(teletrabajo);
+         }
+
+       $("#special-capture").val(catalogo +" "+ teletrabajo +" "+ servicio +" "+ soporte +" "+ ventas +" "+ center); 
         
     });
   $("#servicio2").click(function(){
      
-        var expEspecial = $("#special-capture").val();
-         if (expEspecial == "Ninguno") {
+        
+        servicio = $("#servicio2-f").val();
+        if (expEspecial == "Ninguno") {
           expEspecial="";
          }
-        $("#special-capture").val(expEspecial + "Servicio al cliente -"); 
+         if (servicio == "Servicio al cliente") {
+          servicio="";
+          $("#servicio2-f").val(servicio); 
+         }else{
+          servicio="Servicio al cliente";
+          $("#servicio2-f").val(servicio);
+         }
+
+        $("#special-capture").val(catalogo +" "+ teletrabajo +" "+ servicio +" "+ soporte +" "+ ventas +" "+ center);  
        
         
     });
   $("#soporte").click(function(){
      
-        var expEspecial = $("#special-capture").val();
-         if (expEspecial == "Ninguno") {
+       
+        soporte = $("#soporte-f").val();
+        if (expEspecial == "Ninguno") {
           expEspecial="";
          }
-        $("#special-capture").val(expEspecial + "Soporte tecnico -"); 
-       
+         if (soporte == "Soporte tecnico") {
+          soporte="";
+          $("#soporte-f").val(soporte); 
+         }else{
+          soporte="Soporte tecnico";
+          $("#soporte-f").val(soporte);
+         }
+
+        $("#special-capture").val(catalogo +" "+ teletrabajo +" "+ servicio +" "+ soporte +" "+ ventas +" "+ center);  
         
     });
   $("#ventas").click(function(){
      
-        var expEspecial = $("#special-capture").val();
-         if (expEspecial == "Ninguno") {
+       
+        ventas = $("#ventas-f").val();
+        if (expEspecial == "Ninguno") {
           expEspecial="";
          }
-        $("#special-capture").val(expEspecial + "Ventas -"); 
+         if (ventas == "Ventas") {
+          ventas="";
+          $("#ventas-f").val(ventas); 
+         }else{
+          ventas="Ventas";
+          $("#ventas-f").val(ventas);
+         }
+
+        $("#special-capture").val(catalogo +" "+ teletrabajo +" "+ servicio +" "+ soporte +" "+ ventas +" "+ center); 
        
         
     });
   $("#center").click(function(){
      
-        var expEspecial = $("#special-capture").val();
-         if (expEspecial == "Ninguno") {
+       
+        center = $("#center-f").val();
+        if (expEspecial == "Ninguno") {
           expEspecial="";
          }
-        $("#special-capture").val(expEspecial + "Call center -"); 
+         if (center == "Call center") {
+          center="";
+          $("#center-f").val(center); 
+         }else{
+          center="Call center";
+          $("#center-f").val(center);
+         }
+
+         $("#special-capture").val(catalogo +" "+ teletrabajo +" "+ servicio +" "+ soporte +" "+ ventas +" "+ center); 
        
         
     });
@@ -504,63 +564,123 @@ $(window).keydown(function(event){
         
     });
 
+    var center_m = "";
+   var servicio_m = "";
+   var ventas_m = "";
+   var soporte_m = "";
+   var catalogo_m = "";
+   var teletrabajo_m = "";
+   var expEspecial_m = "";
+
   $("#catalogo-m").click(function(){
-     
-        var expEspecial = $("#special-capture-m").val();
-         if (expEspecial == "Ninguno") {
-          expEspecial="";
+
+       
+        catalogo_m = $("#catalogo-f-m").val();
+        if (expEspecial_m == "Ninguno") {
+          expEspecial_m="";
          }
-        $("#special-capture-m").val(expEspecial + "Catalogo -"); 
+         if (catalogo_m == "Catalogo") {
+          catalogo_m="";
+          $("#catalogo-f-m").val(catalogo_m); 
+         }else{
+          catalogo_m="Catalogo";
+          $("#catalogo-f-m").val(catalogo_m);
+         }
+
+         $("#special-capture-m").val(catalogo_m +" "+ teletrabajo_m +" "+ servicio_m +" "+ soporte_m +" "+ ventas_m +" "+ center_m);   
        
         
     });
   $("#teletrabajo-m").click(function(){
      
-        var expEspecial = $("#special-capture-m").val();
-         if (expEspecial == "Ninguno") {
-          expEspecial="";
+        
+        teletrabajo_m = $("#teletrabajo-f-m").val();
+        if (expEspecial_m == "Ninguno") {
+          expEspecial_m="";
          }
-        $("#special-capture-m").val(expEspecial + "Teletrabajo -"); 
-       
+         if (teletrabajo_m == "Teletrabajo") {
+          teletrabajo_m="";
+          $("#teletrabajo-f-m").val(teletrabajo_m); 
+         }else{
+          teletrabajo_m="Teletrabajo";
+          $("#teletrabajo-f-m").val(teletrabajo_m);
+         }
+
+     $("#special-capture-m").val(catalogo_m +" "+ teletrabajo_m +" "+ servicio_m +" "+ soporte_m +" "+ ventas_m +" "+ center_m); 
         
     });
   $("#servicio2-m").click(function(){
      
-        var expEspecial = $("#special-capture-m").val();
-         if (expEspecial == "Ninguno") {
-          expEspecial="";
+        
+        servicio_m = $("#servicio2-f-m").val();
+        if (expEspecial_m == "Ninguno") {
+          expEspecial_m="";
          }
-        $("#special-capture-m").val(expEspecial + "Servicio al cliente -"); 
+         if (servicio_m == "Servicio al cliente") {
+          servicio_m="";
+          $("#servicio2-f-m").val(servicio_m); 
+         }else{
+          servicio_m="Servicio al cliente";
+          $("#servicio2-f-m").val(servicio_m);
+         }
+
+        $("#special-capture-m").val(catalogo_m +" "+ teletrabajo_m +" "+ servicio_m +" "+ soporte_m +" "+ ventas_m +" "+ center_m); 
        
         
     });
-  $("#soporte-m").click(function(){
+  $("#soporte").click(function(){
      
-        var expEspecial = $("#special-capture-m").val();
-         if (expEspecial == "Ninguno") {
+       
+        soporte_m = $("#soporte-f-m").val();
+        if (expEspecial == "Ninguno") {
           expEspecial="";
          }
-        $("#special-capture-m").val(expEspecial + "Soporte tecnico -"); 
+         if (soporte_m == "Soporte tecnico") {
+          soporte_m="";
+          $("#soporte-f-m").val(soporte_m); 
+         }else{
+          soporte_m="Soporte tecnico";
+          $("#soporte-f-m").val(soporte_m);
+         }
+
+        $("#special-capture").val(catalogo_m +" "+ teletrabajo_m +" "+ servicio_m +" "+ soporte_m +" "+ ventas_m +" "+ center_m); 
+        
+    });
+  $("#ventas").click(function(){
+     
+       
+        ventas_m = $("#ventas-f-m").val();
+        if (expEspecial_m == "Ninguno") {
+          expEspecial_m="";
+         }
+         if (ventas_m == "Ventas") {
+          ventas_m="";
+          $("#ventas-f-m").val(ventas_m); 
+         }else{
+          ventas_m="Ventas";
+          $("#ventas-f-m").val(ventas_m);
+         }
+
+        $("#special-capture-m").val(catalogo_m +" "+ teletrabajo_m +" "+ servicio_m +" "+ soporte_m +" "+ ventas_m +" "+ center_m); 
        
         
     });
-  $("#ventas-m").click(function(){
+  $("#center").click(function(){
      
-        var expEspecial = $("#special-capture-m").val();
-         if (expEspecial == "Ninguno") {
-          expEspecial="";
-         }
-        $("#special-capture-m").val(expEspecial + "Ventas -"); 
        
-        
-    });
-  $("#center-m").click(function(){
-     
-        var expEspecial = $("#special-capture-m").val();
-         if (expEspecial == "Ninguno") {
-          expEspecial="";
+        center_m = $("#center-f-m").val();
+        if (expEspecial_m == "Ninguno") {
+          expEspecial_m="";
          }
-        $("#special-capture-m").val(expEspecial + "Call center -"); 
+         if (center_m == "Call center") {
+          center_m="";
+          $("#center-f-m").val(center_m); 
+         }else{
+          center_m="Call center";
+          $("#center-f-m").val(center_m);
+         }
+
+         $("#special-capture-m").val(catalogo_m +" "+ teletrabajo_m +" "+ servicio_m +" "+ soporte_m +" "+ ventas_m +" "+ center_m); 
        
         
     });
