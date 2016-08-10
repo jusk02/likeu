@@ -46,7 +46,11 @@
 
   <p>
     <strong>primer audio:</strong>
-    <a href="<%= @user.video1 %>" class="fondo-blanco">Escuchar</a> 
+    <% if @user.video1 != "" %>
+      <a href="<%= @user.video1 %>" class="fondo-blanco">Escuchar</a> 
+    <%else%>
+      No presentado
+    <%end%>  
   </p>
   <p>
     <strong>puntaje primer audio:</strong>
@@ -54,7 +58,11 @@
   </p>
   <p>
     <strong>segundo audio:</strong>
-    <a href="<%= @user.video2 %>" class="fondo-blanco">Escuchar</a> 
+    <% if @user.video2 != "" %>
+      <a href="<%= @user.video2 %>" class="fondo-blanco">Escuchar</a> 
+    <%else%>
+      No presentado
+    <%end%>  
   </p>
   <p>
     <strong>puntaje segundo audio:</strong>
@@ -62,7 +70,11 @@
   </p>
   <p>
     <strong>tercer audio:</strong>
-     <a href="<%= @user.video3 %>" class="fondo-blanco">Escuchar</a> 
+     <% if @user.video3 != "" %>
+      <a href="<%= @user.video3 %>" class="fondo-blanco">Escuchar</a> 
+    <%else%>
+      No presentado
+    <%end%>  
   </p>
   <p>
     <strong>puntaje tercer audio:</strong>
