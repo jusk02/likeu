@@ -96,6 +96,11 @@ validates :city, presence: {message: "La mejor forma de encontrar campañas afin
         self.update_attribute(:role, 3)
       end
 
+      if self.email == 'mely@likeu.co'
+        self.role = 3
+        self.update_attribute(:role, 3)
+      end
+
       if self.email == 'comunicaciones@likeu.co'
         self.role = 3
         self.update_attribute(:role, 3)
