@@ -18,6 +18,19 @@ validates :city, presence: {message: "La mejor forma de encontrar campañas afin
 
 	after_create do
 
+      if self.hobby_time == nil
+        self.hobby_time = 0 
+      end
+
+      if self.work_hours == nil
+        self.work_hours = 0 
+      end
+
+      if self.work_days == nil
+        self.work_days = 0 
+      end
+      
+
       self.form_score = 0
 
       unless name.blank? || city.blank? || age.blank? || gender.blank? || cellphone.blank? || email.blank?
