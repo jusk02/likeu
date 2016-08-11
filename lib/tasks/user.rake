@@ -57,7 +57,7 @@ task :rerun_scores => :environment do
      user.form_score = 0
 
       
-     # user.form_score += 5
+     user.form_score += 5
      
 
      #  unless user.no_contract_activities == "No he tenido"
