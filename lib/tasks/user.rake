@@ -43,8 +43,7 @@ task :avance_masivo => :environment do
       user.update_attribute(:video_ans1, nil)
       user.update_attribute(:video_ans2, nil)
       user.update_attribute(:video_ans3, nil)
-      
-      
+
     end
   end
 
@@ -57,9 +56,9 @@ task :rerun_scores => :environment do
       
      user.form_score = 0
 
-      unless name.blank? || city.blank? || age.blank? || gender.blank? || cellphone.blank? || email.blank?
+      
         user.form_score += 5
-      end
+     
 
       unless user.no_contract_activities == "No he tenido"
         user.form_score += 10
