@@ -55,72 +55,72 @@ task :rerun_scores => :environment do
     users = User.all
     users.each do |user|
       
-     self.form_score = 0
+     user.form_score = 0
 
       unless name.blank? || city.blank? || age.blank? || gender.blank? || cellphone.blank? || email.blank?
-        self.form_score += 5
+        user.form_score += 5
       end
 
-      unless self.no_contract_activities == "No he tenido"
-        self.form_score += 10
+      unless user.no_contract_activities == "No he tenido"
+        user.form_score += 10
       end
 
-      if self.achievement ==  "Aumentar las ventas" || self.achievement == "Mejorar servicio"
-        self.form_score += 10
+      if user.achievement ==  "Aumentar las ventas" || user.achievement == "Mejorar servicio"
+        user.form_score += 10
       end
 
-      if self.hobby_time >= 4
-        if self.hobby_validate ==  true
-          self.form_score += 10
+      if user.hobby_time >= 4
+        if user.hobby_validate ==  true
+          user.form_score += 10
         end
       end
 
-      if self.special_experience.include? "Call center"
-        self.form_score += 15
-      elsif self.special_experience.include? "Teletrabajo"
-        self.form_score += 10        
-      elsif self.special_experience.include? "Ventas"
-        self.form_score += 10
-      elsif self.special_experience.include? "Soporte tecnico"
-        self.form_score += 5        
+      if user.special_experience.include? "Call center"
+        user.form_score += 15
+      elsif user.special_experience.include? "Teletrabajo"
+        user.form_score += 10        
+      elsif user.special_experience.include? "Ventas"
+        user.form_score += 10
+      elsif user.special_experience.include? "Soporte tecnico"
+        user.form_score += 5        
       end
 
-      if self.need_income == "500.000 - 1´000.000 Mensuales"
-        self.form_score += 5
-        if self.current_income == self.need_income
-          self.form_score += 5
+      if user.need_income == "500.000 - 1´000.000 Mensuales"
+        user.form_score += 5
+        if user.current_income == user.need_income
+          user.form_score += 5
         end
       end
 
-       if self.need_income == "1’000.000 - 1’500.000 Mensuales"
-        self.form_score += 5
-        if self.need_income == self.current_income || self.current_income == "500.000 - 1´000.000 Mensuales"
-          self.form_score += 5
+       if user.need_income == "1’000.000 - 1’500.000 Mensuales"
+        user.form_score += 5
+        if user.need_income == user.current_income || user.current_income == "500.000 - 1´000.000 Mensuales"
+          user.form_score += 5
         end
       end
 
-      if self.felixibility_importance ==  "Me encantaria"
-        self.form_score += 10
-      elsif self.felixibility_importance == "Nose pero quiero conocer"
-        self.form_score += 5        
+      if user.felixibility_importance ==  "Me encantaria"
+        user.form_score += 10
+      elsif user.felixibility_importance == "Nose pero quiero conocer"
+        user.form_score += 5        
       end
 
-      unless self.pc_type == "No tengo"
-        self.form_score += 5
+      unless user.pc_type == "No tengo"
+        user.form_score += 5
       end
       
-      if self.pc_use == "Personal"
-        self.form_score += 5
+      if user.pc_use == "Personal"
+        user.form_score += 5
       end
 
-      if self.work_hours * self.work_days >= 20
-        self.form_score += 10
+      if user.work_hours * user.work_days >= 20
+        user.form_score += 10
       end
       
-      if self.comfort == "Funciona"
-        self.form_score += 10
-      elsif self.comfort == "Debo hacer ajustes"
-        self.form_score += 5     
+      if user.comfort == "Funciona"
+        user.form_score += 10
+      elsif user.comfort == "Debo hacer ajustes"
+        user.form_score += 5     
       end
       
       
