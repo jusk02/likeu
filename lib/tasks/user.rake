@@ -96,7 +96,7 @@ task :rerun_scores => :environment do
       elsif user.special_experience.include? "Soporte tecnico"
        @numero += 5        
       elsif user.special_experience.include? "Si"
-       @numero += 5        
+       @numero += 10        
       end
 
       if user.need_income == "500.000 - 1´000.000 Mensuales"
