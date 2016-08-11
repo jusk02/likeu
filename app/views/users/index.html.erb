@@ -26,19 +26,7 @@
       <%= link_to 'Mostrar', user ,class: "gris"%>
       <%= link_to 'Editar', edit_user_path(user), class: "gris" %>
       <%= link_to 'Destruir', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "gris" %>
-      <% if current_user.role == 3 %>
-        <%= form_for(user) do |f| %>
-          <%= f.hidden_field :fase, :value => 2 %>
-          <%= f.hidden_field :video_done, :value => false %>
-          <%= f.hidden_field :video1, :value => nil %>
-          <%= f.hidden_field :video2, :value => nil %>
-          <%= f.hidden_field :video3, :value => nil %>
-          <%= f.hidden_field :video_ans1, :value => nil %>
-          <%= f.hidden_field :video_ans2, :value => nil %>
-          <%= f.hidden_field :video_ans3, :value => nil %>
-          <%= f.submit 'resetear prueba de video', :class => 'btn btn-success', data: { confirm: 'Are you sure?' } %>
-        <% end %> 
-      <% end %>     
+         
     </div>
     <% end %>   
   <% end %>

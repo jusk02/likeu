@@ -46,7 +46,7 @@
 
   <p>
     <strong>primer audio:</strong>
-    <% if @user.video1 != "" %>
+    <% if @user.video1 != "" || if @user.video1 != nil  %>
       <a href="<%= @user.video1 %>" class="fondo-blanco">Escuchar</a> 
     <%else%>
       No presentado
@@ -58,7 +58,7 @@
   </p>
   <p>
     <strong>segundo audio:</strong>
-    <% if @user.video2 != "" %>
+    <% if @user.video2 != "" || if @user.video2 != nil %>
       <a href="<%= @user.video2 %>" class="fondo-blanco">Escuchar</a> 
     <%else%>
       No presentado
@@ -70,7 +70,7 @@
   </p>
   <p>
     <strong>tercer audio:</strong>
-     <% if @user.video3 != "" %>
+     <% if @user.video3 != "" || if @user.video3 != nil %>
       <a href="<%= @user.video3 %>" class="fondo-blanco">Escuchar</a> 
     <%else%>
       No presentado
