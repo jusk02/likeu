@@ -10,6 +10,10 @@ class StaticPagesController < ApplicationController
   		
   	end
 
+    def mail
+      @users = User.all  
+    end
+
   	def FAQ_likeu
   		
   	end
