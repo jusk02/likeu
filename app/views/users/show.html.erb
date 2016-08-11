@@ -43,8 +43,9 @@
     <strong>experiencia especial:</strong>
     <%= @user.special_experience %>
   </p>
-
-  <p>
+ <% if @user.video_done == true %>
+     
+      <p>
     <strong>primer audio:</strong>
     <% if @user.video1 != "" %>
       <a href="<%= @user.video1 %>" class="fondo-blanco">Escuchar</a> 
@@ -80,6 +81,11 @@
     <strong>puntaje tercer audio:</strong>
     <%= @user.video3_score %>
   </p>
+  
+    <%else%>
+      Prueba de video no presentada
+    <%end%> 
+ 
 
 <% end %> 
 
