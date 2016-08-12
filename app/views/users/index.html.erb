@@ -6,11 +6,11 @@
   <h2>Lista de usuarios</h2>
 
   <p>En el momento hay <%= User.count %> usuarios registrados.</p>
-<div class="col-lg-4 col-sm-4 col-xs-12">
-<h3 class="text-center">Usuarios registrados en <br>primera etapa</h3>
-  <a class="fondo-blanco" href="/mail">Ver solo correos </a>
+<div class="col-lg-3 col-sm-3 col-xs-3">
+<h3 class="text-center">Usuarios registrados sin confirmar</h3>
+  
   <% @users.each do |user| %>
-       <% if user.fase == 1 %>
+       <% if user.fase == 1 && user.confirmed_at == nil %>
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
       Nombre:<%= user.name %>     registrado en:<%= user.created_at %>
       <% if user.confirmed_at == nil %>
@@ -38,10 +38,42 @@
     <% end %>   
   <% end %>
     </div>
-    <div class="col-lg-4 col-sm-4 col-xs-12">
+    <div class="col-lg-3 col-sm-3 col-xs-3">
+<h3 class="text-center">Usuarios registrados y confirmados</h3>
+  <a class="fondo-blanco" href="/mail">Ver solo correos </a>
+  <% @users.each do |user| %>
+       <% if user.fase == 1 && user.confirmed_at != nil %>
+    <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
+      Nombre:<%= user.name %>     registrado en:<%= user.created_at %>
+      <% if user.confirmed_at == nil %>
+        NO CONFIRMADO
+        <%else%>
+        Confirmado en: <%= user.confirmed_at %>
+       <% end %>               
+      <br> Puntaje formulario:<%= user.form_score %><br>
+      Edad:<%= user.age %>&#160;
+      Genero:<%= user.gender %>&#160;
+      Ciudad:<%= user.city %><br>
+      Celular:<%= user.cellphone %>&#160;
+      Email:<%= user.email %><br>
+      Experiencia especial:<br>
+      <%= user.special_experience %>
+      <br>
+      <!-- Puntaje de formulario: <%= user.form_score %><br> -->
+      Prueba de video hecha?:<br>
+      <%= user.video_done %><br>
+      <%= link_to 'Mostrar', user ,class: "gris"%>
+      <%= link_to 'Editar', edit_user_path(user), class: "gris" %>
+      <%= link_to 'Destruir', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "gris" %>
+         
+    </div>
+    <% end %>   
+  <% end %>
+    </div>
+    <div class="col-lg-3 col-sm-3 col-xs-3">
     <h3 class="text-center">Usuarios con prueba de video <br>activa</h3>
      <% @users.each do |user| %>
-      <% if user.fase == 2 && user.video_done == false %> 
+      <% if user.fase == 2 && user.video_done == false && user.confirmed_at != nil%> 
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
       Nombre:<%= user.name %>     registrado en:<%= user.created_at %>
        <% if user.confirmed_at == nil %>
@@ -81,10 +113,10 @@
   <% end %>
    <% end %> 
     </div>
-    <div class="col-lg-4 col-sm-4 col-xs-12">
+    <div class="col-lg-3 col-sm-3 col-xs-3">
     <h3 class="text-center">Usuarios con prueba de video <br>terminada</h3>
     <% @users.each do |user| %>
-       <% if user.fase == 2 && user.video_done == true %>
+       <% if user.fase == 2 && user.video_done == true && user.confirmed_at != nil%>
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
       Nombre:<%= user.name %>     registrado en:<%= user.created_at %>
        <% if user.confirmed_at == nil %>

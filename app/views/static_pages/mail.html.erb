@@ -3,7 +3,7 @@
 <div class="col-lg-8 col-sm-8 col-xs-8 col-lg-offset-2 col-sm-offset-2 col-xs-offset-2 ">
 <h3 class="text-center">Usuarios registrados en <br>primera etapa</h3>
   <% @users.each do |user| %>
-    <% if user.fase == 1 %>
+    <% if user.fase == 1 && user.confirmed_at != nil%>
     
       
       <%= user.email %><br>
