@@ -1,16 +1,16 @@
 class RegistrationsController < Devise::RegistrationsController
 
-	
+	def after_sign_up_path_for(resource)
+    '/go_confirm' # Or :prefix_to_your_route
+  end
 
 	 protected
 
 
-  def after_sign_up_path_for(resource)
-    '/go_confirm' # Or :prefix_to_your_route
-  end
+  
 
   def after_inactive_sign_up_path_for(resource_or_scope)
-    session["user_return_to"] || root_path
+    session["user_return_to"] || '/go_confirm'
   end
 
  def update_resource(resource, params)
