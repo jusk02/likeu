@@ -6,7 +6,7 @@ class RegistrationsController < Devise::RegistrationsController
 
 
   def after_sign_up_path_for(resource)
-    '/' # Or :prefix_to_your_route
+    '/go_confirm' # Or :prefix_to_your_route
   end
 
   def after_inactive_sign_up_path_for(resource_or_scope)

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def after_sign_up_path_for(resource)
-    '/quieroserliker' # Or :prefix_to_your_route
+    '/go_confirm' # Or :prefix_to_your_route
   end
 
  def after_update_path_for(resource)

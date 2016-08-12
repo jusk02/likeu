@@ -1,8 +1,6 @@
 
 
 
-
-
 <div class="col-lg-8 col-lg-offset-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
 <section id="contenido-user">
                   <div class="row fieldformulario respuesta">
@@ -10,19 +8,9 @@
 
 <span><img src="<%=image_path('corazon.png')%>" class="img-responsive wow bounceIn"></span>
 
-<p><h2 class="color">Gracias por confirmar tu correo</h2></p>
-<p>Si deseas puedes verificar el estado de tu proceso  </p>
-<% if user_signed_in? %>
-<a href="<%= user_path(current_user)%>" class="gris-n" onclick="this.blur();" >aqui</a>
+<p><h2 class="color">Gracias por registrarte</h2></p>
+<p>por favor verifica tu correo para seguir con el proceso </p>
 
-                     
-    <% else %>
-    <a href="<%= new_user_session_path %>"  class="gris-n" onclick="this.blur();" >aqui</a>
-<% end %> </p>
-
- 	
-	
-	
 
 </div>
 </section>

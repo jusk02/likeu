@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   get "/quieroserliker", to: "static_pages#soyliker", as: "soyliker"
 
+  get "/go_confirm", to: "static_pages#go_confirm", as: "go_confirm"
+
   get "/mail", to: "static_pages#mail", as: "mail"
 
   get "/confirmed", to: "static_pages#confirmed", as: "confirmed"
