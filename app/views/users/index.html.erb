@@ -12,7 +12,13 @@
   <% @users.each do |user| %>
        <% if user.fase == 1 %>
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
-      Nombre:<%= user.name %>&#160;&#160;&#160;registrado en:<%= user.created_at %><br> Puntaje:<%= user.form_score %><br>
+      Nombre:<%= user.name %>     registrado en:<%= user.created_at %>
+      <% if user.confirmed_at == nil %>
+        NO CONFIRMADO
+        <%else%>
+        Confirmado en: <%= user.confirmed_at %>
+       <% end %>               
+      <br> Puntaje formulario:<%= user.form_score %><br>
       Edad:<%= user.age %>&#160;
       Genero:<%= user.gender %>&#160;
       Ciudad:<%= user.city %><br>
@@ -37,7 +43,13 @@
      <% @users.each do |user| %>
       <% if user.fase == 2 && user.video_done == false %> 
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
-      Nombre:<%= user.name %>&#160;&#160;&#160;registrado en:<%= user.created_at %><br> Puntaje:<%= user.form_score %><br>
+      Nombre:<%= user.name %>     registrado en:<%= user.created_at %>
+       <% if user.confirmed_at == nil %>
+        NO CONFIRMADO
+        <%else%>
+        Confirmado en: <%= user.confirmed_at %>
+       <% end %>    
+                <br> Puntaje formulario:<%= user.form_score %><br>
       Edad:<%= user.age %>&#160;
       Genero:<%= user.gender %>&#160;
       Ciudad:<%= user.city %><br>
@@ -74,7 +86,12 @@
     <% @users.each do |user| %>
        <% if user.fase == 2 && user.video_done == true %>
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
-      Nombre:<%= user.name %>&#160;&#160;&#160;registrado en:<%= user.created_at %><br> Puntaje:<%= user.form_score %><br>
+      Nombre:<%= user.name %>     registrado en:<%= user.created_at %>
+       <% if user.confirmed_at == nil %>
+        NO CONFIRMADO
+        <%else%>
+        Confirmado en: <%= user.confirmed_at %>
+       <% end %>        <br> Puntaje formulario:<%= user.form_score %><br>
       Edad:<%= user.age %>&#160;
       Genero:<%= user.gender %>&#160;
       Ciudad:<%= user.city %><br>
