@@ -71,7 +71,7 @@
   <% end %>
     </div>
     <div class="col-lg-3 col-sm-3 col-xs-3">
-    <h3 class="text-center">Usuarios con prueba de video <br>activa</h3>
+    <h3 class="text-center">Usuarios con prueba de video activa</h3>
      <% @users.each do |user| %>
       <% if user.fase == 2 && user.video_done == false && user.confirmed_at != nil%> 
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
@@ -114,7 +114,7 @@
    <% end %> 
     </div>
     <div class="col-lg-3 col-sm-3 col-xs-3">
-    <h3 class="text-center">Usuarios con prueba de video <br>terminada</h3>
+    <h3 class="text-center">Usuarios con prueba de video terminada</h3>
     <% @users.each do |user| %>
        <% if user.fase == 2 && user.video_done == true && user.confirmed_at != nil%>
     <div class="col-lg-12 col-sm-12 col-xs-12 user-box">
