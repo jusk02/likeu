@@ -33,13 +33,13 @@ task :spec => :environment do
   #heroku run rake user:avance_masivo
 task :avance_masivo => :environment do
     users = User.where(fase:1)
-    users.each do |user|
+      users.each do |user|
       
       user.update_attribute(:fase, 2)
       user.update_attribute(:video_done, false)
-      user.update_attribute(:video_1, nil)
-      user.update_attribute(:video_2, nil)
-      user.update_attribute(:video_3, nil)
+      user.update_attribute(:video1, nil)
+      user.update_attribute(:video2, nil)
+      user.update_attribute(:video3, nil)
       user.update_attribute(:video_ans1, nil)
       user.update_attribute(:video_ans2, nil)
       user.update_attribute(:video_ans3, nil)
