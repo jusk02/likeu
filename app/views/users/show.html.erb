@@ -86,7 +86,6 @@
       Prueba de video no presentada
     <%end%> 
  
-
 <% end %> 
 
 <div class="col-lg-8 col-lg-offset-3 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center">
@@ -96,6 +95,11 @@
       <span><img src="<%=image_path('corazon.png')%>" class="img-responsive wow bounceIn"></span>
 
       <p><h2 class="color">Hola <%= current_user.name%></h2></p>
+
+      <% if current_user.role == 3 %>
+          <a href="<%= users_path %>" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Ver lista de usuarios</a><br>
+        
+      <% end %>
 
 	    <% if current_user.fase == nil %>
 
@@ -131,7 +135,7 @@
 
 	    <% elsif current_user.fase == 3 %>
 	      <p>Fase 2 listo ahora podras empezar tu entrenamiento</p>
-	      <a href="www.playvox.com" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Levame a entrenar!</a>
+	      <a href="www.playvox.com" target="blank" class="btn btn-primary btn-xl" onclick="this.blur();" >Llévame a entrenar!</a>
 
 	    <% else%>
         <p>lo sentimos parece haber un error por favor contacta a soporte</p>
