@@ -46,11 +46,11 @@
  <% if @user.video_done == true %>
      
       <p>
-    <strong>primer audio:</strong>
+    <strong>primer audio:</strong>Prueba de dicción<br>
     <% if @user.video1 != "" %>
       <a href="<%= @user.video1 %>" class="fondo-blanco">Escuchar</a> 
     <%else%>
-      No presentado
+       <strong>No presentado</strong>
     <%end%>  
   </p>
   <p>
@@ -58,11 +58,11 @@
     <%= @user.video1_score %>
   </p>
   <p>
-    <strong>segundo audio:</strong>
+    <strong>segundo audio</strong> <br>(Describe los últimos 3 proyectos que te has trazado a nivel personal, mencionando las oportunidades y debilidades que han surgido en cada uno de ellos y si conseguiste tus objetivos):<br>
     <% if @user.video2 != "" %>
       <a href="<%= @user.video2 %>" class="fondo-blanco">Escuchar</a> 
     <%else%>
-      No presentado
+      <strong>No presentado</strong>
     <%end%>  
   </p>
   <p>
@@ -70,11 +70,11 @@
     <%= @user.video2_score %>
   </p>
   <p>
-    <strong>tercer audio:</strong>
+    <strong>tercer audio</strong> <br>(Usted es el gerente de Recursos Humanos de una empresa multinacional y debe encontrar un reemplazo para el cargo de coordinador comercial; encontró un candidato con la formación académica y años de experiencia necesarias, pero se da cuenta que no ha trabajado en sectores empresariales de la magnitud comercial de su empresa. Debes responder si lo contratarías y por qué sí o no.):<br>
      <% if @user.video3 != "" %>
       <a href="<%= @user.video3 %>" class="fondo-blanco">Escuchar</a> 
     <%else%>
-      No presentado
+      <strong>No presentado</strong>
     <%end%>  
   </p>
   <p>
